@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,18 @@
 		4B3A6BF62603CE3F00B99CF0 /* FightAcademyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6BF52603CE3F00B99CF0 /* FightAcademyTests.swift */; };
 		4B3A6C012603CE3F00B99CF0 /* FightAcademyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C002603CE3F00B99CF0 /* FightAcademyUITests.swift */; };
 		4B3A6C182603D58700B99CF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6C172603D58700B99CF0 /* GoogleService-Info.plist */; };
+		AE5C81532605167400E12DB5 /* TrailingButtonTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C81522605167400E12DB5 /* TrailingButtonTextField.swift */; };
+		AE5C81582605182300E12DB5 /* TypeAliasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C81572605182300E12DB5 /* TypeAliasses.swift */; };
+		AE5C815E26053A6600E12DB5 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C815C26053A6600E12DB5 /* LogInViewController.swift */; };
+		AE5C815F26053A6600E12DB5 /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE5C815D26053A6600E12DB5 /* LogInViewController.xib */; };
+		AE5C817626055ACE00E12DB5 /* AutentificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C817526055ACE00E12DB5 /* AutentificationService.swift */; };
+		AE5C817E26055B0A00E12DB5 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C817D26055B0A00E12DB5 /* ValidationService.swift */; };
+		AE5C818426055F6000E12DB5 /* RegisterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C818326055F6000E12DB5 /* RegisterData.swift */; };
+		AEB49A6A2604B3F700766762 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB49A692604B3F700766762 /* NibLoadable.swift */; };
+		AEB49A7A2604B90500766762 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB49A782604B90500766762 /* RegisterViewController.swift */; };
+		AEB49A7B2604B90500766762 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB49A792604B90500766762 /* RegisterViewController.xib */; };
+		AEB49A912604C7E100766762 /* LeadingImageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB49A902604C7E000766762 /* LeadingImageTextField.swift */; };
+		AEB49A962604E78300766762 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB49A952604E78200766762 /* DesignableButton.swift */; };
 		CDA38223AE70CB8FE96DA12B /* Pods_FightAcademyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E966CBB0B4BB88BE828FF7 /* Pods_FightAcademyTests.framework */; };
 		CFF26CA13FF00445C82B664B /* Pods_FightAcademy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B568C48F62C13747CFE66D40 /* Pods_FightAcademy.framework */; };
 		D9C1358052FDDF0EA865A3C3 /* Pods_FightAcademy_FightAcademyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2098853A5E86CBDAA2E58BC5 /* Pods_FightAcademy_FightAcademyUITests.framework */; };
@@ -63,6 +75,18 @@
 		4B3A6C022603CE3F00B99CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B3A6C172603D58700B99CF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A1B45D15AB09032B774C8168 /* Pods-FightAcademy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightAcademy.debug.xcconfig"; path = "Target Support Files/Pods-FightAcademy/Pods-FightAcademy.debug.xcconfig"; sourceTree = "<group>"; };
+		AE5C81522605167400E12DB5 /* TrailingButtonTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingButtonTextField.swift; sourceTree = "<group>"; };
+		AE5C81572605182300E12DB5 /* TypeAliasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliasses.swift; sourceTree = "<group>"; };
+		AE5C815C26053A6600E12DB5 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		AE5C815D26053A6600E12DB5 /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
+		AE5C817526055ACE00E12DB5 /* AutentificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutentificationService.swift; sourceTree = "<group>"; };
+		AE5C817D26055B0A00E12DB5 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
+		AE5C818326055F6000E12DB5 /* RegisterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterData.swift; sourceTree = "<group>"; };
+		AEB49A692604B3F700766762 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		AEB49A782604B90500766762 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AEB49A792604B90500766762 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		AEB49A902604C7E000766762 /* LeadingImageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingImageTextField.swift; sourceTree = "<group>"; };
+		AEB49A952604E78200766762 /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
 		B568C48F62C13747CFE66D40 /* Pods_FightAcademy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightAcademy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9E966CBB0B4BB88BE828FF7 /* Pods_FightAcademyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightAcademyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -130,6 +154,11 @@
 		4B3A6BDA2603CE3900B99CF0 /* FightAcademy */ = {
 			isa = PBXGroup;
 			children = (
+				AE5C818226055E5200E12DB5 /* Model */,
+				AE5C817426055A9400E12DB5 /* Service */,
+				AEB49A8F2604C7BA00766762 /* View */,
+				AEB49A712604B4CD00766762 /* Controller */,
+				AEB49A682604B3C800766762 /* Protocol */,
 				4B3A6BDB2603CE3900B99CF0 /* AppDelegate.swift */,
 				4B3A6BDD2603CE3900B99CF0 /* SceneDelegate.swift */,
 				4B3A6BDF2603CE3900B99CF0 /* ViewController.swift */,
@@ -139,6 +168,7 @@
 				4B3A6BEC2603CE3E00B99CF0 /* Info.plist */,
 				4B3A6C172603D58700B99CF0 /* GoogleService-Info.plist */,
 				4B3A6BE42603CE3900B99CF0 /* FightAcademy.xcdatamodeld */,
+				AE5C81572605182300E12DB5 /* TypeAliasses.swift */,
 			);
 			path = FightAcademy;
 			sourceTree = "<group>";
@@ -161,6 +191,68 @@
 			path = FightAcademyUITests;
 			sourceTree = "<group>";
 		};
+		AE5C816326053A6F00E12DB5 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				AEB49A782604B90500766762 /* RegisterViewController.swift */,
+				AEB49A792604B90500766762 /* RegisterViewController.xib */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		AE5C816426053A7B00E12DB5 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				AE5C815C26053A6600E12DB5 /* LogInViewController.swift */,
+				AE5C815D26053A6600E12DB5 /* LogInViewController.xib */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		AE5C817426055A9400E12DB5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AE5C817526055ACE00E12DB5 /* AutentificationService.swift */,
+				AE5C817D26055B0A00E12DB5 /* ValidationService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AE5C818226055E5200E12DB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE5C818326055F6000E12DB5 /* RegisterData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AEB49A682604B3C800766762 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AEB49A692604B3F700766762 /* NibLoadable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		AEB49A712604B4CD00766762 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AE5C816326053A6F00E12DB5 /* Register */,
+				AE5C816426053A7B00E12DB5 /* LogIn */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AEB49A8F2604C7BA00766762 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AEB49A902604C7E000766762 /* LeadingImageTextField.swift */,
+				AEB49A952604E78200766762 /* DesignableButton.swift */,
+				AE5C81522605167400E12DB5 /* TrailingButtonTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B2E784A1A163BFA2FD703417 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +263,6 @@
 				237C2ACCF09599F70920D054 /* Pods-FightAcademyTests.debug.xcconfig */,
 				300809C2D22046E0069F3F5A /* Pods-FightAcademyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -284,6 +375,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B3A6BEB2603CE3E00B99CF0 /* LaunchScreen.storyboard in Resources */,
+				AEB49A7B2604B90500766762 /* RegisterViewController.xib in Resources */,
+				AE5C815F26053A6600E12DB5 /* LogInViewController.xib in Resources */,
 				4B3A6C182603D58700B99CF0 /* GoogleService-Info.plist in Resources */,
 				4B3A6BE82603CE3E00B99CF0 /* Assets.xcassets in Resources */,
 				4B3A6BE32603CE3900B99CF0 /* Main.storyboard in Resources */,
@@ -416,7 +509,17 @@
 			files = (
 				4B3A6BE02603CE3900B99CF0 /* ViewController.swift in Sources */,
 				4B3A6BDC2603CE3900B99CF0 /* AppDelegate.swift in Sources */,
+				AE5C815E26053A6600E12DB5 /* LogInViewController.swift in Sources */,
+				AE5C817626055ACE00E12DB5 /* AutentificationService.swift in Sources */,
 				4B3A6BDE2603CE3900B99CF0 /* SceneDelegate.swift in Sources */,
+				AEB49A7A2604B90500766762 /* RegisterViewController.swift in Sources */,
+				AEB49A962604E78300766762 /* DesignableButton.swift in Sources */,
+				AEB49A912604C7E100766762 /* LeadingImageTextField.swift in Sources */,
+				AEB49A6A2604B3F700766762 /* NibLoadable.swift in Sources */,
+				AE5C817E26055B0A00E12DB5 /* ValidationService.swift in Sources */,
+				AE5C818426055F6000E12DB5 /* RegisterData.swift in Sources */,
+				AE5C81532605167400E12DB5 /* TrailingButtonTextField.swift in Sources */,
+				AE5C81582605182300E12DB5 /* TypeAliasses.swift in Sources */,
 				4B3A6BE62603CE3900B99CF0 /* FightAcademy.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,7 +698,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UPWXFVVHLN;
 				INFOPLIST_FILE = FightAcademy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -614,7 +719,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UPWXFVVHLN;
 				INFOPLIST_FILE = FightAcademy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
