@@ -3,20 +3,55 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4B3A6BDC2603CE3900B99CF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6BDB2603CE3900B99CF0 /* AppDelegate.swift */; };
 		4B3A6BDE2603CE3900B99CF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6BDD2603CE3900B99CF0 /* SceneDelegate.swift */; };
 		4B3A6BE02603CE3900B99CF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6BDF2603CE3900B99CF0 /* ViewController.swift */; };
-		4B3A6BE32603CE3900B99CF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6BE12603CE3900B99CF0 /* Main.storyboard */; };
 		4B3A6BE62603CE3900B99CF0 /* FightAcademy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6BE42603CE3900B99CF0 /* FightAcademy.xcdatamodeld */; };
 		4B3A6BE82603CE3E00B99CF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6BE72603CE3E00B99CF0 /* Assets.xcassets */; };
 		4B3A6BEB2603CE3E00B99CF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6BE92603CE3E00B99CF0 /* LaunchScreen.storyboard */; };
 		4B3A6BF62603CE3F00B99CF0 /* FightAcademyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6BF52603CE3F00B99CF0 /* FightAcademyTests.swift */; };
 		4B3A6C012603CE3F00B99CF0 /* FightAcademyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C002603CE3F00B99CF0 /* FightAcademyUITests.swift */; };
 		4B3A6C182603D58700B99CF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6C172603D58700B99CF0 /* GoogleService-Info.plist */; };
+		9EA8843426068216002A59E2 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8843326068216002A59E2 /* RouterProtocol.swift */; };
+		9EA8843C26068233002A59E2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8843B26068233002A59E2 /* Router.swift */; };
+		9EA8844126068270002A59E2 /* Routed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8844026068270002A59E2 /* Routed.swift */; };
+		9EA88452260683AB002A59E2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA88451260683AB002A59E2 /* NavigationController.swift */; };
+		9EA8845A260683FA002A59E2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA88459260683FA002A59E2 /* TabBarController.swift */; };
+		9EA8845F2606842D002A59E2 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8845E2606842D002A59E2 /* AuthViewController.swift */; };
+		9EA8846426068467002A59E2 /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8846326068467002A59E2 /* RegViewController.swift */; };
+		9EA8846926068480002A59E2 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8846826068480002A59E2 /* AboutViewController.swift */; };
+		9EA884702606850A002A59E2 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8846F2606850A002A59E2 /* UIFontExtensions.swift */; };
+		9EA8847826068540002A59E2 /* CoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8847726068540002A59E2 /* CoachViewController.swift */; };
+		9EA884832606856F002A59E2 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884822606856F002A59E2 /* ActivityViewController.swift */; };
+		9EA884882606858C002A59E2 /* NewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884872606858C002A59E2 /* NewActivityViewController.swift */; };
+		9EA8848D260685A5002A59E2 /* ChoosingActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8848C260685A5002A59E2 /* ChoosingActivityViewController.swift */; };
+		9EA88492260685C7002A59E2 /* ChoosingCoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA88491260685C7002A59E2 /* ChoosingCoachViewController.swift */; };
+		9EA88497260685D9002A59E2 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA88496260685D9002A59E2 /* HistoryViewController.swift */; };
+		9EA8849C260685F0002A59E2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8849B260685F0002A59E2 /* SettingsViewController.swift */; };
+		9EA884A126068609002A59E2 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884A026068609002A59E2 /* ChangePasswordViewController.swift */; };
+		9EA884A8260686DF002A59E2 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884A7260686DF002A59E2 /* BaseCoordinator.swift */; };
+		9EA884AD260686E8002A59E2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884AC260686E8002A59E2 /* Coordinator.swift */; };
+		9EA884B226068709002A59E2 /* FinishFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884B126068709002A59E2 /* FinishFlowCoordinator.swift */; };
+		9EA884BB26068795002A59E2 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884BA26068795002A59E2 /* ApplicationCoordinator.swift */; };
+		9EA884C3260687D1002A59E2 /* ApplicationCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884C2260687D1002A59E2 /* ApplicationCoordinatorFactory.swift */; };
+		9EA884C926068819002A59E2 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884C826068819002A59E2 /* AuthCoordinator.swift */; };
+		9EA884D126068838002A59E2 /* AuthCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884D026068838002A59E2 /* AuthCoordinatorFactory.swift */; };
+		9EA884D72606888F002A59E2 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884D62606888F002A59E2 /* TabBarCoordinator.swift */; };
+		9EA884DC260688AA002A59E2 /* TabBarCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884DB260688AA002A59E2 /* TabBarCoordinatorFactory.swift */; };
+		9EA884E2260688F4002A59E2 /* AboutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884E1260688F4002A59E2 /* AboutCoordinator.swift */; };
+		9EA884EA2606890B002A59E2 /* AboutCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884E92606890B002A59E2 /* AboutCoordinatorFactory.swift */; };
+		9EA884F026068943002A59E2 /* CoachesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884EF26068943002A59E2 /* CoachesCoordinator.swift */; };
+		9EA884F52606894F002A59E2 /* CoachesCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884F42606894F002A59E2 /* CoachesCoordinatorFactory.swift */; };
+		9EA884FB260689AE002A59E2 /* ActivityCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884FA260689AE002A59E2 /* ActivityCoordinator.swift */; };
+		9EA88500260689EA002A59E2 /* ActivityCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884FF260689EA002A59E2 /* ActivityCoordinatorFactory.swift */; };
+		9EA8850626068A0C002A59E2 /* HistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8850526068A0C002A59E2 /* HistoryCoordinator.swift */; };
+		9EA8850E26068A22002A59E2 /* HistoryFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8850D26068A22002A59E2 /* HistoryFactoryProtocol.swift */; };
+		9EA8851426068A4B002A59E2 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8851326068A4B002A59E2 /* SettingsCoordinator.swift */; };
+		9EA8851926068A60002A59E2 /* SettingsCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8851826068A60002A59E2 /* SettingsCoordinatorFactory.swift */; };
 		CDA38223AE70CB8FE96DA12B /* Pods_FightAcademyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E966CBB0B4BB88BE828FF7 /* Pods_FightAcademyTests.framework */; };
 		CFF26CA13FF00445C82B664B /* Pods_FightAcademy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B568C48F62C13747CFE66D40 /* Pods_FightAcademy.framework */; };
 		D9C1358052FDDF0EA865A3C3 /* Pods_FightAcademy_FightAcademyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2098853A5E86CBDAA2E58BC5 /* Pods_FightAcademy_FightAcademyUITests.framework */; };
@@ -50,7 +85,6 @@
 		4B3A6BDB2603CE3900B99CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B3A6BDD2603CE3900B99CF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4B3A6BDF2603CE3900B99CF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4B3A6BE22603CE3900B99CF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B3A6BE52603CE3900B99CF0 /* FightAcademy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FightAcademy.xcdatamodel; sourceTree = "<group>"; };
 		4B3A6BE72603CE3E00B99CF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B3A6BEA2603CE3E00B99CF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +96,42 @@
 		4B3A6C002603CE3F00B99CF0 /* FightAcademyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightAcademyUITests.swift; sourceTree = "<group>"; };
 		4B3A6C022603CE3F00B99CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B3A6C172603D58700B99CF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9EA8843326068216002A59E2 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		9EA8843B26068233002A59E2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		9EA8844026068270002A59E2 /* Routed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routed.swift; sourceTree = "<group>"; };
+		9EA88451260683AB002A59E2 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		9EA88459260683FA002A59E2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		9EA8845E2606842D002A59E2 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		9EA8846326068467002A59E2 /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
+		9EA8846826068480002A59E2 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		9EA8846F2606850A002A59E2 /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
+		9EA8847726068540002A59E2 /* CoachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewController.swift; sourceTree = "<group>"; };
+		9EA884822606856F002A59E2 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		9EA884872606858C002A59E2 /* NewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityViewController.swift; sourceTree = "<group>"; };
+		9EA8848C260685A5002A59E2 /* ChoosingActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingActivityViewController.swift; sourceTree = "<group>"; };
+		9EA88491260685C7002A59E2 /* ChoosingCoachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingCoachViewController.swift; sourceTree = "<group>"; };
+		9EA88496260685D9002A59E2 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		9EA8849B260685F0002A59E2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9EA884A026068609002A59E2 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		9EA884A7260686DF002A59E2 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		9EA884AC260686E8002A59E2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9EA884B126068709002A59E2 /* FinishFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishFlowCoordinator.swift; sourceTree = "<group>"; };
+		9EA884BA26068795002A59E2 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		9EA884C2260687D1002A59E2 /* ApplicationCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinatorFactory.swift; sourceTree = "<group>"; };
+		9EA884C826068819002A59E2 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		9EA884D026068838002A59E2 /* AuthCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinatorFactory.swift; sourceTree = "<group>"; };
+		9EA884D62606888F002A59E2 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		9EA884DB260688AA002A59E2 /* TabBarCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorFactory.swift; sourceTree = "<group>"; };
+		9EA884E1260688F4002A59E2 /* AboutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCoordinator.swift; sourceTree = "<group>"; };
+		9EA884E92606890B002A59E2 /* AboutCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCoordinatorFactory.swift; sourceTree = "<group>"; };
+		9EA884EF26068943002A59E2 /* CoachesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachesCoordinator.swift; sourceTree = "<group>"; };
+		9EA884F42606894F002A59E2 /* CoachesCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachesCoordinatorFactory.swift; sourceTree = "<group>"; };
+		9EA884FA260689AE002A59E2 /* ActivityCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCoordinator.swift; sourceTree = "<group>"; };
+		9EA884FF260689EA002A59E2 /* ActivityCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCoordinatorFactory.swift; sourceTree = "<group>"; };
+		9EA8850526068A0C002A59E2 /* HistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinator.swift; sourceTree = "<group>"; };
+		9EA8850D26068A22002A59E2 /* HistoryFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryFactoryProtocol.swift; sourceTree = "<group>"; };
+		9EA8851326068A4B002A59E2 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		9EA8851826068A60002A59E2 /* SettingsCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorFactory.swift; sourceTree = "<group>"; };
 		A1B45D15AB09032B774C8168 /* Pods-FightAcademy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightAcademy.debug.xcconfig"; path = "Target Support Files/Pods-FightAcademy/Pods-FightAcademy.debug.xcconfig"; sourceTree = "<group>"; };
 		B568C48F62C13747CFE66D40 /* Pods_FightAcademy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightAcademy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9E966CBB0B4BB88BE828FF7 /* Pods_FightAcademyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightAcademyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,10 +200,10 @@
 		4B3A6BDA2603CE3900B99CF0 /* FightAcademy */ = {
 			isa = PBXGroup;
 			children = (
-				4B3A6BDB2603CE3900B99CF0 /* AppDelegate.swift */,
-				4B3A6BDD2603CE3900B99CF0 /* SceneDelegate.swift */,
-				4B3A6BDF2603CE3900B99CF0 /* ViewController.swift */,
-				4B3A6BE12603CE3900B99CF0 /* Main.storyboard */,
+				9EA8842A26067C5C002A59E2 /* Application */,
+				9EA88431260680B7002A59E2 /* Navigation */,
+				9EA88445260682FA002A59E2 /* Controllers */,
+				9EA8846D260684F0002A59E2 /* Extensions */,
 				4B3A6BE72603CE3E00B99CF0 /* Assets.xcassets */,
 				4B3A6BE92603CE3E00B99CF0 /* LaunchScreen.storyboard */,
 				4B3A6BEC2603CE3E00B99CF0 /* Info.plist */,
@@ -161,6 +231,185 @@
 			path = FightAcademyUITests;
 			sourceTree = "<group>";
 		};
+		9EA8842A26067C5C002A59E2 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4B3A6BDB2603CE3900B99CF0 /* AppDelegate.swift */,
+				4B3A6BDD2603CE3900B99CF0 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		9EA88431260680B7002A59E2 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				9EA884322606816F002A59E2 /* Router */,
+				9EA884A52606865C002A59E2 /* Coordinator */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		9EA884322606816F002A59E2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9EA8843326068216002A59E2 /* RouterProtocol.swift */,
+				9EA8843B26068233002A59E2 /* Router.swift */,
+				9EA8844026068270002A59E2 /* Routed.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9EA88445260682FA002A59E2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9EA8845026068395002A59E2 /* Wrappers */,
+				9EA8844C26068346002A59E2 /* Common */,
+				9EA8845E2606842D002A59E2 /* AuthViewController.swift */,
+				9EA8846326068467002A59E2 /* RegViewController.swift */,
+				9EA8846826068480002A59E2 /* AboutViewController.swift */,
+				9EA8847726068540002A59E2 /* CoachViewController.swift */,
+				9EA884822606856F002A59E2 /* ActivityViewController.swift */,
+				9EA884872606858C002A59E2 /* NewActivityViewController.swift */,
+				9EA8848C260685A5002A59E2 /* ChoosingActivityViewController.swift */,
+				9EA88491260685C7002A59E2 /* ChoosingCoachViewController.swift */,
+				9EA88496260685D9002A59E2 /* HistoryViewController.swift */,
+				9EA8849B260685F0002A59E2 /* SettingsViewController.swift */,
+				9EA884A026068609002A59E2 /* ChangePasswordViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9EA8844C26068346002A59E2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4B3A6BDF2603CE3900B99CF0 /* ViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9EA8845026068395002A59E2 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				9EA88451260683AB002A59E2 /* NavigationController.swift */,
+				9EA88459260683FA002A59E2 /* TabBarController.swift */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		9EA8846D260684F0002A59E2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9EA8846E260684F9002A59E2 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9EA8846E260684F9002A59E2 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				9EA8846F2606850A002A59E2 /* UIFontExtensions.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		9EA884A52606865C002A59E2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9EA884A626068670002A59E2 /* Common */,
+				9EA884B926068781002A59E2 /* ApplicationCoordinator */,
+				9EA884C726068800002A59E2 /* AuthCoordinator */,
+				9EA884D526068867002A59E2 /* TabBarCoordinator */,
+				9EA884E0260688E6002A59E2 /* AboutCoordinator */,
+				9EA884EE2606892C002A59E2 /* CoachesCoordinator */,
+				9EA884F9260689A0002A59E2 /* ActivityCoordinator */,
+				9EA88504260689FD002A59E2 /* HistoryCoordinator */,
+				9EA8851226068A38002A59E2 /* SettingsCoordinator */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		9EA884A626068670002A59E2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9EA884AC260686E8002A59E2 /* Coordinator.swift */,
+				9EA884A7260686DF002A59E2 /* BaseCoordinator.swift */,
+				9EA884B126068709002A59E2 /* FinishFlowCoordinator.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9EA884B926068781002A59E2 /* ApplicationCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9EA884BA26068795002A59E2 /* ApplicationCoordinator.swift */,
+				9EA884C2260687D1002A59E2 /* ApplicationCoordinatorFactory.swift */,
+			);
+			path = ApplicationCoordinator;
+			sourceTree = "<group>";
+		};
+		9EA884C726068800002A59E2 /* AuthCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9EA884C826068819002A59E2 /* AuthCoordinator.swift */,
+				9EA884D026068838002A59E2 /* AuthCoordinatorFactory.swift */,
+			);
+			path = AuthCoordinator;
+			sourceTree = "<group>";
+		};
+		9EA884D526068867002A59E2 /* TabBarCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9EA884D62606888F002A59E2 /* TabBarCoordinator.swift */,
+				9EA884DB260688AA002A59E2 /* TabBarCoordinatorFactory.swift */,
+			);
+			path = TabBarCoordinator;
+			sourceTree = "<group>";
+		};
+		9EA884E0260688E6002A59E2 /* AboutCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9EA884E1260688F4002A59E2 /* AboutCoordinator.swift */,
+				9EA884E92606890B002A59E2 /* AboutCoordinatorFactory.swift */,
+			);
+			path = AboutCoordinator;
+			sourceTree = "<group>";
+		};
+		9EA884EE2606892C002A59E2 /* CoachesCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9EA884EF26068943002A59E2 /* CoachesCoordinator.swift */,
+				9EA884F42606894F002A59E2 /* CoachesCoordinatorFactory.swift */,
+			);
+			path = CoachesCoordinator;
+			sourceTree = "<group>";
+		};
+		9EA884F9260689A0002A59E2 /* ActivityCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9EA884FA260689AE002A59E2 /* ActivityCoordinator.swift */,
+				9EA884FF260689EA002A59E2 /* ActivityCoordinatorFactory.swift */,
+			);
+			path = ActivityCoordinator;
+			sourceTree = "<group>";
+		};
+		9EA88504260689FD002A59E2 /* HistoryCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9EA8850526068A0C002A59E2 /* HistoryCoordinator.swift */,
+				9EA8850D26068A22002A59E2 /* HistoryFactoryProtocol.swift */,
+			);
+			path = HistoryCoordinator;
+			sourceTree = "<group>";
+		};
+		9EA8851226068A38002A59E2 /* SettingsCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9EA8851326068A4B002A59E2 /* SettingsCoordinator.swift */,
+				9EA8851826068A60002A59E2 /* SettingsCoordinatorFactory.swift */,
+			);
+			path = SettingsCoordinator;
+			sourceTree = "<group>";
+		};
 		B2E784A1A163BFA2FD703417 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +420,6 @@
 				237C2ACCF09599F70920D054 /* Pods-FightAcademyTests.debug.xcconfig */,
 				300809C2D22046E0069F3F5A /* Pods-FightAcademyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -286,7 +534,6 @@
 				4B3A6BEB2603CE3E00B99CF0 /* LaunchScreen.storyboard in Resources */,
 				4B3A6C182603D58700B99CF0 /* GoogleService-Info.plist in Resources */,
 				4B3A6BE82603CE3E00B99CF0 /* Assets.xcassets in Resources */,
-				4B3A6BE32603CE3900B99CF0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,10 +661,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EA884882606858C002A59E2 /* NewActivityViewController.swift in Sources */,
+				9EA884D126068838002A59E2 /* AuthCoordinatorFactory.swift in Sources */,
 				4B3A6BE02603CE3900B99CF0 /* ViewController.swift in Sources */,
+				9EA88452260683AB002A59E2 /* NavigationController.swift in Sources */,
+				9EA884B226068709002A59E2 /* FinishFlowCoordinator.swift in Sources */,
+				9EA884E2260688F4002A59E2 /* AboutCoordinator.swift in Sources */,
+				9EA884D72606888F002A59E2 /* TabBarCoordinator.swift in Sources */,
+				9EA884F026068943002A59E2 /* CoachesCoordinator.swift in Sources */,
+				9EA8849C260685F0002A59E2 /* SettingsViewController.swift in Sources */,
+				9EA884BB26068795002A59E2 /* ApplicationCoordinator.swift in Sources */,
+				9EA88492260685C7002A59E2 /* ChoosingCoachViewController.swift in Sources */,
+				9EA884702606850A002A59E2 /* UIFontExtensions.swift in Sources */,
+				9EA884A126068609002A59E2 /* ChangePasswordViewController.swift in Sources */,
+				9EA8845F2606842D002A59E2 /* AuthViewController.swift in Sources */,
 				4B3A6BDC2603CE3900B99CF0 /* AppDelegate.swift in Sources */,
+				9EA884A8260686DF002A59E2 /* BaseCoordinator.swift in Sources */,
+				9EA8851926068A60002A59E2 /* SettingsCoordinatorFactory.swift in Sources */,
+				9EA884EA2606890B002A59E2 /* AboutCoordinatorFactory.swift in Sources */,
+				9EA8845A260683FA002A59E2 /* TabBarController.swift in Sources */,
+				9EA8843426068216002A59E2 /* RouterProtocol.swift in Sources */,
+				9EA884C3260687D1002A59E2 /* ApplicationCoordinatorFactory.swift in Sources */,
+				9EA8847826068540002A59E2 /* CoachViewController.swift in Sources */,
+				9EA884C926068819002A59E2 /* AuthCoordinator.swift in Sources */,
+				9EA8846926068480002A59E2 /* AboutViewController.swift in Sources */,
+				9EA8844126068270002A59E2 /* Routed.swift in Sources */,
 				4B3A6BDE2603CE3900B99CF0 /* SceneDelegate.swift in Sources */,
+				9EA8848D260685A5002A59E2 /* ChoosingActivityViewController.swift in Sources */,
+				9EA884F52606894F002A59E2 /* CoachesCoordinatorFactory.swift in Sources */,
+				9EA884AD260686E8002A59E2 /* Coordinator.swift in Sources */,
+				9EA8851426068A4B002A59E2 /* SettingsCoordinator.swift in Sources */,
+				9EA88500260689EA002A59E2 /* ActivityCoordinatorFactory.swift in Sources */,
+				9EA8850626068A0C002A59E2 /* HistoryCoordinator.swift in Sources */,
+				9EA8843C26068233002A59E2 /* Router.swift in Sources */,
 				4B3A6BE62603CE3900B99CF0 /* FightAcademy.xcdatamodeld in Sources */,
+				9EA88497260685D9002A59E2 /* HistoryViewController.swift in Sources */,
+				9EA8850E26068A22002A59E2 /* HistoryFactoryProtocol.swift in Sources */,
+				9EA884832606856F002A59E2 /* ActivityViewController.swift in Sources */,
+				9EA8846426068467002A59E2 /* RegViewController.swift in Sources */,
+				9EA884DC260688AA002A59E2 /* TabBarCoordinatorFactory.swift in Sources */,
+				9EA884FB260689AE002A59E2 /* ActivityCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,14 +736,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4B3A6BE12603CE3900B99CF0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4B3A6BE22603CE3900B99CF0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4B3A6BE92603CE3E00B99CF0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

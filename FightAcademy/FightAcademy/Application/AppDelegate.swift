@@ -14,8 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+
+//        NOTE: decide if visible
+//        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+//        UINavigationBar.appearance().shadowImage = UIImage()
+
         return true
     }
 
