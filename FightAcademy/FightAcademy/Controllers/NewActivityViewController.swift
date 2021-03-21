@@ -15,7 +15,7 @@ protocol BookingNewActivity: UIViewController {
 
 }
 
-class NewActivityViewController: ViewController, BookingNewActivity {
+class NewActivityViewController: UIViewController, BookingNewActivity {
 
     var onRequestActivity: (() -> Void)?
     var onSelectCoach: (() -> Void)?

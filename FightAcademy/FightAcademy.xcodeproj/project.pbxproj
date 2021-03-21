@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B3A6BDC2603CE3900B99CF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6BDB2603CE3900B99CF0 /* AppDelegate.swift */; };
-		4B3A6BDE2603CE3900B99CF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6BDD2603CE3900B99CF0 /* SceneDelegate.swift */; };
-		4B3A6BE02603CE3900B99CF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6BDF2603CE3900B99CF0 /* ViewController.swift */; };
 		4B3A6BE62603CE3900B99CF0 /* FightAcademy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6BE42603CE3900B99CF0 /* FightAcademy.xcdatamodeld */; };
-		4B3A6BE82603CE3E00B99CF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6BE72603CE3E00B99CF0 /* Assets.xcassets */; };
 		4B3A6BEB2603CE3E00B99CF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6BE92603CE3E00B99CF0 /* LaunchScreen.storyboard */; };
 		4B3A6BF62603CE3F00B99CF0 /* FightAcademyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6BF52603CE3F00B99CF0 /* FightAcademyTests.swift */; };
 		4B3A6C012603CE3F00B99CF0 /* FightAcademyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C002603CE3F00B99CF0 /* FightAcademyUITests.swift */; };
 		4B3A6C182603D58700B99CF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6C172603D58700B99CF0 /* GoogleService-Info.plist */; };
+		4B3A6C482606366E00B99CF0 /* CoachTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C462606366E00B99CF0 /* CoachTableViewCell.swift */; };
+		4B3A6C492606366E00B99CF0 /* CoachTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6C472606366E00B99CF0 /* CoachTableViewCell.xib */; };
+		4B3A6C592606734D00B99CF0 /* CoachMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C582606734D00B99CF0 /* CoachMock.swift */; };
+		4B3A6C60260674A100B99CF0 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C5E260674A100B99CF0 /* ReusableCell.swift */; };
+		4B3A6C61260674A100B99CF0 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C5F260674A100B99CF0 /* ConfigurableCell.swift */; };
+		4B3A6C67260732DB00B99CF0 /* CoachDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C66260732DB00B99CF0 /* CoachDataSourse.swift */; };
+		4B3A6C792607416A00B99CF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C772607416900B99CF0 /* SceneDelegate.swift */; };
+		4B3A6C7A2607416A00B99CF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C782607416A00B99CF0 /* AppDelegate.swift */; };
+		4B3A6C91260742F200B99CF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6C5326063E0D00B99CF0 /* Assets.xcassets */; };
+		4B3A6C9D260747A500B99CF0 /* CoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C9B260747A500B99CF0 /* CoachViewController.swift */; };
+		4B3A6C9E260747A500B99CF0 /* CoachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6C9C260747A500B99CF0 /* CoachViewController.xib */; };
+		4BF53EA8260771F2002166D4 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF53EA7260771F2002166D4 /* UIView+IBInspectable.swift */; };
 		9EA8843426068216002A59E2 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8843326068216002A59E2 /* RouterProtocol.swift */; };
 		9EA8843C26068233002A59E2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8843B26068233002A59E2 /* Router.swift */; };
 		9EA8844126068270002A59E2 /* Routed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8844026068270002A59E2 /* Routed.swift */; };
@@ -25,7 +33,6 @@
 		9EA8846426068467002A59E2 /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8846326068467002A59E2 /* RegViewController.swift */; };
 		9EA8846926068480002A59E2 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8846826068480002A59E2 /* AboutViewController.swift */; };
 		9EA884702606850A002A59E2 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8846F2606850A002A59E2 /* UIFontExtensions.swift */; };
-		9EA8847826068540002A59E2 /* CoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8847726068540002A59E2 /* CoachViewController.swift */; };
 		9EA884832606856F002A59E2 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884822606856F002A59E2 /* ActivityViewController.swift */; };
 		9EA884882606858C002A59E2 /* NewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884872606858C002A59E2 /* NewActivityViewController.swift */; };
 		9EA8848D260685A5002A59E2 /* ChoosingActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8848C260685A5002A59E2 /* ChoosingActivityViewController.swift */; };
@@ -82,11 +89,7 @@
 		449D1E5322AEE6898792F26A /* Pods-FightAcademy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightAcademy.release.xcconfig"; path = "Target Support Files/Pods-FightAcademy/Pods-FightAcademy.release.xcconfig"; sourceTree = "<group>"; };
 		45AD68042E6F14392D6D52ED /* Pods-FightAcademy-FightAcademyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightAcademy-FightAcademyUITests.release.xcconfig"; path = "Target Support Files/Pods-FightAcademy-FightAcademyUITests/Pods-FightAcademy-FightAcademyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4B3A6BD82603CE3900B99CF0 /* FightAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FightAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B3A6BDB2603CE3900B99CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4B3A6BDD2603CE3900B99CF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4B3A6BDF2603CE3900B99CF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4B3A6BE52603CE3900B99CF0 /* FightAcademy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FightAcademy.xcdatamodel; sourceTree = "<group>"; };
-		4B3A6BE72603CE3E00B99CF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B3A6BEA2603CE3E00B99CF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B3A6BEC2603CE3E00B99CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B3A6BF12603CE3F00B99CF0 /* FightAcademyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FightAcademyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +99,18 @@
 		4B3A6C002603CE3F00B99CF0 /* FightAcademyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightAcademyUITests.swift; sourceTree = "<group>"; };
 		4B3A6C022603CE3F00B99CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B3A6C172603D58700B99CF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4B3A6C462606366E00B99CF0 /* CoachTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachTableViewCell.swift; sourceTree = "<group>"; };
+		4B3A6C472606366E00B99CF0 /* CoachTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoachTableViewCell.xib; sourceTree = "<group>"; };
+		4B3A6C5326063E0D00B99CF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B3A6C582606734D00B99CF0 /* CoachMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachMock.swift; sourceTree = "<group>"; };
+		4B3A6C5E260674A100B99CF0 /* ReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		4B3A6C5F260674A100B99CF0 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		4B3A6C66260732DB00B99CF0 /* CoachDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachDataSourse.swift; sourceTree = "<group>"; };
+		4B3A6C772607416900B99CF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4B3A6C782607416A00B99CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4B3A6C9B260747A500B99CF0 /* CoachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewController.swift; sourceTree = "<group>"; };
+		4B3A6C9C260747A500B99CF0 /* CoachViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoachViewController.xib; sourceTree = "<group>"; };
+		4BF53EA7260771F2002166D4 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		9EA8843326068216002A59E2 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		9EA8843B26068233002A59E2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9EA8844026068270002A59E2 /* Routed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routed.swift; sourceTree = "<group>"; };
@@ -105,7 +120,6 @@
 		9EA8846326068467002A59E2 /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
 		9EA8846826068480002A59E2 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		9EA8846F2606850A002A59E2 /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
-		9EA8847726068540002A59E2 /* CoachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewController.swift; sourceTree = "<group>"; };
 		9EA884822606856F002A59E2 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		9EA884872606858C002A59E2 /* NewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityViewController.swift; sourceTree = "<group>"; };
 		9EA8848C260685A5002A59E2 /* ChoosingActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingActivityViewController.swift; sourceTree = "<group>"; };
@@ -204,10 +218,11 @@
 				9EA88431260680B7002A59E2 /* Navigation */,
 				9EA88445260682FA002A59E2 /* Controllers */,
 				9EA8846D260684F0002A59E2 /* Extensions */,
-				4B3A6BE72603CE3E00B99CF0 /* Assets.xcassets */,
+				4B3A6C5D2606748B00B99CF0 /* Protocols */,
 				4B3A6BE92603CE3E00B99CF0 /* LaunchScreen.storyboard */,
 				4B3A6BEC2603CE3E00B99CF0 /* Info.plist */,
 				4B3A6C172603D58700B99CF0 /* GoogleService-Info.plist */,
+				4B3A6C5326063E0D00B99CF0 /* Assets.xcassets */,
 				4B3A6BE42603CE3900B99CF0 /* FightAcademy.xcdatamodeld */,
 			);
 			path = FightAcademy;
@@ -231,11 +246,33 @@
 			path = FightAcademyUITests;
 			sourceTree = "<group>";
 		};
+		4B3A6C45260635A600B99CF0 /* Coaches */ = {
+			isa = PBXGroup;
+			children = (
+				4B3A6C462606366E00B99CF0 /* CoachTableViewCell.swift */,
+				4B3A6C472606366E00B99CF0 /* CoachTableViewCell.xib */,
+				4B3A6C582606734D00B99CF0 /* CoachMock.swift */,
+				4B3A6C66260732DB00B99CF0 /* CoachDataSourse.swift */,
+				4B3A6C9B260747A500B99CF0 /* CoachViewController.swift */,
+				4B3A6C9C260747A500B99CF0 /* CoachViewController.xib */,
+			);
+			path = Coaches;
+			sourceTree = "<group>";
+		};
+		4B3A6C5D2606748B00B99CF0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4B3A6C5F260674A100B99CF0 /* ConfigurableCell.swift */,
+				4B3A6C5E260674A100B99CF0 /* ReusableCell.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		9EA8842A26067C5C002A59E2 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				4B3A6BDB2603CE3900B99CF0 /* AppDelegate.swift */,
-				4B3A6BDD2603CE3900B99CF0 /* SceneDelegate.swift */,
+				4B3A6C782607416A00B99CF0 /* AppDelegate.swift */,
+				4B3A6C772607416900B99CF0 /* SceneDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -262,12 +299,11 @@
 		9EA88445260682FA002A59E2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4B3A6C45260635A600B99CF0 /* Coaches */,
 				9EA8845026068395002A59E2 /* Wrappers */,
-				9EA8844C26068346002A59E2 /* Common */,
 				9EA8845E2606842D002A59E2 /* AuthViewController.swift */,
 				9EA8846326068467002A59E2 /* RegViewController.swift */,
 				9EA8846826068480002A59E2 /* AboutViewController.swift */,
-				9EA8847726068540002A59E2 /* CoachViewController.swift */,
 				9EA884822606856F002A59E2 /* ActivityViewController.swift */,
 				9EA884872606858C002A59E2 /* NewActivityViewController.swift */,
 				9EA8848C260685A5002A59E2 /* ChoosingActivityViewController.swift */,
@@ -277,14 +313,6 @@
 				9EA884A026068609002A59E2 /* ChangePasswordViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		9EA8844C26068346002A59E2 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				4B3A6BDF2603CE3900B99CF0 /* ViewController.swift */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		9EA8845026068395002A59E2 /* Wrappers */ = {
@@ -307,6 +335,7 @@
 		9EA8846E260684F9002A59E2 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				4BF53EA7260771F2002166D4 /* UIView+IBInspectable.swift */,
 				9EA8846F2606850A002A59E2 /* UIFontExtensions.swift */,
 			);
 			path = UIKit;
@@ -435,12 +464,15 @@
 				4B3A6BD52603CE3900B99CF0 /* Frameworks */,
 				4B3A6BD62603CE3900B99CF0 /* Resources */,
 				2189DBEB33F4A02A22944EB7 /* [CP] Embed Pods Frameworks */,
+				4BF53EC9260775C5002166D4 /* Swift lint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = FightAcademy;
+			packageProductDependencies = (
+			);
 			productName = FightAcademy;
 			productReference = 4B3A6BD82603CE3900B99CF0 /* FightAcademy.app */;
 			productType = "com.apple.product-type.application";
@@ -515,6 +547,8 @@
 				Base,
 			);
 			mainGroup = 4B3A6BCF2603CE3900B99CF0;
+			packageReferences = (
+			);
 			productRefGroup = 4B3A6BD92603CE3900B99CF0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -532,8 +566,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B3A6BEB2603CE3E00B99CF0 /* LaunchScreen.storyboard in Resources */,
+				4B3A6C492606366E00B99CF0 /* CoachTableViewCell.xib in Resources */,
+				4B3A6C91260742F200B99CF0 /* Assets.xcassets in Resources */,
+				4B3A6C9E260747A500B99CF0 /* CoachViewController.xib in Resources */,
 				4B3A6C182603D58700B99CF0 /* GoogleService-Info.plist in Resources */,
-				4B3A6BE82603CE3E00B99CF0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +673,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4BF53EC9260775C5002166D4 /* Swift lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
 		E44BFF28383741ACC550F8C9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -661,10 +715,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B3A6C7A2607416A00B99CF0 /* AppDelegate.swift in Sources */,
 				9EA884882606858C002A59E2 /* NewActivityViewController.swift in Sources */,
 				9EA884D126068838002A59E2 /* AuthCoordinatorFactory.swift in Sources */,
-				4B3A6BE02603CE3900B99CF0 /* ViewController.swift in Sources */,
 				9EA88452260683AB002A59E2 /* NavigationController.swift in Sources */,
+				4B3A6C792607416A00B99CF0 /* SceneDelegate.swift in Sources */,
+				4B3A6C9D260747A500B99CF0 /* CoachViewController.swift in Sources */,
 				9EA884B226068709002A59E2 /* FinishFlowCoordinator.swift in Sources */,
 				9EA884E2260688F4002A59E2 /* AboutCoordinator.swift in Sources */,
 				9EA884D72606888F002A59E2 /* TabBarCoordinator.swift in Sources */,
@@ -675,18 +731,15 @@
 				9EA884702606850A002A59E2 /* UIFontExtensions.swift in Sources */,
 				9EA884A126068609002A59E2 /* ChangePasswordViewController.swift in Sources */,
 				9EA8845F2606842D002A59E2 /* AuthViewController.swift in Sources */,
-				4B3A6BDC2603CE3900B99CF0 /* AppDelegate.swift in Sources */,
 				9EA884A8260686DF002A59E2 /* BaseCoordinator.swift in Sources */,
 				9EA8851926068A60002A59E2 /* SettingsCoordinatorFactory.swift in Sources */,
 				9EA884EA2606890B002A59E2 /* AboutCoordinatorFactory.swift in Sources */,
 				9EA8845A260683FA002A59E2 /* TabBarController.swift in Sources */,
 				9EA8843426068216002A59E2 /* RouterProtocol.swift in Sources */,
 				9EA884C3260687D1002A59E2 /* ApplicationCoordinatorFactory.swift in Sources */,
-				9EA8847826068540002A59E2 /* CoachViewController.swift in Sources */,
 				9EA884C926068819002A59E2 /* AuthCoordinator.swift in Sources */,
 				9EA8846926068480002A59E2 /* AboutViewController.swift in Sources */,
 				9EA8844126068270002A59E2 /* Routed.swift in Sources */,
-				4B3A6BDE2603CE3900B99CF0 /* SceneDelegate.swift in Sources */,
 				9EA8848D260685A5002A59E2 /* ChoosingActivityViewController.swift in Sources */,
 				9EA884F52606894F002A59E2 /* CoachesCoordinatorFactory.swift in Sources */,
 				9EA884AD260686E8002A59E2 /* Coordinator.swift in Sources */,
@@ -694,11 +747,17 @@
 				9EA88500260689EA002A59E2 /* ActivityCoordinatorFactory.swift in Sources */,
 				9EA8850626068A0C002A59E2 /* HistoryCoordinator.swift in Sources */,
 				9EA8843C26068233002A59E2 /* Router.swift in Sources */,
+				4B3A6C592606734D00B99CF0 /* CoachMock.swift in Sources */,
+				4B3A6C61260674A100B99CF0 /* ConfigurableCell.swift in Sources */,
+				4B3A6C67260732DB00B99CF0 /* CoachDataSourse.swift in Sources */,
+				4B3A6C482606366E00B99CF0 /* CoachTableViewCell.swift in Sources */,
+				4B3A6C60260674A100B99CF0 /* ReusableCell.swift in Sources */,
 				4B3A6BE62603CE3900B99CF0 /* FightAcademy.xcdatamodeld in Sources */,
 				9EA88497260685D9002A59E2 /* HistoryViewController.swift in Sources */,
 				9EA8850E26068A22002A59E2 /* HistoryFactoryProtocol.swift in Sources */,
 				9EA884832606856F002A59E2 /* ActivityViewController.swift in Sources */,
 				9EA8846426068467002A59E2 /* RegViewController.swift in Sources */,
+				4BF53EA8260771F2002166D4 /* UIView+IBInspectable.swift in Sources */,
 				9EA884DC260688AA002A59E2 /* TabBarCoordinatorFactory.swift in Sources */,
 				9EA884FB260689AE002A59E2 /* ActivityCoordinator.swift in Sources */,
 			);

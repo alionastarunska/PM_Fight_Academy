@@ -13,7 +13,7 @@ protocol Activity: UIViewController {
 
 }
 
-class ActivityViewController: ViewController, Activity {
+class ActivityViewController: UIViewController, Activity {
 
     var onActivityStartBooking: (() -> Void)?
 
