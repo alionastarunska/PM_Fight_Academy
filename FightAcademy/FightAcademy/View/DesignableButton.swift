@@ -11,6 +11,7 @@ import UIKit
 class DesignableButton: UIButton {
     
     //MARK: - Properties
+    
     @IBInspectable var cornerRadius: CGFloat = 15 {
         didSet {
             layer.cornerRadius = cornerRadius
@@ -23,4 +24,12 @@ class DesignableButton: UIButton {
             layer.borderWidth = borderWidth
         }
     }
+    
+    @IBInspectable
+        var borderColor: UIColor? {
+            didSet {
+                layer.borderColor = borderColor?.cgColor
+            }
+        }
+    
 }

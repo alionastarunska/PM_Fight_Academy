@@ -14,11 +14,11 @@ class TrailingButtonTextField: LeadingImageTextField {
     
     var buttonClicked: VoidClosure?
     
-    let button = UIButton(type: .custom)
+    private let button = UIButton(type: .custom)
 
-    @IBInspectable var trailingButtonWidth: CGFloat = 0
+    @IBInspectable var trailingButtonWidth: CGFloat = 10
     
-    @IBInspectable var trailingButtonHeight: CGFloat = 0
+    @IBInspectable var trailingButtonHeight: CGFloat = 10
     
     @IBInspectable var trailingPadding: CGFloat = 0
     
@@ -51,13 +51,13 @@ class TrailingButtonTextField: LeadingImageTextField {
                                   y:0,
                                   width: trailingButtonWidth,
                                   height: trailingButtonHeight)
-            
             button.setImage(image , for: .normal)
             button.imageView?.contentMode = .scaleAspectFit
             button.tintColor = trailingImageButtonColor
             button.addTarget(self, action: #selector(clickedButton), for: .touchUpInside)
             
             rightView = button
+            
         } else {
             rightViewMode = UITextField.ViewMode.never
             rightView = nil
@@ -68,6 +68,4 @@ class TrailingButtonTextField: LeadingImageTextField {
         buttonClicked?()
         print("works")
     }
-    
-    
 }

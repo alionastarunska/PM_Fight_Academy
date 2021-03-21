@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,14 +21,19 @@
 		AE5C81582605182300E12DB5 /* TypeAliasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C81572605182300E12DB5 /* TypeAliasses.swift */; };
 		AE5C815E26053A6600E12DB5 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C815C26053A6600E12DB5 /* LogInViewController.swift */; };
 		AE5C815F26053A6600E12DB5 /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE5C815D26053A6600E12DB5 /* LogInViewController.xib */; };
-		AE5C817626055ACE00E12DB5 /* AutentificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C817526055ACE00E12DB5 /* AutentificationService.swift */; };
+		AE5C817626055ACE00E12DB5 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C817526055ACE00E12DB5 /* AuthorizationService.swift */; };
 		AE5C817E26055B0A00E12DB5 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C817D26055B0A00E12DB5 /* ValidationService.swift */; };
-		AE5C818426055F6000E12DB5 /* RegisterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C818326055F6000E12DB5 /* RegisterData.swift */; };
+		AE5C818426055F6000E12DB5 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C818326055F6000E12DB5 /* RegisterModel.swift */; };
 		AEB49A6A2604B3F700766762 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB49A692604B3F700766762 /* NibLoadable.swift */; };
 		AEB49A7A2604B90500766762 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB49A782604B90500766762 /* RegisterViewController.swift */; };
 		AEB49A7B2604B90500766762 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB49A792604B90500766762 /* RegisterViewController.xib */; };
 		AEB49A912604C7E100766762 /* LeadingImageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB49A902604C7E000766762 /* LeadingImageTextField.swift */; };
 		AEB49A962604E78300766762 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB49A952604E78200766762 /* DesignableButton.swift */; };
+		AEF81BB8260608DA00B5F2B3 /* ValidationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BB7260608D900B5F2B3 /* ValidationServiceTests.swift */; };
+		AEF81BC3260624A200B5F2B3 /* ProfileApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BC2260624A200B5F2B3 /* ProfileApiClient.swift */; };
+		AEF81BD42606445100B5F2B3 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = AEF81BD32606445100B5F2B3 /* SwiftKeychainWrapper */; };
+		AEF81BD92607520100B5F2B3 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BD8260751FF00B5F2B3 /* AuthModel.swift */; };
+		AEF81BE72607728C00B5F2B3 /* BaseAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BE62607728B00B5F2B3 /* BaseAuthModel.swift */; };
 		CDA38223AE70CB8FE96DA12B /* Pods_FightAcademyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E966CBB0B4BB88BE828FF7 /* Pods_FightAcademyTests.framework */; };
 		CFF26CA13FF00445C82B664B /* Pods_FightAcademy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B568C48F62C13747CFE66D40 /* Pods_FightAcademy.framework */; };
 		D9C1358052FDDF0EA865A3C3 /* Pods_FightAcademy_FightAcademyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2098853A5E86CBDAA2E58BC5 /* Pods_FightAcademy_FightAcademyUITests.framework */; };
@@ -79,14 +84,18 @@
 		AE5C81572605182300E12DB5 /* TypeAliasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliasses.swift; sourceTree = "<group>"; };
 		AE5C815C26053A6600E12DB5 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		AE5C815D26053A6600E12DB5 /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
-		AE5C817526055ACE00E12DB5 /* AutentificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutentificationService.swift; sourceTree = "<group>"; };
+		AE5C817526055ACE00E12DB5 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		AE5C817D26055B0A00E12DB5 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
-		AE5C818326055F6000E12DB5 /* RegisterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterData.swift; sourceTree = "<group>"; };
+		AE5C818326055F6000E12DB5 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		AEB49A692604B3F700766762 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		AEB49A782604B90500766762 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AEB49A792604B90500766762 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		AEB49A902604C7E000766762 /* LeadingImageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingImageTextField.swift; sourceTree = "<group>"; };
 		AEB49A952604E78200766762 /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		AEF81BB7260608D900B5F2B3 /* ValidationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationServiceTests.swift; sourceTree = "<group>"; };
+		AEF81BC2260624A200B5F2B3 /* ProfileApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileApiClient.swift; sourceTree = "<group>"; };
+		AEF81BD8260751FF00B5F2B3 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		AEF81BE62607728B00B5F2B3 /* BaseAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAuthModel.swift; sourceTree = "<group>"; };
 		B568C48F62C13747CFE66D40 /* Pods_FightAcademy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightAcademy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9E966CBB0B4BB88BE828FF7 /* Pods_FightAcademyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightAcademyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -96,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF81BD42606445100B5F2B3 /* SwiftKeychainWrapper in Frameworks */,
 				CFF26CA13FF00445C82B664B /* Pods_FightAcademy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,6 +188,7 @@
 			children = (
 				4B3A6BF52603CE3F00B99CF0 /* FightAcademyTests.swift */,
 				4B3A6BF72603CE3F00B99CF0 /* Info.plist */,
+				AEF81BB7260608D900B5F2B3 /* ValidationServiceTests.swift */,
 			);
 			path = FightAcademyTests;
 			sourceTree = "<group>";
@@ -212,8 +223,9 @@
 		AE5C817426055A9400E12DB5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				AE5C817526055ACE00E12DB5 /* AutentificationService.swift */,
+				AE5C817526055ACE00E12DB5 /* AuthorizationService.swift */,
 				AE5C817D26055B0A00E12DB5 /* ValidationService.swift */,
+				AEF81BC2260624A200B5F2B3 /* ProfileApiClient.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -221,7 +233,9 @@
 		AE5C818226055E5200E12DB5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AE5C818326055F6000E12DB5 /* RegisterData.swift */,
+				AE5C818326055F6000E12DB5 /* RegisterModel.swift */,
+				AEF81BD8260751FF00B5F2B3 /* AuthModel.swift */,
+				AEF81BE62607728B00B5F2B3 /* BaseAuthModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +298,9 @@
 			dependencies = (
 			);
 			name = FightAcademy;
+			packageProductDependencies = (
+				AEF81BD32606445100B5F2B3 /* SwiftKeychainWrapper */,
+			);
 			productName = FightAcademy;
 			productReference = 4B3A6BD82603CE3900B99CF0 /* FightAcademy.app */;
 			productType = "com.apple.product-type.application";
@@ -358,6 +375,9 @@
 				Base,
 			);
 			mainGroup = 4B3A6BCF2603CE3900B99CF0;
+			packageReferences = (
+				AEF81BD22606445000B5F2B3 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+			);
 			productRefGroup = 4B3A6BD92603CE3900B99CF0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -507,18 +527,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF81BE72607728C00B5F2B3 /* BaseAuthModel.swift in Sources */,
 				4B3A6BE02603CE3900B99CF0 /* ViewController.swift in Sources */,
 				4B3A6BDC2603CE3900B99CF0 /* AppDelegate.swift in Sources */,
 				AE5C815E26053A6600E12DB5 /* LogInViewController.swift in Sources */,
-				AE5C817626055ACE00E12DB5 /* AutentificationService.swift in Sources */,
+				AE5C817626055ACE00E12DB5 /* AuthorizationService.swift in Sources */,
 				4B3A6BDE2603CE3900B99CF0 /* SceneDelegate.swift in Sources */,
 				AEB49A7A2604B90500766762 /* RegisterViewController.swift in Sources */,
 				AEB49A962604E78300766762 /* DesignableButton.swift in Sources */,
 				AEB49A912604C7E100766762 /* LeadingImageTextField.swift in Sources */,
 				AEB49A6A2604B3F700766762 /* NibLoadable.swift in Sources */,
 				AE5C817E26055B0A00E12DB5 /* ValidationService.swift in Sources */,
-				AE5C818426055F6000E12DB5 /* RegisterData.swift in Sources */,
+				AE5C818426055F6000E12DB5 /* RegisterModel.swift in Sources */,
 				AE5C81532605167400E12DB5 /* TrailingButtonTextField.swift in Sources */,
+				AEF81BC3260624A200B5F2B3 /* ProfileApiClient.swift in Sources */,
+				AEF81BD92607520100B5F2B3 /* AuthModel.swift in Sources */,
 				AE5C81582605182300E12DB5 /* TypeAliasses.swift in Sources */,
 				4B3A6BE62603CE3900B99CF0 /* FightAcademy.xcdatamodeld in Sources */,
 			);
@@ -528,6 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF81BB8260608DA00B5F2B3 /* ValidationServiceTests.swift in Sources */,
 				4B3A6BF62603CE3F00B99CF0 /* FightAcademyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -857,6 +881,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AEF81BD22606445000B5F2B3 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AEF81BD32606445100B5F2B3 /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AEF81BD22606445000B5F2B3 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		4B3A6BE42603CE3900B99CF0 /* FightAcademy.xcdatamodeld */ = {

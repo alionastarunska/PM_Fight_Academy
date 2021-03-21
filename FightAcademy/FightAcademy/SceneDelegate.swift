@@ -19,7 +19,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
         window?.makeKeyAndVisible()
         
-        let registerVC = RegisterViewController(nibName: RegisterViewController.name, bundle: .main)
+        //TODO: Probably move to some DI??
+        
+        let authService = AuthorizationService(sessionStorage: SessionStorage(), profileApiClient: ProfileApiClient(networkService: MockNetworkManager()))
+        
+        let registerVC = RegisterViewController(validationService: DefaultValidationService(), authService: authService)
+        
+        let loginVC = LogInViewController(nibName: LogInViewController.name, bundle: .main)
+        
         window?.rootViewController = registerVC
 
     }

@@ -8,23 +8,47 @@
 import UIKit
 
 class RegisterViewController: UIViewController, NibLoadable {
-    @IBOutlet weak var button: DesignableButton!
-    
-    @IBOutlet private weak var scrollView: UIScrollView!
-    
-    @IBOutlet private weak var firstNameTextField: LeadingImageTextField!
-    
-    @IBOutlet private weak var numberTextField: LeadingImageTextField!
-    
-    @IBOutlet weak var passwordTextField: TrailingButtonTextField!
-    
-    var activeTextField : UITextField? = nil
+    //TODO: figure out how to add a plus on keyboard o textfield in view controller
 
-    //TODO: think about provider for that???
-    private var registerData = RegisterData()
+    //MARK: - Properties
+    
+    @IBOutlet private weak var button: DesignableButton!
+    @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var firstNameTextField: LeadingImageTextField!
+    @IBOutlet private weak var numberTextField: LeadingImageTextField!
+    @IBOutlet private weak var passwordTextField: TrailingButtonTextField!
+    @IBOutlet weak var nameErrorLabel: UILabel!
+    @IBOutlet weak var phoneErrorLabel: UILabel!
+    @IBOutlet weak var passwordErrorLabel: UILabel!
+    
+    private var activeTextField : UITextField?
+    
+    private let symbolIntoTextField = "+"
+    
+    private var registerModel = RegisterModel()
+    
+    //TODO: CHANGE TO PROTOCOL
+    private var validationService: ValidationService
+    private var authService: AuthorizationService
+    
+    init(validationService: ValidationService, authService: AuthorizationService) {
+        self.validationService = validationService
+        self.authService = authService
+        
+        super.init(nibName: RegisterViewController.name, bundle: .main)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    //MARK: - LifeCicle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setErrorsLabelHiden()
+        
+        setClearButtons()
         
         checkButtonAvailability()
         
@@ -35,25 +59,50 @@ class RegisterViewController: UIViewController, NibLoadable {
         setKeyboardObservers()
     }
     
+    //MARK: - IBAction
     
-    @objc func keyboardWillShow(notification: NSNotification) {
-        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
-            return
-        }
+    @IBAction func signUpAction(_ sender: Any) {
+        do {
+            let result = try validationService.validate(for: registerModel)
 
-        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height , right: 0.0)
-        scrollView.contentInset = contentInsets
-        scrollView.scrollIndicatorInsets = contentInsets
-      }
-
-      @objc func keyboardWillHide(notification: NSNotification) {
-        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+            guard result else { return }
             
-        
-        // reset back the content inset to zero after keyboard is gone
-        scrollView.contentInset = contentInsets
-        scrollView.scrollIndicatorInsets = contentInsets
-      }
+        } catch let error {
+            switch error {
+            case ValidationError.badName:
+                nameErrorLabel.text = ValidationError.badName.rawValue
+                nameErrorLabel.isHidden = false
+            case ValidationError.badPassword:
+                passwordErrorLabel.text = ValidationError.badPassword.rawValue
+                passwordErrorLabel.isHidden = false
+            case ValidationError.badPhoneNumber:
+                phoneErrorLabel.text = ValidationError.badPhoneNumber.rawValue
+                phoneErrorLabel.isHidden = false
+            default:
+                return
+            }
+        }
+    }
+    
+}
+
+
+private extension RegisterViewController {
+    
+    //MARK: - Methods
+    
+    private func setErrorsLabelHiden() {
+        nameErrorLabel.isHidden = true
+        phoneErrorLabel.isHidden = true
+        passwordErrorLabel.isHidden = true
+    }
+    
+    private func setClearButtons() {
+        //TODO: Figure out how to add both clear and hide buttons for password
+        firstNameTextField.clearButtonMode = .whileEditing
+        numberTextField.clearButtonMode = .whileEditing
+    }
+
     
     private func setTextFieldDelegating() {
         firstNameTextField.delegate = self
@@ -61,63 +110,94 @@ class RegisterViewController: UIViewController, NibLoadable {
         passwordTextField.delegate = self
     }
     
-    private func setKeyboardObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    
+    func setKeyboardObservers() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow(notification:)),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
     }
     
-    @IBAction func signUpAction(_ sender: Any) {
-        print("register action")
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+            return
+        }
+        
+        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height , right: 0.0)
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
     }
     
-    @IBAction func firstNameEditingDidChange(_ sender: UITextField) {
-        print("First name typing ended")
-        registerData.name = sender.text
-        checkButtonAvailability()
+    @objc func keyboardWillHide(notification: NSNotification) {
+        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
     }
     
-    @IBAction func phoneNumberEditingDidChange(_ sender: UITextField) {
-        print("First name typing ended")
-        registerData.phoneNumber = sender.text
-        checkButtonAvailability()
-
+    func checkButtonAvailability() {
+        if registerModel.isFilled {
+            button.isEnabled = true
+            setButtonBackground(with: UIColor(named: "customYellow"))
+        } else {
+            button.isEnabled = false
+            setButtonBackground(with: .lightGray)
+        }
     }
     
-    @IBAction func passwordEditingDidChange(_ sender: UITextField) {
-        print("passwordEditingDidChange")
-        registerData.password = sender.text
-        checkButtonAvailability()
-
-
+    func setButtonBackground(with color: UIColor?) {
+        button.backgroundColor = color
     }
     
-    private func checkButtonAvailability() {
-//        if registerData.isFilled {
-//            button.isEnabled = true
-//        }else {
-//            button.isEnabled = false
-//        }
+    
+    func dismiss(_ sender:UITapGestureRecognizer) {
+        self.view.endEditing(true)
     }
-
-}
-
-
-private extension RegisterViewController {
+    
     func setTextVisibility() {
         passwordTextField.isSecureTextEntry = true
         passwordTextField.buttonClicked = { [weak self] in
             self?.passwordTextField.isSecureTextEntry.toggle()
+            self?.passwordTextField.trailingImageButton = UIImage(named: "visibility")
         }
     }
 }
 
+//MARK: - UITextFieldDelegate
+
 extension RegisterViewController : UITextFieldDelegate {
-  func textFieldDidBeginEditing(_ textField: UITextField) {
-    self.activeTextField = textField
-  }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == numberTextField, registerModel._phoneNumber == nil {
+            textField.text = symbolIntoTextField
+        }
+        self.activeTextField = textField
+    }
     
-  func textFieldDidEndEditing(_ textField: UITextField) {
-    self.activeTextField = nil
-  }
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        switch textField {
+        case firstNameTextField:
+            registerModel.name = firstNameTextField.text
+        case numberTextField:
+            registerModel.phoneNumber = numberTextField.text
+        case passwordTextField:
+            registerModel.password = passwordTextField.text
+        default:
+            break
+        }
+        checkButtonAvailability()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.activeTextField = nil
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        checkButtonAvailability()
+        print("textFieldShouldClear")
+        return true
+    }
 }

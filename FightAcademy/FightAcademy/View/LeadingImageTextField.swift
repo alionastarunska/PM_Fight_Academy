@@ -25,11 +25,17 @@ class LeadingImageTextField: UITextField {
         }
     }
     
-    @IBInspectable var leadingImageWidth: CGFloat = 0
+    @IBInspectable var leadingText: String? {
+        didSet {
+            updateLeadingImage()
+        }
+    }
     
-    @IBInspectable var leadingImageHeight: CGFloat = 0
+    @IBInspectable var leadingImageWidth: CGFloat = 0.0
+    
+    @IBInspectable var leadingImageHeight: CGFloat = 0.0
 
-    @IBInspectable var leadingPadding: CGFloat = 0
+    @IBInspectable var leadingPadding: CGFloat = 0.0
     
     @IBInspectable var leadingImageColor: UIColor = UIColor.lightGray {
         // Note: In order for your image to use the tint color, you have to select the image in the Assets.xcassets and change the "Render As" property to "Template Image".
@@ -37,6 +43,8 @@ class LeadingImageTextField: UITextField {
             updateLeadingImage()
         }
     }
+    
+    let spacingInLeftView: CGFloat = 5.0
     
     // MARK: - Ovveride methods
     
@@ -68,7 +76,19 @@ class LeadingImageTextField: UITextField {
             imageView.image = image
             imageView.tintColor = leadingImageColor
             
-            leftView = imageView
+            
+            let stack = UIStackView()
+            
+            stack.addArrangedSubview(imageView)
+            
+            if let text = leadingText {
+                let label = UILabel()
+                label.text = text
+                stack.addArrangedSubview(label)
+                stack.alignment = .top
+                stack.spacing = spacingInLeftView
+            }
+            leftView = stack
         } else {
             leftViewMode = UITextField.ViewMode.never
             leftView = nil

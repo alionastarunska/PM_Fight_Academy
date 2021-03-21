@@ -14,8 +14,11 @@
             <connections>
                 <outlet property="button" destination="L1g-TR-NsJ" id="Mfh-mD-spo"/>
                 <outlet property="firstNameTextField" destination="XZH-tN-Jbl" id="bjW-rJ-zjQ"/>
+                <outlet property="nameErrorLabel" destination="wE8-zn-DRs" id="C6t-KM-yZN"/>
                 <outlet property="numberTextField" destination="TrT-q5-7Q5" id="f9X-5T-gyW"/>
+                <outlet property="passwordErrorLabel" destination="kye-JH-gUU" id="OhF-mG-fsR"/>
                 <outlet property="passwordTextField" destination="LrI-Op-0Ml" id="jxC-2m-wG7"/>
+                <outlet property="phoneErrorLabel" destination="QPZ-LO-pYv" id="Uu0-zd-1Nv"/>
                 <outlet property="scrollView" destination="hCa-hd-e4A" id="rdg-xB-Zh6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -31,8 +34,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dtw-OI-fox" userLabel="Content View">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uyt-6m-pJB">
-                                    <rect key="frame" x="20.5" y="0.0" width="373" height="629"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="uyt-6m-pJB">
+                                    <rect key="frame" x="20.5" y="0.0" width="373" height="643"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZ8-CF-hvi">
                                             <rect key="frame" x="0.0" y="0.0" width="373" height="210.5"/>
@@ -52,92 +55,116 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXb-M7-hR8">
-                                            <rect key="frame" x="0.0" y="240.5" width="373" height="37.5"/>
+                                            <rect key="frame" x="0.0" y="235.5" width="373" height="38.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                             <color key="textColor" name="customYellow"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XZH-tN-Jbl" customClass="LeadingImageTextField" customModule="FightAcademy" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="308" width="373" height="49"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="image" keyPath="leadingImage" value="mail"/>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="leadingPadding">
-                                                    <real key="value" value="10"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="leadingImageWidth">
-                                                    <real key="value" value="20"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="leadingImageHeight">
-                                                    <real key="value" value="20"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="24"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="firstNameEditingDidChange:" destination="-1" eventType="editingDidEnd" id="aoX-2M-4oa"/>
-                                            </connections>
-                                        </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TrT-q5-7Q5" customClass="LeadingImageTextField" customModule="FightAcademy" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="387" width="373" height="48.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="image" keyPath="leadingImage" value="phone"/>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="leadingPadding">
-                                                    <real key="value" value="10"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="leadingImageWidth">
-                                                    <real key="value" value="20"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="leadingImageHeight">
-                                                    <real key="value" value="20"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="24"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="phoneNumberEditingDidChange:" destination="-1" eventType="editingDidEnd" id="bfq-AK-XBd"/>
-                                            </connections>
-                                        </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LrI-Op-0Ml" customClass="TrailingButtonTextField" customModule="FightAcademy" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="465.5" width="373" height="48.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="password"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="image" keyPath="leadingImage" value="lock"/>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="leadingPadding">
-                                                    <real key="value" value="15"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="leadingImageWidth">
-                                                    <real key="value" value="20"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="leadingImageHeight">
-                                                    <real key="value" value="20"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="trailingPadding">
-                                                    <real key="value" value="-8"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="24"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="image" keyPath="trailingImageButton" value="eye"/>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="trailingImageButtonColor">
-                                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="passwordEditingDidChange:" destination="-1" eventType="editingDidEnd" id="xWE-5U-2bs"/>
-                                            </connections>
-                                        </textField>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="gdL-Zy-yND">
+                                            <rect key="frame" x="0.0" y="299" width="373" height="54.5"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XZH-tN-Jbl" customClass="LeadingImageTextField" customModule="FightAcademy" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="373" height="48.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="leadingImage" value="mail"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leadingPadding">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leadingImageWidth">
+                                                            <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leadingImageHeight">
+                                                            <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="24"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wE8-zn-DRs">
+                                                    <rect key="frame" x="0.0" y="54.5" width="373" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.29994087209999998" blue="0.19234915899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="U5r-G4-Wql">
+                                            <rect key="frame" x="0.0" y="378.5" width="373" height="54.5"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TrT-q5-7Q5" customClass="LeadingImageTextField" customModule="FightAcademy" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="373" height="48.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="leadingImage" value="phone"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leadingPadding">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leadingImageWidth">
+                                                            <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leadingImageHeight">
+                                                            <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="24"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPZ-LO-pYv">
+                                                    <rect key="frame" x="0.0" y="54.5" width="373" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.29994087209999998" blue="0.19234915899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="mcV-bi-yrC">
+                                            <rect key="frame" x="0.0" y="458" width="373" height="75.5"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LrI-Op-0Ml" customClass="TrailingButtonTextField" customModule="FightAcademy" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="373" height="49"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="password"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="leadingImage" value="lock"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leadingPadding">
+                                                            <real key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leadingImageWidth">
+                                                            <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leadingImageHeight">
+                                                            <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="trailingPadding">
+                                                            <real key="value" value="-8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="24"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="trailingImageButton" value="visibility"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="trailingImageButtonColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kye-JH-gUU">
+                                                    <rect key="frame" x="0.0" y="55" width="373" height="20.5"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.29994087209999998" blue="0.19234915899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONo-iP-Yhv">
-                                            <rect key="frame" x="0.0" y="544" width="373" height="85"/>
+                                            <rect key="frame" x="0.0" y="558.5" width="373" height="84.5"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1g-TR-NsJ" customClass="DesignableButton" customModule="FightAcademy" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="36.5" width="373" height="48.5"/>
+                                                    <rect key="frame" x="0.0" y="36" width="373" height="48.5"/>
                                                     <color key="backgroundColor" name="customYellow"/>
                                                     <state key="normal" title="Done">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -161,10 +188,10 @@
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="L1g-TR-NsJ" firstAttribute="height" secondItem="LrI-Op-0Ml" secondAttribute="height" id="cg6-AB-aBn"/>
-                                        <constraint firstItem="TrT-q5-7Q5" firstAttribute="height" secondItem="LrI-Op-0Ml" secondAttribute="height" id="gSf-v5-aaf"/>
+                                        <constraint firstItem="LrI-Op-0Ml" firstAttribute="height" secondItem="L1g-TR-NsJ" secondAttribute="height" id="DrH-mh-S34"/>
+                                        <constraint firstItem="TrT-q5-7Q5" firstAttribute="height" secondItem="LrI-Op-0Ml" secondAttribute="height" id="P7e-oG-3sC"/>
                                         <constraint firstItem="nXb-M7-hR8" firstAttribute="height" secondItem="uyt-6m-pJB" secondAttribute="height" multiplier="0.06" id="hgR-0w-vVt"/>
-                                        <constraint firstItem="XZH-tN-Jbl" firstAttribute="height" secondItem="TrT-q5-7Q5" secondAttribute="height" id="nqa-7Y-eje"/>
+                                        <constraint firstItem="XZH-tN-Jbl" firstAttribute="height" secondItem="TrT-q5-7Q5" secondAttribute="height" id="jht-Nk-RMN"/>
                                     </constraints>
                                 </stackView>
                             </subviews>
@@ -215,11 +242,11 @@
         </designable>
     </designables>
     <resources>
-        <image name="eye" width="20" height="12"/>
         <image name="lock" width="15" height="20"/>
         <image name="logo" width="256" height="68"/>
         <image name="mail" width="20" height="20"/>
         <image name="phone" width="21" height="21"/>
+        <image name="visibility" width="512" height="512"/>
         <namedColor name="customYellow">
             <color red="0.95686274509803926" green="0.88235294117647056" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
