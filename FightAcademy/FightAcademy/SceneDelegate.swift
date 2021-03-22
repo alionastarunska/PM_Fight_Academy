@@ -21,13 +21,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         //TODO: Probably move to some DI??
         
-        let authService = AuthorizationService(sessionStorage: SessionStorage(), profileApiClient: ProfileApiClient(networkService: MockNetworkManager()))
+        let authService = AuthorizationService(sessionStorage: SessionStorage(), profileApiClient: ProfileApiClient(networkService: MockNetworkManager(), jsonEcoder: JSONEncoder()))
         
         let registerVC = RegisterViewController(validationService: DefaultValidationService(), authService: authService)
         
-        let loginVC = LogInViewController(nibName: LogInViewController.name, bundle: .main)
+        let loginVC = LogInViewController(validationService: DefaultValidationService(), authService: authService)
         
-        window?.rootViewController = registerVC
+        window?.rootViewController = loginVC
 
     }
 

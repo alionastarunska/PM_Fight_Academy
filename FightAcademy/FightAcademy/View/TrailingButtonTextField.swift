@@ -18,37 +18,43 @@ class TrailingButtonTextField: LeadingImageTextField {
 
     @IBInspectable var trailingButtonWidth: CGFloat = 10
     
+    @IBInspectable var rightViewWidth: CGFloat = 40
+    
+    @IBInspectable var rightViewHeight: CGFloat = 40
+
     @IBInspectable var trailingButtonHeight: CGFloat = 10
     
     @IBInspectable var trailingPadding: CGFloat = 0
     
     @IBInspectable var trailingImageButton: UIImage? {
         didSet {
-            updateTrailingButton()
+            updateTrailingIcons()
         }
     }
     
     @IBInspectable var trailingImageButtonColor: UIColor = UIColor.white {
         // Note: In order for your image to use the tint color, you have to select the image in the Assets.xcassets and change the "Render As" property to "Template Image".
         didSet {
-            updateTrailingButton()
+            updateTrailingIcons()
         }
     }
     
     override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
-        var textRect = super.rightViewRect(forBounds: bounds)
-        textRect.origin.x += trailingPadding
-        return textRect
+        var rect = super.rightViewRect(forBounds: bounds)
+        rect.origin.x += trailingPadding
+        
+        let customRect = CGRect(x: rect.origin.x, y: rect.origin.y, width: 40, height: 10)
+        return customRect
     }
     
     
-    private func updateTrailingButton() {
+    private func updateTrailingIcons() {
         if let image = trailingImageButton {
             
-            rightViewMode = UITextField.ViewMode.always
+            rightViewMode = UITextField.ViewMode.whileEditing
             
-            button.frame = CGRect(x:0,
-                                  y:0,
+            button.frame = CGRect(x: 0,
+                                  y: 0,
                                   width: trailingButtonWidth,
                                   height: trailingButtonHeight)
             button.setImage(image , for: .normal)
@@ -56,7 +62,16 @@ class TrailingButtonTextField: LeadingImageTextField {
             button.tintColor = trailingImageButtonColor
             button.addTarget(self, action: #selector(clickedButton), for: .touchUpInside)
             
-            rightView = button
+            let stack = UIStackView()
+            stack.axis = .horizontal
+            
+            let cleanIcon = setCleanIcon()
+            
+            stack.addArrangedSubview(cleanIcon)
+            stack.addArrangedSubview(button)
+            stack.spacing = 6
+            stack.alignment = .center
+            rightView = stack
             
         } else {
             rightViewMode = UITextField.ViewMode.never
@@ -64,8 +79,24 @@ class TrailingButtonTextField: LeadingImageTextField {
         }
     }
     
+    private func setCleanIcon() -> UIImageView {
+        let cleanIcon =  UIImageView(image: UIImage(systemName: "multiply.circle.fill"))
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self,
+                                                          action: #selector(cleanIconTapped(tapGestureRecognizer:)))
+        cleanIcon.isUserInteractionEnabled = true
+        cleanIcon.addGestureRecognizer(tapGestureRecognizer)
+        
+        cleanIcon.tintColor = UIColor.lightGray
+        
+        return cleanIcon
+    }
+    
+    @objc func cleanIconTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        self.text = nil
+    }
+    
     @objc func clickedButton() {
         buttonClicked?()
-        print("works")
     }
 }

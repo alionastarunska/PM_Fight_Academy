@@ -10,7 +10,7 @@ import Foundation
 class AuthModel: BaseAuthModel {
         
     var isFilled: Bool {
-        !(_phoneNumber ?? "").isEmpty && !(password ?? "").isEmpty
+        !(phoneNumber ?? "").isEmpty && !(password ?? "").isEmpty
     }
     
 }

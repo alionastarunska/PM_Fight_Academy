@@ -23,7 +23,7 @@ class RegisterModel: BaseAuthModel {
     }
     
     var isFilled: Bool {
-        !(_name ?? "").isEmpty && !(_phoneNumber ?? "").isEmpty && !(password ?? "").isEmpty
+        !(_name ?? "").isEmpty && !(phoneNumber ?? "").isEmpty && !(password ?? "").isEmpty
     }
     
     override init() { super.init() }

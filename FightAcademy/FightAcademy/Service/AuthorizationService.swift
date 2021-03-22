@@ -9,7 +9,8 @@ import Foundation
 import SwiftKeychainWrapper
 
 struct AuthorizationService {
-    
+    var onCompleteAuth: (() -> Void)?
+    var onError: ((Error) -> Void)?
     var isLogin: Bool {
         sessionStorage.sessionId != nil
     }
@@ -21,8 +22,17 @@ struct AuthorizationService {
         self.profileApiClient = profileApiClient
     }
     
-    func register(with registerData: RegisterModel) {
-        profileApiClient
+    func authorize<T: Encodable>(with authModel: T, completion: @escaping ItemClosure<Result<Void?, NetworkingError>>)  {
+        let resourceMock = ResourceMock(url: "parimatch/client/register")
+        profileApiClient.execute(resource: resourceMock, data: authModel) { result in
+            switch result {
+            case .success(let model):
+                sessionStorage.sessionId = model.sessionId
+                completion(.success(nil))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
     }
 }
 

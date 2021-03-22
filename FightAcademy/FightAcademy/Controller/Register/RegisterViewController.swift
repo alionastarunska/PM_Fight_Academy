@@ -8,8 +8,6 @@
 import UIKit
 
 class RegisterViewController: UIViewController, NibLoadable {
-    //TODO: figure out how to add a plus on keyboard o textfield in view controller
-
     //MARK: - Properties
     
     @IBOutlet private weak var button: DesignableButton!
@@ -20,6 +18,9 @@ class RegisterViewController: UIViewController, NibLoadable {
     @IBOutlet weak var nameErrorLabel: UILabel!
     @IBOutlet weak var phoneErrorLabel: UILabel!
     @IBOutlet weak var passwordErrorLabel: UILabel!
+    
+    var onCompleteAuth: (() -> Void)?
+    var onError: ((Error) -> Void)?
     
     private var activeTextField : UITextField?
     
@@ -41,6 +42,7 @@ class RegisterViewController: UIViewController, NibLoadable {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     //MARK: - LifeCicle
     
     override func viewDidLoad() {
@@ -62,21 +64,29 @@ class RegisterViewController: UIViewController, NibLoadable {
     //MARK: - IBAction
     
     @IBAction func signUpAction(_ sender: Any) {
+        
         do {
-            let result = try validationService.validate(for: registerModel)
-
-            guard result else { return }
-            
+            try validationService.validate(for: registerModel)
+            authService.authorize(with: registerModel) { [weak self] result in
+                guard let self = self else { return }
+                switch result {
+                case .success(_):
+                    self.onCompleteAuth?()
+                case .failure(let error):
+                    self.onError?(error)
+                }
+            }
+            print("Registration done")
         } catch let error {
             switch error {
-            case ValidationError.badName:
-                nameErrorLabel.text = ValidationError.badName.rawValue
+            case ValidationError.badName(let message):
+                nameErrorLabel.text = message
                 nameErrorLabel.isHidden = false
-            case ValidationError.badPassword:
-                passwordErrorLabel.text = ValidationError.badPassword.rawValue
+            case ValidationError.badPassword(let message):
+                passwordErrorLabel.text = message
                 passwordErrorLabel.isHidden = false
-            case ValidationError.badPhoneNumber:
-                phoneErrorLabel.text = ValidationError.badPhoneNumber.rawValue
+            case ValidationError.badPhoneNumber(let message):
+                phoneErrorLabel.text = message
                 phoneErrorLabel.isHidden = false
             default:
                 return
@@ -99,6 +109,7 @@ private extension RegisterViewController {
     
     private func setClearButtons() {
         //TODO: Figure out how to add both clear and hide buttons for password
+//        passwordTextField.clearButtonMode = .whileEditing
         firstNameTextField.clearButtonMode = .whileEditing
         numberTextField.clearButtonMode = .whileEditing
     }
@@ -142,17 +153,12 @@ private extension RegisterViewController {
     func checkButtonAvailability() {
         if registerModel.isFilled {
             button.isEnabled = true
-            setButtonBackground(with: UIColor(named: "customYellow"))
+            button.backgroundColor = UIColor(named: "customYellow")
         } else {
             button.isEnabled = false
-            setButtonBackground(with: .lightGray)
+            button.backgroundColor = .lightGray
         }
     }
-    
-    func setButtonBackground(with color: UIColor?) {
-        button.backgroundColor = color
-    }
-    
     
     func dismiss(_ sender:UITapGestureRecognizer) {
         self.view.endEditing(true)
@@ -162,7 +168,7 @@ private extension RegisterViewController {
         passwordTextField.isSecureTextEntry = true
         passwordTextField.buttonClicked = { [weak self] in
             self?.passwordTextField.isSecureTextEntry.toggle()
-            self?.passwordTextField.trailingImageButton = UIImage(named: "visibility")
+            self?.passwordTextField.trailingImageButton = UIImage(systemName: "eye.slash.fill")
         }
     }
 }
@@ -171,7 +177,7 @@ private extension RegisterViewController {
 
 extension RegisterViewController : UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == numberTextField, registerModel._phoneNumber == nil {
+        if textField == numberTextField, registerModel.phoneNumber == nil {
             textField.text = symbolIntoTextField
         }
         self.activeTextField = textField
@@ -181,10 +187,13 @@ extension RegisterViewController : UITextFieldDelegate {
         switch textField {
         case firstNameTextField:
             registerModel.name = firstNameTextField.text
+            nameErrorLabel.isHidden = true
         case numberTextField:
             registerModel.phoneNumber = numberTextField.text
+            phoneErrorLabel.isHidden = true
         case passwordTextField:
             registerModel.password = passwordTextField.text
+            passwordErrorLabel.isHidden = true
         default:
             break
         }
@@ -197,7 +206,6 @@ extension RegisterViewController : UITextFieldDelegate {
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         checkButtonAvailability()
-        print("textFieldShouldClear")
         return true
     }
 }
