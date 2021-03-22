@@ -13,7 +13,7 @@ protocol ChoosingCoach: UIViewController {
 
 }
 
-class ChoosingCoachViewController: ViewController, ChoosingCoach {
+class ChoosingCoachViewController: UIViewController, ChoosingCoach {
 
     var onSelectCoach: (() -> Void)?
 

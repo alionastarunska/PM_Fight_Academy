@@ -7,14 +7,14 @@
 
 import UIKit
 
-protocol Settings: ViewController {
+protocol Settings: UIViewController {
 
     var onLogOut: (() -> Void)? { get set }
     var onChangeButtonTapped: (() -> Void)? { get set }
 
 }
 
-class SettingsViewController: ViewController, Settings {
+class SettingsViewController: UIViewController, Settings {
 
     var onLogOut: (() -> Void)?
     var onChangeButtonTapped: (() -> Void)?

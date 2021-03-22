@@ -14,7 +14,7 @@ protocol ChangePassword: UIViewController {
 
 }
 
-class ChangePasswordViewController: ViewController, ChangePassword {
+class ChangePasswordViewController: UIViewController, ChangePassword {
 
     var onError: ((Error) -> Void)?
     var onSuccess: (() -> Void)?

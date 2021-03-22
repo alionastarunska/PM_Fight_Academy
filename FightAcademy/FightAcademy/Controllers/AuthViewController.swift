@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol Authorization: ViewController {
+protocol Authorization: UIViewController {
 
     var onCompleteAuth: (() -> Void)? { get set }
     var onSignUpButtonTap: (() -> Void)? { get set }
@@ -15,7 +15,7 @@ protocol Authorization: ViewController {
 
 }
 
-class AuthViewController: ViewController, Authorization {
+class AuthViewController: UIViewController, Authorization {
 
     var onCompleteAuth: (() -> Void)?
     var onSignUpButtonTap: (() -> Void)?

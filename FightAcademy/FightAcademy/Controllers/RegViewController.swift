@@ -14,7 +14,7 @@ protocol Registering: UIViewController {
 
 }
 
-class RegistrationViewController: ViewController, Registering {
+class RegistrationViewController: UIViewController, Registering {
 
     var onCompleteAuth: (() -> Void)?
     var onError: ((Error) -> Void)?

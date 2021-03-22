@@ -13,7 +13,7 @@ protocol ChoosingActivity: UIViewController {
 
 }
 
-class ChoosingActivityViewController: ViewController, ChoosingActivity {
+class ChoosingActivityViewController: UIViewController, ChoosingActivity {
 
     var onSelectActivityType: (() -> Void)?
 
