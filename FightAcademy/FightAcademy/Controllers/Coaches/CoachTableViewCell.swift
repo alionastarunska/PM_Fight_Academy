@@ -36,27 +36,8 @@ class CoachTableViewCell: UITableViewCell, ConfigurableCell, ReusableCell {
         ageLabel.text = "\(item.coach.age)" + " years old"
         phoneNumberLabel.text = item.coach.phoneNumber
         descriptionLabel.text = item.coach.description
-        trainingLabel.text = item.coach.trainings?.joined(separator: ", ")
-        if item.isExpanded {
-            descriptionLabel.numberOfLines = .zero
-            showMoreButton.isHidden = true
-        } else {
-            descriptionLabel.numberOfLines = .collapsedLines
-            if sizeOf(string: descriptionLabel.text ?? "", font: descriptionLabel.font, constrainedToWidth: .labelWidth) < .linesHeight {
-                showMoreButton.isHidden = true
-            } else {
-                showMoreButton.isHidden = false
-            }
-        }
-    }
-    
-    // MARK: - Private
-    
-    private func sizeOf(string: String, font: UIFont, constrainedToWidth width: CGFloat) -> CGFloat {
-        return NSString(string: string).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)),
-                                                     options: NSStringDrawingOptions.usesLineFragmentOrigin,
-                                                     attributes: [.font: font],
-                                                     context: nil).height
+        trainingLabel.text = item.coach.trainings.joined(separator: ", ")
+        сonfigureShowMoreButton(item.isExpanded)
     }
 }
 
@@ -67,4 +48,21 @@ private extension CGFloat {
 
 private extension Int {
     static var collapsedLines: Int { return 3 }
+}
+
+extension CoachTableViewCell {
+    func сonfigureShowMoreButton(_ isExpanded: Bool) {
+        if isExpanded {
+            descriptionLabel.numberOfLines = .zero
+            showMoreButton.isHidden = true
+        } else {
+            descriptionLabel.numberOfLines = .collapsedLines
+            guard let text = descriptionLabel.text else { return }
+            if text.size(with: descriptionLabel.font, constrainedTo: .labelWidth) < .linesHeight {
+                showMoreButton.isHidden = true
+            } else {
+                showMoreButton.isHidden = false
+            }
+        }
+    }
 }

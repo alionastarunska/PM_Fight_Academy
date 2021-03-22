@@ -14,7 +14,7 @@ struct Coach: Codable {
     var age: Int
     var description: String
     var phoneNumber: String
-    var trainings: [String]?
+    var trainings: [String]
 }
 
 class CoachCellModel {

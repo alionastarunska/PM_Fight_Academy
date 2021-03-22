@@ -24,6 +24,7 @@
 		4B3A6C9D260747A500B99CF0 /* CoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C9B260747A500B99CF0 /* CoachViewController.swift */; };
 		4B3A6C9E260747A500B99CF0 /* CoachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6C9C260747A500B99CF0 /* CoachViewController.xib */; };
 		4BF53EA8260771F2002166D4 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF53EA7260771F2002166D4 /* UIView+IBInspectable.swift */; };
+		4BF53EF426079CE1002166D4 /* String+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF53EF326079CE1002166D4 /* String+Size.swift */; };
 		9EA8843426068216002A59E2 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8843326068216002A59E2 /* RouterProtocol.swift */; };
 		9EA8843C26068233002A59E2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8843B26068233002A59E2 /* Router.swift */; };
 		9EA8844126068270002A59E2 /* Routed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8844026068270002A59E2 /* Routed.swift */; };
@@ -111,6 +112,7 @@
 		4B3A6C9B260747A500B99CF0 /* CoachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewController.swift; sourceTree = "<group>"; };
 		4B3A6C9C260747A500B99CF0 /* CoachViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoachViewController.xib; sourceTree = "<group>"; };
 		4BF53EA7260771F2002166D4 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
+		4BF53EF326079CE1002166D4 /* String+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Size.swift"; sourceTree = "<group>"; };
 		9EA8843326068216002A59E2 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		9EA8843B26068233002A59E2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9EA8844026068270002A59E2 /* Routed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routed.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 			children = (
 				4BF53EA7260771F2002166D4 /* UIView+IBInspectable.swift */,
 				9EA8846F2606850A002A59E2 /* UIFontExtensions.swift */,
+				4BF53EF326079CE1002166D4 /* String+Size.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -729,6 +732,7 @@
 				9EA884BB26068795002A59E2 /* ApplicationCoordinator.swift in Sources */,
 				9EA88492260685C7002A59E2 /* ChoosingCoachViewController.swift in Sources */,
 				9EA884702606850A002A59E2 /* UIFontExtensions.swift in Sources */,
+				4BF53EF426079CE1002166D4 /* String+Size.swift in Sources */,
 				9EA884A126068609002A59E2 /* ChangePasswordViewController.swift in Sources */,
 				9EA8845F2606842D002A59E2 /* AuthViewController.swift in Sources */,
 				9EA884A8260686DF002A59E2 /* BaseCoordinator.swift in Sources */,
