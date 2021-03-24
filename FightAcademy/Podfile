@@ -6,6 +6,7 @@ target 'FightAcademy' do
   use_frameworks!
 
 	pod 'Firebase/Analytics'
+  pod 'SwiftLint'
 
   # Pods for FightAcademy
 
