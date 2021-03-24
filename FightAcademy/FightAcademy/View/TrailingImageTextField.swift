@@ -10,7 +10,7 @@ import UIKit
 @IBDesignable
 class TrailingImageTextField: LeadingImageTextField {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     private lazy var customRightView: CustomRightView = {
         let view = CustomRightView.loadFromNib()
@@ -18,7 +18,6 @@ class TrailingImageTextField: LeadingImageTextField {
     }()
     
     var imageTapped: VoidClosure?
-    
     
     @IBInspectable var trailingPadding: CGFloat = 0
     
@@ -34,7 +33,7 @@ class TrailingImageTextField: LeadingImageTextField {
         return rect
     }
     
-    //MARK: - Handlers
+    // MARK: - Handlers
     
     private func updateTrailingIcon() {
         if let image = trailingImageButton {

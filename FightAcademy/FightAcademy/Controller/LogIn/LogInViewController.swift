@@ -7,10 +7,19 @@
 
 import UIKit
 
-class LogInViewController: BaseAuthViewController, NibLoadable {
+protocol Authorization: UIViewController {
     
-    private var authModel = AuthModel()
+    var onCompleteAuth: (() -> Void)? { get set }
+    var onSignUpButtonTap: (() -> Void)? { get set }
+    var onError: ((Error) -> Void)? { get set }
+    
+}
 
+class LogInViewController: BaseAuthViewController, NibLoadable, Authorization {
+    
+    var onSignUpButtonTap: (() -> Void)?
+    private var authModel = AuthModel()
+    
     init(validationService: Validating, authService: AuthorizationService) {
         super.init(nibName: LogInViewController.name, bundle: .main)
         self.validationService = validationService
@@ -27,7 +36,7 @@ class LogInViewController: BaseAuthViewController, NibLoadable {
         setErrorsLabelHiden()
         
         setClearButtonsMode(for: [phoneTextField])
-                
+        
         checkButtonAvailability()
         
         setTextVisibility()
@@ -54,15 +63,16 @@ class LogInViewController: BaseAuthViewController, NibLoadable {
         } catch _ {
             passwordErrorLabel.text = ValidationError.Contnet.unknown
             passwordErrorLabel.isHidden = false
-            }
         }
+    }
     
     @IBAction func createAccountPressed(_ sender: Any) {
-        
+        onSignUpButtonTap?()
     }
 }
 
 extension LogInViewController {
+    
     private func setErrorsLabelHiden() {
         phoneErrorLabel.isHidden = true
         passwordErrorLabel.isHidden = true
@@ -72,7 +82,6 @@ extension LogInViewController {
         phoneTextField.delegate = self
         passwordTextField.delegate = self
     }
-    
     
     func checkButtonAvailability() {
         if authModel.isFilled {
@@ -84,16 +93,15 @@ extension LogInViewController {
         }
     }
     
-    
     func dismiss(_ sender:UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
 }
 
 
-//MARK: - UITextFieldDelegate
-
+// MARK: - UITextFieldDelegate
 extension LogInViewController : UITextFieldDelegate {
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == phoneTextField, authModel.phoneNumber == nil {
             textField.text = symbolIntoTextField

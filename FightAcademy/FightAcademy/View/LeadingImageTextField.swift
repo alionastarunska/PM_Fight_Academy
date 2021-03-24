@@ -12,7 +12,7 @@ class LeadingImageTextField: UITextField {
 
     // MARK: - Properties
     
-    @IBInspectable var cornerRadius: CGFloat = 15.0 {
+    @IBInspectable override var cornerRadius: CGFloat {
         didSet {
             layer.cornerRadius = cornerRadius
             layer.masksToBounds = true
@@ -38,7 +38,9 @@ class LeadingImageTextField: UITextField {
     @IBInspectable var leadingPadding: CGFloat = 0.0
     
     @IBInspectable var leadingImageColor: UIColor = UIColor.lightGray {
-        // Note: In order for your image to use the tint color, you have to select the image in the Assets.xcassets and change the "Render As" property to "Template Image".
+//        Note: In order for your image to use the tint color,
+//        you have to select the image in the Assets.xcassets
+//        and change the "Render As" property to "Template Image".
         didSet {
             updateLeadingImage()
         }

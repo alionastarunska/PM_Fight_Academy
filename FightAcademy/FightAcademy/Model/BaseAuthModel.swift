@@ -15,20 +15,20 @@ class BaseAuthModel: Codable {
     init() {}
     
     private enum CodingKeys: String, CodingKey {
-        case _phoneNumber = "login"
+        case phoneNumber = "login"
         case password
     }
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        phoneNumber = try container.decode(String?.self, forKey: ._phoneNumber)
+        phoneNumber = try container.decode(String?.self, forKey: .phoneNumber)
         password = try container.decode(String?.self, forKey: .password)
     }
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         
-        try container.encode(phoneNumber, forKey: ._phoneNumber)
+        try container.encode(phoneNumber, forKey: .phoneNumber)
         try container.encode(password, forKey: .password)
         
     }

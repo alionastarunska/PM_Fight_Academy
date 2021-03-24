@@ -24,21 +24,18 @@ class CustomRightView: UIView, NibLoadable {
         self.imageForChanging.image = image
         layoutIfNeeded()
     }
-    
-    
+       
     private func setUpGestureRecognizers() {
         let firstGesture = UITapGestureRecognizer(target: self,
                                                   action: #selector(tappedCleanIcon(tapGestureRecognizer:)))
         defaultCleanImage.isUserInteractionEnabled = true
         defaultCleanImage.addGestureRecognizer(firstGesture)
         
-        
         let secondGesture = UITapGestureRecognizer(target: self,
                                                    action: #selector(tappedImageForChanging(tapGestureRecognizer:)))
         imageForChanging.isUserInteractionEnabled = true
         imageForChanging.addGestureRecognizer(secondGesture)
 
-   
     }
 
     @objc private func tappedCleanIcon(tapGestureRecognizer: UITapGestureRecognizer) {
@@ -48,7 +45,4 @@ class CustomRightView: UIView, NibLoadable {
     @objc private func tappedImageForChanging(tapGestureRecognizer: UITapGestureRecognizer) {
         imageForChangingTapped?()
     }
-    
-    
-
 }

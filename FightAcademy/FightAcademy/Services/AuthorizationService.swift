@@ -26,7 +26,7 @@ struct AuthorizationService {
         self.profileApiClient = profileApiClient
     }
     
-    func authorize<T: Encodable>(with authModel: T, completion: @escaping ItemClosure<Result<Void?, NetworkingError>>)  {
+    func authorize<T: Encodable>(with authModel: T, completion: @escaping ItemClosure<Result<Void?, NetworkingError>>) {
         
         //INFO:  MOCK
         
@@ -44,7 +44,6 @@ struct AuthorizationService {
     }
 }
 
-
 final class SessionStorage {
     
     private enum Keys: String {
@@ -54,6 +53,11 @@ final class SessionStorage {
     private let keychainWrapper = KeychainWrapper.standard
     
     var sessionId: String? {
+        
+        get {
+            keychainWrapper.string(forKey: Keys.sessionID.rawValue)
+        }
+        
         set {
             if let newValue = newValue {
                 keychainWrapper.set(newValue, forKey: Keys.sessionID.rawValue)
@@ -61,10 +65,5 @@ final class SessionStorage {
                 keychainWrapper.removeObject(forKey: Keys.sessionID.rawValue)
             }
         }
-        
-        get {
-            keychainWrapper.string(forKey: Keys.sessionID.rawValue)
-        }
     }
 }
-

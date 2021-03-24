@@ -9,7 +9,7 @@ import UIKit
 
 class BaseAuthViewController: UIViewController {
     
-    //MARK: - Properties
+    // MARK: - Properties
 
     @IBOutlet internal weak var doneButton: DesignableButton!
     @IBOutlet internal weak var scrollView: UIScrollView!
@@ -31,7 +31,7 @@ class BaseAuthViewController: UIViewController {
 
 extension BaseAuthViewController {
     
-    //MARK: - Handlers
+    // MARK: - Handlers
     
     func setTextVisibility() {
         passwordTextField.isSecureTextEntry = true
@@ -45,7 +45,6 @@ extension BaseAuthViewController {
             self.passwordTextField.isSecureTextEntry.toggle()
         }
     }
-    
     
     func setKeyboardObservers() {
         NotificationCenter.default.addObserver(self,
@@ -64,7 +63,7 @@ extension BaseAuthViewController {
             return
         }
         
-        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height , right: 0.0)
+        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height, right: 0.0)
         scrollView.contentInset = contentInsets
         scrollView.scrollIndicatorInsets = contentInsets
     }

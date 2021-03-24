@@ -13,7 +13,9 @@ class ValidationServiceTests: XCTestCase {
     
     func testPassword() {
         let successPasswords = ["Qwerty_12345", "FSD333333_i"]
-        let wrongPasswords = ["qwerty_12345", "1111111111", "d", "fkljsdlkfjsdflk", "____________", "FDSFDSFSDFSDFSD", "FDFFDSFSDFF", "FSD_333333", " ", "", "32r3423423423423423423"]
+        let wrongPasswords = ["qwerty_12345", "1111111111", "d", "fkljsdlkfjsdflk", "____________",
+                              "FDSFDSFSDFSDFSD", "FDFFDSFSDFF", "FSD_333333", " ",
+                              "", "32r3423423423423423423"]
         
         successPasswords.forEach {
             do {
@@ -23,7 +25,7 @@ class ValidationServiceTests: XCTestCase {
             }
         }
         
-        wrongPasswords.forEach{
+        wrongPasswords.forEach {
             do {
                 try validationSerice.validate(password: $0)
                 XCTFail("The validate() was supposed to throw an error but wasn't")

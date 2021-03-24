@@ -7,7 +7,14 @@
 
 import UIKit
 
-class RegisterViewController: BaseAuthViewController, NibLoadable {
+protocol Registering: UIViewController {
+
+    var onCompleteAuth: (() -> Void)? { get set }
+    var onError: ((Error) -> Void)? { get set }
+
+}
+
+class RegisterViewController: BaseAuthViewController, NibLoadable, Registering {
     //MARK: - Properties
    
     @IBOutlet private weak var firstNameTextField: LeadingImageTextField!

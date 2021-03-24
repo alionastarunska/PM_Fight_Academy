@@ -12,28 +12,6 @@
 		4B3A6BF62603CE3F00B99CF0 /* FightAcademyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6BF52603CE3F00B99CF0 /* FightAcademyTests.swift */; };
 		4B3A6C012603CE3F00B99CF0 /* FightAcademyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C002603CE3F00B99CF0 /* FightAcademyUITests.swift */; };
 		4B3A6C182603D58700B99CF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6C172603D58700B99CF0 /* GoogleService-Info.plist */; };
-		AE5C81532605167400E12DB5 /* TrailingImageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C81522605167400E12DB5 /* TrailingImageTextField.swift */; };
-		AE5C81582605182300E12DB5 /* TypeAliasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C81572605182300E12DB5 /* TypeAliasses.swift */; };
-		AE5C815E26053A6600E12DB5 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C815C26053A6600E12DB5 /* LogInViewController.swift */; };
-		AE5C815F26053A6600E12DB5 /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE5C815D26053A6600E12DB5 /* LogInViewController.xib */; };
-		AE5C817626055ACE00E12DB5 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C817526055ACE00E12DB5 /* AuthorizationService.swift */; };
-		AE5C817E26055B0A00E12DB5 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C817D26055B0A00E12DB5 /* Validator.swift */; };
-		AE5C818426055F6000E12DB5 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C818326055F6000E12DB5 /* RegisterModel.swift */; };
-		AE80C8592609FE6200E99D40 /* BaseAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80C8582609FE6200E99D40 /* BaseAuthViewController.swift */; };
-		AE80C85E260A228900E99D40 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80C85D260A228900E99D40 /* ResponseModel.swift */; };
-		AE80C863260B1C0200E99D40 /* CustomRightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80C862260B1C0100E99D40 /* CustomRightView.swift */; };
-		AE80C868260B1C1200E99D40 /* CustomRightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE80C867260B1C1200E99D40 /* CustomRightView.xib */; };
-		AEB49A6A2604B3F700766762 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB49A692604B3F700766762 /* NibLoadable.swift */; };
-		AEB49A7A2604B90500766762 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB49A782604B90500766762 /* RegisterViewController.swift */; };
-		AEB49A7B2604B90500766762 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB49A792604B90500766762 /* RegisterViewController.xib */; };
-		AEB49A912604C7E100766762 /* LeadingImageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB49A902604C7E000766762 /* LeadingImageTextField.swift */; };
-		AEB49A962604E78300766762 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB49A952604E78200766762 /* DesignableButton.swift */; };
-		AEF81BB8260608DA00B5F2B3 /* ValidationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BB7260608D900B5F2B3 /* ValidationServiceTests.swift */; };
-		AEF81BC3260624A200B5F2B3 /* ProfileApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BC2260624A200B5F2B3 /* ProfileApiClient.swift */; };
-		AEF81BD42606445100B5F2B3 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = AEF81BD32606445100B5F2B3 /* SwiftKeychainWrapper */; };
-		AEF81BD92607520100B5F2B3 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BD8260751FF00B5F2B3 /* AuthModel.swift */; };
-		AEF81BE72607728C00B5F2B3 /* BaseAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BE62607728B00B5F2B3 /* BaseAuthModel.swift */; };
-
 		4B3A6C482606366E00B99CF0 /* CoachTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C462606366E00B99CF0 /* CoachTableViewCell.swift */; };
 		4B3A6C492606366E00B99CF0 /* CoachTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6C472606366E00B99CF0 /* CoachTableViewCell.xib */; };
 		4B3A6C592606734D00B99CF0 /* CoachMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C582606734D00B99CF0 /* CoachMock.swift */; };
@@ -82,6 +60,27 @@
 		9EA8850E26068A22002A59E2 /* HistoryFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8850D26068A22002A59E2 /* HistoryFactoryProtocol.swift */; };
 		9EA8851426068A4B002A59E2 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8851326068A4B002A59E2 /* SettingsCoordinator.swift */; };
 		9EA8851926068A60002A59E2 /* SettingsCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8851826068A60002A59E2 /* SettingsCoordinatorFactory.swift */; };
+		AE5C81582605182300E12DB5 /* TypeAliasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C81572605182300E12DB5 /* TypeAliasses.swift */; };
+		AE5C815E26053A6600E12DB5 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C815C26053A6600E12DB5 /* LogInViewController.swift */; };
+		AE5C815F26053A6600E12DB5 /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE5C815D26053A6600E12DB5 /* LogInViewController.xib */; };
+		AE5C817626055ACE00E12DB5 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C817526055ACE00E12DB5 /* AuthorizationService.swift */; };
+		AE5C817E26055B0A00E12DB5 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C817D26055B0A00E12DB5 /* Validator.swift */; };
+		AE5C818426055F6000E12DB5 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C818326055F6000E12DB5 /* RegisterModel.swift */; };
+		AE80C8592609FE6200E99D40 /* BaseAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80C8582609FE6200E99D40 /* BaseAuthViewController.swift */; };
+		AE80C85E260A228900E99D40 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80C85D260A228900E99D40 /* ResponseModel.swift */; };
+		AE80C8B9260B4C8C00E99D40 /* LeadingImageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80C8B4260B4C8C00E99D40 /* LeadingImageTextField.swift */; };
+		AE80C8BA260B4C8C00E99D40 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80C8B5260B4C8C00E99D40 /* DesignableButton.swift */; };
+		AE80C8BB260B4C8C00E99D40 /* TrailingImageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80C8B6260B4C8C00E99D40 /* TrailingImageTextField.swift */; };
+		AE80C8BC260B4C8C00E99D40 /* CustomRightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80C8B7260B4C8C00E99D40 /* CustomRightView.swift */; };
+		AE80C8BD260B4C8C00E99D40 /* CustomRightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE80C8B8260B4C8C00E99D40 /* CustomRightView.xib */; };
+		AEB49A6A2604B3F700766762 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB49A692604B3F700766762 /* NibLoadable.swift */; };
+		AEB49A7A2604B90500766762 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB49A782604B90500766762 /* RegisterViewController.swift */; };
+		AEB49A7B2604B90500766762 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB49A792604B90500766762 /* RegisterViewController.xib */; };
+		AEF81BB8260608DA00B5F2B3 /* ValidationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BB7260608D900B5F2B3 /* ValidationServiceTests.swift */; };
+		AEF81BC3260624A200B5F2B3 /* ProfileApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BC2260624A200B5F2B3 /* ProfileApiClient.swift */; };
+		AEF81BD42606445100B5F2B3 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = AEF81BD32606445100B5F2B3 /* SwiftKeychainWrapper */; };
+		AEF81BD92607520100B5F2B3 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BD8260751FF00B5F2B3 /* AuthModel.swift */; };
+		AEF81BE72607728C00B5F2B3 /* BaseAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BE62607728B00B5F2B3 /* BaseAuthModel.swift */; };
 		CDA38223AE70CB8FE96DA12B /* Pods_FightAcademyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E966CBB0B4BB88BE828FF7 /* Pods_FightAcademyTests.framework */; };
 		CFF26CA13FF00445C82B664B /* Pods_FightAcademy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B568C48F62C13747CFE66D40 /* Pods_FightAcademy.framework */; };
 		D9C1358052FDDF0EA865A3C3 /* Pods_FightAcademy_FightAcademyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2098853A5E86CBDAA2E58BC5 /* Pods_FightAcademy_FightAcademyUITests.framework */; };
@@ -171,7 +170,6 @@
 		9EA8851326068A4B002A59E2 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		9EA8851826068A60002A59E2 /* SettingsCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorFactory.swift; sourceTree = "<group>"; };
 		A1B45D15AB09032B774C8168 /* Pods-FightAcademy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightAcademy.debug.xcconfig"; path = "Target Support Files/Pods-FightAcademy/Pods-FightAcademy.debug.xcconfig"; sourceTree = "<group>"; };
-		AE5C81522605167400E12DB5 /* TrailingImageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingImageTextField.swift; sourceTree = "<group>"; };
 		AE5C81572605182300E12DB5 /* TypeAliasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliasses.swift; sourceTree = "<group>"; };
 		AE5C815C26053A6600E12DB5 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		AE5C815D26053A6600E12DB5 /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
@@ -180,13 +178,14 @@
 		AE5C818326055F6000E12DB5 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		AE80C8582609FE6200E99D40 /* BaseAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAuthViewController.swift; sourceTree = "<group>"; };
 		AE80C85D260A228900E99D40 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
-		AE80C862260B1C0100E99D40 /* CustomRightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRightView.swift; sourceTree = "<group>"; };
-		AE80C867260B1C1200E99D40 /* CustomRightView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomRightView.xib; sourceTree = "<group>"; };
+		AE80C8B4260B4C8C00E99D40 /* LeadingImageTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeadingImageTextField.swift; sourceTree = "<group>"; };
+		AE80C8B5260B4C8C00E99D40 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		AE80C8B6260B4C8C00E99D40 /* TrailingImageTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailingImageTextField.swift; sourceTree = "<group>"; };
+		AE80C8B7260B4C8C00E99D40 /* CustomRightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRightView.swift; sourceTree = "<group>"; };
+		AE80C8B8260B4C8C00E99D40 /* CustomRightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomRightView.xib; sourceTree = "<group>"; };
 		AEB49A692604B3F700766762 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		AEB49A782604B90500766762 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AEB49A792604B90500766762 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
-		AEB49A902604C7E000766762 /* LeadingImageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingImageTextField.swift; sourceTree = "<group>"; };
-		AEB49A952604E78200766762 /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
 		AEF81BB7260608D900B5F2B3 /* ValidationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationServiceTests.swift; sourceTree = "<group>"; };
 		AEF81BC2260624A200B5F2B3 /* ProfileApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileApiClient.swift; sourceTree = "<group>"; };
 		AEF81BD8260751FF00B5F2B3 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
@@ -259,16 +258,11 @@
 		4B3A6BDA2603CE3900B99CF0 /* FightAcademy */ = {
 			isa = PBXGroup;
 			children = (
+				AE80C8B3260B4C8C00E99D40 /* View */,
 				AE5C818226055E5200E12DB5 /* Model */,
-				AE5C817426055A9400E12DB5 /* Service */,
-				AEB49A8F2604C7BA00766762 /* View */,
+				AE5C817426055A9400E12DB5 /* Services */,
 				AEB49A712604B4CD00766762 /* Controller */,
 				AEB49A682604B3C800766762 /* Protocol */,
-				4B3A6BDB2603CE3900B99CF0 /* AppDelegate.swift */,
-				4B3A6BDD2603CE3900B99CF0 /* SceneDelegate.swift */,
-				4B3A6BDF2603CE3900B99CF0 /* ViewController.swift */,
-				4B3A6BE12603CE3900B99CF0 /* Main.storyboard */,
-				4B3A6BE72603CE3E00B99CF0 /* Assets.xcassets */,
 				9EA8842A26067C5C002A59E2 /* Application */,
 				9EA88431260680B7002A59E2 /* Navigation */,
 				9EA88445260682FA002A59E2 /* Controllers */,
@@ -303,73 +297,6 @@
 			path = FightAcademyUITests;
 			sourceTree = "<group>";
 		};
-		AE5C816326053A6F00E12DB5 /* Register */ = {
-			isa = PBXGroup;
-			children = (
-				AEB49A782604B90500766762 /* RegisterViewController.swift */,
-				AEB49A792604B90500766762 /* RegisterViewController.xib */,
-			);
-			path = Register;
-			sourceTree = "<group>";
-		};
-		AE5C816426053A7B00E12DB5 /* LogIn */ = {
-			isa = PBXGroup;
-			children = (
-				AE5C815C26053A6600E12DB5 /* LogInViewController.swift */,
-				AE5C815D26053A6600E12DB5 /* LogInViewController.xib */,
-			);
-			path = LogIn;
-			sourceTree = "<group>";
-		};
-		AE5C817426055A9400E12DB5 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				AE5C817526055ACE00E12DB5 /* AuthorizationService.swift */,
-				AE5C817D26055B0A00E12DB5 /* Validator.swift */,
-				AEF81BC2260624A200B5F2B3 /* ProfileApiClient.swift */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		AE5C818226055E5200E12DB5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				AE5C818326055F6000E12DB5 /* RegisterModel.swift */,
-				AEF81BD8260751FF00B5F2B3 /* AuthModel.swift */,
-				AEF81BE62607728B00B5F2B3 /* BaseAuthModel.swift */,
-				AE80C85D260A228900E99D40 /* ResponseModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		AEB49A682604B3C800766762 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				AEB49A692604B3F700766762 /* NibLoadable.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
-		AEB49A712604B4CD00766762 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				AE5C816326053A6F00E12DB5 /* Register */,
-				AE5C816426053A7B00E12DB5 /* LogIn */,
-				AE80C8582609FE6200E99D40 /* BaseAuthViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		AEB49A8F2604C7BA00766762 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				AEB49A902604C7E000766762 /* LeadingImageTextField.swift */,
-				AEB49A952604E78200766762 /* DesignableButton.swift */,
-				AE5C81522605167400E12DB5 /* TrailingImageTextField.swift */,
-				AE80C862260B1C0100E99D40 /* CustomRightView.swift */,
-				AE80C867260B1C1200E99D40 /* CustomRightView.xib */,
-			);
-			path = View;
 		4B3A6C45260635A600B99CF0 /* Coaches */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,6 +491,76 @@
 			path = SettingsCoordinator;
 			sourceTree = "<group>";
 		};
+		AE5C816326053A6F00E12DB5 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				AEB49A782604B90500766762 /* RegisterViewController.swift */,
+				AEB49A792604B90500766762 /* RegisterViewController.xib */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		AE5C816426053A7B00E12DB5 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				AE5C815C26053A6600E12DB5 /* LogInViewController.swift */,
+				AE5C815D26053A6600E12DB5 /* LogInViewController.xib */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		AE5C817426055A9400E12DB5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AE5C817526055ACE00E12DB5 /* AuthorizationService.swift */,
+				AE5C817D26055B0A00E12DB5 /* Validator.swift */,
+				AEF81BC2260624A200B5F2B3 /* ProfileApiClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AE5C818226055E5200E12DB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE5C818326055F6000E12DB5 /* RegisterModel.swift */,
+				AEF81BD8260751FF00B5F2B3 /* AuthModel.swift */,
+				AEF81BE62607728B00B5F2B3 /* BaseAuthModel.swift */,
+				AE80C85D260A228900E99D40 /* ResponseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE80C8B3260B4C8C00E99D40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE80C8B4260B4C8C00E99D40 /* LeadingImageTextField.swift */,
+				AE80C8B5260B4C8C00E99D40 /* DesignableButton.swift */,
+				AE80C8B6260B4C8C00E99D40 /* TrailingImageTextField.swift */,
+				AE80C8B7260B4C8C00E99D40 /* CustomRightView.swift */,
+				AE80C8B8260B4C8C00E99D40 /* CustomRightView.xib */,
+			);
+			name = View;
+			path = FightAcademy/View;
+			sourceTree = SOURCE_ROOT;
+		};
+		AEB49A682604B3C800766762 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AEB49A692604B3F700766762 /* NibLoadable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		AEB49A712604B4CD00766762 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AE5C816326053A6F00E12DB5 /* Register */,
+				AE5C816426053A7B00E12DB5 /* LogIn */,
+				AE80C8582609FE6200E99D40 /* BaseAuthViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		B2E784A1A163BFA2FD703417 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -694,9 +691,9 @@
 			files = (
 				4B3A6BEB2603CE3E00B99CF0 /* LaunchScreen.storyboard in Resources */,
 				AEB49A7B2604B90500766762 /* RegisterViewController.xib in Resources */,
-				AE80C868260B1C1200E99D40 /* CustomRightView.xib in Resources */,
 				AE5C815F26053A6600E12DB5 /* LogInViewController.xib in Resources */,
 				4B3A6C492606366E00B99CF0 /* CoachTableViewCell.xib in Resources */,
+				AE80C8BD260B4C8C00E99D40 /* CustomRightView.xib in Resources */,
 				4B3A6C91260742F200B99CF0 /* Assets.xcassets in Resources */,
 				4B3A6C9E260747A500B99CF0 /* CoachViewController.xib in Resources */,
 				4B3A6C182603D58700B99CF0 /* GoogleService-Info.plist in Resources */,
@@ -846,20 +843,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEF81BE72607728C00B5F2B3 /* BaseAuthModel.swift in Sources */,
-				4B3A6BE02603CE3900B99CF0 /* ViewController.swift in Sources */,
-				4B3A6BDC2603CE3900B99CF0 /* AppDelegate.swift in Sources */,
 				AE5C815E26053A6600E12DB5 /* LogInViewController.swift in Sources */,
 				AE5C817626055ACE00E12DB5 /* AuthorizationService.swift in Sources */,
-				4B3A6BDE2603CE3900B99CF0 /* SceneDelegate.swift in Sources */,
 				AEB49A7A2604B90500766762 /* RegisterViewController.swift in Sources */,
-				AEB49A962604E78300766762 /* DesignableButton.swift in Sources */,
-				AEB49A912604C7E100766762 /* LeadingImageTextField.swift in Sources */,
 				AEB49A6A2604B3F700766762 /* NibLoadable.swift in Sources */,
 				AE5C817E26055B0A00E12DB5 /* Validator.swift in Sources */,
 				AE80C8592609FE6200E99D40 /* BaseAuthViewController.swift in Sources */,
-				AE80C863260B1C0200E99D40 /* CustomRightView.swift in Sources */,
 				AE5C818426055F6000E12DB5 /* RegisterModel.swift in Sources */,
-				AE5C81532605167400E12DB5 /* TrailingImageTextField.swift in Sources */,
+				AE80C8BB260B4C8C00E99D40 /* TrailingImageTextField.swift in Sources */,
 				AEF81BC3260624A200B5F2B3 /* ProfileApiClient.swift in Sources */,
 				AEF81BD92607520100B5F2B3 /* AuthModel.swift in Sources */,
 				AE5C81582605182300E12DB5 /* TypeAliasses.swift in Sources */,
@@ -870,6 +861,8 @@
 				9EA884D126068838002A59E2 /* AuthCoordinatorFactory.swift in Sources */,
 				9EA88452260683AB002A59E2 /* NavigationController.swift in Sources */,
 				4B3A6C792607416A00B99CF0 /* SceneDelegate.swift in Sources */,
+				AE80C8B9260B4C8C00E99D40 /* LeadingImageTextField.swift in Sources */,
+				AE80C8BA260B4C8C00E99D40 /* DesignableButton.swift in Sources */,
 				4B3A6C9D260747A500B99CF0 /* CoachViewController.swift in Sources */,
 				9EA884B226068709002A59E2 /* FinishFlowCoordinator.swift in Sources */,
 				9EA884E2260688F4002A59E2 /* AboutCoordinator.swift in Sources */,
@@ -903,6 +896,7 @@
 				4B3A6C67260732DB00B99CF0 /* CoachDataSourse.swift in Sources */,
 				4B3A6C482606366E00B99CF0 /* CoachTableViewCell.swift in Sources */,
 				4B3A6C60260674A100B99CF0 /* ReusableCell.swift in Sources */,
+				AE80C8BC260B4C8C00E99D40 /* CustomRightView.swift in Sources */,
 				4B3A6BE62603CE3900B99CF0 /* FightAcademy.xcdatamodeld in Sources */,
 				9EA88497260685D9002A59E2 /* HistoryViewController.swift in Sources */,
 				9EA8850E26068A22002A59E2 /* HistoryFactoryProtocol.swift in Sources */,
