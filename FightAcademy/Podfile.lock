@@ -29,6 +29,7 @@ PODS:
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/UserDefaults (~> 7.0)
     - PromisesObjC (~> 1.2)
+  - FSCalendar (2.8.2)
   - GoogleAppMeasurement (7.8.1):
     - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
     - GoogleUtilities/MethodSwizzler (~> 7.0)
@@ -68,6 +69,7 @@ PODS:
 
 DEPENDENCIES:
   - Firebase/Analytics
+  - FSCalendar
   - SwiftLint
 
 SPEC REPOS:
@@ -77,6 +79,7 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseInstallations
+    - FSCalendar
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
@@ -90,6 +93,7 @@ SPEC CHECKSUMS:
   FirebaseCore: 049029df3096e5c118917029be7da75ee16f3b1b
   FirebaseCoreDiagnostics: 066f996579cf097bdad3d7dc9a918d6b9e129c50
   FirebaseInstallations: 7f7ed0e7e27fb51f57291e1876e2ddb1524126c1
+  FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
   GoogleAppMeasurement: 50a254ee92c1b94fbe2abea7e3da35e4c6dedce0
   GoogleDataTransport: b006084b73915a42c28a3466961a4edda3065da6
   GoogleUtilities: e1d9ed4e544fc32a93e00e721400cbc3f377200d
@@ -97,6 +101,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
 
-PODFILE CHECKSUM: 54d020297b1bdf31119eb405ccfdc4384bf5b64e
+PODFILE CHECKSUM: 7b121472a5d499580c8410530d67e345b668bf28
 
 COCOAPODS: 1.10.1

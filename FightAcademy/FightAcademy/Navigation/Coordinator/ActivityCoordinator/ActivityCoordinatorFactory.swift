@@ -24,7 +24,7 @@ final class ActivityFactory: ActivityFactoryProtocol {
     }
 
     func makeNewActivityViewController() -> BookingNewActivity {
-        return NewActivityViewController()
+        return BookingActivityViewController()
     }
 
     func makeChooseActivityViewController() -> ChoosingActivity {

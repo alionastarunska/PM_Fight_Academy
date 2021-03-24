@@ -23,8 +23,14 @@
 		4B3A6C91260742F200B99CF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6C5326063E0D00B99CF0 /* Assets.xcassets */; };
 		4B3A6C9D260747A500B99CF0 /* CoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C9B260747A500B99CF0 /* CoachViewController.swift */; };
 		4B3A6C9E260747A500B99CF0 /* CoachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6C9C260747A500B99CF0 /* CoachViewController.xib */; };
+		4B59448C260A8FAF0096FB9F /* TimeSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B59448B260A8FAF0096FB9F /* TimeSlot.swift */; };
+		4B5FE59F260B3E0B004B336C /* BookingDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5FE59E260B3E0B004B336C /* BookingDataSourse.swift */; };
+		4BB86463260A8B1E003198CA /* TimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB86461260A8B1E003198CA /* TimeCollectionViewCell.swift */; };
+		4BB86464260A8B1E003198CA /* TimeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BB86462260A8B1E003198CA /* TimeCollectionViewCell.xib */; };
 		4BF53EA8260771F2002166D4 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF53EA7260771F2002166D4 /* UIView+IBInspectable.swift */; };
 		4BF53EF426079CE1002166D4 /* String+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF53EF326079CE1002166D4 /* String+Size.swift */; };
+		4BF53EFE2608A6E5002166D4 /* BookingActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF53EFC2608A6E4002166D4 /* BookingActivityViewController.swift */; };
+		4BF53EFF2608A6E5002166D4 /* BookingActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BF53EFD2608A6E4002166D4 /* BookingActivityViewController.xib */; };
 		9EA8843426068216002A59E2 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8843326068216002A59E2 /* RouterProtocol.swift */; };
 		9EA8843C26068233002A59E2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8843B26068233002A59E2 /* Router.swift */; };
 		9EA8844126068270002A59E2 /* Routed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8844026068270002A59E2 /* Routed.swift */; };
@@ -111,8 +117,14 @@
 		4B3A6C782607416A00B99CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B3A6C9B260747A500B99CF0 /* CoachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewController.swift; sourceTree = "<group>"; };
 		4B3A6C9C260747A500B99CF0 /* CoachViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoachViewController.xib; sourceTree = "<group>"; };
+		4B59448B260A8FAF0096FB9F /* TimeSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSlot.swift; sourceTree = "<group>"; };
+		4B5FE59E260B3E0B004B336C /* BookingDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDataSourse.swift; sourceTree = "<group>"; };
+		4BB86461260A8B1E003198CA /* TimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCollectionViewCell.swift; sourceTree = "<group>"; };
+		4BB86462260A8B1E003198CA /* TimeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeCollectionViewCell.xib; sourceTree = "<group>"; };
 		4BF53EA7260771F2002166D4 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		4BF53EF326079CE1002166D4 /* String+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Size.swift"; sourceTree = "<group>"; };
+		4BF53EFC2608A6E4002166D4 /* BookingActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingActivityViewController.swift; sourceTree = "<group>"; };
+		4BF53EFD2608A6E4002166D4 /* BookingActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingActivityViewController.xib; sourceTree = "<group>"; };
 		9EA8843326068216002A59E2 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		9EA8843B26068233002A59E2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9EA8844026068270002A59E2 /* Routed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routed.swift; sourceTree = "<group>"; };
@@ -270,6 +282,19 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		4BF53EFB2608A680002166D4 /* Booking */ = {
+			isa = PBXGroup;
+			children = (
+				4BF53EFC2608A6E4002166D4 /* BookingActivityViewController.swift */,
+				4BF53EFD2608A6E4002166D4 /* BookingActivityViewController.xib */,
+				4BB86461260A8B1E003198CA /* TimeCollectionViewCell.swift */,
+				4BB86462260A8B1E003198CA /* TimeCollectionViewCell.xib */,
+				4B59448B260A8FAF0096FB9F /* TimeSlot.swift */,
+				4B5FE59E260B3E0B004B336C /* BookingDataSourse.swift */,
+			);
+			path = Booking;
+			sourceTree = "<group>";
+		};
 		9EA8842A26067C5C002A59E2 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +326,7 @@
 		9EA88445260682FA002A59E2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4BF53EFB2608A680002166D4 /* Booking */,
 				4B3A6C45260635A600B99CF0 /* Coaches */,
 				9EA8845026068395002A59E2 /* Wrappers */,
 				9EA8845E2606842D002A59E2 /* AuthViewController.swift */,
@@ -569,10 +595,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B3A6BEB2603CE3E00B99CF0 /* LaunchScreen.storyboard in Resources */,
+				4BF53EFF2608A6E5002166D4 /* BookingActivityViewController.xib in Resources */,
 				4B3A6C492606366E00B99CF0 /* CoachTableViewCell.xib in Resources */,
 				4B3A6C91260742F200B99CF0 /* Assets.xcassets in Resources */,
 				4B3A6C9E260747A500B99CF0 /* CoachViewController.xib in Resources */,
 				4B3A6C182603D58700B99CF0 /* GoogleService-Info.plist in Resources */,
+				4BB86464260A8B1E003198CA /* TimeCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,6 +748,7 @@
 			files = (
 				4B3A6C7A2607416A00B99CF0 /* AppDelegate.swift in Sources */,
 				9EA884882606858C002A59E2 /* NewActivityViewController.swift in Sources */,
+				4BF53EFE2608A6E5002166D4 /* BookingActivityViewController.swift in Sources */,
 				9EA884D126068838002A59E2 /* AuthCoordinatorFactory.swift in Sources */,
 				9EA88452260683AB002A59E2 /* NavigationController.swift in Sources */,
 				4B3A6C792607416A00B99CF0 /* SceneDelegate.swift in Sources */,
@@ -730,6 +759,7 @@
 				9EA884F026068943002A59E2 /* CoachesCoordinator.swift in Sources */,
 				9EA8849C260685F0002A59E2 /* SettingsViewController.swift in Sources */,
 				9EA884BB26068795002A59E2 /* ApplicationCoordinator.swift in Sources */,
+				4BB86463260A8B1E003198CA /* TimeCollectionViewCell.swift in Sources */,
 				9EA88492260685C7002A59E2 /* ChoosingCoachViewController.swift in Sources */,
 				9EA884702606850A002A59E2 /* UIFontExtensions.swift in Sources */,
 				4BF53EF426079CE1002166D4 /* String+Size.swift in Sources */,
@@ -740,11 +770,13 @@
 				9EA884EA2606890B002A59E2 /* AboutCoordinatorFactory.swift in Sources */,
 				9EA8845A260683FA002A59E2 /* TabBarController.swift in Sources */,
 				9EA8843426068216002A59E2 /* RouterProtocol.swift in Sources */,
+				4B59448C260A8FAF0096FB9F /* TimeSlot.swift in Sources */,
 				9EA884C3260687D1002A59E2 /* ApplicationCoordinatorFactory.swift in Sources */,
 				9EA884C926068819002A59E2 /* AuthCoordinator.swift in Sources */,
 				9EA8846926068480002A59E2 /* AboutViewController.swift in Sources */,
 				9EA8844126068270002A59E2 /* Routed.swift in Sources */,
 				9EA8848D260685A5002A59E2 /* ChoosingActivityViewController.swift in Sources */,
+				4B5FE59F260B3E0B004B336C /* BookingDataSourse.swift in Sources */,
 				9EA884F52606894F002A59E2 /* CoachesCoordinatorFactory.swift in Sources */,
 				9EA884AD260686E8002A59E2 /* Coordinator.swift in Sources */,
 				9EA8851426068A4B002A59E2 /* SettingsCoordinator.swift in Sources */,
