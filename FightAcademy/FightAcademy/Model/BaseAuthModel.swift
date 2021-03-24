@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class BaseAuthModel: Codable {
     var phoneNumber: String?
     var password: String?

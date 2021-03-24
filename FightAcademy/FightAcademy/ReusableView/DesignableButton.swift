@@ -10,14 +10,13 @@ import UIKit
 @IBDesignable
 class DesignableButton: UIButton {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     @IBInspectable override var cornerRadius: CGFloat {
         didSet {
             layer.cornerRadius = cornerRadius
         }
     }
-    
     
     @IBInspectable override var borderWidth: CGFloat {
         didSet {
@@ -27,9 +26,9 @@ class DesignableButton: UIButton {
     
     @IBInspectable
     override var borderColor: UIColor? {
-            didSet {
-                layer.borderColor = borderColor?.cgColor
-            }
+        didSet {
+            layer.borderColor = borderColor?.cgColor
         }
+    }
     
 }

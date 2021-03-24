@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AuthModel: BaseAuthModel {
+class AuthorizationModel: BaseAuthModel {
         
     var isFilled: Bool {
         !(phoneNumber ?? "").isEmpty && !(password ?? "").isEmpty

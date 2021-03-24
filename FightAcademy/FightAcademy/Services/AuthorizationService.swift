@@ -14,7 +14,7 @@ struct AuthorizationService {
     var onError: ((Error) -> Void)?
     
     var isLogin: Bool {
-        //use it for checking when splash screen wil be loading
+        // use it for checking when splash screen wil be loading
         sessionStorage.sessionId != nil
     }
     
@@ -28,7 +28,7 @@ struct AuthorizationService {
     
     func authorize<T: Encodable>(with authModel: T, completion: @escaping ItemClosure<Result<Void?, NetworkingError>>) {
         
-        //INFO:  MOCK
+        // INFO:  MOCK
         
         let resourceMock = ResourceMock(url: "parimatch/client/register")
         

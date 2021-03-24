@@ -19,7 +19,7 @@ class BaseAuthViewController: UIViewController {
     @IBOutlet internal weak var passwordErrorLabel: UILabel!
     
     internal let symbolIntoTextField = "+"
-    internal var activeTextField : UITextField?
+    internal var activeTextField: UITextField?
 
     internal var validationService: Validating?
     internal var authService: AuthorizationService?

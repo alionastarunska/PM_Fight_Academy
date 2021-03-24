@@ -178,7 +178,8 @@
                                 <constraint firstItem="hfm-hL-bnK" firstAttribute="width" secondItem="1fM-Yd-mDF" secondAttribute="width" id="NVb-MJ-mPS"/>
                                 <constraint firstItem="L0N-D3-R3E" firstAttribute="height" secondItem="uwH-v1-qWV" secondAttribute="height" id="PKa-Jb-Cke"/>
                                 <constraint firstItem="1fM-Yd-mDF" firstAttribute="width" secondItem="Q7x-Wq-htf" secondAttribute="width" multiplier="0.9" id="RKH-C6-cpl"/>
-                                <constraint firstItem="hfm-hL-bnK" firstAttribute="top" secondItem="1fM-Yd-mDF" secondAttribute="bottom" constant="200" id="a70-ZS-fV1"/>
+                                <constraint firstItem="hfm-hL-bnK" firstAttribute="top" relation="lessThanOrEqual" secondItem="1fM-Yd-mDF" secondAttribute="bottom" constant="200" id="a70-ZS-fV1"/>
+                                <constraint firstAttribute="bottom" secondItem="hfm-hL-bnK" secondAttribute="bottom" constant="35.5" id="aFD-Re-ra5"/>
                                 <constraint firstItem="hfm-hL-bnK" firstAttribute="centerX" secondItem="Q7x-Wq-htf" secondAttribute="centerX" id="eWb-Lx-lb3"/>
                                 <constraint firstItem="1fM-Yd-mDF" firstAttribute="centerX" secondItem="Q7x-Wq-htf" secondAttribute="centerX" id="wMd-6j-hFu"/>
                             </constraints>
@@ -213,10 +214,10 @@
             <size key="intrinsicContentSize" width="126" height="30"/>
         </designable>
         <designable name="PGR-wF-Zic">
-            <size key="intrinsicContentSize" width="120.5" height="34"/>
+            <size key="intrinsicContentSize" width="97.5" height="34"/>
         </designable>
         <designable name="aUo-ay-bUO">
-            <size key="intrinsicContentSize" width="153.5" height="34"/>
+            <size key="intrinsicContentSize" width="132.5" height="34"/>
         </designable>
         <designable name="uwH-v1-qWV">
             <size key="intrinsicContentSize" width="37" height="30"/>

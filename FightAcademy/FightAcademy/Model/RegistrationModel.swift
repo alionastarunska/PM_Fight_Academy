@@ -1,5 +1,5 @@
 //
-//  RegisterData.swift
+//  RegistrationModel.swift
 //  FightAcademy
 //
 //  Created by Павел Снижко on 20.03.2021.
@@ -7,18 +7,18 @@
 
 import Foundation
 
-class RegisterModel: BaseAuthModel {
+class RegistrationModel: BaseAuthModel {
     var firstName: String?
   
     var name: String? {
+        get {
+            firstName
+        }
+        
         set {
             if let newValue = newValue {
                 firstName = newValue.trimmingCharacters(in: .whitespacesAndNewlines)
             }
-        }
-        
-        get {
-            firstName
         }
     }
     

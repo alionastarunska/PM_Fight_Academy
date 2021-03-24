@@ -7,8 +7,7 @@
 
 import Foundation
 
-
-//MOCKS
+// TODO: manage MOCKS
 
 class MockNetworkManager: Networking {
     func execute(requestBody: Data, completion: @escaping ItemClosure<Result<ResponseModel, NetworkingError>> ) {
@@ -20,19 +19,15 @@ protocol Networking {
     func execute(requestBody: Data, completion: @escaping ItemClosure<Result<ResponseModel, NetworkingError>> )
 }
 
-
 enum NetworkingError: Error {
     case conflict
     case badRequest
     case badRequestData
 }
 
-
-
 struct ResourceMock {
     let url: String
 }
-
 
 struct ProfileApiClient {
     let networkService: Networking
@@ -43,7 +38,7 @@ struct ProfileApiClient {
         self.jsonEcoder = jsonEcoder
     }
     
-    func execute<T: Encodable>(resource: ResourceMock ,data: T,  completion: @escaping ItemClosure<Result<ResponseModel, NetworkingError>>) {
+    func execute<T: Encodable>(resource: ResourceMock, data: T, completion: @escaping ItemClosure<Result<ResponseModel, NetworkingError>>) {
         
         var requestBody: Data!
         
@@ -61,5 +56,3 @@ struct ProfileApiClient {
     }
 
 }
-
-

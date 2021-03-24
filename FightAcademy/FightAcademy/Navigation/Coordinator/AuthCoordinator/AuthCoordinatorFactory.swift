@@ -19,7 +19,7 @@ final class AuthFactory: AuthFactoryProtocol {
         
     func makeRegController() -> Registering {
         
-        //TODO: maybe provide some DI class for these objects
+        // TODO: maybe provide some DI class for these objects
         let sessionStorage =  SessionStorage()
         
         let apiClient = ProfileApiClient(networkService: MockNetworkManager(), jsonEcoder: JSONEncoder())
@@ -33,7 +33,7 @@ final class AuthFactory: AuthFactoryProtocol {
 
     func makeAuthController() -> Authorization {
         
-        //TODO: maybe provide some DI class for these objects
+        // TODO: maybe provide some DI class for these objects
         let validator = Validator()
         let sessionStorage =  SessionStorage()
         let apiClient = ProfileApiClient(networkService: MockNetworkManager(), jsonEcoder: JSONEncoder())

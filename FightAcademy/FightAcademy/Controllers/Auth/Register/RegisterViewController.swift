@@ -1,5 +1,5 @@
 //
-//  LogInViewController.swift
+//  RegisterViewController.swift
 //  FightAcademy
 //
 //  Created by Павел Снижко on 19.03.2021.
@@ -7,21 +7,23 @@
 
 import UIKit
 
-protocol Authorization: UIViewController {
-    
+protocol Registering: UIViewController {
+
     var onCompleteAuth: (() -> Void)? { get set }
-    var onSignUpButtonTap: (() -> Void)? { get set }
     var onError: ((Error) -> Void)? { get set }
-    
+
 }
 
-class LogInViewController: BaseAuthViewController, NibLoadable, Authorization {
-    
-    var onSignUpButtonTap: (() -> Void)?
-    private var authModel = AuthModel()
-    
+class RegisterViewController: BaseAuthViewController, NibLoadable, Registering {
+    // MARK: - Properties
+   
+    @IBOutlet private weak var firstNameTextField: LeadingImageTextField!
+    @IBOutlet private weak var nameErrorLabel: UILabel!
+
+    private var registerModel = RegistrationModel()
+           
     init(validationService: Validating, authService: AuthorizationService) {
-        super.init(nibName: LogInViewController.name, bundle: .main)
+        super.init(nibName: RegisterViewController.name, bundle: .main)
         self.validationService = validationService
         self.authService = authService
     }
@@ -30,12 +32,14 @@ class LogInViewController: BaseAuthViewController, NibLoadable, Authorization {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - LifeCicle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setErrorsLabelHiden()
         
-        setClearButtonsMode(for: [phoneTextField])
+        setClearButtonsMode(for: [firstNameTextField, phoneTextField])
         
         checkButtonAvailability()
         
@@ -46,45 +50,59 @@ class LogInViewController: BaseAuthViewController, NibLoadable, Authorization {
         setKeyboardObservers()
     }
     
-    //MARK: - IBAction
-    @IBAction func logInPressed(_ sender: Any) {
+    // MARK: - IBAction
+    
+    @IBAction func signUpAction(_ sender: Any) {
+        
         do {
-            try validationService?.validate(for: authModel)
-            authService?.authorize(with: authModel) { [weak self] result in
+            try validationService?.validate(for: registerModel)
+            authService?.authorize(with: registerModel) { [weak self] result in
                 guard let self = self else { return }
                 switch result {
-                case .success(_):
+                case .success:
                     self.onCompleteAuth?()
                 case .failure(let error):
                     self.onError?(error)
                 }
             }
-            print("done")
-        } catch _ {
-            passwordErrorLabel.text = ValidationError.Contnet.unknown
-            passwordErrorLabel.isHidden = false
+            print("Registration done")
+        } catch let error {
+            switch error {
+            case ValidationError.badName(let message):
+                nameErrorLabel.text = message
+                nameErrorLabel.isHidden = false
+            case ValidationError.badPassword(let message):
+                passwordErrorLabel.text = message
+                passwordErrorLabel.isHidden = false
+            case ValidationError.badPhoneNumber(let message):
+                phoneErrorLabel.text = message
+                phoneErrorLabel.isHidden = false
+            default:
+                return
+            }
         }
     }
     
-    @IBAction func createAccountPressed(_ sender: Any) {
-        onSignUpButtonTap?()
-    }
 }
 
-extension LogInViewController {
+private extension RegisterViewController {
+    
+    // MARK: - Methods
     
     private func setErrorsLabelHiden() {
+        nameErrorLabel.isHidden = true
         phoneErrorLabel.isHidden = true
         passwordErrorLabel.isHidden = true
     }
     
     private func setTextFieldDelegating() {
+        firstNameTextField.delegate = self
         phoneTextField.delegate = self
         passwordTextField.delegate = self
     }
     
     func checkButtonAvailability() {
-        if authModel.isFilled {
+        if registerModel.isFilled {
             doneButton.isEnabled = true
             doneButton.backgroundColor = UIColor(named: "customYellow")
         } else {
@@ -93,17 +111,17 @@ extension LogInViewController {
         }
     }
     
-    func dismiss(_ sender:UITapGestureRecognizer) {
+    func dismiss(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
+    
 }
 
-
 // MARK: - UITextFieldDelegate
-extension LogInViewController : UITextFieldDelegate {
-    
+
+extension RegisterViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == phoneTextField, authModel.phoneNumber == nil {
+        if textField == phoneTextField, registerModel.phoneNumber == nil {
             textField.text = symbolIntoTextField
         }
         self.activeTextField = textField
@@ -111,11 +129,14 @@ extension LogInViewController : UITextFieldDelegate {
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         switch textField {
+        case firstNameTextField:
+            registerModel.name = firstNameTextField.text
+            nameErrorLabel.isHidden = true
         case phoneTextField:
-            authModel.phoneNumber = phoneTextField.text
+            registerModel.phoneNumber = phoneTextField.text
             phoneErrorLabel.isHidden = true
         case passwordTextField:
-            authModel.password = passwordTextField.text
+            registerModel.password = passwordTextField.text
             passwordErrorLabel.isHidden = true
         default:
             break

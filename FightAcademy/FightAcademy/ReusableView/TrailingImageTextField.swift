@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-class TrailingImageTextField: LeadingImageTextField {
+final class TrailingImageTextField: LeadingImageTextField {
     
     // MARK: - Properties
     
@@ -43,7 +43,7 @@ class TrailingImageTextField: LeadingImageTextField {
             
             self.rightView = customRightView
             rightViewMode = .whileEditing
-
+            
         } else {
             rightViewMode = UITextField.ViewMode.never
             rightView = nil

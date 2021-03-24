@@ -11,10 +11,9 @@ protocol Validating {
     func validate(password: String?) throws
     func validate(phoneNumber: String?) throws
     func validate(name: String?) throws
-    func validate(for registerModel: RegisterModel) throws
-    func validate(for authModel: AuthModel) throws
+    func validate(for registerModel: RegistrationModel) throws
+    func validate(for authModel: AuthorizationModel) throws
 }
-
 
 enum ValidationError: Error {
     case badPassword(String)
@@ -40,13 +39,11 @@ extension ValidationError {
     
 }
 
-
 struct Validator: Validating {
-    func validate(for authModel: AuthModel) throws {
+    func validate(for authModel: AuthorizationModel) throws {
         try validate(password: authModel.password)
         try validate(phoneNumber: authModel.phoneNumber)
     }
-    
     
     func validate(password: String?) throws {
         guard let password = password, password.count >= 8, password.count <= 64  else {
@@ -87,7 +84,7 @@ struct Validator: Validating {
         }
     }
     
-    func validate(for registerModel: RegisterModel) throws {
+    func validate(for registerModel: RegistrationModel) throws {
         try self.validate(password: registerModel.password)
         try self.validate(phoneNumber: registerModel.phoneNumber)
         try self.validate(name: registerModel.name)
