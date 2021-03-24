@@ -23,9 +23,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let authService = AuthorizationService(sessionStorage: SessionStorage(), profileApiClient: ProfileApiClient(networkService: MockNetworkManager(), jsonEcoder: JSONEncoder()))
         
-        let registerVC = RegisterViewController(validationService: DefaultValidationService(), authService: authService)
+        let registerVC = RegisterViewController(validationService: Validator(), authService: authService)
         
-        let loginVC = LogInViewController(validationService: DefaultValidationService(), authService: authService)
+        let loginVC = LogInViewController(validationService: Validator(), authService: authService)
         
         window?.rootViewController = loginVC
 

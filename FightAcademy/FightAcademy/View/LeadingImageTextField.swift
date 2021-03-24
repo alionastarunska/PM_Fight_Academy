@@ -12,7 +12,7 @@ class LeadingImageTextField: UITextField {
 
     // MARK: - Properties
     
-    @IBInspectable public var cornerRadius: CGFloat = 15.0 {
+    @IBInspectable var cornerRadius: CGFloat = 15.0 {
         didSet {
             layer.cornerRadius = cornerRadius
             layer.masksToBounds = true
@@ -43,9 +43,7 @@ class LeadingImageTextField: UITextField {
             updateLeadingImage()
         }
     }
-    
-    let spacingInLeftView: CGFloat = 5.0
-    
+        
     // MARK: - Ovveride methods
     
     override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
@@ -76,19 +74,8 @@ class LeadingImageTextField: UITextField {
             imageView.image = image
             imageView.tintColor = leadingImageColor
             
+            leftView = imageView
             
-            let stack = UIStackView()
-            
-            stack.addArrangedSubview(imageView)
-            
-            if let text = leadingText {
-                let label = UILabel()
-                label.text = text
-                stack.addArrangedSubview(label)
-                stack.alignment = .top
-                stack.spacing = spacingInLeftView
-            }
-            leftView = stack
         } else {
             leftViewMode = UITextField.ViewMode.never
             leftView = nil

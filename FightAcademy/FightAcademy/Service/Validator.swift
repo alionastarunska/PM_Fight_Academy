@@ -1,5 +1,5 @@
 //
-//  ValidationService.swift
+//  Validator.swift
 //  FightAcademy
 //
 //  Created by Павел Снижко on 20.03.2021.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ValidationService {
+protocol Validating {
     func validate(password: String?) throws
     func validate(phoneNumber: String?) throws
     func validate(name: String?) throws
@@ -23,6 +23,7 @@ enum ValidationError: Error {
 }
 
 extension ValidationError {
+    
     struct Contnet {
         static let badPasswordLenght = "Password must be at least 8 chars and not more than 64"
         static let nonUpperChar = "Password must include at least one char from [A-Z]"
@@ -36,10 +37,11 @@ extension ValidationError {
         static let unknown = "A wrong password or login"
 
     }
+    
 }
 
 
-struct DefaultValidationService: ValidationService {
+struct Validator: Validating {
     func validate(for authModel: AuthModel) throws {
         try validate(password: authModel.password)
         try validate(phoneNumber: authModel.phoneNumber)
@@ -51,29 +53,18 @@ struct DefaultValidationService: ValidationService {
             throw ValidationError.badPassword(ValidationError.Contnet.badPasswordLenght)
         }
         
-        
         let upperMatch = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z]).*?")
-        
         guard upperMatch.evaluate(with: password) else { throw ValidationError.badPassword(ValidationError.Contnet.nonUpperChar) }
 
-        
         let numberMatch = NSPredicate(format: "SELF MATCHES %@", "(?=.*[0-9]).*?")
-        
         guard numberMatch.evaluate(with: password) else {
             throw  ValidationError.badPassword(ValidationError.Contnet.nonNumber)
         }
-        
+
         let lowerMatch = NSPredicate(format: "SELF MATCHES %@", "(?=.*[a-z]).*?")
-        
         guard lowerMatch.evaluate(with: password) else {
             throw ValidationError.badPassword(ValidationError.Contnet.nonlowerChar)
         }
-    
-//        let passwordRegex = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
-//
-//        guard passwordRegex.evaluate(with: password) else {
-//            throw ValidationError.badPassword(ValidationError.Contnet.badSymbols)
-//        }
     }
     
     func validate(phoneNumber: String?) throws {
@@ -94,20 +85,11 @@ struct DefaultValidationService: ValidationService {
         guard let name = name, name.count >= 2, name.count <= 64 else {
             throw ValidationError.badName(ValidationError.Contnet.badNameLenght)
         }
-        
-        //TODO: ask about name??
-//        let nameRegex = NSPredicate(format: "SELF MATCHES %@", "^[a-z]{2,64}$")
-//
-//        guard nameRegex.evaluate(with: name) else {
-//            throw ValidationError.badName(ValidationError.Contnet.badNameFormat)
-//        }
     }
     
     func validate(for registerModel: RegisterModel) throws {
         try self.validate(password: registerModel.password)
-        
         try self.validate(phoneNumber: registerModel.phoneNumber)
-        
         try self.validate(name: registerModel.name)
     }
 }

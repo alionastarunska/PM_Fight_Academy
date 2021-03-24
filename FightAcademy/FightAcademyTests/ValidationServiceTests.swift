@@ -9,7 +9,7 @@ import XCTest
 @testable import FightAcademy
 
 class ValidationServiceTests: XCTestCase {
-    let validationSerice = DefaultValidationService()
+    let validationSerice = Validator()
     
     func testPassword() {
         let successPasswords = ["Qwerty_12345", "FSD333333_i"]

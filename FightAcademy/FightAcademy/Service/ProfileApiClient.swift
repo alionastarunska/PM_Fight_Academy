@@ -7,9 +7,12 @@
 
 import Foundation
 
+
+//MOCKS
+
 class MockNetworkManager: Networking {
     func execute(requestBody: Data, completion: @escaping ItemClosure<Result<ResponseModel, NetworkingError>> ) {
-        completion(.success(ResponseModel(sessionId: "11111")))
+        completion(.success(ResponseModel(token: "11111")))
     }
 }
 
@@ -17,16 +20,13 @@ protocol Networking {
     func execute(requestBody: Data, completion: @escaping ItemClosure<Result<ResponseModel, NetworkingError>> )
 }
 
+
 enum NetworkingError: Error {
     case conflict
     case badRequest
     case badRequestData
 }
 
-
-struct ResponseModel: Decodable {
-    let sessionId: String
-}
 
 
 struct ResourceMock {
