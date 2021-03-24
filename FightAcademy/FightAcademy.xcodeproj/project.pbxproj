@@ -259,7 +259,6 @@
 				AE80C8B3260B4C8C00E99D40 /* ReusableView */,
 				AE5C818226055E5200E12DB5 /* Model */,
 				AE5C817426055A9400E12DB5 /* Services */,
-				AEB49A682604B3C800766762 /* Protocol */,
 				9EA8842A26067C5C002A59E2 /* Application */,
 				9EA88431260680B7002A59E2 /* Navigation */,
 				9EA88445260682FA002A59E2 /* Controllers */,
@@ -311,6 +310,7 @@
 		4B3A6C5D2606748B00B99CF0 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				AEB49A692604B3F700766762 /* NibLoadable.swift */,
 				4B3A6C5F260674A100B99CF0 /* ConfigurableCell.swift */,
 				4B3A6C5E260674A100B99CF0 /* ReusableCell.swift */,
 			);
@@ -548,14 +548,6 @@
 				AE80C8582609FE6200E99D40 /* BaseAuthViewController.swift */,
 			);
 			path = Auth;
-			sourceTree = "<group>";
-		};
-		AEB49A682604B3C800766762 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				AEB49A692604B3F700766762 /* NibLoadable.swift */,
-			);
-			path = Protocol;
 			sourceTree = "<group>";
 		};
 		B2E784A1A163BFA2FD703417 /* Pods */ = {
