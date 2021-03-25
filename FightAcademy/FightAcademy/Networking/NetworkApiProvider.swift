@@ -11,8 +11,6 @@ protocol NetworkApiProvider {
 
     associatedtype ApiEndpoint: RequestableItem
 
-    var token: String? { get set }
-
     func request<T: Decodable>(_ endPoint: ApiEndpoint, completion: @escaping (Result<T, Error>) -> Void)
 
 }

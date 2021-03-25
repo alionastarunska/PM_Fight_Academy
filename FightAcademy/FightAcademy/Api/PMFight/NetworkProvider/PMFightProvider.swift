@@ -16,7 +16,7 @@ class PMFightProvider: NetworkApiProvider {
 
     private let commonHeaders: HTTPHeaders = ["Content-Type": "application/json",
                                               "Accept": "text/plain"]
-    internal var token: String?
+    private var storage = SessionStorage()
 
     func request<T: Decodable>(_ endPoint: ApiEndpoint, completion: @escaping (Result<T, Error>) -> Void) {
 
@@ -57,7 +57,7 @@ class PMFightProvider: NetworkApiProvider {
 
     private func buildRequest(for endPoint: ApiEndpoint) throws -> URLRequest {
         var urlRequest = try endPoint.buildURLRequest(with: commonHeaders)
-        if let token = token {
+        if let token = storage.sessionId {
             urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         }
 
@@ -70,6 +70,8 @@ class PMFightProvider: NetworkApiProvider {
         case NetworkError.badStatusCode(let statusCode):
 
             switch statusCode {
+            case 400:
+                return HumanApiError.userError
             case 401:
                 return HumanApiError.unauthorized
             case 404:

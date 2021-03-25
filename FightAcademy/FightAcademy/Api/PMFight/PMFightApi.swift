@@ -17,18 +17,12 @@ class PMFightApi {
 
     func logIn(phone: String, password: String, completion: @escaping (Result<Token, Error>) -> Void) {
         netApiProvider.request(.login(login: phone, password: password)) { (result: Result<Token, Error>) in
-
-            // Todo: keychain
-            do {
-
-                let token = try result.get()
-                self.netApiProvider.token = token.raw
-
+            switch result {
+            case .success(let token):
+                SessionStorage().sessionId = token.raw
                 completion(.success(token))
-            } catch {
-                self.netApiProvider.token = nil
+            case .failure(let error):
                 completion(.failure(error))
-
             }
         }
 
@@ -36,16 +30,12 @@ class PMFightApi {
 
     func register(name: String, phone: String, password: String, completion: @escaping (Result<Token, Error>) -> Void) {
         netApiProvider.request(.register(name: name, login: phone, password: password)) { (result: Result<Token, Error>) in
-            do {
-
-                let token = try result.get()
-                self.netApiProvider.token = token.raw
-
+            switch result {
+            case .success(let token):
+                SessionStorage().sessionId = token.raw
                 completion(.success(token))
-            } catch {
-                self.netApiProvider.token = nil
+            case .failure(let error):
                 completion(.failure(error))
-
             }
         }
 

@@ -13,6 +13,7 @@ enum HumanApiError: LocalizedError {
     case notFound
     case conflict
     case serverError
+    case userError
 
     case unresolved
 
@@ -20,6 +21,8 @@ enum HumanApiError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
+        case .userError:
+            return "The server cannot or will not process the request due to an apparent client error"
         case .unauthorized:
             return "Our series of highly sophisticated and complex algorithms says that you are some sort of interplanetary alien-being."
             + " We need to make sure that we are dealing with a human and have to ask you to log in again!"
