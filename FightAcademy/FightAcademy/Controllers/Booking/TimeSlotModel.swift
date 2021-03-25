@@ -1,5 +1,5 @@
 //
-//  TimeSlots.swift
+//  TimeSlotModel.swift
 //  FightAcademy
 //
 //  Created by Aliona Starunska on 23.03.2021.

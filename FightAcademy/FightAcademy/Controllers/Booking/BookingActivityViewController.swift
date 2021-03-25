@@ -28,7 +28,7 @@ class BookingActivityViewController: UIViewController, BookingNewActivity, FSCal
     @IBOutlet private weak var timeHeightConstraint: NSLayoutConstraint!
     
     private var timeSlots: [TimeSlot] = TimeSlotsMock.make()
-    private var dataSourse: BookingDataSourse<TimeCollectionViewCell>?
+    private var dataSource: BookingDataSource<TimeCollectionViewCell>?
     
     var onRequestActivity: (() -> Void)?
     var onSelectCoach: (() -> Void)?
@@ -74,10 +74,10 @@ class BookingActivityViewController: UIViewController, BookingNewActivity, FSCal
         let numberOfRows = ceil(CGFloat(timeSlots.count) / .numberOfColumns)
         timeHeightConstraint.constant = (numberOfRows - 1) * .lineSpacing + numberOfRows * .cellHeight
         view.layoutIfNeeded()
-        dataSourse = BookingDataSourse<TimeCollectionViewCell>(slots: timeSlots)
+        dataSource = BookingDataSource<TimeCollectionViewCell>(slots: timeSlots)
         timeCollectionView.register(TimeCollectionViewCell.cellNib,
                                     forCellWithReuseIdentifier: TimeCollectionViewCell.reuseIdentifier)
-        timeCollectionView.dataSource = dataSourse
+        timeCollectionView.dataSource = dataSource
     }
 }
 
@@ -88,7 +88,7 @@ private extension CGSize {
 
 private extension CGFloat {
     static var numberOfColumns: CGFloat { return 3 }
-    static var horizontalMargins: CGFloat { return 52 }
+    static var horizontalMargins: CGFloat { return 55 }
     static var lineSpacing: CGFloat { return 6 }
     static var cellHeight: CGFloat { return 40 }
 }

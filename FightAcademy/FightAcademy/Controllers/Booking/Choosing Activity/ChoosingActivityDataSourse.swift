@@ -1,32 +1,30 @@
 //
-//  CoachDataSource.swift
+//  ChoosingActivityDataSource.swift
 //  FightAcademy
 //
-//  Created by Aliona Starunska on 21.03.2021.
+//  Created by Aliona Starunska on 24.03.2021.
 //
 
 import UIKit
 
-class CoachDataSource<Cell: CoachTableViewCell>: NSObject, UITableViewDataSource {
+class ChoosingActivityDataSource<Cell: ChoosingActivityTableViewCell>: NSObject, UITableViewDataSource {
     
-    var coaches: [CoachCellModel]
+    var activity: [ChoosingActivityModel]
 
-       init(coaches: [CoachCellModel]) {
-           self.coaches = coaches
+       init(activity: [ChoosingActivityModel]) {
+           self.activity = activity
        }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return coaches.count
+        return activity.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Cell.reuseIdentifier, for: indexPath) as? Cell else {
             return UITableViewCell()
         }
-        cell.configure(with: coaches[indexPath.row])
-        cell.expandEvent = {
-            tableView.reloadRows(at: [indexPath], with: .none)
-        }
+        cell.configure(with: activity[indexPath.row])
+        
         return cell
     }
 }

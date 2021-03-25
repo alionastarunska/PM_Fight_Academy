@@ -1,17 +1,19 @@
 //
-//  CoachDataSource.swift
+//  ChoosingCoachDataSource.swift
 //  FightAcademy
 //
-//  Created by Aliona Starunska on 21.03.2021.
+//  Created by Aliona Starunska on 24.03.2021.
 //
+
+import Foundation
 
 import UIKit
 
-class CoachDataSource<Cell: CoachTableViewCell>: NSObject, UITableViewDataSource {
+class ChoosingCoachDataSource<Cell: ChoosingCoachTableViewCell>: NSObject, UITableViewDataSource {
     
-    var coaches: [CoachCellModel]
+    var coaches: [ChoosingCoachModel]
 
-       init(coaches: [CoachCellModel]) {
+       init(coaches: [ChoosingCoachModel]) {
            self.coaches = coaches
        }
 
@@ -24,9 +26,6 @@ class CoachDataSource<Cell: CoachTableViewCell>: NSObject, UITableViewDataSource
             return UITableViewCell()
         }
         cell.configure(with: coaches[indexPath.row])
-        cell.expandEvent = {
-            tableView.reloadRows(at: [indexPath], with: .none)
-        }
         return cell
     }
 }

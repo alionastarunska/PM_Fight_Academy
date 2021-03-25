@@ -1,5 +1,5 @@
 //
-//  BookingDataSourse.swift
+//  BookingDataSource.swift
 //  FightAcademy
 //
 //  Created by Aliona Starunska on 24.03.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BookingDataSourse<Cell: TimeCollectionViewCell>: NSObject, UICollectionViewDataSource {
+class BookingDataSource<Cell: TimeCollectionViewCell>: NSObject, UICollectionViewDataSource {
     
     var slots: [TimeSlot]
     

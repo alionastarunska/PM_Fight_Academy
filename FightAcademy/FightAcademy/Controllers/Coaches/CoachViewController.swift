@@ -12,7 +12,7 @@ class CoachViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     private var coaches: [CoachCellModel] = []
-    private var dataSourse: CoachDataSourse<CoachTableViewCell>?
+    private var dataSource: CoachDataSource<CoachTableViewCell>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +24,8 @@ class CoachViewController: UIViewController {
     }
 
     private func setupTableView() {
-        dataSourse = CoachDataSourse<CoachTableViewCell>(coaches: coaches)
+        dataSource = CoachDataSource<CoachTableViewCell>(coaches: coaches)
         tableView.register(CoachTableViewCell.self)
-        tableView.dataSource = dataSourse
+        tableView.dataSource = dataSource
     }
 }
