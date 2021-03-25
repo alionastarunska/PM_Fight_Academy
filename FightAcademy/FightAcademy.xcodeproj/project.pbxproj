@@ -34,7 +34,6 @@
 		9EA8846426068467002A59E2 /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8846326068467002A59E2 /* RegViewController.swift */; };
 		9EA8846926068480002A59E2 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8846826068480002A59E2 /* AboutViewController.swift */; };
 		9EA884702606850A002A59E2 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8846F2606850A002A59E2 /* UIFontExtensions.swift */; };
-		9EA884832606856F002A59E2 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884822606856F002A59E2 /* ActivityViewController.swift */; };
 		9EA884882606858C002A59E2 /* NewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884872606858C002A59E2 /* NewActivityViewController.swift */; };
 		9EA8848D260685A5002A59E2 /* ChoosingActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8848C260685A5002A59E2 /* ChoosingActivityViewController.swift */; };
 		9EA88492260685C7002A59E2 /* ChoosingCoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA88491260685C7002A59E2 /* ChoosingCoachViewController.swift */; };
@@ -60,6 +59,13 @@
 		9EA8850E26068A22002A59E2 /* HistoryFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8850D26068A22002A59E2 /* HistoryFactoryProtocol.swift */; };
 		9EA8851426068A4B002A59E2 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8851326068A4B002A59E2 /* SettingsCoordinator.swift */; };
 		9EA8851926068A60002A59E2 /* SettingsCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8851826068A60002A59E2 /* SettingsCoordinatorFactory.swift */; };
+		AE628E6D260C906800A47A1D /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE628E6C260C906800A47A1D /* NibLoadable.swift */; };
+		AE628E79260C912400A47A1D /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE628E77260C912400A47A1D /* ActivityViewController.swift */; };
+		AE628E7A260C912400A47A1D /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE628E78260C912400A47A1D /* ActivityViewController.xib */; };
+		AE628E80260C917400A47A1D /* ActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE628E7E260C917400A47A1D /* ActivityCollectionViewCell.swift */; };
+		AE628E81260C917400A47A1D /* ActivityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE628E7F260C917400A47A1D /* ActivityCollectionViewCell.xib */; };
+		AE628E86260C922E00A47A1D /* ActivityDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE628E85260C922E00A47A1D /* ActivityDataSource.swift */; };
+		AEEE5DE2260CCB2400576540 /* ActivityMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE5DE1260CCB2400576540 /* ActivityMocks.swift */; };
 		CDA38223AE70CB8FE96DA12B /* Pods_FightAcademyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E966CBB0B4BB88BE828FF7 /* Pods_FightAcademyTests.framework */; };
 		CFF26CA13FF00445C82B664B /* Pods_FightAcademy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B568C48F62C13747CFE66D40 /* Pods_FightAcademy.framework */; };
 		D9C1358052FDDF0EA865A3C3 /* Pods_FightAcademy_FightAcademyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2098853A5E86CBDAA2E58BC5 /* Pods_FightAcademy_FightAcademyUITests.framework */; };
@@ -122,7 +128,6 @@
 		9EA8846326068467002A59E2 /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
 		9EA8846826068480002A59E2 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		9EA8846F2606850A002A59E2 /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
-		9EA884822606856F002A59E2 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		9EA884872606858C002A59E2 /* NewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityViewController.swift; sourceTree = "<group>"; };
 		9EA8848C260685A5002A59E2 /* ChoosingActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingActivityViewController.swift; sourceTree = "<group>"; };
 		9EA88491260685C7002A59E2 /* ChoosingCoachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingCoachViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +154,13 @@
 		9EA8851326068A4B002A59E2 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		9EA8851826068A60002A59E2 /* SettingsCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorFactory.swift; sourceTree = "<group>"; };
 		A1B45D15AB09032B774C8168 /* Pods-FightAcademy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightAcademy.debug.xcconfig"; path = "Target Support Files/Pods-FightAcademy/Pods-FightAcademy.debug.xcconfig"; sourceTree = "<group>"; };
+		AE628E6C260C906800A47A1D /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		AE628E77260C912400A47A1D /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		AE628E78260C912400A47A1D /* ActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
+		AE628E7E260C917400A47A1D /* ActivityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCollectionViewCell.swift; sourceTree = "<group>"; };
+		AE628E7F260C917400A47A1D /* ActivityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCollectionViewCell.xib; sourceTree = "<group>"; };
+		AE628E85260C922E00A47A1D /* ActivityDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDataSource.swift; sourceTree = "<group>"; };
+		AEEE5DE1260CCB2400576540 /* ActivityMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMocks.swift; sourceTree = "<group>"; };
 		B568C48F62C13747CFE66D40 /* Pods_FightAcademy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightAcademy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9E966CBB0B4BB88BE828FF7 /* Pods_FightAcademyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightAcademyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -266,6 +278,7 @@
 			children = (
 				4B3A6C5F260674A100B99CF0 /* ConfigurableCell.swift */,
 				4B3A6C5E260674A100B99CF0 /* ReusableCell.swift */,
+				AE628E6C260C906800A47A1D /* NibLoadable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -306,7 +319,7 @@
 				9EA8845E2606842D002A59E2 /* AuthViewController.swift */,
 				9EA8846326068467002A59E2 /* RegViewController.swift */,
 				9EA8846826068480002A59E2 /* AboutViewController.swift */,
-				9EA884822606856F002A59E2 /* ActivityViewController.swift */,
+				AE628E68260C8F6300A47A1D /* Activity */,
 				9EA884872606858C002A59E2 /* NewActivityViewController.swift */,
 				9EA8848C260685A5002A59E2 /* ChoosingActivityViewController.swift */,
 				9EA88491260685C7002A59E2 /* ChoosingCoachViewController.swift */,
@@ -442,6 +455,19 @@
 			path = SettingsCoordinator;
 			sourceTree = "<group>";
 		};
+		AE628E68260C8F6300A47A1D /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				AE628E77260C912400A47A1D /* ActivityViewController.swift */,
+				AE628E78260C912400A47A1D /* ActivityViewController.xib */,
+				AE628E7E260C917400A47A1D /* ActivityCollectionViewCell.swift */,
+				AE628E7F260C917400A47A1D /* ActivityCollectionViewCell.xib */,
+				AE628E85260C922E00A47A1D /* ActivityDataSource.swift */,
+				AEEE5DE1260CCB2400576540 /* ActivityMocks.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
 		B2E784A1A163BFA2FD703417 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -569,8 +595,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B3A6BEB2603CE3E00B99CF0 /* LaunchScreen.storyboard in Resources */,
+				AE628E81260C917400A47A1D /* ActivityCollectionViewCell.xib in Resources */,
 				4B3A6C492606366E00B99CF0 /* CoachTableViewCell.xib in Resources */,
 				4B3A6C91260742F200B99CF0 /* Assets.xcassets in Resources */,
+				AE628E7A260C912400A47A1D /* ActivityViewController.xib in Resources */,
 				4B3A6C9E260747A500B99CF0 /* CoachViewController.xib in Resources */,
 				4B3A6C182603D58700B99CF0 /* GoogleService-Info.plist in Resources */,
 			);
@@ -727,6 +755,7 @@
 				9EA884B226068709002A59E2 /* FinishFlowCoordinator.swift in Sources */,
 				9EA884E2260688F4002A59E2 /* AboutCoordinator.swift in Sources */,
 				9EA884D72606888F002A59E2 /* TabBarCoordinator.swift in Sources */,
+				AE628E86260C922E00A47A1D /* ActivityDataSource.swift in Sources */,
 				9EA884F026068943002A59E2 /* CoachesCoordinator.swift in Sources */,
 				9EA8849C260685F0002A59E2 /* SettingsViewController.swift in Sources */,
 				9EA884BB26068795002A59E2 /* ApplicationCoordinator.swift in Sources */,
@@ -735,6 +764,7 @@
 				4BF53EF426079CE1002166D4 /* String+Size.swift in Sources */,
 				9EA884A126068609002A59E2 /* ChangePasswordViewController.swift in Sources */,
 				9EA8845F2606842D002A59E2 /* AuthViewController.swift in Sources */,
+				AE628E6D260C906800A47A1D /* NibLoadable.swift in Sources */,
 				9EA884A8260686DF002A59E2 /* BaseCoordinator.swift in Sources */,
 				9EA8851926068A60002A59E2 /* SettingsCoordinatorFactory.swift in Sources */,
 				9EA884EA2606890B002A59E2 /* AboutCoordinatorFactory.swift in Sources */,
@@ -743,6 +773,7 @@
 				9EA884C3260687D1002A59E2 /* ApplicationCoordinatorFactory.swift in Sources */,
 				9EA884C926068819002A59E2 /* AuthCoordinator.swift in Sources */,
 				9EA8846926068480002A59E2 /* AboutViewController.swift in Sources */,
+				AE628E80260C917400A47A1D /* ActivityCollectionViewCell.swift in Sources */,
 				9EA8844126068270002A59E2 /* Routed.swift in Sources */,
 				9EA8848D260685A5002A59E2 /* ChoosingActivityViewController.swift in Sources */,
 				9EA884F52606894F002A59E2 /* CoachesCoordinatorFactory.swift in Sources */,
@@ -754,15 +785,16 @@
 				4B3A6C592606734D00B99CF0 /* CoachMock.swift in Sources */,
 				4B3A6C61260674A100B99CF0 /* ConfigurableCell.swift in Sources */,
 				4B3A6C67260732DB00B99CF0 /* CoachDataSourse.swift in Sources */,
+				AEEE5DE2260CCB2400576540 /* ActivityMocks.swift in Sources */,
 				4B3A6C482606366E00B99CF0 /* CoachTableViewCell.swift in Sources */,
 				4B3A6C60260674A100B99CF0 /* ReusableCell.swift in Sources */,
 				4B3A6BE62603CE3900B99CF0 /* FightAcademy.xcdatamodeld in Sources */,
 				9EA88497260685D9002A59E2 /* HistoryViewController.swift in Sources */,
 				9EA8850E26068A22002A59E2 /* HistoryFactoryProtocol.swift in Sources */,
-				9EA884832606856F002A59E2 /* ActivityViewController.swift in Sources */,
 				9EA8846426068467002A59E2 /* RegViewController.swift in Sources */,
 				4BF53EA8260771F2002166D4 /* UIView+IBInspectable.swift in Sources */,
 				9EA884DC260688AA002A59E2 /* TabBarCoordinatorFactory.swift in Sources */,
+				AE628E79260C912400A47A1D /* ActivityViewController.swift in Sources */,
 				9EA884FB260689AE002A59E2 /* ActivityCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -843,8 +875,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = UPWXFVVHLN;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -861,7 +895,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -904,8 +938,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = UPWXFVVHLN;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -916,7 +952,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

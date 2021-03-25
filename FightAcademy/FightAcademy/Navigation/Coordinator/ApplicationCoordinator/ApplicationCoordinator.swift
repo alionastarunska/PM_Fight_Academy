@@ -19,7 +19,7 @@ final class ApplicationCoordinator: BaseCoordinator {
         case true: runMainFlow()
         }
     }
-
+    
     private func runAuthFlow() {
         let coordinator = factory.makeAuthCoordinator(router: router)
         coordinator.finishFlow = { [weak self, weak coordinator] in
@@ -37,6 +37,7 @@ final class ApplicationCoordinator: BaseCoordinator {
         add(coordinator)
         coordinator.finishFlow = { [weak self, weak coordinator] in
             guard let self = self, let coordinator = coordinator else { return }
+            // TODO: maybe there will make sessionId = nil 
             self.isAutorized = false
             self.start()
             self.remove(coordinator)

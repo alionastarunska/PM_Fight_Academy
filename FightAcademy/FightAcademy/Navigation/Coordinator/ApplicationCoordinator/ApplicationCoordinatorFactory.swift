@@ -25,5 +25,7 @@ final class ApplicationFactory: ApplicationFactoryProtocol {
         let coordinator = AuthCoordinator(router: router)
         return coordinator
     }
+    
+    //TODO: maybe create func makeLaunchCoordinator
 
 }
