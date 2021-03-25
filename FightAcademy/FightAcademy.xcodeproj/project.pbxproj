@@ -72,6 +72,7 @@
 		AE80C8BC260B4C8C00E99D40 /* CustomRightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80C8B7260B4C8C00E99D40 /* CustomRightView.swift */; };
 		AE80C8BD260B4C8C00E99D40 /* CustomRightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE80C8B8260B4C8C00E99D40 /* CustomRightView.xib */; };
 		AE80C8E6260B5E9B00E99D40 /* AuthModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80C8E5260B5E9B00E99D40 /* AuthModelTests.swift */; };
+		AE80C93B260BC7B500E99D40 /* SessionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80C93A260BC7B500E99D40 /* SessionStorage.swift */; };
 		AEB49A6A2604B3F700766762 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB49A692604B3F700766762 /* NibLoadable.swift */; };
 		AEB49A7A2604B90500766762 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB49A782604B90500766762 /* RegisterViewController.swift */; };
 		AEB49A7B2604B90500766762 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB49A792604B90500766762 /* RegisterViewController.xib */; };
@@ -181,6 +182,7 @@
 		AE80C8B7260B4C8C00E99D40 /* CustomRightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRightView.swift; sourceTree = "<group>"; };
 		AE80C8B8260B4C8C00E99D40 /* CustomRightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomRightView.xib; sourceTree = "<group>"; };
 		AE80C8E5260B5E9B00E99D40 /* AuthModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModelTests.swift; sourceTree = "<group>"; };
+		AE80C93A260BC7B500E99D40 /* SessionStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStorage.swift; sourceTree = "<group>"; };
 		AEB49A692604B3F700766762 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		AEB49A782604B90500766762 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AEB49A792604B90500766762 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -512,6 +514,7 @@
 				AE5C817526055ACE00E12DB5 /* AuthorizationService.swift */,
 				AE5C817D26055B0A00E12DB5 /* Validator.swift */,
 				AEF81BC2260624A200B5F2B3 /* ProfileApiClient.swift */,
+				AE80C93A260BC7B500E99D40 /* SessionStorage.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -845,6 +848,7 @@
 				AE5C81582605182300E12DB5 /* TypeAliasses.swift in Sources */,
 				4B3A6BE62603CE3900B99CF0 /* FightAcademy.xcdatamodeld in Sources */,
 				AE80C85E260A228900E99D40 /* ResponseModel.swift in Sources */,
+				AE80C93B260BC7B500E99D40 /* SessionStorage.swift in Sources */,
 				4B3A6C7A2607416A00B99CF0 /* AppDelegate.swift in Sources */,
 				9EA884882606858C002A59E2 /* NewActivityViewController.swift in Sources */,
 				9EA884D126068838002A59E2 /* AuthCoordinatorFactory.swift in Sources */,

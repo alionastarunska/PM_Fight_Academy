@@ -39,7 +39,8 @@ class RegisterViewController: BaseAuthViewController, NibLoadable, Registering {
         
         setErrorsLabelHiden()
         
-        setClearButtonsMode(for: [firstNameTextField, phoneTextField])
+        setClearButtons(for: [firstNameTextField, phoneTextField],
+                        image: UIImage(systemName: "multiply.circle.fill"))
         
         checkButtonAvailability()
         

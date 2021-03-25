@@ -74,9 +74,11 @@ extension BaseAuthViewController {
         scrollView.scrollIndicatorInsets = contentInsets
     }
     
-    func setClearButtonsMode(for textfields: [UITextField]) {
+    func setClearButtons(for textfields: [LeadingImageTextField], image: UIImage?) {
+        guard let image = image else { return }
+        
         textfields.forEach {
-            $0.clearButtonMode = .whileEditing
+            $0.setCustomClearButton(with: image)
         }
     }
 }

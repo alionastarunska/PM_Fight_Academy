@@ -34,7 +34,8 @@ class LogInViewController: BaseAuthViewController, NibLoadable, Authorization {
         super.viewDidLoad()
         setErrorsLabelHiden()
         
-        setClearButtonsMode(for: [phoneTextField])
+        setClearButtons(for: [phoneTextField],
+                        image: UIImage(systemName: "multiply.circle.fill"))
         
         checkButtonAvailability()
         

@@ -18,19 +18,11 @@ final class TrailingImageTextField: LeadingImageTextField {
     }()
     
     var imageTapped: VoidClosure?
-    
-    @IBInspectable var trailingPadding: CGFloat = 0
-    
+        
     @IBInspectable var trailingImageButton: UIImage? {
         didSet {
             updateTrailingIcon()
         }
-    }
-    
-    override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
-        var rect = super.rightViewRect(forBounds: bounds)
-        rect.origin.x += trailingPadding
-        return rect
     }
     
     // MARK: - Handlers
@@ -53,7 +45,9 @@ final class TrailingImageTextField: LeadingImageTextField {
     private func setHandlersForImageTapping() {
         customRightView.cleanIconTapped = { [weak self] in
             self?.text = nil
+            self?.sendActions(for: .editingChanged)
         }
+        
         customRightView.imageForChangingTapped = { [weak self] in
             self?.imageTapped?()
         }

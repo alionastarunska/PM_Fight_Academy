@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftKeychainWrapper
 
 struct AuthorizationService {
     
@@ -39,30 +38,6 @@ struct AuthorizationService {
                 completion(.success(nil))
             case .failure(let error):
                 completion(.failure(error))
-            }
-        }
-    }
-}
-
-final class SessionStorage {
-    
-    private enum Keys: String {
-        case sessionID
-    }
-    
-    private let keychainWrapper = KeychainWrapper.standard
-    
-    var sessionId: String? {
-        
-        get {
-            keychainWrapper.string(forKey: Keys.sessionID.rawValue)
-        }
-        
-        set {
-            if let newValue = newValue {
-                keychainWrapper.set(newValue, forKey: Keys.sessionID.rawValue)
-            } else {
-                keychainWrapper.removeObject(forKey: Keys.sessionID.rawValue)
             }
         }
     }

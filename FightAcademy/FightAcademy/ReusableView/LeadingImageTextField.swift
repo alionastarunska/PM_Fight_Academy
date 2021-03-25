@@ -46,7 +46,9 @@ class LeadingImageTextField: UITextField {
         }
     }
     
-    // MARK: - Ovveride methods
+    internal let trailingPadding: CGFloat = -10
+    
+    // MARK: - Override methods
     
     override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
         var textRect = super.leftViewRect(forBounds: bounds)
@@ -55,6 +57,10 @@ class LeadingImageTextField: UITextField {
     }
     
     // MARK: - Handlers
+    
+    func setCustomClearButton(with image: UIImage) {
+        modifyClearButtonWithImage(image: image)
+    }
     
     private func updateCornerRadius(using cornerRadius: CGFloat) {
         layer.cornerRadius = cornerRadius
@@ -80,5 +86,34 @@ class LeadingImageTextField: UITextField {
             leftViewMode = UITextField.ViewMode.never
             leftView = nil
         }
+    }
+    
+    override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+        var rect = super.rightViewRect(forBounds: bounds)
+        rect.origin.x += trailingPadding
+        return rect
+    }
+}
+
+extension UITextField {
+    func modifyClearButtonWithImage(image: UIImage) {
+        
+        guard let color = UIColor(named: "clearButtonColor") else { return }
+        let tintedImage = image.withRenderingMode(.alwaysTemplate)
+        
+        let clearButton = UIButton(type: .custom)
+        clearButton.setImage(tintedImage, for: .normal)
+        clearButton.tintColor = color
+        clearButton.frame = CGRect(x: 0, y: 0, width: 20, height: 40)
+        clearButton.contentMode = .scaleAspectFit
+        clearButton.addTarget(self, action: #selector(UITextField.clear(sender:) ), for: .touchUpInside)
+        
+        self.rightView = clearButton
+        self.rightViewMode = .whileEditing
+    }
+
+    @objc func clear(sender: AnyObject) {
+        self.text = nil
+        sendActions(for: .editingChanged)
     }
 }
