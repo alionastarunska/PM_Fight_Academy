@@ -78,6 +78,8 @@ class BookingActivityViewController: UIViewController, BookingNewActivity {
             timeCollectionView.shake()
             return
         }
+        
+        // todo: create booking
         onRequestActivity?()
     }
     
