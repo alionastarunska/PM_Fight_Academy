@@ -32,6 +32,8 @@
 		9E35A497260D0F07005D177B /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E35A496260D0F07005D177B /* AboutViewController.xib */; };
 		9E35A49F260D106F005D177B /* SocialNetworkDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E35A49E260D106F005D177B /* SocialNetworkDataSource.swift */; };
 		9E35A4A4260D11EB005D177B /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E35A4A3260D11EB005D177B /* UITableView.swift */; };
+		9E48E323260D2277005D2E5F /* RCKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E48E322260D2277005D2E5F /* RCKey.swift */; };
+		9E48E328260D2743005D2E5F /* RemoteConfigProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E48E327260D2743005D2E5F /* RemoteConfigProvider.swift */; };
 		9E7124AA260D152200B881AB /* ExpandableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7124A9260D152200B881AB /* ExpandableTableViewCell.swift */; };
 		9E7124AF260D16F900B881AB /* AutoSizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7124AE260D16F900B881AB /* AutoSizingTableView.swift */; };
 		9E7124B4260D1A9A00B881AB /* UITextField+Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7124B3260D1A9A00B881AB /* UITextField+Inspectable.swift */; };
@@ -69,6 +71,7 @@
 		9EA8850E26068A22002A59E2 /* HistoryFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8850D26068A22002A59E2 /* HistoryFactoryProtocol.swift */; };
 		9EA8851426068A4B002A59E2 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8851326068A4B002A59E2 /* SettingsCoordinator.swift */; };
 		9EA8851926068A60002A59E2 /* SettingsCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8851826068A60002A59E2 /* SettingsCoordinatorFactory.swift */; };
+		9EF91D84260D20CE0067FE76 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9EF91D83260D20CE0067FE76 /* RemoteConfigDefaults.plist */; };
 		9EF93A23260C5952006EB24A /* NetworkApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF93A22260C5952006EB24A /* NetworkApiProvider.swift */; };
 		9EF93A2B260C596D006EB24A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF93A2A260C596D006EB24A /* NetworkManager.swift */; };
 		9EF93A30260C5988006EB24A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF93A2F260C5988006EB24A /* NetworkError.swift */; };
@@ -172,6 +175,8 @@
 		9E35A496260D0F07005D177B /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		9E35A49E260D106F005D177B /* SocialNetworkDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkDataSource.swift; sourceTree = "<group>"; };
 		9E35A4A3260D11EB005D177B /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		9E48E322260D2277005D2E5F /* RCKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCKey.swift; sourceTree = "<group>"; };
+		9E48E327260D2743005D2E5F /* RemoteConfigProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigProvider.swift; sourceTree = "<group>"; };
 		9E7124A9260D152200B881AB /* ExpandableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewCell.swift; sourceTree = "<group>"; };
 		9E7124AE260D16F900B881AB /* AutoSizingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSizingTableView.swift; sourceTree = "<group>"; };
 		9E7124B3260D1A9A00B881AB /* UITextField+Inspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Inspectable.swift"; sourceTree = "<group>"; };
@@ -209,6 +214,7 @@
 		9EA8850D26068A22002A59E2 /* HistoryFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryFactoryProtocol.swift; sourceTree = "<group>"; };
 		9EA8851326068A4B002A59E2 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		9EA8851826068A60002A59E2 /* SettingsCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorFactory.swift; sourceTree = "<group>"; };
+		9EF91D83260D20CE0067FE76 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		9EF93A22260C5952006EB24A /* NetworkApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkApiProvider.swift; sourceTree = "<group>"; };
 		9EF93A2A260C596D006EB24A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9EF93A2F260C5988006EB24A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -389,7 +395,6 @@
 			isa = PBXGroup;
 			children = (
 				9EA8846826068480002A59E2 /* AboutViewController.swift */,
-				9E7124B8260D1D8900B881AB /* RemoteConfigManager.swift */,
 				9E7124AE260D16F900B881AB /* AutoSizingTableView.swift */,
 				9E35A49E260D106F005D177B /* SocialNetworkDataSource.swift */,
 				9E35A496260D0F07005D177B /* AboutViewController.xib */,
@@ -581,6 +586,17 @@
 			path = SettingsCoordinator;
 			sourceTree = "<group>";
 		};
+		9EF91D7F260D20AC0067FE76 /* RemoteConfig */ = {
+			isa = PBXGroup;
+			children = (
+				9E7124B8260D1D8900B881AB /* RemoteConfigManager.swift */,
+				9E48E327260D2743005D2E5F /* RemoteConfigProvider.swift */,
+				9E48E322260D2277005D2E5F /* RCKey.swift */,
+				9EF91D83260D20CE0067FE76 /* RemoteConfigDefaults.plist */,
+			);
+			path = RemoteConfig;
+			sourceTree = "<group>";
+		};
 		9EF93A21260C5901006EB24A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -692,6 +708,7 @@
 		AE5C817426055A9400E12DB5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9EF91D7F260D20AC0067FE76 /* RemoteConfig */,
 				AE5C817526055ACE00E12DB5 /* AuthorizationService.swift */,
 				AE5C817D26055B0A00E12DB5 /* Validator.swift */,
 				AEF81BC2260624A200B5F2B3 /* ProfileApiClient.swift */,
@@ -872,6 +889,7 @@
 				9E35A491260D0EF1005D177B /* AboutSocialTableCell.xib in Resources */,
 				4B3A6C9E260747A500B99CF0 /* CoachViewController.xib in Resources */,
 				4B3A6C182603D58700B99CF0 /* GoogleService-Info.plist in Resources */,
+				9EF91D84260D20CE0067FE76 /* RemoteConfigDefaults.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1017,6 +1035,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E48E328260D2743005D2E5F /* RemoteConfigProvider.swift in Sources */,
 				AEF81BE72607728C00B5F2B3 /* BaseAuthModel.swift in Sources */,
 				AE5C815E26053A6600E12DB5 /* LogInViewController.swift in Sources */,
 				AE5C817626055ACE00E12DB5 /* AuthorizationService.swift in Sources */,
@@ -1061,6 +1080,7 @@
 				4BF53EF426079CE1002166D4 /* String+Size.swift in Sources */,
 				9EA884A126068609002A59E2 /* ChangePasswordViewController.swift in Sources */,
 				9EA884A8260686DF002A59E2 /* BaseCoordinator.swift in Sources */,
+				9E48E323260D2277005D2E5F /* RCKey.swift in Sources */,
 				9EF93A61260C5E14006EB24A /* PMFightApi.swift in Sources */,
 				9EA8851926068A60002A59E2 /* SettingsCoordinatorFactory.swift in Sources */,
 				9EA884EA2606890B002A59E2 /* AboutCoordinatorFactory.swift in Sources */,

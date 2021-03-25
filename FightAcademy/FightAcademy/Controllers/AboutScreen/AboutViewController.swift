@@ -10,34 +10,43 @@ import UIKit
 class AboutViewController: UIViewController {
 
     @IBOutlet private weak var table: AutoSizingTableView!
+    @IBOutlet private weak var descriptionTextView: UITextView!
+    @IBOutlet private weak var articleTextView: UITextView!
     
-    private var socialNetworks: [SocialNetwork] = [.init(name: "facebook",
-                                                         link: "https://facebook.com"),
-                                                   .init(name: "instagram",
-                                                         link: "https://instagram.com"),
-                                                   .init(name: "youtube",
-                                                         link: "https://youtube.com")]
+    private let descriptionText: String
+    private let articleText: String
 
-    private var dataSourse: SocialNetworkDataSourse<AboutSocialTableCell>?
+    private let dataSourse: SocialNetworkDataSourse<AboutSocialTableCell>
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "About"
-        
+
         setupTableView()
+        setupAcricles()
+    }
+
+    private func setupAcricles() {
+        descriptionTextView.text = descriptionText
+        articleTextView.text = articleText
     }
 
     private func setupTableView() {
-        dataSourse = SocialNetworkDataSourse<AboutSocialTableCell>(items: socialNetworks)
         table.register(AboutSocialTableCell.self)
         table.dataSource = dataSourse
     }
 
-    init() {
+    init(socialNetworks: [SocialNetwork], description: String, acticle: String) {
+        dataSourse = SocialNetworkDataSourse<AboutSocialTableCell>(items: socialNetworks)
+        descriptionText = description
+        articleText = acticle
         super.init(nibName: "AboutViewController", bundle: .main)
     }
     
     required init?(coder: NSCoder) {
+        dataSourse = SocialNetworkDataSourse<AboutSocialTableCell>(items: [])
+        descriptionText = ""
+        articleText = ""
         super.init(nibName: "AboutViewController", bundle: .main)
     }
     

@@ -57,10 +57,6 @@ class RegisterViewController: BaseAuthViewController, NibLoadable, Registering {
         
         do {
             try validationService?.validate(for: registerModel)
-            print(registerModel.firstName)
-            print(registerModel.name)
-            print(registerModel.password)
-            print(registerModel.phoneNumber)
             
             authService?.reg(phone: registerModel.phoneNumber ?? "",
                              password: registerModel.password ?? "",

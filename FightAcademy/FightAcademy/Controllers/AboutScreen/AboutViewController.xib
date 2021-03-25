@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutViewController" customModule="FightAcademy" customModuleProvider="target">
             <connections>
+                <outlet property="articleTextView" destination="r6W-IS-VHF" id="CC1-9M-4nh"/>
+                <outlet property="descriptionTextView" destination="pZJ-Ay-FAe" id="iNi-aE-Kvu"/>
                 <outlet property="table" destination="MSy-uS-a3M" id="cGT-rD-9CF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
