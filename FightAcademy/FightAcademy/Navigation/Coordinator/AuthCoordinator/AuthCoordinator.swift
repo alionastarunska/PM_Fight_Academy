@@ -12,7 +12,7 @@ final class AuthCoordinator: FinishFlowCoordinator {
     private let factory: AuthFactoryProtocol = AuthFactory()
 
     override func start() {
-        showSignUp()
+        showLogin()
     }
 
     private func showLogin() {

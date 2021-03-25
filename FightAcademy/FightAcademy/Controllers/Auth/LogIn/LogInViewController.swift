@@ -50,16 +50,29 @@ class LogInViewController: BaseAuthViewController, NibLoadable, Authorization {
     @IBAction func logInPressed(_ sender: Any) {
         do {
             try validationService?.validate(for: authModel)
-            authService?.authorize(with: authModel) { [weak self] result in
-                guard let self = self else { return }
-                switch result {
-                case .success:
-                    self.onCompleteAuth?()
-                case .failure(let error):
-                    self.onError?(error)
-                }
-            }
-            print("done")
+            authService?.login(phone: authModel.phoneNumber ?? "",
+                               password: authModel.password ?? "",
+                               completion: { (result) in
+                                DispatchQueue.main.async {
+                                    switch result {
+                                    case .success(let token):
+                                        print(token.raw)
+                                        self.onCompleteAuth?()
+                                    case .failure(let error):
+                                        self.onError?(error)
+                                    }
+                                }
+                               })
+//            authService?.authorize(with: authModel) { [weak self] result in
+//                guard let self = self else { return }
+//                switch result {
+//                case .success:
+//                    self.onCompleteAuth?()
+//                case .failure(let error):
+//                    self.onError?(error)
+//                }
+//            }
+//            print("done")
         } catch _ {
             passwordErrorLabel.text = ValidationError.Contnet.unknown
             passwordErrorLabel.isHidden = false

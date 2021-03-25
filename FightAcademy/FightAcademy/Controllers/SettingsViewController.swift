@@ -45,6 +45,7 @@ class SettingsViewController: UIViewController, Settings {
 
     @objc
     private func logOut() {
+        SessionStorage().sessionId = nil
         onLogOut?()
     }
 

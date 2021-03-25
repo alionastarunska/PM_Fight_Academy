@@ -57,16 +57,37 @@ class RegisterViewController: BaseAuthViewController, NibLoadable, Registering {
         
         do {
             try validationService?.validate(for: registerModel)
-            authService?.authorize(with: registerModel) { [weak self] result in
-                guard let self = self else { return }
-                switch result {
-                case .success:
-                    self.onCompleteAuth?()
-                case .failure(let error):
-                    self.onError?(error)
-                }
-            }
-            print("Registration done")
+            print(registerModel.firstName)
+            print(registerModel.name)
+            print(registerModel.password)
+            print(registerModel.phoneNumber)
+            
+            authService?.reg(phone: registerModel.phoneNumber ?? "",
+                             password: registerModel.password ?? "",
+                             name: registerModel.name ?? "",
+                             completion: { (result) in
+                                DispatchQueue.main.async {
+                                    
+                                    switch result {
+                                    case .success(let token):
+                                        print(token.raw)
+                                        self.onCompleteAuth?()
+                                    case .failure(let error):
+                                        self.onError?(error)
+                                    }
+                                }
+                             })
+            
+//            authService?.authorize(with: registerModel) { [weak self] result in
+//                guard let self = self else { return }
+//                switch result {
+//                case .success:
+//                    self.onCompleteAuth?()
+//                case .failure(let error):
+//                    self.onError?(error)
+//                }
+//            }
+//            print("Registration done")
         } catch let error {
             switch error {
             case ValidationError.badName(let message):

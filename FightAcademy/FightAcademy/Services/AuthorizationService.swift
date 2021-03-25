@@ -24,6 +24,15 @@ struct AuthorizationService {
         self.sessionStorage = sessionStorage
         self.profileApiClient = profileApiClient
     }
+
+    // note:
+    func login(phone: String, password: String, completion: @escaping (Result<Token, Error>) -> Void) {
+        PMFightApi.shared.logIn(phone: phone, password: password, completion: completion)
+    }
+    
+    func reg(phone: String, password: String, name: String, completion: @escaping (Result<Token, Error>) -> Void) {
+        PMFightApi.shared.register(name: name, phone: phone, password: password, completion: completion)
+    }
     
     func authorize<T: Encodable>(with authModel: T, completion: @escaping ItemClosure<Result<Void?, NetworkingError>>) {
         

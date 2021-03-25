@@ -55,7 +55,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="YUa-ti-0bM">
                                             <rect key="frame" x="0.0" y="311.5" width="373" height="55"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aUo-ay-bUO" customClass="LeadingImageTextField" customModule="FightAcademy" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+380689292193" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aUo-ay-bUO" customClass="LeadingImageTextField" customModule="FightAcademy" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="373" height="49"/>
                                                     <color key="backgroundColor" name="customWhite"/>
                                                     <color key="tintColor" name="typingTextColor"/>
@@ -95,7 +95,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="7wz-RJ-FQB">
                                             <rect key="frame" x="0.0" y="396.5" width="373" height="55"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-wF-Zic" customClass="TrailingImageTextField" customModule="FightAcademy" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="PaSSw0rd123" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-wF-Zic" customClass="TrailingImageTextField" customModule="FightAcademy" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="373" height="49"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -229,10 +229,10 @@
             <size key="intrinsicContentSize" width="126" height="30"/>
         </designable>
         <designable name="PGR-wF-Zic">
-            <size key="intrinsicContentSize" width="112.5" height="34"/>
+            <size key="intrinsicContentSize" width="140" height="34"/>
         </designable>
         <designable name="aUo-ay-bUO">
-            <size key="intrinsicContentSize" width="153.5" height="34"/>
+            <size key="intrinsicContentSize" width="170" height="34"/>
         </designable>
         <designable name="uwH-v1-qWV">
             <size key="intrinsicContentSize" width="37" height="30"/>
