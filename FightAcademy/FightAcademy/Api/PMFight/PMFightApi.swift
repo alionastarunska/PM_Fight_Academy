@@ -7,11 +7,11 @@
 
 import Foundation
 
-class WeatherApi {
+class PMFightApi {
 
     private let netApiProvider = PMFightProvider()
 
-    static let shared = WeatherApi()
+    static let shared = PMFightApi()
 
     private init() {}
 
