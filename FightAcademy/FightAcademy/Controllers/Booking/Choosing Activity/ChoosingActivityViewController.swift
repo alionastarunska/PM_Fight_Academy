@@ -9,7 +9,7 @@ import UIKit
 
 protocol ChoosingActivity: UIViewController {
 
-    var onSelectActivityType: (() -> Void)? { get set }
+    var onSelectActivityType: ((ChoosingActivityModel) -> Void)? { get set }
 
 }
 
@@ -17,7 +17,7 @@ class ChoosingActivityViewController: UIViewController, ChoosingActivity {
     
     @IBOutlet private weak var tableView: UITableView!
     
-    var onSelectActivityType: (() -> Void)?
+    var onSelectActivityType: ((ChoosingActivityModel) -> Void)?
     
     private var activity: [ChoosingActivityModel] = ChoosingActivityMock.make()
     private var dataSource: ChoosingActivityDataSource<ChoosingActivityTableViewCell>?
@@ -27,15 +27,20 @@ class ChoosingActivityViewController: UIViewController, ChoosingActivity {
         navigationItem.title = "Activities"
         setupTableView()
     }
-
-    @objc private func chooseActivity() {
-        onSelectActivityType?()
-    }
     
     private func setupTableView() {
         dataSource = ChoosingActivityDataSource<ChoosingActivityTableViewCell>(activity: activity)
         tableView.register(ChoosingActivityTableViewCell.self)
         tableView.dataSource = dataSource
+        tableView.delegate = self
     }
 
+}
+
+extension ChoosingActivityViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard activity.indices.contains(indexPath.row) else { return }
+        let selectedActivity = activity[indexPath.row]
+        onSelectActivityType?(selectedActivity)
+    }
 }

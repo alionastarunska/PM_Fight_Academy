@@ -7,13 +7,15 @@
 
 import UIKit
 
-class CoachDataSource<Cell: CoachTableViewCell>: NSObject, UITableViewDataSource {
-    
-    var coaches: [CoachCellModel]
+typealias TableViewCell = UITableViewCell & ReusableCell & ConfigurableCell
 
-       init(coaches: [CoachCellModel]) {
-           self.coaches = coaches
-       }
+class CoachDataSource<Cell: TableViewCell>: NSObject, UITableViewDataSource {
+    
+    var coaches: [Cell.Item]
+
+    init(coaches: [Cell.Item]) {
+        self.coaches = coaches
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coaches.count
@@ -24,7 +26,7 @@ class CoachDataSource<Cell: CoachTableViewCell>: NSObject, UITableViewDataSource
             return UITableViewCell()
         }
         cell.configure(with: coaches[indexPath.row])
-        cell.expandEvent = {
+        (cell as? CoachTableViewCell)?.expandEvent = {
             tableView.reloadRows(at: [indexPath], with: .none)
         }
         return cell

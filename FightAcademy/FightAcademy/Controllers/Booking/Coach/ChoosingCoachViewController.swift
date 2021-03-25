@@ -9,7 +9,7 @@ import UIKit
 
 protocol ChoosingCoach: UIViewController {
 
-    var onSelectCoach: (() -> Void)? { get set }
+    var onSelectCoach: ((Coach) -> Void)? { get set }
 
 }
 
@@ -17,25 +17,30 @@ class ChoosingCoachViewController: UIViewController, ChoosingCoach {
    
     @IBOutlet private weak var tableView: UITableView!
     
-    private var coaches: [ChoosingCoachModel] = ChoosingCoachMock.make()
-    private var dataSource: ChoosingCoachDataSource<ChoosingCoachTableViewCell>?
+    private var coaches: [Coach] = CoachMock.make()
+    private var dataSource: CoachDataSource<ChoosingCoachTableViewCell>?
     
-    var onSelectCoach: (() -> Void)?
+    var onSelectCoach: ((Coach) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Coaches"
         setupTableView()
     }
-
-    @objc private func chooseCoach() {
-        onSelectCoach?()
-    }
     
     private func setupTableView() {
-        dataSource = ChoosingCoachDataSource<ChoosingCoachTableViewCell>(coaches: coaches)
+        dataSource = CoachDataSource<ChoosingCoachTableViewCell>(coaches: coaches)
         tableView.register(ChoosingCoachTableViewCell.self)
         tableView.dataSource = dataSource
+        tableView.delegate = self
     }
 
+}
+
+extension ChoosingCoachViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard coaches.indices.contains(indexPath.row) else { return }
+        let coach = coaches[indexPath.row]
+        onSelectCoach?(coach)
+    }
 }

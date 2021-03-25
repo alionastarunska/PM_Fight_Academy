@@ -10,8 +10,6 @@
 		4B1BC3FB260BD042003746DC /* ChoosingActivityDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BC3FA260BD042003746DC /* ChoosingActivityDataSourse.swift */; };
 		4B1BC407260BDB83003746DC /* ChoosingCoachTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BC405260BDB83003746DC /* ChoosingCoachTableViewCell.swift */; };
 		4B1BC408260BDB83003746DC /* ChoosingCoachTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1BC406260BDB83003746DC /* ChoosingCoachTableViewCell.xib */; };
-		4B1BC40D260BDB9C003746DC /* ChoosingCoachModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BC40C260BDB9C003746DC /* ChoosingCoachModel.swift */; };
-		4B1BC412260BDBAF003746DC /* ChoosingCoachDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BC411260BDBAF003746DC /* ChoosingCoachDataSource.swift */; };
 		4B3A6BE62603CE3900B99CF0 /* FightAcademy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6BE42603CE3900B99CF0 /* FightAcademy.xcdatamodeld */; };
 		4B3A6BEB2603CE3E00B99CF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6BE92603CE3E00B99CF0 /* LaunchScreen.storyboard */; };
 		4B3A6BF62603CE3F00B99CF0 /* FightAcademyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6BF52603CE3F00B99CF0 /* FightAcademyTests.swift */; };
@@ -30,6 +28,7 @@
 		4B3A6C9E260747A500B99CF0 /* CoachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6C9C260747A500B99CF0 /* CoachViewController.xib */; };
 		4B59448C260A8FAF0096FB9F /* TimeSlotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B59448B260A8FAF0096FB9F /* TimeSlotModel.swift */; };
 		4B5FE59F260B3E0B004B336C /* BookingDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5FE59E260B3E0B004B336C /* BookingDataSourse.swift */; };
+		4B6CE7BC260CC16E004D6039 /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CE7BB260CC16E004D6039 /* UIView+Shake.swift */; };
 		4B82037D260BC48900970868 /* ChoosingActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B82037C260BC48900970868 /* ChoosingActivityModel.swift */; };
 		4B8EDED7260BBB7700DEFC5D /* ChoosingCoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8EDED5260BBB7700DEFC5D /* ChoosingCoachViewController.swift */; };
 		4B8EDED8260BBB7700DEFC5D /* ChoosingCoachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B8EDED6260BBB7700DEFC5D /* ChoosingCoachViewController.xib */; };
@@ -107,8 +106,6 @@
 		4B1BC3FA260BD042003746DC /* ChoosingActivityDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingActivityDataSourse.swift; sourceTree = "<group>"; };
 		4B1BC405260BDB83003746DC /* ChoosingCoachTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingCoachTableViewCell.swift; sourceTree = "<group>"; };
 		4B1BC406260BDB83003746DC /* ChoosingCoachTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoosingCoachTableViewCell.xib; sourceTree = "<group>"; };
-		4B1BC40C260BDB9C003746DC /* ChoosingCoachModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingCoachModel.swift; sourceTree = "<group>"; };
-		4B1BC411260BDBAF003746DC /* ChoosingCoachDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingCoachDataSource.swift; sourceTree = "<group>"; };
 		4B3A6BD82603CE3900B99CF0 /* FightAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FightAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B3A6BE52603CE3900B99CF0 /* FightAcademy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FightAcademy.xcdatamodel; sourceTree = "<group>"; };
 		4B3A6BEA2603CE3E00B99CF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -133,6 +130,7 @@
 		4B3A6C9C260747A500B99CF0 /* CoachViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoachViewController.xib; sourceTree = "<group>"; };
 		4B59448B260A8FAF0096FB9F /* TimeSlotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSlotModel.swift; sourceTree = "<group>"; };
 		4B5FE59E260B3E0B004B336C /* BookingDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDataSourse.swift; sourceTree = "<group>"; };
+		4B6CE7BB260CC16E004D6039 /* UIView+Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
 		4B82037C260BC48900970868 /* ChoosingActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingActivityModel.swift; sourceTree = "<group>"; };
 		4B8EDED5260BBB7700DEFC5D /* ChoosingCoachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingCoachViewController.swift; sourceTree = "<group>"; };
 		4B8EDED6260BBB7700DEFC5D /* ChoosingCoachViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoosingCoachViewController.xib; sourceTree = "<group>"; };
@@ -320,8 +318,6 @@
 				4B8EDED6260BBB7700DEFC5D /* ChoosingCoachViewController.xib */,
 				4B1BC405260BDB83003746DC /* ChoosingCoachTableViewCell.swift */,
 				4B1BC406260BDB83003746DC /* ChoosingCoachTableViewCell.xib */,
-				4B1BC40C260BDB9C003746DC /* ChoosingCoachModel.swift */,
-				4B1BC411260BDBAF003746DC /* ChoosingCoachDataSource.swift */,
 			);
 			path = Coach;
 			sourceTree = "<group>";
@@ -409,6 +405,7 @@
 				4BF53EA7260771F2002166D4 /* UIView+IBInspectable.swift */,
 				9EA8846F2606850A002A59E2 /* UIFontExtensions.swift */,
 				4BF53EF326079CE1002166D4 /* String+Size.swift */,
+				4B6CE7BB260CC16E004D6039 /* UIView+Shake.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -799,10 +796,10 @@
 				9EA88452260683AB002A59E2 /* NavigationController.swift in Sources */,
 				4B3A6C792607416A00B99CF0 /* SceneDelegate.swift in Sources */,
 				4B3A6C9D260747A500B99CF0 /* CoachViewController.swift in Sources */,
-				4B1BC40D260BDB9C003746DC /* ChoosingCoachModel.swift in Sources */,
 				9EA884B226068709002A59E2 /* FinishFlowCoordinator.swift in Sources */,
 				4B82037D260BC48900970868 /* ChoosingActivityModel.swift in Sources */,
 				4B8EDEE5260BBD2500DEFC5D /* ChoosingActivityTableViewCell.swift in Sources */,
+				4B6CE7BC260CC16E004D6039 /* UIView+Shake.swift in Sources */,
 				9EA884E2260688F4002A59E2 /* AboutCoordinator.swift in Sources */,
 				4B8EDEDE260BBC3E00DEFC5D /* ChoosingActivityViewController.swift in Sources */,
 				9EA884D72606888F002A59E2 /* TabBarCoordinator.swift in Sources */,
@@ -847,7 +844,6 @@
 				4BF53EA8260771F2002166D4 /* UIView+IBInspectable.swift in Sources */,
 				9EA884DC260688AA002A59E2 /* TabBarCoordinatorFactory.swift in Sources */,
 				9EA884FB260689AE002A59E2 /* ActivityCoordinator.swift in Sources */,
-				4B1BC412260BDBAF003746DC /* ChoosingCoachDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -945,7 +941,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1000,7 +996,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1017,12 +1013,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 82CSN5YWUM;
 				INFOPLIST_FILE = FightAcademy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.PMTech.FightAcademy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sa.FightAcademy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1036,12 +1033,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 82CSN5YWUM;
 				INFOPLIST_FILE = FightAcademy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.PMTech.FightAcademy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sa.FightAcademy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

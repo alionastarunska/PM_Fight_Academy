@@ -85,6 +85,7 @@
                 <outlet property="avatarImageView" destination="buW-87-aT7" id="ilp-Ic-Y6A"/>
                 <outlet property="nameLabel" destination="hom-i8-2UG" id="ivp-Ov-Gwv"/>
                 <outlet property="phoneNumberLabel" destination="jcz-ol-PsA" id="Yop-L5-RBA"/>
+                <outlet property="selectionView" destination="jCq-gc-CkF" id="shb-VE-eTV"/>
             </connections>
             <point key="canvasLocation" x="140.57971014492756" y="21.09375"/>
         </tableViewCell>

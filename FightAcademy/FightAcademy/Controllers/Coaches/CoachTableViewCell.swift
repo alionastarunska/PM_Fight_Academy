@@ -32,7 +32,7 @@ class CoachTableViewCell: UITableViewCell, ConfigurableCell, ReusableCell {
     
     func configure(with item: CoachCellModel) {
         model = item
-        nameLabel.text = item.coach.firstName + " " + item.coach.lastName
+        nameLabel.text = item.coach.fullName
         ageLabel.text = "\(item.coach.age)" + " years old"
         phoneNumberLabel.text = item.coach.phoneNumber
         descriptionLabel.text = item.coach.description

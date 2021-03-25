@@ -10,13 +10,20 @@ import FSCalendar
 
 protocol BookingNewActivity: UIViewController {
 
-    var onSelectActivityType: (() -> Void)? { get set }
-    var onSelectCoach: (() -> Void)? { get set }
+    var onSelectActivityType: ((BookingDelegate) -> Void)? { get set }
+    var onSelectCoach: ((BookingDelegate) -> Void)? { get set }
     var onRequestActivity: (() -> Void)? { get set }
 
 }
 
-class BookingActivityViewController: UIViewController, BookingNewActivity, FSCalendarDelegate, FSCalendarDataSource {
+protocol BookingDelegate: class {
+    
+    func didSelect(_ activity: ChoosingActivityModel)
+    func didSelect(_ coach: Coach)
+    
+}
+
+class BookingActivityViewController: UIViewController, BookingNewActivity {
     
     @IBOutlet private weak var chooseCoachButton: UIButton!
     @IBOutlet private weak var chooseActivityButton: UIButton!
@@ -26,22 +33,52 @@ class BookingActivityViewController: UIViewController, BookingNewActivity, FSCal
     @IBOutlet private weak var coachNameLabel: UILabel!
     @IBOutlet private weak var timeCollectionView: UICollectionView!
     @IBOutlet private weak var timeHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var scrollView: UIScrollView!
     
     private var timeSlots: [TimeSlot] = TimeSlotsMock.make()
     private var dataSource: BookingDataSource<TimeCollectionViewCell>?
     
+    private var selectedActivity: ChoosingActivityModel?
+    private var selectedCoach: Coach?
+    private var selectedDate: Date?
+    private var selectedTimeSlot: TimeSlot?
+    
     var onRequestActivity: (() -> Void)?
-    var onSelectCoach: (() -> Void)?
-    var onSelectActivityType: (() -> Void)?
+    var onSelectCoach: ((BookingDelegate) -> Void)?
+    var onSelectActivityType: ((BookingDelegate) -> Void)?
     
     @IBAction func chooseCoachButtonAction(_ sender: UIButton) {
-        chooseCoach()
+        onSelectCoach?(self)
     }
+    
     @IBAction func chooseActivityButtonAction(_ sender: UIButton) {
-        chooseActivity()
+        onSelectActivityType?(self)
     }
+    
     @IBAction func doneButtonAction(_ sender: UIButton) {
-        requestForActivity()
+        guard let activity = selectedActivity else {
+            error()
+            activityLabel.superview?.shake()
+            scrollView.setContentOffset(.zero, animated: true)
+            return
+        }
+        guard let coach = selectedCoach else {
+            error()
+            coachNameLabel.superview?.shake()
+            scrollView.setContentOffset(.zero, animated: true)
+            return
+        }
+        guard let date = selectedDate else {
+            error()
+            calendar.shake()
+            return
+        }
+        guard let timeSlot = selectedTimeSlot else {
+            error()
+            timeCollectionView.shake()
+            return
+        }
+        onRequestActivity?()
     }
     
     override func viewDidLoad() {
@@ -50,19 +87,6 @@ class BookingActivityViewController: UIViewController, BookingNewActivity, FSCal
         setupCollectionView()
         calendar.dataSource = self
         calendar.delegate = self
-        
-    }
-    
-    @objc private func chooseActivity() {
-        onSelectActivityType?()
-    }
-    
-    @objc private func chooseCoach() {
-        onSelectCoach?()
-    }
-    
-    @objc private func requestForActivity() {
-        onRequestActivity?()
     }
     
     private func setupCollectionView() {
@@ -78,6 +102,43 @@ class BookingActivityViewController: UIViewController, BookingNewActivity, FSCal
         timeCollectionView.register(TimeCollectionViewCell.cellNib,
                                     forCellWithReuseIdentifier: TimeCollectionViewCell.reuseIdentifier)
         timeCollectionView.dataSource = dataSource
+        timeCollectionView.delegate = self
+    }
+    
+    private func error() {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.error)
+    }
+}
+
+extension BookingActivityViewController: BookingDelegate {
+    func didSelect(_ coach: Coach) {
+        selectedCoach = coach
+        coachNameLabel.text = coach.fullName
+        calendar.alpha = 1
+        calendar.isUserInteractionEnabled = true
+    }
+    
+    func didSelect(_ activity: ChoosingActivityModel) {
+        selectedActivity = activity
+        activityLabel.text = activity.name
+        chooseCoachButton.isEnabled = true
+        chooseCoachButton.superview?.alpha = 1
+    }
+}
+
+extension BookingActivityViewController: FSCalendarDelegate, FSCalendarDataSource {
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        selectedDate = date
+        timeCollectionView.alpha = 1
+        timeCollectionView.isUserInteractionEnabled = true
+    }
+}
+
+extension BookingActivityViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard timeSlots.indices.contains(indexPath.item) else { return }
+        selectedTimeSlot = timeSlots[indexPath.item]
     }
 }
 

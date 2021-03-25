@@ -15,6 +15,8 @@ struct Coach: Codable {
     var description: String
     var phoneNumber: String
     var trainings: [String]
+    
+    var fullName: String { return [firstName, lastName].joined(separator: " ") }
 }
 
 class CoachCellModel {

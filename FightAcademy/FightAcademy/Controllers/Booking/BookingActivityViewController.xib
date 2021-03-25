@@ -15,6 +15,7 @@
                 <outlet property="chooseCoachButton" destination="6BO-az-oVL" id="Jlo-Af-iCh"/>
                 <outlet property="coachNameLabel" destination="atW-NX-dc0" id="Jxe-T1-wQi"/>
                 <outlet property="doneButton" destination="xds-JM-RsY" id="ObD-Ih-BZz"/>
+                <outlet property="scrollView" destination="udf-uc-W6J" id="w12-gD-kR9"/>
                 <outlet property="timeCollectionView" destination="OR7-nr-QBl" id="kI5-Za-VMP"/>
                 <outlet property="timeHeightConstraint" destination="hyH-Bp-5hL" id="mJ1-Of-pvr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -29,7 +30,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pwL-ei-auH">
-                            <rect key="frame" x="0.0" y="8" width="375" height="852"/>
+                            <rect key="frame" x="0.0" y="8" width="375" height="832"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPI-2i-di2">
                                     <rect key="frame" x="21" y="6" width="338" height="22"/>
@@ -111,7 +112,7 @@
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aai-w3-cyK">
+                                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aai-w3-cyK">
                                     <rect key="frame" x="16" y="182" width="343" height="78"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testAvatarImage" translatesAutoresizingMaskIntoConstraints="NO" id="Ce1-qB-BKU">
@@ -139,8 +140,9 @@
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BO-az-oVL">
+                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BO-az-oVL">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="78"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="chooseCoachButtonAction:" destination="-1" eventType="touchUpInside" id="iwi-3q-Aan"/>
                                             </connections>
@@ -173,11 +175,11 @@
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qt-oU-g3I" customClass="FSCalendar">
-                                    <rect key="frame" x="16" y="324" width="343" height="320"/>
+                                <view userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qt-oU-g3I" customClass="FSCalendar">
+                                    <rect key="frame" x="16" y="324" width="343" height="300"/>
                                     <color key="backgroundColor" red="0.19215686269999999" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="320" id="NvF-FX-d35"/>
+                                        <constraint firstAttribute="height" constant="300" id="NvF-FX-d35"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="YES"/>
@@ -215,13 +217,13 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gU7-tR-NQ3">
-                                    <rect key="frame" x="20" y="668" width="335" height="22"/>
+                                    <rect key="frame" x="20" y="648" width="335" height="22"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="OR7-nr-QBl">
-                                    <rect key="frame" x="16" y="702" width="343" height="50"/>
+                                <collectionView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="OR7-nr-QBl">
+                                    <rect key="frame" x="16" y="682" width="343" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="hyH-Bp-5hL"/>
@@ -234,7 +236,7 @@
                                     </collectionViewFlowLayout>
                                 </collectionView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xds-JM-RsY">
-                                    <rect key="frame" x="16" y="776" width="343" height="52"/>
+                                    <rect key="frame" x="16" y="756" width="343" height="52"/>
                                     <color key="backgroundColor" red="0.95686274510000002" green="0.88235294119999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="52" id="E79-on-ffE"/>
