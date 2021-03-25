@@ -7,9 +7,7 @@
 
 import UIKit
 
-typealias Event = () -> Void
-
-class CoachTableViewCell: UITableViewCell, ConfigurableCell, ReusableCell {
+class CoachTableViewCell: UITableViewCell, ConfigurableTableViewCell, ReusableTableViewCell, ExpandableTableViewCell {
     
     var expandEvent: Event?
     

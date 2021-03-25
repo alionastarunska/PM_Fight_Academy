@@ -24,7 +24,7 @@ class CoachViewController: UIViewController {
     }
 
     private func setupTableView() {
-        dataSourse = CoachDataSourse<CoachTableViewCell>(coaches: coaches)
+        dataSourse = CoachDataSourse<CoachTableViewCell>(items: coaches)
         tableView.register(CoachTableViewCell.self)
         tableView.dataSource = dataSourse
     }
