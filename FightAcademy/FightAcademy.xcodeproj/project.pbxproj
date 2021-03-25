@@ -60,6 +60,15 @@
 		9EA8850E26068A22002A59E2 /* HistoryFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8850D26068A22002A59E2 /* HistoryFactoryProtocol.swift */; };
 		9EA8851426068A4B002A59E2 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8851326068A4B002A59E2 /* SettingsCoordinator.swift */; };
 		9EA8851926068A60002A59E2 /* SettingsCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8851826068A60002A59E2 /* SettingsCoordinatorFactory.swift */; };
+		9EF93A23260C5952006EB24A /* NetworkApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF93A22260C5952006EB24A /* NetworkApiProvider.swift */; };
+		9EF93A2B260C596D006EB24A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF93A2A260C596D006EB24A /* NetworkManager.swift */; };
+		9EF93A30260C5988006EB24A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF93A2F260C5988006EB24A /* NetworkError.swift */; };
+		9EF93A36260C59A3006EB24A /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF93A35260C59A3006EB24A /* StatusCode.swift */; };
+		9EF93A3F260C59C5006EB24A /* RequestableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF93A3E260C59C5006EB24A /* RequestableItem.swift */; };
+		9EF93A47260C59D9006EB24A /* EndPointError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF93A46260C59D9006EB24A /* EndPointError.swift */; };
+		9EF93A4D260C59FF006EB24A /* HTTPSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF93A4C260C59FF006EB24A /* HTTPSchema.swift */; };
+		9EF93A55260C5A0E006EB24A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF93A54260C5A0E006EB24A /* HTTPMethod.swift */; };
+		9EF93A5A260C5A1E006EB24A /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF93A59260C5A1E006EB24A /* HTTPHeaders.swift */; };
 		CDA38223AE70CB8FE96DA12B /* Pods_FightAcademyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E966CBB0B4BB88BE828FF7 /* Pods_FightAcademyTests.framework */; };
 		CFF26CA13FF00445C82B664B /* Pods_FightAcademy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B568C48F62C13747CFE66D40 /* Pods_FightAcademy.framework */; };
 		D9C1358052FDDF0EA865A3C3 /* Pods_FightAcademy_FightAcademyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2098853A5E86CBDAA2E58BC5 /* Pods_FightAcademy_FightAcademyUITests.framework */; };
@@ -148,6 +157,15 @@
 		9EA8850D26068A22002A59E2 /* HistoryFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryFactoryProtocol.swift; sourceTree = "<group>"; };
 		9EA8851326068A4B002A59E2 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		9EA8851826068A60002A59E2 /* SettingsCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorFactory.swift; sourceTree = "<group>"; };
+		9EF93A22260C5952006EB24A /* NetworkApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkApiProvider.swift; sourceTree = "<group>"; };
+		9EF93A2A260C596D006EB24A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9EF93A2F260C5988006EB24A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		9EF93A35260C59A3006EB24A /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
+		9EF93A3E260C59C5006EB24A /* RequestableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestableItem.swift; sourceTree = "<group>"; };
+		9EF93A46260C59D9006EB24A /* EndPointError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointError.swift; sourceTree = "<group>"; };
+		9EF93A4C260C59FF006EB24A /* HTTPSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPSchema.swift; sourceTree = "<group>"; };
+		9EF93A54260C5A0E006EB24A /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		9EF93A59260C5A1E006EB24A /* HTTPHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaders.swift; sourceTree = "<group>"; };
 		A1B45D15AB09032B774C8168 /* Pods-FightAcademy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightAcademy.debug.xcconfig"; path = "Target Support Files/Pods-FightAcademy/Pods-FightAcademy.debug.xcconfig"; sourceTree = "<group>"; };
 		B568C48F62C13747CFE66D40 /* Pods_FightAcademy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightAcademy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9E966CBB0B4BB88BE828FF7 /* Pods_FightAcademyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightAcademyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +239,7 @@
 				9EA88445260682FA002A59E2 /* Controllers */,
 				9EA8846D260684F0002A59E2 /* Extensions */,
 				4B3A6C5D2606748B00B99CF0 /* Protocols */,
+				9EF93A21260C5901006EB24A /* Networking */,
 				4B3A6BE92603CE3E00B99CF0 /* LaunchScreen.storyboard */,
 				4B3A6BEC2603CE3E00B99CF0 /* Info.plist */,
 				4B3A6C172603D58700B99CF0 /* GoogleService-Info.plist */,
@@ -440,6 +459,46 @@
 				9EA8851826068A60002A59E2 /* SettingsCoordinatorFactory.swift */,
 			);
 			path = SettingsCoordinator;
+			sourceTree = "<group>";
+		};
+		9EF93A21260C5901006EB24A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9EF93A22260C5952006EB24A /* NetworkApiProvider.swift */,
+				9EF93A2A260C596D006EB24A /* NetworkManager.swift */,
+				9EF93A2F260C5988006EB24A /* NetworkError.swift */,
+				9EF93A4B260C59E4006EB24A /* HTTPThings */,
+				9EF93A3D260C59BB006EB24A /* Endpoint */,
+				9EF93A34260C599A006EB24A /* StatusCode */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9EF93A34260C599A006EB24A /* StatusCode */ = {
+			isa = PBXGroup;
+			children = (
+				9EF93A35260C59A3006EB24A /* StatusCode.swift */,
+			);
+			path = StatusCode;
+			sourceTree = "<group>";
+		};
+		9EF93A3D260C59BB006EB24A /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				9EF93A3E260C59C5006EB24A /* RequestableItem.swift */,
+				9EF93A46260C59D9006EB24A /* EndPointError.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		9EF93A4B260C59E4006EB24A /* HTTPThings */ = {
+			isa = PBXGroup;
+			children = (
+				9EF93A4C260C59FF006EB24A /* HTTPSchema.swift */,
+				9EF93A54260C5A0E006EB24A /* HTTPMethod.swift */,
+				9EF93A59260C5A1E006EB24A /* HTTPHeaders.swift */,
+			);
+			path = HTTPThings;
 			sourceTree = "<group>";
 		};
 		B2E784A1A163BFA2FD703417 /* Pods */ = {
@@ -721,7 +780,9 @@
 				4B3A6C7A2607416A00B99CF0 /* AppDelegate.swift in Sources */,
 				9EA884882606858C002A59E2 /* NewActivityViewController.swift in Sources */,
 				9EA884D126068838002A59E2 /* AuthCoordinatorFactory.swift in Sources */,
+				9EF93A23260C5952006EB24A /* NetworkApiProvider.swift in Sources */,
 				9EA88452260683AB002A59E2 /* NavigationController.swift in Sources */,
+				9EF93A4D260C59FF006EB24A /* HTTPSchema.swift in Sources */,
 				4B3A6C792607416A00B99CF0 /* SceneDelegate.swift in Sources */,
 				4B3A6C9D260747A500B99CF0 /* CoachViewController.swift in Sources */,
 				9EA884B226068709002A59E2 /* FinishFlowCoordinator.swift in Sources */,
@@ -738,7 +799,9 @@
 				9EA884A8260686DF002A59E2 /* BaseCoordinator.swift in Sources */,
 				9EA8851926068A60002A59E2 /* SettingsCoordinatorFactory.swift in Sources */,
 				9EA884EA2606890B002A59E2 /* AboutCoordinatorFactory.swift in Sources */,
+				9EF93A47260C59D9006EB24A /* EndPointError.swift in Sources */,
 				9EA8845A260683FA002A59E2 /* TabBarController.swift in Sources */,
+				9EF93A30260C5988006EB24A /* NetworkError.swift in Sources */,
 				9EA8843426068216002A59E2 /* RouterProtocol.swift in Sources */,
 				9EA884C3260687D1002A59E2 /* ApplicationCoordinatorFactory.swift in Sources */,
 				9EA884C926068819002A59E2 /* AuthCoordinator.swift in Sources */,
@@ -746,13 +809,17 @@
 				9EA8844126068270002A59E2 /* Routed.swift in Sources */,
 				9EA8848D260685A5002A59E2 /* ChoosingActivityViewController.swift in Sources */,
 				9EA884F52606894F002A59E2 /* CoachesCoordinatorFactory.swift in Sources */,
+				9EF93A5A260C5A1E006EB24A /* HTTPHeaders.swift in Sources */,
 				9EA884AD260686E8002A59E2 /* Coordinator.swift in Sources */,
 				9EA8851426068A4B002A59E2 /* SettingsCoordinator.swift in Sources */,
 				9EA88500260689EA002A59E2 /* ActivityCoordinatorFactory.swift in Sources */,
 				9EA8850626068A0C002A59E2 /* HistoryCoordinator.swift in Sources */,
 				9EA8843C26068233002A59E2 /* Router.swift in Sources */,
 				4B3A6C592606734D00B99CF0 /* CoachMock.swift in Sources */,
+				9EF93A36260C59A3006EB24A /* StatusCode.swift in Sources */,
+				9EF93A3F260C59C5006EB24A /* RequestableItem.swift in Sources */,
 				4B3A6C61260674A100B99CF0 /* ConfigurableCell.swift in Sources */,
+				9EF93A2B260C596D006EB24A /* NetworkManager.swift in Sources */,
 				4B3A6C67260732DB00B99CF0 /* CoachDataSourse.swift in Sources */,
 				4B3A6C482606366E00B99CF0 /* CoachTableViewCell.swift in Sources */,
 				4B3A6C60260674A100B99CF0 /* ReusableCell.swift in Sources */,
@@ -761,6 +828,7 @@
 				9EA8850E26068A22002A59E2 /* HistoryFactoryProtocol.swift in Sources */,
 				9EA884832606856F002A59E2 /* ActivityViewController.swift in Sources */,
 				9EA8846426068467002A59E2 /* RegViewController.swift in Sources */,
+				9EF93A55260C5A0E006EB24A /* HTTPMethod.swift in Sources */,
 				4BF53EA8260771F2002166D4 /* UIView+IBInspectable.swift in Sources */,
 				9EA884DC260688AA002A59E2 /* TabBarCoordinatorFactory.swift in Sources */,
 				9EA884FB260689AE002A59E2 /* ActivityCoordinator.swift in Sources */,
