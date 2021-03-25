@@ -836,7 +836,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					4B3A6BD72603CE3900B99CF0 = {
 						CreatedOnToolsVersion = 12.2;
@@ -1116,7 +1116,6 @@
 				9EF93A6B260C5E4C006EB24A /* PMFightEndPoint.swift in Sources */,
 				9EF93AA8260C5FF3006EB24A /* Training.swift in Sources */,
 				AE80C8BC260B4C8C00E99D40 /* CustomRightView.swift in Sources */,
-				4B3A6BE62603CE3900B99CF0 /* FightAcademy.xcdatamodeld in Sources */,
 				9EA88497260685D9002A59E2 /* HistoryViewController.swift in Sources */,
 				9E7124AA260D152200B881AB /* ExpandableTableViewCell.swift in Sources */,
 				9EF93AA3260C5FDF006EB24A /* TrainingTime.swift in Sources */,
