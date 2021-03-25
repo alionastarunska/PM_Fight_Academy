@@ -2,12 +2,13 @@
 //  NibLoadable.swift
 //  FightAcademy
 //
-//  Created by Павел Снижко on 25.03.2021.
+//  Created by Павел Снижко on 19.03.2021.
 //
 import UIKit
 
 protocol NibLoadable: class {
-    static var nib: UINib { get  }
+    static var nib: UINib { get }
+    static var name: String { get }
 }
 
 extension NibLoadable {

@@ -16,13 +16,30 @@ protocol AuthFactoryProtocol {
 }
 
 final class AuthFactory: AuthFactoryProtocol {
-
+        
     func makeRegController() -> Registering {
-        return RegistrationViewController()
+        
+        // TODO: maybe provide some DI class for these objects
+        let sessionStorage =  SessionStorage()
+        
+        let apiClient = ProfileApiClient(networkService: MockNetworkManager(), jsonEcoder: JSONEncoder())
+        
+        let authService = AuthorizationService(sessionStorage: sessionStorage, profileApiClient: apiClient)
+        
+        let validator = Validator()
+        
+        return RegisterViewController(validationService: validator, authService: authService)
     }
 
     func makeAuthController() -> Authorization {
-        return AuthViewController()
+        
+        // TODO: maybe provide some DI class for these objects
+        let validator = Validator()
+        let sessionStorage =  SessionStorage()
+        let apiClient = ProfileApiClient(networkService: MockNetworkManager(), jsonEcoder: JSONEncoder())
+        let authService = AuthorizationService(sessionStorage: sessionStorage, profileApiClient: apiClient)
+
+        return LogInViewController(validationService: validator, authService: authService)
     }
 
     func makeAlertController(with error: Error) -> UIAlertController {

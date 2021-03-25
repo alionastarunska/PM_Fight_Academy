@@ -10,7 +10,7 @@ import Foundation
 final class ApplicationCoordinator: BaseCoordinator {
 
     private let factory: ApplicationFactoryProtocol = ApplicationFactory()
-    private var isAutorized: Bool = false
+    private var isAutorized: Bool = SessionStorage().sessionId != nil
 
     override func start() {
 
