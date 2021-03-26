@@ -13,7 +13,7 @@ class PMFightProvider: NetworkApiProvider {
 
     private let networkManager = NetworkManager()
     private let decoder = JSONDecoder()
-
+    // TODO: RENAME
     private let commonHeaders: HTTPHeaders = ["Content-Type": "application/json",
                                               "Accept": "text/plain"]
     private var storage = SessionStorage()

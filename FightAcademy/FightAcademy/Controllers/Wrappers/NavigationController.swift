@@ -18,6 +18,7 @@ class NavigationController: UINavigationController {
 
         self.delegate = self
 
+        // TODO: move to func
         navigationBar.barStyle = UIBarStyle.black
 
         navigationBar.barTintColor = barBackgrounColor

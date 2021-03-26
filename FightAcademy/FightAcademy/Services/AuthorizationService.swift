@@ -8,7 +8,7 @@
 import Foundation
 
 struct AuthorizationService {
-    
+    // TODO: TypeAlias
     var onCompleteAuth: (() -> Void)?
     var onError: ((Error) -> Void)?
     
@@ -29,6 +29,8 @@ struct AuthorizationService {
     func login(phone: String, password: String, completion: @escaping (Result<Token, Error>) -> Void) {
         PMFightApi.shared.logIn(phone: phone, password: password, completion: completion)
     }
+    
+    // TODO: make one model
     
     func reg(phone: String, password: String, name: String, completion: @escaping (Result<Token, Error>) -> Void) {
         PMFightApi.shared.register(name: name, phone: phone, password: password, completion: completion)

@@ -21,8 +21,10 @@ enum ValidationError: Error {
     case badName(String)
 }
 
+//MARK: - ValidationError
+
 extension ValidationError {
-    
+    //TODO: rename
     struct Contnet {
         static let badPasswordLenght = "Password must be at least 8 chars and not more than 64"
         static let nonUpperChar = "Password must include at least one char from [A-Z]"

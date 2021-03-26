@@ -7,6 +7,8 @@
 
 import Foundation
 
+// TODO: не должно быть опшыонал
+// спробувати імплементувати через protocol BaseAuthModel: Codable
 class BaseAuthModel: Codable {
     var phoneNumber: String?
     var password: String?
