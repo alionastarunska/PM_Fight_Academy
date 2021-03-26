@@ -101,6 +101,7 @@
 		AEEE5E27260D189A00576540 /* ActivityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEEE5E21260D189A00576540 /* ActivityCollectionViewCell.xib */; };
 		AEEE5E28260D189A00576540 /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEEE5E22260D189A00576540 /* ActivityViewController.xib */; };
 		AEEE5E29260D189A00576540 /* ActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE5E23260D189A00576540 /* ActivityCollectionViewCell.swift */; };
+		AEEE5E60260DC04A00576540 /* ActivityApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE5E5F260DC04A00576540 /* ActivityApiClient.swift */; };
 		AEF81BB8260608DA00B5F2B3 /* ValidationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BB7260608D900B5F2B3 /* ValidationServiceTests.swift */; };
 		AEF81BC3260624A200B5F2B3 /* ProfileApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BC2260624A200B5F2B3 /* ProfileApiClient.swift */; };
 		AEF81BD42606445100B5F2B3 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = AEF81BD32606445100B5F2B3 /* SwiftKeychainWrapper */; };
@@ -164,7 +165,6 @@
 		9EA8844026068270002A59E2 /* Routed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routed.swift; sourceTree = "<group>"; };
 		9EA88451260683AB002A59E2 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		9EA88459260683FA002A59E2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-
 		9EA8846826068480002A59E2 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		9EA8846F2606850A002A59E2 /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		9EA884872606858C002A59E2 /* NewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +237,7 @@
 		AEEE5E21260D189A00576540 /* ActivityCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityCollectionViewCell.xib; sourceTree = "<group>"; };
 		AEEE5E22260D189A00576540 /* ActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
 		AEEE5E23260D189A00576540 /* ActivityCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCollectionViewCell.swift; sourceTree = "<group>"; };
+		AEEE5E5F260DC04A00576540 /* ActivityApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityApiClient.swift; sourceTree = "<group>"; };
 		AEF81BB7260608D900B5F2B3 /* ValidationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationServiceTests.swift; sourceTree = "<group>"; };
 		AEF81BC2260624A200B5F2B3 /* ProfileApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileApiClient.swift; sourceTree = "<group>"; };
 		AEF81BD8260751FF00B5F2B3 /* AuthorizationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationModel.swift; sourceTree = "<group>"; };
@@ -293,7 +294,6 @@
 				4B3A6BD92603CE3900B99CF0 /* Products */,
 				B2E784A1A163BFA2FD703417 /* Pods */,
 				3D469A606DBC92AC5E4E6F0D /* Frameworks */,
-				AEEE5E19260D164B00576540 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -706,6 +706,7 @@
 				AEEE5E21260D189A00576540 /* ActivityCollectionViewCell.xib */,
 				AEEE5E22260D189A00576540 /* ActivityViewController.xib */,
 				AEEE5E23260D189A00576540 /* ActivityCollectionViewCell.swift */,
+				AEEE5E5F260DC04A00576540 /* ActivityApiClient.swift */,
 			);
 			name = Activity;
 			path = FightAcademy/Controllers/Activity;
@@ -1026,6 +1027,7 @@
 				9EA884B226068709002A59E2 /* FinishFlowCoordinator.swift in Sources */,
 				9EF93A96260C5FAB006EB24A /* TrainingType.swift in Sources */,
 				9EA884E2260688F4002A59E2 /* AboutCoordinator.swift in Sources */,
+				AEEE5E60260DC04A00576540 /* ActivityApiClient.swift in Sources */,
 				9EA884D72606888F002A59E2 /* TabBarCoordinator.swift in Sources */,
 				9EA884F026068943002A59E2 /* CoachesCoordinator.swift in Sources */,
 				9EA8849C260685F0002A59E2 /* SettingsViewController.swift in Sources */,

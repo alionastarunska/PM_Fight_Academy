@@ -7,8 +7,16 @@
 
 import UIKit
 
-class ActivityDataSourse<Cell: ActivityCollectionViewCell>: NSObject, UICollectionViewDataSource {
-
+class ActivityDataSource<Cell: ActivityCollectionViewCell>: NSObject,
+                                                            UICollectionViewDataSource,
+                                                            UICollectionViewDataSourcePrefetching {
+    
+    
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        
+    }
+    
+    
     var activities: [ActivityModel]
     
     init(activities: [ActivityModel]) {
@@ -25,48 +33,60 @@ class ActivityDataSourse<Cell: ActivityCollectionViewCell>: NSObject, UICollecti
             return UICollectionViewCell()
         }
         
-        // TODO: Move to delegates willDisplay ???
-
         cell.activity = activities[indexPath.item]
         
         return cell
     }
+    
+    
+    
+    func isLoadingCell(for indexPath: IndexPath) -> Bool {
+        return indexPath.row >= self.activities.count
+    }
+
+    
 }
 
 
-class PrefetchingDataSourceService: NSObject, UICollectionViewDataSourcePrefetching {
-    
-    
-    let itemsPerBatch = 15
-    var currentRow : Int = 1
-    
-    var dataTasks : [URLSessionDataTask] = []
 
-    
-    
-    
-    
-    func collectionView(_ collectionView: UICollectionView, cancelPrefetchingForItemsAt indexPaths: [IndexPath]) {
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-            guard let last = indexPaths.last else {
-                return
-            }
-        
-    }
-    
-    
-    func fetchData(indexPathNumber: Int) {
 
-    }
-    
-    
-    func checkIfServerHasMore(indexPathNumber: Int) {
-        
-    }
 
-    
-    
-}
+
+
+//
+//class PrefetchingDataSourceService: NSObject, UICollectionViewDataSourcePrefetching {
+//
+//    let itemsPerBatch = 15
+////    var currentRow : Int = 1
+////    var dataTasks : [URLSessionDataTask] = []
+//    var models = [Activity]()
+//    var currentPage: Int = 0
+//
+//    func collectionView(_ collectionView: UICollectionView, cancelPrefetchingForItemsAt indexPaths: [IndexPath]) {
+//
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+//        guard let last = indexPaths.last else {
+//            return
+//        }
+//
+//        print(last)
+//
+////        fetchData(indexPathNumber: last)
+//
+//    }
+//
+//    func fetchData(indexPathNumber: Int) {
+//
+//    }
+//
+//    // TODO: change to decodable type
+//
+//
+//
+//    func checkIfServerHasMore(indexPathNumber: Int) {
+//
+//    }
+//
+//}

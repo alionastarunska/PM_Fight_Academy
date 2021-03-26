@@ -37,7 +37,7 @@ final class TabBarFactory: TabBarFactoryProtocol {
             let navigationController = self.navigationController(for: $0)
             let router = Router(rootController: navigationController)
             let coordinator = $0.pageCoordinator.init(router: router)
-
+            
             return (navigationController, coordinator)
 
         }

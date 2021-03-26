@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ActivityModel {
+struct ActivityModel: Decodable {
     let id: Int
     let serviceName: String
     let date: String
@@ -16,6 +16,10 @@ struct ActivityModel {
     let time: String
     let price: Double
 }
+
+
+
+
 
 struct ActivityService {
     
@@ -38,36 +42,34 @@ struct ActivityService {
 
 
 class APIClientMock {
+    
+    static func fetchData(page: Int,  completion: @escaping (Result<ApiResponse<ActivityModel>, Error>) -> Void ) {
+        var activities = [ActivityModel]()
+        let totalPage = 10
         
-    func fetchData(pagination: Bool,  complition: @escaping (Result<[ActivityModel], Error>) -> Void ) {
+        for _ in 0...15 {
+            activities.append(ActivityModel(id: page,
+                                            serviceName: "Karate \(page)",
+                                            date: "22.1.3", coachFirstName: "Lorem",
+                                            coachLastName: "Ipsum",
+                                            time: "10:0",
+                                            price: 10000))
         
+        }
         
+        let responseModel = ApiResponse(contents: activities,
+                                        paggination: Paggination(page: page,
+                                                                 totalPages: totalPage ,
+                                                                 hasPreviousPage: false,
+                                                                 hasNextPage: true))
         
-        DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
-            var activities = [ActivityModel]()
-
-            for i in 0...15 {
-                activities.append(ActivityModel(id: i,
-                                                serviceName: "Karate",
-                                                date: "22.1.3", coachFirstName: "Lorem",
-                                                coachLastName: "Ipsum",
-                                                time: "10:0",
-                                                price: 10000))
-            
+        PMFightApi.shared.incomingActivities(page: page) { result in
+            switch result {
+            case .success( _):
+            completion(.success(responseModel))
+            case .failure(let error):
+            completion(.failure((error)))
             }
-            
-            var newActivities = [ActivityModel]()
-            
-            for i in 0...10 {
-                newActivities.append(ActivityModel(id: i,
-                                                serviceName: "Box",
-                                                date: "25.01.34", coachFirstName: "Pasha",
-                                                coachLastName: "Ipsum",
-                                                time: "20:00",
-                                                price: 100))
-            }
-            
-            complition(.success(pagination ? newActivities : activities))
         }
         
     }
