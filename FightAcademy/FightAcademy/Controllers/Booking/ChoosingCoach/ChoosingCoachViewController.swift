@@ -14,27 +14,44 @@ protocol ChoosingCoach: UIViewController {
 }
 
 class ChoosingCoachViewController: UIViewController, ChoosingCoach {
+    
+    var activity: TrainingType?
    
     @IBOutlet private weak var tableView: UITableView!
     
-    private var coaches: [Coach] = CoachMock.make()
+    private var coaches: [Coach] = []
     private var dataSource: CoachDataSource<ChoosingCoachTableViewCell>?
     
     var onSelectCoach: ((Coach) -> Void)?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Coaches"
         setupTableView()
+        loadCoaches()
     }
     
     private func setupTableView() {
-        dataSource = CoachDataSource<ChoosingCoachTableViewCell>(coaches: coaches)
+        dataSource = CoachDataSource<ChoosingCoachTableViewCell>(coaches: [])
         tableView.register(ChoosingCoachTableViewCell.self)
         tableView.dataSource = dataSource
         tableView.delegate = self
     }
-
+    
+    private func loadCoaches() {
+        guard let id = activity?.id else { return }
+        PMFightApi.shared.coaches(with: id) { [weak self] result in
+            switch result {
+            case .success(let coaches):
+                self?.coaches = coaches
+                guard let indexes = self?.dataSource?.append(items: coaches),
+                      !indexes.isEmpty else { return }
+                self?.tableView.insertRows(at: indexes, with: .none)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
 
 extension ChoosingCoachViewController: UITableViewDelegate {
