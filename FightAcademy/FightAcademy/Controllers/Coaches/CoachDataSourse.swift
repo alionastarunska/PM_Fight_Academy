@@ -31,4 +31,16 @@ class CoachDataSource<Cell: TableViewCell>: NSObject, UITableViewDataSource {
         }
         return cell
     }
+    
+    // MARK: - Public
+    
+    func append(items: [Cell.Item]) -> [IndexPath] {
+        let count = self.coaches.count
+        self.coaches.append(contentsOf: items)
+        var indexes = [IndexPath]()
+        for idx in 0..<items.count {
+            indexes.append(IndexPath(row: count + idx, section: 0))
+        }
+        return indexes
+    }
 }

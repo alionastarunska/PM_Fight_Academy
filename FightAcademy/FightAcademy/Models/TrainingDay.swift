@@ -25,3 +25,11 @@ extension Array where Element == TrainingDay {
         return (1...7).map { (_) -> TrainingDay in "\(components.month!)/" + "\(Int.random(in: range))/" + "\(components.year!)" }
     }
 }
+
+extension TrainingDay {
+    var date: Date {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy"
+        return formatter.date(from: self) ?? Date()
+    }
+}

@@ -17,7 +17,7 @@ class CoachTableViewCell: UITableViewCell, ConfigurableCell, ReusableCell {
     @IBOutlet private weak var avatarImageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var ageLabel: UILabel!
-    @IBOutlet private weak var phoneNumberLabel: UILabel!
+    @IBOutlet private weak var phoneNumberButton: UIButton!
     @IBOutlet private weak var trainingLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var showMoreButton: UIButton!
@@ -29,12 +29,16 @@ class CoachTableViewCell: UITableViewCell, ConfigurableCell, ReusableCell {
         model?.isExpanded = true
         expandEvent?()
     }
+    @IBAction func phoneNumberButtonAction(_ sender: UIButton) {
+        guard let number = URL(string: "tel://" + (model?.coach.phoneNumber ?? "")) else { return }
+           UIApplication.shared.open(number)
+    }
     
     func configure(with item: CoachCellModel) {
         model = item
         nameLabel.text = item.coach.fullName
         ageLabel.text = "\(item.coach.age)" + " years old"
-        phoneNumberLabel.text = item.coach.phoneNumber
+        phoneNumberButton.setTitle(item.coach.phoneNumber, for: .normal)
         descriptionLabel.text = item.coach.description
         trainingLabel.text = item.coach.trainings.joined(separator: ", ")
         сonfigureShowMoreButton(item.isExpanded)

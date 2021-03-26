@@ -37,6 +37,9 @@
 		4B6CE84D260D0BEC004D6039 /* ChoosingCoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CE839260D0BEC004D6039 /* ChoosingCoachViewController.swift */; };
 		4B6CE84E260D0BEC004D6039 /* ChoosingCoachTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CE83A260D0BEC004D6039 /* ChoosingCoachTableViewCell.swift */; };
 		4B6CE85F260D0CB7004D6039 /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CE85E260D0CB7004D6039 /* UIView+Shake.swift */; };
+		4B6CE875260D2D54004D6039 /* CoachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6C9C260747A500B99CF0 /* CoachViewController.xib */; };
+		4B6CE879260D2D64004D6039 /* ChoosingCoachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6CE838260D0BEC004D6039 /* ChoosingCoachViewController.xib */; };
+		4B6CE87D260D2D70004D6039 /* ChoosingCoachTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6CE837260D0BEC004D6039 /* ChoosingCoachTableViewCell.xib */; };
 		4BF53EA8260771F2002166D4 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF53EA7260771F2002166D4 /* UIView+IBInspectable.swift */; };
 		4BF53EF426079CE1002166D4 /* String+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF53EF326079CE1002166D4 /* String+Size.swift */; };
 		9EA8843426068216002A59E2 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8843326068216002A59E2 /* RouterProtocol.swift */; };
@@ -876,6 +879,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B6CE87D260D2D70004D6039 /* ChoosingCoachTableViewCell.xib in Resources */,
+				4B6CE879260D2D64004D6039 /* ChoosingCoachViewController.xib in Resources */,
+				4B6CE875260D2D54004D6039 /* CoachViewController.xib in Resources */,
 				4B3A6BEB2603CE3E00B99CF0 /* LaunchScreen.storyboard in Resources */,
 				AEB49A7B2604B90500766762 /* RegisterViewController.xib in Resources */,
 				AE5C815F26053A6600E12DB5 /* LogInViewController.xib in Resources */,
@@ -1293,7 +1299,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UPWXFVVHLN;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FightAcademy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1314,7 +1320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UPWXFVVHLN;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FightAcademy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

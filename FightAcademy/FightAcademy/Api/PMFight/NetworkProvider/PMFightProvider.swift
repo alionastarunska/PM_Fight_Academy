@@ -26,9 +26,10 @@ class PMFightProvider: NetworkApiProvider {
             perform(request, completion: completion)
 
         } catch {
-
-            completion(.failure(error))
-
+            
+            DispatchQueue.main.async {
+                completion(.failure(error))
+            }
         }
 
     }
@@ -43,11 +44,15 @@ class PMFightProvider: NetworkApiProvider {
 
                 let decoded = try decoder.decode(T.self, from: data)
 
-                completion(.success(decoded))
+                DispatchQueue.main.async {
+                    completion(.success(decoded))
+                }
 
             } catch {
                 print(error)
-                completion(.failure(self.handleError(error)))
+                DispatchQueue.main.async {
+                    completion(.failure(self.handleError(error)))
+                }
 
             }
 

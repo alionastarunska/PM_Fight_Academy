@@ -35,7 +35,8 @@ class BookingActivityViewController: UIViewController, BookingNewActivity {
     @IBOutlet private weak var timeHeightConstraint: NSLayoutConstraint!
     @IBOutlet private weak var scrollView: UIScrollView!
     
-    private var timeSlots: [TimeSlot] = TimeSlotsMock.make()
+    private var trainingDates: [Date] = []
+    private var timeSlots: [TimeSlot] = []
     private var dataSource: BookingDataSource<TimeCollectionViewCell>?
     
     private var selectedActivity: ChoosingActivityModel?
@@ -111,14 +112,42 @@ class BookingActivityViewController: UIViewController, BookingNewActivity {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.error)
     }
+    
+    private func isAvailable(date: Date) -> Bool {
+        if date < Date().removeTimeStamp {
+            return false
+        } else {
+            if (trainingDates.first(where: { $0.removeTimeStamp == date.removeTimeStamp }) != nil) {
+                return true
+            }
+            return false
+        }
+    }
+    
+    private func fetchDates() {
+        guard let activity = selectedActivity, let coach = selectedCoach else {
+            error()
+            return
+        }
+        PMFightApi.shared.dates(for: activity.id, with: coach.id) { [weak self] result in
+            switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let days):
+                self?.trainingDates = days.compactMap({ $0.date })
+                self?.calendar.reloadData()
+                self?.calendar.alpha = 1
+                self?.calendar.isUserInteractionEnabled = true
+            }
+        }
+    }
 }
 
 extension BookingActivityViewController: BookingDelegate {
     func didSelect(_ coach: Coach) {
         selectedCoach = coach
         coachNameLabel.text = coach.fullName
-        calendar.alpha = 1
-        calendar.isUserInteractionEnabled = true
+        fetchDates()
     }
     
     func didSelect(_ activity: ChoosingActivityModel) {
@@ -129,9 +158,28 @@ extension BookingActivityViewController: BookingDelegate {
     }
 }
 
-extension BookingActivityViewController: FSCalendarDelegate, FSCalendarDataSource {
+extension BookingActivityViewController: FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
+    func minimumDate(for calendar: FSCalendar) -> Date {
+        let today = Date()
+        print("\(today)")
+        return Date()
+    }
+    
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
+        if isAvailable(date: date) {
+            return .white
+        }
+        return .typingTextColor
+    }
+    
+    func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
+        return isAvailable(date: date)
+    }
+    
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         selectedDate = date
+        let formatter = dateFormatter.string(from: date)
+        print("\(formatter)")
         timeCollectionView.alpha = 1
         timeCollectionView.isUserInteractionEnabled = true
     }
@@ -154,4 +202,21 @@ private extension CGFloat {
     static var horizontalMargins: CGFloat { return 55 }
     static var lineSpacing: CGFloat { return 6 }
     static var cellHeight: CGFloat { return 40 }
+}
+
+private var dateFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "MM/dd/yyyy"
+    return formatter
+}()
+
+private extension Date {
+    var removeTimeStamp: Date {
+        guard let date = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: self)) else { return self }
+        return date
+    }
+}
+
+private extension UIColor {
+    static var typingTextColor: UIColor { return UIColor(named: "typingTextColor") ?? .lightGray }
 }
