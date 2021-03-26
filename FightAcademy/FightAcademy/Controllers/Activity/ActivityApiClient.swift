@@ -7,36 +7,41 @@
 
 import Foundation
 
-
 protocol Prefetchable {
+    
     associatedtype ModelType
     
+    var fetchCompleted: ItemClosure<Result<([IndexPath], [ModelType])?, Error>>? { get set }
     var models: [ModelType] {get set}
     var isFetchInProgress: Bool { get set }
     var currentPage: Int { get set }
     var total: Int {get set}
-    func fetchData(for page: Int)
+    func fetchData()
 }
 
-class ActivityClientAPI: Prefetchable  {
-        
-    var total: Int = 0
+class ActivityClientAPI: Prefetchable {
     
-    var currentPage: Int = 0
-
+    var fetchCompleted: ItemClosure<Result<([IndexPath], [ActivityModel])?, Error>>?
+    
+    var total: Int = 10
+    
+    var currentPage: Int = 1
+    
     var models = [ActivityModel]()
     
     var isFetchInProgress: Bool = false
     
-    weak var delegate: ActivityViewController?
+    private var firstCall = true
+    
+    private var lastCall = false
     
     private func calculateIndexPathsToReload(from newModels: [ActivityModel]) -> [IndexPath] {
-      let startIndex = models.count - newModels.count
-      let endIndex = startIndex + newModels.count
-      return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
+        let startIndex = models.count - newModels.count
+        let endIndex = startIndex + newModels.count
+        return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
     }
-
-    func fetchData(for page: Int) {
+    
+    func fetchData() {
         guard !isFetchInProgress else {
             return
         }
@@ -45,8 +50,8 @@ class ActivityClientAPI: Prefetchable  {
         
         //TODO: decomment when data on backend will appear
         
-//        PMFightApi.shared.incomingActivities(page: page)
-        APIClientMock.fetchData(page: page) { [weak self] result in
+        //        PMFightApi.shared.incomingActivities(page: page)
+        APIClientMock.fetchData(page: currentPage) { [weak self] result in
             
             guard let self = self else { return }
             
@@ -55,31 +60,37 @@ class ActivityClientAPI: Prefetchable  {
             switch result {
             case .success(let response):
                 
-                print(response)
+                //                print(response)
                 
                 DispatchQueue.main.async {
-                  // 1
-                  self.currentPage += 1
-                  self.isFetchInProgress = false
-                  // 2
+                    self.currentPage += 1
+                    
+                    self.isFetchInProgress = false
+                    
                     self.total = response.paggination.totalPages
+                    
                     self.models.append(contentsOf: response.contents)
-                  
-                  // 3
-                    if response.paggination.page > 1 {
+                    
+                    if response.paggination.page > 1 || self.firstCall {
+                        
+                        self.firstCall = false
+                        
                         let indexPathsToReload = self.calculateIndexPathsToReload(from: response.contents)
                         
-                        //TODO: check for ref cycle
-                        self.delegate?.onFetchCompleted(with: indexPathsToReload, and: self.models)
-                  } else {
-                    print("onFetchCompleted(with: .none)")
-//                    self.delegate?.onFetchCompleted(with: .none)
-                  }
+                        //TODO: check for the ref cycle
+                        self.fetchCompleted?(.success((indexPathsToReload, self.models)))
+                        
+                    } else {
+                        
+                        self.fetchCompleted?(.success(nil))
+                        
+                        print("onFetchCompleted(with: .none)")
+                    }
                 }
                 
             case .failure(let error):
                 
-                print(error)
+                self.fetchCompleted?(.failure(error))
             }
         }
     }

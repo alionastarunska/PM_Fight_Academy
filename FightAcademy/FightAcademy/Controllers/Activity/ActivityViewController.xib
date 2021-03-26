@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -10,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActivityViewController" customModule="FightAcademy" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="oNF-yt-5e2" id="XPg-Yj-Ynx"/>
                 <outlet property="collectionView" destination="36Y-pw-C4L" id="FOy-St-isc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -29,10 +31,15 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="oNF-yt-5e2">
+                    <rect key="frame" x="197" y="443" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="oNF-yt-5e2" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="6YQ-jP-kcF"/>
+                <constraint firstItem="oNF-yt-5e2" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="IpB-rJ-Rmh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="36Y-pw-C4L" secondAttribute="bottom" id="XLX-Tc-vIs"/>
                 <constraint firstItem="36Y-pw-C4L" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="n0R-t8-thc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="36Y-pw-C4L" secondAttribute="trailing" id="vBI-mh-fz7"/>

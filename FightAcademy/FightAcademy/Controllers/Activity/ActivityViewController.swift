@@ -14,16 +14,21 @@ protocol Activity: UIViewController {
 
 }
 
+protocol DataSourceReloadable {
+    associatedtype ModelType
+    func reloadDataSource(for indexes: [IndexPath], and models: [ModelType])
+}
+
 class ActivityViewController: UIViewController, Activity, NibLoadable {
     var closeCoordinator: VoidClosure?
     
     @IBOutlet private weak var collectionView: UICollectionView!
-    
-    private var activityService = ActivityService()
+  
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
+        
     private var dataSource: ActivityDataSource<ActivityCollectionViewCell>?
 
     private var activityClientApi: ActivityClientAPI?
-//    private var prefetchingService: ActivityDataSource?
     
     var onActivityStartBooking: (() -> Void)?
     
@@ -42,35 +47,51 @@ class ActivityViewController: UIViewController, Activity, NibLoadable {
         self.collectionView.register(ActivityCollectionViewCell.nib, forCellWithReuseIdentifier: ActivityCollectionViewCell.name)
 
         self.collectionView.delegate = self
-        
-//        self.prefetchingService = PrefetchingDataSourceService()
-        
+                
         self.activityClientApi = ActivityClientAPI()
-    
+        
+        self.handleResponseFromAPI()
+        
+        self.activityClientApi?.fetchData()
+        
+        self.dataSource = ActivityDataSource(apiCaller: activityClientApi)
+        
         self.collectionView.prefetchDataSource = dataSource
+        self.collectionView.dataSource = dataSource
+    }
+    
+    func handleResponseFromAPI() {
         
+        startActivityIndicator()
         
-        activityClientApi?.fetchData(for: 1)
-        
-        
-        PMFightApi.shared.incomingActivities(page: 1) { [weak self] result in
+        self.activityClientApi?.fetchCompleted = {[weak self]  result in
+            
+            guard let self = self else {
+                return
+            }
+            
             switch result {
-            case .success(let response):
-                print(response.paggination)
-                print(response.contents)
-//                self?.dataSource = ActivityDataSourse<ActivityCollectionViewCell>(activities: avtivities)
+            case .success(let successeData):
+                guard  let successeData = successeData else {
+                    print("successeData == nil")
+                    return
+                }
+                            
+                self.endActivityIndicator()
+                
+                self.collectionView.performBatchUpdates({
+                    self.dataSource?.activities = successeData.1
+                    self.collectionView.insertItems(at: successeData.0)
+                }, completion: nil)
                 
             case .failure(let error):
+                print("ERROR " + error.localizedDescription)
+                
                 DispatchQueue.main.async {
-                    self?.closeCoordinator?()
+                    self.closeCoordinator?()
                 }
             }
         }
-        
-//        let avtivities = activityService.getActivities(page: 0)
-        
-        
-        self.collectionView.dataSource = dataSource
     }
     
     @objc
@@ -94,23 +115,15 @@ extension ActivityViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-protocol FetchCompletable {
-    associatedtype T
+private extension ActivityViewController {
     
-    func onFetchCompleted(with indexPathsToReload: [IndexPath], and models: [T])
-}
-
-extension ActivityViewController: FetchCompletable {
-    
-    func onFetchCompleted(with indexPathsToReload: [IndexPath], and models: [ActivityModel]) {
-        
-        self.dataSource?.activities = models
-        
-        collectionView.performBatchUpdates( {
-            self.collectionView.insertItems(at: indexPathsToReload)
-        }, completion: nil)
-        
+    func startActivityIndicator() {
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.stopAnimating()
     }
     
-    
+    func endActivityIndicator() {
+        self.activityIndicator.stopAnimating()
+        self.activityIndicator.isHidden = true
+    }
 }

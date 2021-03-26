@@ -17,33 +17,9 @@ struct ActivityModel: Decodable {
     let price: Double
 }
 
-
-
-
-
-struct ActivityService {
-    
-    func getActivities(page: Int) -> [ActivityModel] {
-        var activities = [ActivityModel]()
-
-        for i in 0...15 {
-            activities.append(ActivityModel(id: i,
-                                            serviceName: "Karate",
-                                            date: "22.1.3", coachFirstName: "Lorem",
-                                            coachLastName: "Ipsum",
-                                            time: "10:0",
-                                            price: 10000))
-        
-        }
-        
-        return activities
-    }
-}
-
-
 class APIClientMock {
     
-    static func fetchData(page: Int,  completion: @escaping (Result<ApiResponse<ActivityModel>, Error>) -> Void ) {
+    static func fetchData(page: Int, completion: @escaping (Result<ApiResponse<ActivityModel>, Error>) -> Void ) {
         var activities = [ActivityModel]()
         let totalPage = 10
         

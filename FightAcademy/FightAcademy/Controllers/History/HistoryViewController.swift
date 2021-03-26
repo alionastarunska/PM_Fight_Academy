@@ -2,13 +2,15 @@
 //  HistoryViewController.swift
 //  FightAcademy
 //
-//  Created by Artem Myshkin on 3/20/21.
+//  Created by Павел Снижко on 26.03.2021.
 //
 
 import UIKit
 
-class HistoryViewController: UIViewController {
-
+class HistoryViewController: UIViewController, NibLoadable {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "History"

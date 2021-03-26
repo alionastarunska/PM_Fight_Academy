@@ -11,82 +11,48 @@ class ActivityDataSource<Cell: ActivityCollectionViewCell>: NSObject,
                                                             UICollectionViewDataSource,
                                                             UICollectionViewDataSourcePrefetching {
     
-    
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-        
+        if indexPaths.contains(where: isLoadingCell(for:)) {
+            self.apiCaller?.fetchData()
+        } else {
+            return
+        }
     }
     
-    
     var activities: [ActivityModel]
+    let apiCaller: ActivityClientAPI?
     
-    init(activities: [ActivityModel]) {
+    init(activities: [ActivityModel] = [], apiCaller: ActivityClientAPI?) {
         self.activities = activities
+        self.apiCaller = apiCaller        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return activities.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.name, for: indexPath) as? Cell else {
-            return UICollectionViewCell()
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.name,
+                                                            for: indexPath) as? Cell, indexPath.item != activities.count
+        else  {
+            fatalError()
+            
         }
         
         cell.activity = activities[indexPath.item]
-        
+                
         return cell
     }
     
-    
-    
     func isLoadingCell(for indexPath: IndexPath) -> Bool {
-        return indexPath.row >= self.activities.count
+        return indexPath.item >= self.activities.count - 1
     }
-
-    
 }
 
-
-
-
-
-
-
-//
-//class PrefetchingDataSourceService: NSObject, UICollectionViewDataSourcePrefetching {
-//
-//    let itemsPerBatch = 15
-////    var currentRow : Int = 1
-////    var dataTasks : [URLSessionDataTask] = []
-//    var models = [Activity]()
-//    var currentPage: Int = 0
-//
-//    func collectionView(_ collectionView: UICollectionView, cancelPrefetchingForItemsAt indexPaths: [IndexPath]) {
-//
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-//        guard let last = indexPaths.last else {
-//            return
-//        }
-//
-//        print(last)
-//
-////        fetchData(indexPathNumber: last)
-//
-//    }
-//
-//    func fetchData(indexPathNumber: Int) {
-//
-//    }
-//
-//    // TODO: change to decodable type
-//
-//
-//
-//    func checkIfServerHasMore(indexPathNumber: Int) {
-//
-//    }
-//
-//}
+extension ActivityDataSource {
+    private func makeFirstCall() {
+        self.apiCaller?.fetchData()
+    }
+}

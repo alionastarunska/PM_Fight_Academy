@@ -8,9 +8,9 @@
 import UIKit
 
 class ActivityCollectionViewCell: UICollectionViewCell, NibLoadable {
+    
     @IBOutlet private weak var activityTitle: UILabel!
     @IBOutlet private weak var coachLabel: UILabel!
-    
     @IBOutlet private weak var priceLabel: UILabel!
     @IBOutlet private weak var priceValueLabel: UILabel!
     @IBOutlet private weak var activityTimeLabel: UILabel!
