@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ChoosingCoach: UIViewController {
+protocol ChoosingCoach: UIViewController, LoadingDisplaying, ErrorDisplaying {
 
     var onSelectCoach: ((Coach) -> Void)? { get set }
 
@@ -40,7 +40,9 @@ class ChoosingCoachViewController: UIViewController, ChoosingCoach {
     
     private func loadCoaches() {
         guard let id = activity?.id else { return }
+        startLoading()
         PMFightApi.shared.coaches(with: id) { [weak self] result in
+            self?.endLoading()
             switch result {
             case .success(let coaches):
                 self?.coaches = coaches
@@ -48,7 +50,7 @@ class ChoosingCoachViewController: UIViewController, ChoosingCoach {
                       !indexes.isEmpty else { return }
                 self?.tableView.insertRows(at: indexes, with: .none)
             case .failure(let error):
-                print(error.localizedDescription)
+                self?.show(error: error)
             }
         }
     }

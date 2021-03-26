@@ -9,9 +9,9 @@ import UIKit
 
 class BookingDataSource<Cell: TimeCollectionViewCell>: NSObject, UICollectionViewDataSource {
     
-    var slots: [TimeSlot]
+    var slots: [TrainingTime]
     
-    init(slots: [TimeSlot]) {
+    init(slots: [TrainingTime]) {
         self.slots = slots
     }
     
@@ -26,5 +26,9 @@ class BookingDataSource<Cell: TimeCollectionViewCell>: NSObject, UICollectionVie
         
         cell.configure(with: slots[indexPath.row])
         return cell
+    }
+    
+    func set(items: [TrainingTime]) {
+        self.slots = items
     }
 }

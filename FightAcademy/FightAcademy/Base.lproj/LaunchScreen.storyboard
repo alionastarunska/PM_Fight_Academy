@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,19 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttonShowMore" translatesAutoresizingMaskIntoConstraints="NO" id="lac-bw-4T4">
-                                <rect key="frame" x="82" y="408" width="250" height="90"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="nVd-0G-NCP"/>
-                                    <constraint firstAttribute="width" constant="250" id="s3a-cT-Mgb"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoLaunch" translatesAutoresizingMaskIntoConstraints="NO" id="lac-bw-4T4">
+                                <rect key="frame" x="40" y="409" width="334" height="88"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="lac-bw-4T4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="43R-oI-prz"/>
                             <constraint firstItem="lac-bw-4T4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Aue-ZW-t3B"/>
                             <constraint firstItem="lac-bw-4T4" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="VWQ-QU-xp6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lac-bw-4T4" secondAttribute="trailing" constant="40" id="Xu4-VK-knG"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,6 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="buttonShowMore" width="341" height="37"/>
+        <image name="logoLaunch" width="300" height="88"/>
     </resources>
 </document>

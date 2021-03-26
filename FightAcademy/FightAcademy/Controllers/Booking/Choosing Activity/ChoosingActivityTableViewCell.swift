@@ -12,10 +12,8 @@ class ChoosingActivityTableViewCell: UITableViewCell, ConfigurableCell, Reusable
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!
     
-    func configure(with item: ChoosingActivityModel) {
+    func configure(with item: TrainingType) {
         nameLabel.text = item.name
         priceLabel.text = "Price: " + "\(item.price)" + " UAH"
-        
     }
-    
 }

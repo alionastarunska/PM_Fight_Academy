@@ -14,18 +14,11 @@ class TimeCollectionViewCell: UICollectionViewCell, ReusableCell, ConfigurableCe
     override var isSelected: Bool {
         didSet {
             timeSlotLabel.textColor = isSelected ? .black : .white
-            timeSlotLabel.backgroundColor = isSelected ? .main : .background
+            timeSlotLabel.backgroundColor = isSelected ? Asset.Colors.customYellow.color : Asset.Colors.backgroundColor.color
         }
     }
     
-    func configure(with data: TimeSlot) {
-        timeSlotLabel.text = data.date
+    func configure(with data: TrainingTime) {
+        timeSlotLabel.text = data
     }
-}
-
-// TODO: Move to assets or public extension
-
-extension UIColor {
-    static var main: UIColor { return UIColor(red: 244/255.0, green: 225/255.0, blue: 51/255.0, alpha: 1) }
-    static var background: UIColor { return UIColor(red: 49/255.0, green: 48/255.0, blue: 48/255.0, alpha: 1) }
 }

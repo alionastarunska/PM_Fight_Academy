@@ -8,22 +8,28 @@
 import UIKit
 import FSCalendar
 
-protocol BookingNewActivity: UIViewController {
+protocol BookingNewActivity: ErrorDisplaying, LoadingDisplaying {
 
     var onSelectActivityType: ((BookingDelegate) -> Void)? { get set }
-    var onSelectCoach: ((BookingDelegate) -> Void)? { get set }
+    var onSelectCoach: ((BookingDelegate, TrainingType) -> Void)? { get set }
     var onRequestActivity: (() -> Void)? { get set }
 
 }
 
 protocol BookingDelegate: class {
     
-    func didSelect(_ activity: ChoosingActivityModel)
+    func didSelect(_ activity: TrainingType)
     func didSelect(_ coach: Coach)
     
 }
 
 class BookingActivityViewController: UIViewController, BookingNewActivity {
+    
+    var onRequestActivity: (() -> Void)?
+    var onSelectCoach: ((BookingDelegate, TrainingType) -> Void)?
+    var onSelectActivityType: ((BookingDelegate) -> Void)?
+    
+    // MARK: - Outlets
     
     @IBOutlet private weak var chooseCoachButton: UIButton!
     @IBOutlet private weak var chooseActivityButton: UIButton!
@@ -36,53 +42,17 @@ class BookingActivityViewController: UIViewController, BookingNewActivity {
     @IBOutlet private weak var scrollView: UIScrollView!
     
     private var trainingDates: [Date] = []
-    private var timeSlots: [TimeSlot] = []
+    private var timeSlots: [TrainingTime] = []
     private var dataSource: BookingDataSource<TimeCollectionViewCell>?
+        
+    // MARK: - Selected data
     
-    private var selectedActivity: ChoosingActivityModel?
+    private var selectedActivity: TrainingType?
     private var selectedCoach: Coach?
     private var selectedDate: Date?
-    private var selectedTimeSlot: TimeSlot?
+    private var selectedTimeSlot: TrainingTime?
     
-    var onRequestActivity: (() -> Void)?
-    var onSelectCoach: ((BookingDelegate) -> Void)?
-    var onSelectActivityType: ((BookingDelegate) -> Void)?
-    
-    @IBAction func chooseCoachButtonAction(_ sender: UIButton) {
-        onSelectCoach?(self)
-    }
-    
-    @IBAction func chooseActivityButtonAction(_ sender: UIButton) {
-        onSelectActivityType?(self)
-    }
-    
-    @IBAction func doneButtonAction(_ sender: UIButton) {
-        guard let activity = selectedActivity else {
-            error()
-            activityLabel.superview?.shake()
-            scrollView.setContentOffset(.zero, animated: true)
-            return
-        }
-        guard let coach = selectedCoach else {
-            error()
-            coachNameLabel.superview?.shake()
-            scrollView.setContentOffset(.zero, animated: true)
-            return
-        }
-        guard let date = selectedDate else {
-            error()
-            calendar.shake()
-            return
-        }
-        guard let timeSlot = selectedTimeSlot else {
-            error()
-            timeCollectionView.shake()
-            return
-        }
-        
-        // todo: create booking
-        onRequestActivity?()
-    }
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,25 +62,64 @@ class BookingActivityViewController: UIViewController, BookingNewActivity {
         calendar.delegate = self
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        calendar.reloadData()
+        calendar.calendarHeaderView.reloadData()
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction private func chooseCoachButtonAction(_ sender: UIButton) {
+        guard let activity = selectedActivity else { return }
+        onSelectCoach?(self, activity)
+    }
+    
+    @IBAction private func chooseActivityButtonAction(_ sender: UIButton) {
+        onSelectActivityType?(self)
+    }
+    
+    @IBAction private func doneButtonAction(_ sender: UIButton) {
+        guard let activity = selectedActivity else {
+            activityLabel.superview?.shake()
+            scrollView.setContentOffset(.zero, animated: true)
+            show(errorString: "Please select training type first")
+            return
+        }
+        guard let coach = selectedCoach else {
+            coachNameLabel.superview?.shake()
+            scrollView.setContentOffset(.zero, animated: true)
+            show(errorString: "Please select coach first")
+            return
+        }
+        guard let date = selectedDate else {
+            calendar.shake()
+            show(errorString: "Please select date first")
+            return
+        }
+        guard let timeSlot = selectedTimeSlot else {
+            timeCollectionView.shake()
+            show(errorString: "Please select time first")
+            return
+        }
+        
+        createBooking(activity, coach, date, timeSlot)
+    }
+    
+    // MARK: - Private
+    
     private func setupCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.itemSize = .itemSize
         layout.minimumLineSpacing = .lineSpacing
         timeCollectionView.collectionViewLayout = layout
-        let numberOfRows = ceil(CGFloat(timeSlots.count) / .numberOfColumns)
-        timeHeightConstraint.constant = (numberOfRows - 1) * .lineSpacing + numberOfRows * .cellHeight
-        view.layoutIfNeeded()
         dataSource = BookingDataSource<TimeCollectionViewCell>(slots: timeSlots)
         timeCollectionView.register(TimeCollectionViewCell.cellNib,
                                     forCellWithReuseIdentifier: TimeCollectionViewCell.reuseIdentifier)
         timeCollectionView.dataSource = dataSource
         timeCollectionView.delegate = self
-    }
-    
-    private func error() {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.error)
+        updateTimeSlotsHeight()
     }
     
     private func isAvailable(date: Date) -> Bool {
@@ -125,20 +134,50 @@ class BookingActivityViewController: UIViewController, BookingNewActivity {
     }
     
     private func fetchDates() {
-        guard let activity = selectedActivity, let coach = selectedCoach else {
-            error()
-            return
-        }
+        guard let activity = selectedActivity, let coach = selectedCoach else { return }
+        startLoading()
         PMFightApi.shared.dates(for: activity.id, with: coach.id) { [weak self] result in
+            self?.endLoading()
             switch result {
             case .failure(let error):
-                print(error)
+                self?.show(error: error)
             case .success(let days):
                 self?.trainingDates = days.compactMap({ $0.date })
                 self?.calendar.reloadData()
                 self?.calendar.alpha = 1
                 self?.calendar.isUserInteractionEnabled = true
             }
+        }
+    }
+    
+    private func fetchTimeSlots() {
+        guard let date = selectedDate, let activity = selectedActivity, let coach = selectedCoach else { return }
+        startLoading()
+        PMFightApi.shared.time(for: activity.id, with: coach.id, on: date.dayString) { [weak self] (result) in
+            self?.endLoading()
+            switch result {
+            case .success(let time):
+                self?.timeSlots = time
+                self?.dataSource?.set(items: time)
+                self?.timeCollectionView.reloadData()
+                self?.updateTimeSlotsHeight()
+            case .failure(let error):
+                self?.show(error: error)
+            }
+        }
+    }
+    
+    private func createBooking(_ activity: TrainingType, _ coach: Coach, _ date: Date, _ timeSlot: TrainingTime) {
+        // TODO:
+        
+        onRequestActivity?()
+    }
+    
+    private func updateTimeSlotsHeight() {
+        UIView.animate(withDuration: 0.3) {
+            let numberOfRows = ceil(CGFloat(self.timeSlots.count) / .numberOfColumns)
+            self.timeHeightConstraint.constant = (numberOfRows - 1) * .lineSpacing + numberOfRows * .cellHeight
+            self.view.layoutIfNeeded()
         }
     }
 }
@@ -150,7 +189,7 @@ extension BookingActivityViewController: BookingDelegate {
         fetchDates()
     }
     
-    func didSelect(_ activity: ChoosingActivityModel) {
+    func didSelect(_ activity: TrainingType) {
         selectedActivity = activity
         activityLabel.text = activity.name
         chooseCoachButton.isEnabled = true
@@ -160,8 +199,6 @@ extension BookingActivityViewController: BookingDelegate {
 
 extension BookingActivityViewController: FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
     func minimumDate(for calendar: FSCalendar) -> Date {
-        let today = Date()
-        print("\(today)")
         return Date()
     }
     
@@ -169,7 +206,7 @@ extension BookingActivityViewController: FSCalendarDelegate, FSCalendarDataSourc
         if isAvailable(date: date) {
             return .white
         }
-        return .typingTextColor
+        return Asset.Colors.typingTextColor.color
     }
     
     func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
@@ -178,10 +215,9 @@ extension BookingActivityViewController: FSCalendarDelegate, FSCalendarDataSourc
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         selectedDate = date
-        let formatter = dateFormatter.string(from: date)
-        print("\(formatter)")
         timeCollectionView.alpha = 1
         timeCollectionView.isUserInteractionEnabled = true
+        fetchTimeSlots()
     }
 }
 
@@ -191,6 +227,8 @@ extension BookingActivityViewController: UICollectionViewDelegate {
         selectedTimeSlot = timeSlots[indexPath.item]
     }
 }
+
+// MARK: - Constants
 
 private extension CGSize {
     static var itemSize: CGSize { return CGSize(width: (UIScreen.main.bounds.width - .horizontalMargins) / .numberOfColumns,
@@ -202,21 +240,4 @@ private extension CGFloat {
     static var horizontalMargins: CGFloat { return 55 }
     static var lineSpacing: CGFloat { return 6 }
     static var cellHeight: CGFloat { return 40 }
-}
-
-private var dateFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateFormat = "MM/dd/yyyy"
-    return formatter
-}()
-
-private extension Date {
-    var removeTimeStamp: Date {
-        guard let date = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: self)) else { return self }
-        return date
-    }
-}
-
-private extension UIColor {
-    static var typingTextColor: UIColor { return UIColor(named: "typingTextColor") ?? .lightGray }
 }

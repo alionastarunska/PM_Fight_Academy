@@ -9,9 +9,9 @@ import UIKit
 
 class ChoosingActivityDataSource<Cell: ChoosingActivityTableViewCell>: NSObject, UITableViewDataSource {
     
-    var activity: [ChoosingActivityModel]
+    var activity: [TrainingType]
 
-       init(activity: [ChoosingActivityModel]) {
+       init(activity: [TrainingType]) {
            self.activity = activity
        }
 
@@ -26,5 +26,15 @@ class ChoosingActivityDataSource<Cell: ChoosingActivityTableViewCell>: NSObject,
         cell.configure(with: activity[indexPath.row])
         
         return cell
+    }
+    
+    func append(items: [Cell.Item]) -> [IndexPath] {
+        let count = self.activity.count
+        self.activity.append(contentsOf: items)
+        var indexes = [IndexPath]()
+        for idx in 0..<items.count {
+            indexes.append(IndexPath(row: count + idx, section: 0))
+        }
+        return indexes
     }
 }

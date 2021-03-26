@@ -8,6 +8,9 @@ target 'FightAcademy' do
 	pod 'Firebase/Analytics'
   pod 'SwiftLint'
   pod 'FSCalendar'
+  pod 'NVActivityIndicatorView'
+  pod 'SwiftMessages'
+  pod 'SwiftGen'
 
   # Pods for FightAcademy
 

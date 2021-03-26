@@ -7,12 +7,12 @@
 
 import UIKit
 
-class CoachViewController: UIViewController {
+class CoachViewController: UIViewController, LoadingDisplaying, ErrorDisplaying {
 
     @IBOutlet private weak var tableView: UITableView!
     
     private var dataSource: CoachDataSource<CoachTableViewCell>?
-    private var page: Int = 1
+    private var page: Int = 0
     private var canLoadMore: Bool = true
     private var isLoadingMore: Bool = false
     
@@ -36,7 +36,9 @@ class CoachViewController: UIViewController {
         guard canLoadMore else { return }
         isLoadingMore = true
         page += 1
+        startLoading()
         PMFightApi.shared.getCoaches(page: page) { [weak self] result in
+            self?.endLoading()
             self?.isLoadingMore = false
             switch result {
             case .success(let response):
@@ -46,7 +48,7 @@ class CoachViewController: UIViewController {
                 self?.tableView.insertRows(at: indexes, with: .none)
             case .failure(let error):
                 self?.page -= 1
-                print(error)
+                self?.show(error: error)
             }
         }
     }

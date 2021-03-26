@@ -23,11 +23,9 @@
 		4B3A6C9D260747A500B99CF0 /* CoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C9B260747A500B99CF0 /* CoachViewController.swift */; };
 		4B6CE7FE260D0B8C004D6039 /* CoachModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CE7FD260D0B8C004D6039 /* CoachModel.swift */; };
 		4B6CE83B260D0BEC004D6039 /* TimeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6CE824260D0BEC004D6039 /* TimeCollectionViewCell.xib */; };
-		4B6CE83C260D0BEC004D6039 /* TimeSlotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CE825260D0BEC004D6039 /* TimeSlotModel.swift */; };
 		4B6CE83D260D0BEC004D6039 /* BookingDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CE826260D0BEC004D6039 /* BookingDataSourse.swift */; };
 		4B6CE83E260D0BEC004D6039 /* BookingActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CE827260D0BEC004D6039 /* BookingActivityViewController.swift */; };
 		4B6CE843260D0BEC004D6039 /* ChoosingActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CE82E260D0BEC004D6039 /* ChoosingActivityTableViewCell.swift */; };
-		4B6CE844260D0BEC004D6039 /* ChoosingActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CE82F260D0BEC004D6039 /* ChoosingActivityModel.swift */; };
 		4B6CE845260D0BEC004D6039 /* ChoosingActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6CE830260D0BEC004D6039 /* ChoosingActivityViewController.xib */; };
 		4B6CE846260D0BEC004D6039 /* ChoosingActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6CE831260D0BEC004D6039 /* ChoosingActivityTableViewCell.xib */; };
 		4B6CE847260D0BEC004D6039 /* ChoosingActivityDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CE832260D0BEC004D6039 /* ChoosingActivityDataSourse.swift */; };
@@ -40,6 +38,11 @@
 		4B6CE875260D2D54004D6039 /* CoachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6C9C260747A500B99CF0 /* CoachViewController.xib */; };
 		4B6CE879260D2D64004D6039 /* ChoosingCoachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6CE838260D0BEC004D6039 /* ChoosingCoachViewController.xib */; };
 		4B6CE87D260D2D70004D6039 /* ChoosingCoachTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6CE837260D0BEC004D6039 /* ChoosingCoachTableViewCell.xib */; };
+		4BB7F81B260E741800E9294F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BB7F81A260E741800E9294F /* Colors.xcassets */; };
+		4BB7F821260E74DF00E9294F /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB7F820260E74DF00E9294F /* Assets.swift */; };
+		4BB7F82E260E769F00E9294F /* LoadingDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB7F82C260E769F00E9294F /* LoadingDisplaying.swift */; };
+		4BB7F82F260E769F00E9294F /* ErrorDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB7F82D260E769F00E9294F /* ErrorDisplaying.swift */; };
+		4BB7F840260E8A7F00E9294F /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB7F83F260E8A7F00E9294F /* Date+String.swift */; };
 		4BF53EA8260771F2002166D4 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF53EA7260771F2002166D4 /* UIView+IBInspectable.swift */; };
 		4BF53EF426079CE1002166D4 /* String+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF53EF326079CE1002166D4 /* String+Size.swift */; };
 		9EA8843426068216002A59E2 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8843326068216002A59E2 /* RouterProtocol.swift */; };
@@ -167,11 +170,9 @@
 		4B3A6C9C260747A500B99CF0 /* CoachViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoachViewController.xib; sourceTree = "<group>"; };
 		4B6CE7FD260D0B8C004D6039 /* CoachModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoachModel.swift; sourceTree = "<group>"; };
 		4B6CE824260D0BEC004D6039 /* TimeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeCollectionViewCell.xib; sourceTree = "<group>"; };
-		4B6CE825260D0BEC004D6039 /* TimeSlotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSlotModel.swift; sourceTree = "<group>"; };
 		4B6CE826260D0BEC004D6039 /* BookingDataSourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingDataSourse.swift; sourceTree = "<group>"; };
 		4B6CE827260D0BEC004D6039 /* BookingActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingActivityViewController.swift; sourceTree = "<group>"; };
 		4B6CE82E260D0BEC004D6039 /* ChoosingActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosingActivityTableViewCell.swift; sourceTree = "<group>"; };
-		4B6CE82F260D0BEC004D6039 /* ChoosingActivityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosingActivityModel.swift; sourceTree = "<group>"; };
 		4B6CE830260D0BEC004D6039 /* ChoosingActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoosingActivityViewController.xib; sourceTree = "<group>"; };
 		4B6CE831260D0BEC004D6039 /* ChoosingActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoosingActivityTableViewCell.xib; sourceTree = "<group>"; };
 		4B6CE832260D0BEC004D6039 /* ChoosingActivityDataSourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosingActivityDataSourse.swift; sourceTree = "<group>"; };
@@ -183,6 +184,11 @@
 		4B6CE839260D0BEC004D6039 /* ChoosingCoachViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosingCoachViewController.swift; sourceTree = "<group>"; };
 		4B6CE83A260D0BEC004D6039 /* ChoosingCoachTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosingCoachTableViewCell.swift; sourceTree = "<group>"; };
 		4B6CE85E260D0CB7004D6039 /* UIView+Shake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
+		4BB7F81A260E741800E9294F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		4BB7F820260E74DF00E9294F /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		4BB7F82C260E769F00E9294F /* LoadingDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingDisplaying.swift; sourceTree = "<group>"; };
+		4BB7F82D260E769F00E9294F /* ErrorDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDisplaying.swift; sourceTree = "<group>"; };
+		4BB7F83F260E8A7F00E9294F /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 		4BF53EA7260771F2002166D4 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		4BF53EF326079CE1002166D4 /* String+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Size.swift"; sourceTree = "<group>"; };
 		9EA8843326068216002A59E2 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
@@ -341,6 +347,8 @@
 				4B3A6BEC2603CE3E00B99CF0 /* Info.plist */,
 				4B3A6C172603D58700B99CF0 /* GoogleService-Info.plist */,
 				4B3A6C5326063E0D00B99CF0 /* Assets.xcassets */,
+				4BB7F81A260E741800E9294F /* Colors.xcassets */,
+				4BB7F81F260E74C400E9294F /* Generated */,
 				4B3A6BE42603CE3900B99CF0 /* FightAcademy.xcdatamodeld */,
 				AE5C81572605182300E12DB5 /* TypeAliasses.swift */,
 			);
@@ -383,6 +391,8 @@
 		4B3A6C5D2606748B00B99CF0 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				4BB7F82D260E769F00E9294F /* ErrorDisplaying.swift */,
+				4BB7F82C260E769F00E9294F /* LoadingDisplaying.swift */,
 				AEB49A692604B3F700766762 /* NibLoadable.swift */,
 				4B3A6C5F260674A100B99CF0 /* ConfigurableCell.swift */,
 				4B3A6C5E260674A100B99CF0 /* ReusableCell.swift */,
@@ -393,14 +403,15 @@
 		4B6CE823260D0BEC004D6039 /* Booking */ = {
 			isa = PBXGroup;
 			children = (
-				4B6CE824260D0BEC004D6039 /* TimeCollectionViewCell.xib */,
-				4B6CE825260D0BEC004D6039 /* TimeSlotModel.swift */,
+				4B6CE836260D0BEC004D6039 /* ChoosingCoach */,
+				4B6CE82D260D0BEC004D6039 /* Choosing Activity */,
 				4B6CE826260D0BEC004D6039 /* BookingDataSourse.swift */,
 				4B6CE827260D0BEC004D6039 /* BookingActivityViewController.swift */,
-				4B6CE82D260D0BEC004D6039 /* Choosing Activity */,
 				4B6CE834260D0BEC004D6039 /* BookingActivityViewController.xib */,
+				4B6CE824260D0BEC004D6039 /* TimeCollectionViewCell.xib */,
 				4B6CE835260D0BEC004D6039 /* TimeCollectionViewCell.swift */,
-				4B6CE836260D0BEC004D6039 /* ChoosingCoach */,
+				9EF93AA2260C5FDF006EB24A /* TrainingTime.swift */,
+				9EF93A9D260C5FCA006EB24A /* TrainingDay.swift */,
 			);
 			path = Booking;
 			sourceTree = "<group>";
@@ -409,11 +420,11 @@
 			isa = PBXGroup;
 			children = (
 				4B6CE82E260D0BEC004D6039 /* ChoosingActivityTableViewCell.swift */,
-				4B6CE82F260D0BEC004D6039 /* ChoosingActivityModel.swift */,
 				4B6CE830260D0BEC004D6039 /* ChoosingActivityViewController.xib */,
 				4B6CE831260D0BEC004D6039 /* ChoosingActivityTableViewCell.xib */,
 				4B6CE832260D0BEC004D6039 /* ChoosingActivityDataSourse.swift */,
 				4B6CE833260D0BEC004D6039 /* ChoosingActivityViewController.swift */,
+				9EF93A95260C5FAB006EB24A /* TrainingType.swift */,
 			);
 			path = "Choosing Activity";
 			sourceTree = "<group>";
@@ -427,6 +438,14 @@
 				4B6CE83A260D0BEC004D6039 /* ChoosingCoachTableViewCell.swift */,
 			);
 			path = ChoosingCoach;
+			sourceTree = "<group>";
+		};
+		4BB7F81F260E74C400E9294F /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				4BB7F820260E74DF00E9294F /* Assets.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		9EA8842A26067C5C002A59E2 /* Application */ = {
@@ -460,15 +479,15 @@
 		9EA88445260682FA002A59E2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AE80C8D0260B58B700E99D40 /* Auth */,
-				4B3A6C45260635A600B99CF0 /* Coaches */,
-				9EA8845026068395002A59E2 /* Wrappers */,
-				4B6CE823260D0BEC004D6039 /* Booking */,
 				9EA8846826068480002A59E2 /* AboutViewController.swift */,
 				9EA884822606856F002A59E2 /* ActivityViewController.swift */,
 				9EA88496260685D9002A59E2 /* HistoryViewController.swift */,
 				9EA8849B260685F0002A59E2 /* SettingsViewController.swift */,
 				9EA884A026068609002A59E2 /* ChangePasswordViewController.swift */,
+				AE80C8D0260B58B700E99D40 /* Auth */,
+				4B3A6C45260635A600B99CF0 /* Coaches */,
+				9EA8845026068395002A59E2 /* Wrappers */,
+				4B6CE823260D0BEC004D6039 /* Booking */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -497,6 +516,7 @@
 				9EA8846F2606850A002A59E2 /* UIFontExtensions.swift */,
 				4BF53EF326079CE1002166D4 /* String+Size.swift */,
 				4B6CE85E260D0CB7004D6039 /* UIView+Shake.swift */,
+				4BB7F83F260E8A7F00E9294F /* Date+String.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -663,9 +683,6 @@
 				9EF93A73260C5F00006EB24A /* ApiResponse.swift */,
 				9EF93A7B260C5F16006EB24A /* Paggination.swift */,
 				9EF93A80260C5F2B006EB24A /* Token.swift */,
-				9EF93A95260C5FAB006EB24A /* TrainingType.swift */,
-				9EF93A9D260C5FCA006EB24A /* TrainingDay.swift */,
-				9EF93AA2260C5FDF006EB24A /* TrainingTime.swift */,
 				9EF93AA7260C5FF3006EB24A /* Training.swift */,
 			);
 			path = Models;
@@ -777,6 +794,7 @@
 				4B3A6BD62603CE3900B99CF0 /* Resources */,
 				2189DBEB33F4A02A22944EB7 /* [CP] Embed Pods Frameworks */,
 				4BF53EC9260775C5002166D4 /* Swift lint */,
+				4BB7F828260E752800E9294F /* Swift Gen */,
 			);
 			buildRules = (
 			);
@@ -879,6 +897,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BB7F81B260E741800E9294F /* Colors.xcassets in Resources */,
 				4B6CE87D260D2D70004D6039 /* ChoosingCoachTableViewCell.xib in Resources */,
 				4B6CE879260D2D64004D6039 /* ChoosingCoachViewController.xib in Resources */,
 				4B6CE875260D2D54004D6039 /* CoachViewController.xib in Resources */,
@@ -996,6 +1015,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4BB7F828260E752800E9294F /* Swift Gen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Gen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftGen/bin/swiftgen\n";
+		};
 		4BF53EC9260775C5002166D4 /* Swift lint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1038,7 +1075,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B6CE83C260D0BEC004D6039 /* TimeSlotModel.swift in Sources */,
 				AEF81BE72607728C00B5F2B3 /* BaseAuthModel.swift in Sources */,
 				AE5C815E26053A6600E12DB5 /* LogInViewController.swift in Sources */,
 				4B6CE84D260D0BEC004D6039 /* ChoosingCoachViewController.swift in Sources */,
@@ -1046,13 +1082,13 @@
 				AEB49A7A2604B90500766762 /* RegisterViewController.swift in Sources */,
 				AEB49A6A2604B3F700766762 /* NibLoadable.swift in Sources */,
 				AE5C817E26055B0A00E12DB5 /* Validator.swift in Sources */,
+				4BB7F821260E74DF00E9294F /* Assets.swift in Sources */,
 				AE80C8592609FE6200E99D40 /* BaseAuthViewController.swift in Sources */,
 				AE5C818426055F6000E12DB5 /* RegistrationModel.swift in Sources */,
 				4B6CE84A260D0BEC004D6039 /* TimeCollectionViewCell.swift in Sources */,
 				AE80C8BB260B4C8C00E99D40 /* TrailingImageTextField.swift in Sources */,
 				4B6CE843260D0BEC004D6039 /* ChoosingActivityTableViewCell.swift in Sources */,
 				AEF81BC3260624A200B5F2B3 /* ProfileApiClient.swift in Sources */,
-				4B6CE844260D0BEC004D6039 /* ChoosingActivityModel.swift in Sources */,
 				AEF81BD92607520100B5F2B3 /* AuthorizationModel.swift in Sources */,
 				AE5C81582605182300E12DB5 /* TypeAliasses.swift in Sources */,
 				4B3A6BE62603CE3900B99CF0 /* FightAcademy.xcdatamodeld in Sources */,
@@ -1065,6 +1101,7 @@
 				9EF93A23260C5952006EB24A /* NetworkApiProvider.swift in Sources */,
 				9EF93A9E260C5FCA006EB24A /* TrainingDay.swift in Sources */,
 				9EA88452260683AB002A59E2 /* NavigationController.swift in Sources */,
+				4BB7F82E260E769F00E9294F /* LoadingDisplaying.swift in Sources */,
 				4B6CE83E260D0BEC004D6039 /* BookingActivityViewController.swift in Sources */,
 				9EF93A4D260C59FF006EB24A /* HTTPSchema.swift in Sources */,
 				4B3A6C792607416A00B99CF0 /* SceneDelegate.swift in Sources */,
@@ -1077,6 +1114,7 @@
 				9EA884D72606888F002A59E2 /* TabBarCoordinator.swift in Sources */,
 				9EA884F026068943002A59E2 /* CoachesCoordinator.swift in Sources */,
 				9EA8849C260685F0002A59E2 /* SettingsViewController.swift in Sources */,
+				4BB7F82F260E769F00E9294F /* ErrorDisplaying.swift in Sources */,
 				9EA884BB26068795002A59E2 /* ApplicationCoordinator.swift in Sources */,
 				9EA884702606850A002A59E2 /* UIFontExtensions.swift in Sources */,
 				4BF53EF426079CE1002166D4 /* String+Size.swift in Sources */,
@@ -1105,6 +1143,7 @@
 				9EA8850626068A0C002A59E2 /* HistoryCoordinator.swift in Sources */,
 				9EA8843C26068233002A59E2 /* Router.swift in Sources */,
 				9EF93A36260C59A3006EB24A /* StatusCode.swift in Sources */,
+				4BB7F840260E8A7F00E9294F /* Date+String.swift in Sources */,
 				9EF93A3F260C59C5006EB24A /* RequestableItem.swift in Sources */,
 				9EF93A86260C5F52006EB24A /* HumanApiError.swift in Sources */,
 				4B3A6C61260674A100B99CF0 /* ConfigurableCell.swift in Sources */,
