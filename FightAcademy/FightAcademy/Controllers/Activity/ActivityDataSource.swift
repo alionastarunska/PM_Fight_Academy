@@ -12,6 +12,8 @@ class ActivityDataSource<Cell: ActivityCollectionViewCell>: NSObject,
                                                             UICollectionViewDataSourcePrefetching {
     
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        print(indexPaths)
+
         if indexPaths.contains(where: isLoadingCell(for:)) {
             self.apiCaller?.fetchData()
         } else {
@@ -19,10 +21,10 @@ class ActivityDataSource<Cell: ActivityCollectionViewCell>: NSObject,
         }
     }
     
-    var activities: [ActivityModel]
+    var activities: [Training]
     let apiCaller: ActivityClientAPI?
     
-    init(activities: [ActivityModel] = [], apiCaller: ActivityClientAPI?) {
+    init(activities: [Training] = [], apiCaller: ActivityClientAPI?) {
         self.activities = activities
         self.apiCaller = apiCaller        
     }
@@ -40,7 +42,7 @@ class ActivityDataSource<Cell: ActivityCollectionViewCell>: NSObject,
             fatalError()
         }
         
-        cell.activity = activities[indexPath.item]
+        cell.training = activities[indexPath.item]
                 
         return cell
     }

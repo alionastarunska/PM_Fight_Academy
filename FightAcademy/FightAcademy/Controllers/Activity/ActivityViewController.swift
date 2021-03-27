@@ -104,7 +104,7 @@ extension ActivityViewController: UICollectionViewDelegateFlowLayout {
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = view.bounds.width * 0.9
-        let height = view.bounds.height * 0.147
+        let height = view.bounds.height * 0.15
         return CGSize(width: width, height: height)
         
     }

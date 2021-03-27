@@ -65,7 +65,7 @@ class HistoryViewController: UIViewController, NibLoadable, UICollectionViewDele
                 self.endActivityIndicator()
                 
                 self.collectionView.performBatchUpdates({
-                    self.dataSource?.activities = successeData.1
+                    self.dataSource?.trainings = successeData.1
                     self.collectionView.insertItems(at: successeData.0)
                 }, completion: nil)
                 

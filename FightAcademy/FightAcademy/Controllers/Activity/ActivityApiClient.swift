@@ -21,37 +21,30 @@ protocol Prefetchable {
 
 class ActivityClientAPI: Prefetchable {
     
-    var fetchCompleted: ItemClosure<Result<([IndexPath], [ActivityModel])?, Error>>?
+    var fetchCompleted: ItemClosure<Result<([IndexPath], [Training])?, Error>>?
     
-    var total: Int = 10
+    var total: Int = 1
     
     var currentPage: Int = 1
     
-    var models = [ActivityModel]()
+    var models = [Training]()
     
     var isFetchInProgress: Bool = false
     
     private var firstCall = true
     
+    // TODO: think how to manage lastCall. If user come back form activity it should add data to dataSource or set lastcall shoud be  false
+    
     private var lastCall = false
     
-    private func calculateIndexPathsToReload(from newModels: [ActivityModel]) -> [IndexPath] {
-        let startIndex = models.count - newModels.count
-        let endIndex = startIndex + newModels.count
-        return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
-    }
-    
     func fetchData() {
-        guard !isFetchInProgress else {
+        guard !isFetchInProgress && currentPage <= total else {
             return
         }
         
         isFetchInProgress = true
-        
-        //TODO: decomment when data on backend will appear
-        
-        //        PMFightApi.shared.incomingActivities(page: page)
-        APIClientMock.fetchData(page: currentPage) { [weak self] result in
+                
+            PMFightApi.shared.incomingActivities(page: currentPage) { [weak self] result in
             
             guard let self = self else { return }
             
@@ -60,7 +53,7 @@ class ActivityClientAPI: Prefetchable {
             switch result {
             case .success(let response):
                 
-                //                print(response)
+                print(response)
                 
                 DispatchQueue.main.async {
                     self.currentPage += 1
@@ -79,6 +72,8 @@ class ActivityClientAPI: Prefetchable {
                         
                         self.lastCall = !response.paggination.hasNextPage
                         
+                        self.total = response.paggination.totalPages
+                        
                         //TODO: check for the ref cycle
                         self.fetchCompleted?(.success((indexPathsToReload, self.models)))
                         
@@ -95,5 +90,11 @@ class ActivityClientAPI: Prefetchable {
                 self.fetchCompleted?(.failure(error))
             }
         }
+    }
+    
+    private func calculateIndexPathsToReload(from newModels: [Training]) -> [IndexPath] {
+        let startIndex = models.count - newModels.count
+        let endIndex = startIndex + newModels.count
+        return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
     }
 }

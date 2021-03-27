@@ -17,7 +17,7 @@ class ActivityCollectionViewCell: UICollectionViewCell, NibLoadable {
     @IBOutlet private weak var activityDateLabel: UILabel!
     @IBOutlet weak var coachFullNameLabel: UILabel!
     
-    var activity: ActivityModel? {
+    var training: Training? {
         didSet {
             configureCell()
         }
@@ -30,28 +30,28 @@ class ActivityCollectionViewCell: UICollectionViewCell, NibLoadable {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        activity = nil
+        training = nil
     }
     
     func configureCell() {
-        activityTitle.text = activity?.serviceName
-        activityDateLabel.text = activity?.date
+        activityTitle.text = training?.serviceName
+        activityDateLabel.text = training?.date
         
-        if let firstName = activity?.coachFirstName, let secondName = activity?.coachLastName {
+        if let firstName = training?.coachFirstName, let secondName = training?.coachLastName {
             coachFullNameLabel.text = firstName + " " + secondName
         } else {
             coachFullNameLabel.text = ""
         }
         
-        if let time = activity?.time {
-            activityTimeLabel.text = "\(time)"
-        } else {
-            activityTimeLabel.text = ""
-        }
+//        if let time = training?.time {
+//            activityTimeLabel.text = "\(time)"
+//        } else {
+//            activityTimeLabel.text = ""
+//        }
         
-        activityTimeLabel.text =  activity?.time
+        activityTimeLabel.text =  training?.time
 
-        if let price = activity?.price {
+        if let price = training?.price {
             priceValueLabel.text = "\(price)"
         } else {
             priceValueLabel.text = ""

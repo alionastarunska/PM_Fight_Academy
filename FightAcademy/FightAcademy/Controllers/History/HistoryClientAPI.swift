@@ -12,13 +12,13 @@ import Foundation
 
 class HistoryClientApi: Prefetchable {
     
-    var fetchCompleted: ItemClosure<Result<([IndexPath], [ActivityModel])?, Error>>?
+    var fetchCompleted: ItemClosure<Result<([IndexPath], [Training])?, Error>>?
     
     var total: Int = 10
     
     var currentPage: Int = 1
     
-    var models = [ActivityModel]()
+    var models = [Training]()
     
     var isFetchInProgress: Bool = false
     
@@ -26,14 +26,14 @@ class HistoryClientApi: Prefetchable {
     
     private var lastCall = false
     
-    private func calculateIndexPathsToReload(from newModels: [ActivityModel]) -> [IndexPath] {
+    private func calculateIndexPathsToReload(from newModels: [Training]) -> [IndexPath] {
         let startIndex = models.count - newModels.count
         let endIndex = startIndex + newModels.count
         return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
     }
     
     func fetchData() {
-        guard !isFetchInProgress else {
+        guard !isFetchInProgress && !lastCall else {
             return
         }
         
@@ -41,8 +41,7 @@ class HistoryClientApi: Prefetchable {
         
         //TODO: decomment when data on backend will appear
         
-        //        PMFightApi.shared.incomingActivities(page: page)
-        APIClientMock.fetchData(page: currentPage) { [weak self] result in
+            PMFightApi.shared.incomingActivities(page: currentPage) { [weak self] result in
             
             guard let self = self else { return }
             

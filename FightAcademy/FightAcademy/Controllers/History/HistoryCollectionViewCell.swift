@@ -19,7 +19,7 @@ class HistoryCollectionViewCell: UICollectionViewCell, NibLoadable {
         // Initialization code
     }
 
-    var activity: ActivityModel? {
+    var training: Training? {
         didSet {
             configureCell()
         }
@@ -27,21 +27,21 @@ class HistoryCollectionViewCell: UICollectionViewCell, NibLoadable {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        activity = nil
+        training = nil
     }
     
     //TODO: think how to make as one cell
     func configureCell() {
-        activityNameLabel.text = activity?.serviceName
-        dateValueLabel.text = activity?.date
+        activityNameLabel.text = training?.serviceName
+        dateValueLabel.text = training?.date
         
-        if let firstName = activity?.coachFirstName, let secondName = activity?.coachLastName {
+        if let firstName = training?.coachFirstName, let secondName = training?.coachLastName {
             coachFullNameLabel.text = firstName + " " + secondName
         } else {
             coachFullNameLabel.text = ""
         }
         
-        if let price = activity?.price {
+        if let price = training?.price {
             priceValueLabel.text = "\(price)"
         } else {
             priceValueLabel.text = ""

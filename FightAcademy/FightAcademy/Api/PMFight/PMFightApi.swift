@@ -74,15 +74,15 @@ class PMFightApi {
                                completion: completion)
 
     }
-
+// TODO: replace page size it's only for testing
     func activityHistory(page: Int, completion: @escaping (Result<ApiResponse<Training>, Error>) -> Void) {
-        netApiProvider.request(.activityHistory(pageSize: 15, page: page),
+        netApiProvider.request(.activityHistory(pageSize: 7, page: page),
                                completion: completion)
 
     }
 
     func incomingActivities(page: Int, completion: @escaping (Result<ApiResponse<Training>, Error>) -> Void) {
-        netApiProvider.request(.incomingActivity(pageSize: 15, page: page),
+        netApiProvider.request(.incomingActivity(pageSize: 7, page: page),
                                completion: completion)
     }
 
