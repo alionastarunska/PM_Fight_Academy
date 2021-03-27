@@ -1,13 +1,14 @@
 //
-//  ActivityDataSource.swift
+//  HistoryDataSource.swift
 //  FightAcademy
 //
-//  Created by Павел Снижко on 25.03.2021.
+//  Created by Павел Снижко on 26.03.2021.
 //
 
 import UIKit
 
-class ActivityDataSource<Cell: ActivityCollectionViewCell>: NSObject,
+
+class HistoryDataSource<Cell: HistoryCollectionViewCell>: NSObject,
                                                             UICollectionViewDataSource,
                                                             UICollectionViewDataSourcePrefetching {
     
@@ -20,11 +21,11 @@ class ActivityDataSource<Cell: ActivityCollectionViewCell>: NSObject,
     }
     
     var activities: [ActivityModel]
-    let apiCaller: ActivityClientAPI?
+    let apiCaller: HistoryClientApi?
     
-    init(activities: [ActivityModel] = [], apiCaller: ActivityClientAPI?) {
+    init(activities: [ActivityModel] = [], apiCaller: HistoryClientApi?) {
         self.activities = activities
-        self.apiCaller = apiCaller        
+        self.apiCaller = apiCaller
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

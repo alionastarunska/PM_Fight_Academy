@@ -82,6 +82,9 @@
 		AE5C817626055ACE00E12DB5 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C817526055ACE00E12DB5 /* AuthorizationService.swift */; };
 		AE5C817E26055B0A00E12DB5 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C817D26055B0A00E12DB5 /* Validator.swift */; };
 		AE5C818426055F6000E12DB5 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C818326055F6000E12DB5 /* RegistrationModel.swift */; };
+		AE5F1520260E4FFB009861FE /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE5F151F260E4FFB009861FE /* HistoryViewController.xib */; };
+		AE5F1525260E79E3009861FE /* HistoryClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5F1524260E79E3009861FE /* HistoryClientAPI.swift */; };
+		AE5F152D260E7DED009861FE /* HistoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5F152C260E7DED009861FE /* HistoryDataSource.swift */; };
 		AE80C8592609FE6200E99D40 /* BaseAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80C8582609FE6200E99D40 /* BaseAuthViewController.swift */; };
 		AE80C85E260A228900E99D40 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80C85D260A228900E99D40 /* ResponseModel.swift */; };
 		AE80C8B9260B4C8C00E99D40 /* LeadingImageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80C8B4260B4C8C00E99D40 /* LeadingImageTextField.swift */; };
@@ -220,6 +223,9 @@
 		AE5C817526055ACE00E12DB5 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		AE5C817D26055B0A00E12DB5 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		AE5C818326055F6000E12DB5 /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
+		AE5F151F260E4FFB009861FE /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
+		AE5F1524260E79E3009861FE /* HistoryClientAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryClientAPI.swift; sourceTree = "<group>"; };
+		AE5F152C260E7DED009861FE /* HistoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDataSource.swift; sourceTree = "<group>"; };
 		AE80C8582609FE6200E99D40 /* BaseAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAuthViewController.swift; sourceTree = "<group>"; };
 		AE80C85D260A228900E99D40 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		AE80C8B4260B4C8C00E99D40 /* LeadingImageTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeadingImageTextField.swift; sourceTree = "<group>"; };
@@ -722,6 +728,9 @@
 				AEEE5EA8260E4C8400576540 /* HistoryViewController.swift */,
 				AEEE5EAF260E4D1B00576540 /* HistoryCollectionViewCell.swift */,
 				AEEE5EB0260E4D1B00576540 /* HistoryCollectionViewCell.xib */,
+				AE5F151F260E4FFB009861FE /* HistoryViewController.xib */,
+				AE5F1524260E79E3009861FE /* HistoryClientAPI.swift */,
+				AE5F152C260E7DED009861FE /* HistoryDataSource.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -865,6 +874,7 @@
 				4B3A6C182603D58700B99CF0 /* GoogleService-Info.plist in Resources */,
 				AEEE5EB2260E4D1B00576540 /* HistoryCollectionViewCell.xib in Resources */,
 				AEEE5E27260D189A00576540 /* ActivityCollectionViewCell.xib in Resources */,
+				AE5F1520260E4FFB009861FE /* HistoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1027,9 +1037,11 @@
 				4B3A6BE62603CE3900B99CF0 /* FightAcademy.xcdatamodeld in Sources */,
 				AE80C85E260A228900E99D40 /* ResponseModel.swift in Sources */,
 				AE80C93B260BC7B500E99D40 /* SessionStorage.swift in Sources */,
+				AE5F152D260E7DED009861FE /* HistoryDataSource.swift in Sources */,
 				4B3A6C7A2607416A00B99CF0 /* AppDelegate.swift in Sources */,
 				9EF93A7C260C5F16006EB24A /* Paggination.swift in Sources */,
 				9EF93A81260C5F2B006EB24A /* Token.swift in Sources */,
+				AE5F1525260E79E3009861FE /* HistoryClientAPI.swift in Sources */,
 				9EA884882606858C002A59E2 /* NewActivityViewController.swift in Sources */,
 				9EA884D126068838002A59E2 /* AuthCoordinatorFactory.swift in Sources */,
 				9EF93A23260C5952006EB24A /* NetworkApiProvider.swift in Sources */,

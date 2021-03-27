@@ -9,14 +9,14 @@ import UIKit
 
 protocol HistoryFactoryProtocol {
 
-    func makeHistoryViewController() -> UIViewController
+    func makeHistoryViewController() -> HistoryViewController
 
 }
 
 final class HistoryFactory: HistoryFactoryProtocol {
 
-    func makeHistoryViewController() -> UIViewController {
-        return HistoryViewController()
+    func makeHistoryViewController() -> HistoryViewController {
+        return HistoryViewController(nibName: HistoryViewController.name, bundle: .main)
     }
 
 }

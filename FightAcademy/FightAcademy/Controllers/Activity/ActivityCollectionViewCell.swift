@@ -57,5 +57,4 @@ class ActivityCollectionViewCell: UICollectionViewCell, NibLoadable {
             priceValueLabel.text = ""
         }
     }
-
 }

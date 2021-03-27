@@ -14,11 +14,6 @@ protocol Activity: UIViewController {
 
 }
 
-protocol DataSourceReloadable {
-    associatedtype ModelType
-    func reloadDataSource(for indexes: [IndexPath], and models: [ModelType])
-}
-
 class ActivityViewController: UIViewController, Activity, NibLoadable {
     var closeCoordinator: VoidClosure?
     
@@ -64,7 +59,7 @@ class ActivityViewController: UIViewController, Activity, NibLoadable {
         
         startActivityIndicator()
         
-        self.activityClientApi?.fetchCompleted = {[weak self]  result in
+        self.activityClientApi?.fetchCompleted = { [weak self]  result in
             
             guard let self = self else {
                 return
