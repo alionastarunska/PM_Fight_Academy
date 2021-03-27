@@ -18,8 +18,6 @@ struct Training: Decodable {
 
 }
 
-
-
 extension Training {
 
     private static var mocdate: String {

@@ -24,11 +24,9 @@ class APIClientMock {
         let totalPage = 10
         let hasNextPage: Bool
         
-        
         if page == totalPage {
             hasNextPage = false
-        }
-        else {
+        } else {
             hasNextPage = true
         }
         
@@ -50,7 +48,7 @@ class APIClientMock {
         
         PMFightApi.shared.incomingActivities(page: page) { result in
             switch result {
-            case .success( _):
+            case .success:
             completion(.success(responseModel))
             case .failure(let error):
             completion(.failure((error)))

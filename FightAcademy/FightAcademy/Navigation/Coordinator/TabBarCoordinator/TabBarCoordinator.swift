@@ -25,7 +25,6 @@ class TabBarCoordinator: FinishFlowCoordinator {
 
         pages.map { $0.coord }.forEach(configureCoordinator)
         
-        
         // set root after coord-config
         router.setNewRoot(tabContrroller, hideBar: true)
 

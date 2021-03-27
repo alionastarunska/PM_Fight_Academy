@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 //TODO: remake it very bad solution. Violance DRY !!!!!
 
 class HistoryClientApi: Prefetchable {

@@ -81,7 +81,6 @@ class HistoryViewController: UIViewController, NibLoadable, UICollectionViewDele
     
 }
 
-
 extension HistoryViewController {
     func startActivityIndicator() {
         self.activityIndicator.isHidden = false
