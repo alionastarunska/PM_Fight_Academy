@@ -23,9 +23,8 @@ final class ApplicationFactory: ApplicationFactoryProtocol {
 
     func makeAuthCoordinator(router: Router) -> FinishFlowCoordinator {
         let coordinator = AuthCoordinator(router: router)
+
         return coordinator
     }
-    
-    //TODO: maybe create func makeLaunchCoordinator
 
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 struct RemoteConfigProvider {
-    
+
     static func fetchSocialNetworks() -> [SocialNetwork] {
 
         let keys = RCKey.SocialNetworks.allCases.map { $0.rawValue }
@@ -19,18 +19,18 @@ struct RemoteConfigProvider {
             .filter { !$0.1.isEmpty }
 
         let socialNetworks = pairs.map { SocialNetwork(name: $0.0, link: $0.1) }
-        
+
         return socialNetworks
     }
 
     static func fetchDescription() -> String {
-        
+
         return RemoteConfigManager.fetch(for: RCKey.description.rawValue) ?? ""
     }
 
     static func fetchArticle() -> String {
-        
+
         return RemoteConfigManager.fetch(for: RCKey.article.rawValue) ?? ""
     }
-    
+
 }

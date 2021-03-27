@@ -16,30 +16,24 @@ protocol AuthFactoryProtocol {
 }
 
 final class AuthFactory: AuthFactoryProtocol {
-        
+
     func makeRegController() -> Registering {
-        
-        // TODO: maybe provide some DI class for these objects
-        let sessionStorage =  SessionStorage()
-        
-        let apiClient = ProfileApiClient(networkService: MockNetworkManager(), jsonEcoder: JSONEncoder())
-        
-        let authService = AuthorizationService(sessionStorage: sessionStorage, profileApiClient: apiClient)
-        
-        let validator = Validator()
-        
-        return RegisterViewController(validationService: validator, authService: authService)
+
+        let authorizationService = AuthorizationService(authorizationService: PMFightApi.shared)
+
+        let validator = RegistrationValidator(validator: Validator())
+
+        return RegisterViewController(validationService: validator,
+                                      authService: authorizationService)
     }
 
     func makeAuthController() -> Authorization {
-        
-        // TODO: maybe provide some DI class for these objects
-        let validator = Validator()
-        let sessionStorage =  SessionStorage()
-        let apiClient = ProfileApiClient(networkService: MockNetworkManager(), jsonEcoder: JSONEncoder())
-        let authService = AuthorizationService(sessionStorage: sessionStorage, profileApiClient: apiClient)
 
-        return LogInViewController(validationService: validator, authService: authService)
+        let validator = LogginingValidator(validator: Validator())
+        let authorizationService = AuthorizationService(authorizationService: PMFightApi.shared)
+
+        return LogInViewController(validationService: validator,
+                                   authService: authorizationService)
     }
 
     func makeAlertController(with error: Error) -> UIAlertController {

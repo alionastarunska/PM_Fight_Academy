@@ -9,8 +9,9 @@ import UIKit
 
 extension UITableView {
 
-    func register<T: ReusableTableViewCell>(_ type: T.Type) {
-        register(type.cellNib, forCellReuseIdentifier: type.reuseIdentifier)
+    func registerNib<T: ReusableTableViewCell>(for cellType: T.Type) {
+        register(cellType.cellNib,
+                 forCellReuseIdentifier: cellType.reuseIdentifier)
     }
 
 }

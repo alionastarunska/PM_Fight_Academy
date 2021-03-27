@@ -10,16 +10,16 @@ import UIKit
 class CoachViewController: UIViewController, LoadingDisplaying, ErrorDisplaying {
 
     @IBOutlet private weak var tableView: UITableView!
-    
+
     private var dataSource: CoachDataSource<CoachTableViewCell>?
     private var page: Int = 0
     private var canLoadMore: Bool = true
     private var isLoadingMore: Bool = false
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Coach"
-        
+
         setupTableView()
         loadMoreCoaches()
     }
@@ -27,11 +27,11 @@ class CoachViewController: UIViewController, LoadingDisplaying, ErrorDisplaying 
     private func setupTableView() {
 
         dataSource = CoachDataSource<CoachTableViewCell>(items: [])
-        tableView.register(CoachTableViewCell.self)
+        tableView.registerNib(for: CoachTableViewCell.self)
         tableView.dataSource = dataSource
         tableView.delegate = self
     }
-    
+
     private func loadMoreCoaches() {
         guard !isLoadingMore else { return }
         guard canLoadMore else { return }
@@ -44,7 +44,12 @@ class CoachViewController: UIViewController, LoadingDisplaying, ErrorDisplaying 
             switch result {
             case .success(let response):
                 self?.canLoadMore = response.paggination.hasNextPage
-                guard let indexes = self?.dataSource?.append(items: response.contents.map({ CoachCellModel(coach: $0) })),
+                print(response.contents)
+                guard let indexes = self?.dataSource?.append(items: response.contents.map({ (coach) -> Coach in
+                    var coachc = coach
+                    coachc.description! += String(repeating: "kek ", count: 100)
+                    return coachc
+                }).map({ CoachCellModel(coach: $0) })),
                       !indexes.isEmpty else { return }
                 self?.tableView.insertRows(at: indexes, with: .none)
             case .failure(let error):
@@ -53,11 +58,14 @@ class CoachViewController: UIViewController, LoadingDisplaying, ErrorDisplaying 
             }
         }
     }
+
 }
 
 extension CoachViewController: UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard indexPath.row == tableView.numberOfRows(inSection: 0) - 1 else { return }
         loadMoreCoaches()
     }
+
 }

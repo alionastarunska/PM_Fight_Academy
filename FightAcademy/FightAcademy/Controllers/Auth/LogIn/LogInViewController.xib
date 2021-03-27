@@ -55,7 +55,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="YUa-ti-0bM">
                                             <rect key="frame" x="0.0" y="311.5" width="373" height="55"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+380689292193" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aUo-ay-bUO" customClass="LeadingImageTextField" customModule="FightAcademy" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aUo-ay-bUO" customClass="LeadingImageTextField" customModule="FightAcademy" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="373" height="49"/>
                                                     <color key="backgroundColor" name="customWhite"/>
                                                     <color key="tintColor" name="typingTextColor"/>
@@ -95,7 +95,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="7wz-RJ-FQB">
                                             <rect key="frame" x="0.0" y="396.5" width="373" height="55"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="PaSSw0rd123" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-wF-Zic" customClass="TrailingImageTextField" customModule="FightAcademy" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-wF-Zic" customClass="TrailingImageTextField" customModule="FightAcademy" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="373" height="49"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -133,7 +133,7 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwH-v1-qWV" customClass="DesignableButton" customModule="FightAcademy" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwH-v1-qWV">
                                             <rect key="frame" x="0.0" y="481.5" width="373" height="49"/>
                                             <color key="backgroundColor" name="customYellow"/>
                                             <state key="normal" title="Done">
@@ -163,7 +163,7 @@
                                             <color key="textColor" name="customGray"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0N-D3-R3E" customClass="DesignableButton" customModule="FightAcademy" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0N-D3-R3E">
                                             <rect key="frame" x="0.0" y="37" width="373" height="49"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Create an account">
@@ -225,17 +225,11 @@
         </view>
     </objects>
     <designables>
-        <designable name="L0N-D3-R3E">
-            <size key="intrinsicContentSize" width="126" height="30"/>
-        </designable>
         <designable name="PGR-wF-Zic">
-            <size key="intrinsicContentSize" width="140" height="34"/>
+            <size key="intrinsicContentSize" width="97.5" height="34"/>
         </designable>
         <designable name="aUo-ay-bUO">
-            <size key="intrinsicContentSize" width="170" height="34"/>
-        </designable>
-        <designable name="uwH-v1-qWV">
-            <size key="intrinsicContentSize" width="37" height="30"/>
+            <size key="intrinsicContentSize" width="132.5" height="34"/>
         </designable>
     </designables>
     <resources>
@@ -247,16 +241,16 @@
             <color red="0.35294117647058826" green="0.35294117647058826" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="customWhite">
-            <color red="0.93725490196078431" green="0.94509803921568625" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.93699997663497925" green="0.94499999284744263" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="customYellow">
-            <color red="0.95686274509803926" green="0.88235294117647056" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.9570000171661377" green="0.88200002908706665" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="errorTextCollor">
-            <color red="0.90588235294117647" green="0.11372549019607843" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.90600001811981201" green="0.11400000005960464" blue="0.21199999749660492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="typingTextColor">
-            <color red="0.40000000000000002" green="0.44313725490196076" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.40000000596046448" green="0.44299998879432678" blue="0.49399998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

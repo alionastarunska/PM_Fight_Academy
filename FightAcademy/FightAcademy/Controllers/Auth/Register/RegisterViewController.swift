@@ -14,76 +14,69 @@ protocol Registering: UIViewController {
 
 }
 
-class RegisterViewController: BaseAuthViewController, NibLoadable, Registering {
+final class RegisterViewController<RegValidator: RegistrationValidationService>: BaseAuthViewController,
+                                                                                 NibLoadable,
+                                                                                 Registering,
+                                                                                 UITextFieldDelegate {
     // MARK: - Properties
-   
+
     @IBOutlet private weak var firstNameTextField: LeadingImageTextField!
     @IBOutlet private weak var nameErrorLabel: UILabel!
+    private var validationService: RegistrationValidator<RegValidator>
+    private var registerModel = RegValidator.CustomRegistraionModel()
+    private var authService: AuthorizationService
 
-    private var registerModel = RegistrationModel()
-           
-    init(validationService: Validating, authService: AuthorizationService) {
-        super.init(nibName: RegisterViewController.name, bundle: .main)
+    init(validationService: RegistrationValidator<RegValidator>, authService: AuthorizationService) {
         self.validationService = validationService
         self.authService = authService
+        super.init(nibName: Self.name, bundle: .main)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: - LifeCicle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setErrorsLabelHiden()
-        
+
         setClearButtons(for: [firstNameTextField, phoneTextField],
                         image: UIImage(systemName: "multiply.circle.fill"))
-        
+
         checkButtonAvailability()
-        
+
         setTextVisibility()
-        
+
         setTextFieldDelegating()
-        
+
         setKeyboardObservers()
     }
-    
+
     // MARK: - IBAction
-    
+
     @IBAction func signUpAction(_ sender: Any) {
-        
+
         do {
-            try validationService?.validate(for: registerModel)
-            
-            authService?.reg(phone: registerModel.phoneNumber ?? "",
-                             password: registerModel.password ?? "",
-                             name: registerModel.name ?? "",
-                             completion: { (result) in
-                                DispatchQueue.main.async {
-                                    
-                                    switch result {
-                                    case .success(let token):
-                                        print(token.raw)
-                                        self.onCompleteAuth?()
-                                    case .failure(let error):
-                                        self.onError?(error)
-                                    }
-                                }
+
+            try validationService.validate(registerModel)
+
+            authService.registrate(phone: registerModel.phone,
+                             password: registerModel.password,
+                             name: registerModel.name,
+                             completion: { [weak self] (error) in
+                              guard let self = self else {
+                                  return
+                              }
+                              switch error {
+                              case .none:
+                                  self.onCompleteAuth?()
+                              case .some(let error):
+                                  self.onError?(error)
+                              }
                              })
-            
-//            authService?.authorize(with: registerModel) { [weak self] result in
-//                guard let self = self else { return }
-//                switch result {
-//                case .success:
-//                    self.onCompleteAuth?()
-//                case .failure(let error):
-//                    self.onError?(error)
-//                }
-//            }
-//            print("Registration done")
         } catch let error {
             switch error {
             case ValidationError.badName(let message):
@@ -100,25 +93,65 @@ class RegisterViewController: BaseAuthViewController, NibLoadable, Registering {
             }
         }
     }
-    
+
+// MARK: - UITextFieldDelegate
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField === phoneTextField {
+            textField.text = symbolIntoTextField
+        }
+        self.activeTextField = textField
+    }
+
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        checkButtonAvailability()
+        guard let name = firstNameTextField.text,
+              let phone = phoneTextField.text,
+              let password = passwordTextField.text else {
+            return
+        }
+        switch textField {
+        case firstNameTextField:
+            registerModel.name = name
+            nameErrorLabel.isHidden = true
+        case phoneTextField:
+            registerModel.phone = phone
+            phoneErrorLabel.isHidden = true
+        case passwordTextField:
+            registerModel.password = password
+            passwordErrorLabel.isHidden = true
+        default:
+            break
+        }
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.activeTextField = nil
+    }
+
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        checkButtonAvailability()
+        return true
+    }
+
 }
 
-private extension RegisterViewController {
-    
-    // MARK: - Methods
-    
-    private func setErrorsLabelHiden() {
+// MARK: - Private Methods
+
+extension RegisterViewController {
+
+    func setErrorsLabelHiden() {
         nameErrorLabel.isHidden = true
         phoneErrorLabel.isHidden = true
         passwordErrorLabel.isHidden = true
     }
-    
-    private func setTextFieldDelegating() {
+
+    func setTextFieldDelegating() {
         firstNameTextField.delegate = self
         phoneTextField.delegate = self
         passwordTextField.delegate = self
     }
-    
+
     func checkButtonAvailability() {
         if registerModel.isFilled {
             doneButton.isEnabled = true
@@ -128,46 +161,9 @@ private extension RegisterViewController {
             doneButton.backgroundColor = .lightGray
         }
     }
-    
+
     func dismiss(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
-    
-}
 
-// MARK: - UITextFieldDelegate
-
-extension RegisterViewController: UITextFieldDelegate {
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == phoneTextField, registerModel.phoneNumber == nil {
-            textField.text = symbolIntoTextField
-        }
-        self.activeTextField = textField
-    }
-    
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        switch textField {
-        case firstNameTextField:
-            registerModel.name = firstNameTextField.text
-            nameErrorLabel.isHidden = true
-        case phoneTextField:
-            registerModel.phoneNumber = phoneTextField.text
-            phoneErrorLabel.isHidden = true
-        case passwordTextField:
-            registerModel.password = passwordTextField.text
-            passwordErrorLabel.isHidden = true
-        default:
-            break
-        }
-        checkButtonAvailability()
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        self.activeTextField = nil
-    }
-    
-    func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        checkButtonAvailability()
-        return true
-    }
 }

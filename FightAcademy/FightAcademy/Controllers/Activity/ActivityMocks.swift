@@ -18,18 +18,18 @@ struct ActivityModel: Decodable {
 }
 
 class APIClientMock {
-    
+
     static func fetchData(page: Int, completion: @escaping (Result<ApiResponse<ActivityModel>, Error>) -> Void ) {
         var activities = [ActivityModel]()
         let totalPage = 10
         let hasNextPage: Bool
-        
+
         if page == totalPage {
             hasNextPage = false
         } else {
             hasNextPage = true
         }
-        
+
         for _ in 0...15 {
             activities.append(ActivityModel(id: page,
                                             serviceName: "Karate \(page)",
@@ -37,15 +37,15 @@ class APIClientMock {
                                             coachLastName: "Ipsum",
                                             time: "10:0",
                                             price: 10000))
-        
+
         }
-        
+
         let responseModel = ApiResponse(contents: activities,
                                         paggination: Paggination(page: page,
                                                                  totalPages: totalPage ,
                                                                  hasPreviousPage: false,
                                                                  hasNextPage: hasNextPage))
-        
+
         PMFightApi.shared.incomingActivities(page: page) { result in
             switch result {
             case .success:
@@ -54,6 +54,7 @@ class APIClientMock {
             completion(.failure((error)))
             }
         }
-        
+
     }
+
 }

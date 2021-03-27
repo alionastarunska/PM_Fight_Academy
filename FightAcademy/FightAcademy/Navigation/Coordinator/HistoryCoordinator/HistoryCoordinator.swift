@@ -22,7 +22,7 @@ final class HistoryCoordinator: FinishFlowCoordinator {
         initialPage.closeCoordinator = { [ weak self ] in
             self?.finishFlow?()
         }
-        
+
         router.setNewRoot(initialPage)
 
     }

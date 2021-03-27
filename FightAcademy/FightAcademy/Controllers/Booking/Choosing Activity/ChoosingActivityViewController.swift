@@ -14,28 +14,28 @@ protocol ChoosingActivity: LoadingDisplaying, ErrorDisplaying {
 }
 
 class ChoosingActivityViewController: UIViewController, ChoosingActivity {
-    
+
     @IBOutlet private weak var tableView: UITableView!
-    
+
     var onSelectActivityType: ((TrainingType) -> Void)?
-    
+
     private var activity: [TrainingType] = []
     private var dataSource: ChoosingActivityDataSource<ChoosingActivityTableViewCell>?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Activities"
         loadActivities()
         setupTableView()
     }
-    
+
     private func setupTableView() {
         dataSource = ChoosingActivityDataSource<ChoosingActivityTableViewCell>(activity: activity)
-        tableView.register(ChoosingActivityTableViewCell.self)
+        tableView.registerNib(for: ChoosingActivityTableViewCell.self)
         tableView.dataSource = dataSource
         tableView.delegate = self
     }
-    
+
     private func loadActivities() {
         startLoading()
         PMFightApi.shared.activities { [weak self] result in
@@ -53,9 +53,11 @@ class ChoosingActivityViewController: UIViewController, ChoosingActivity {
 }
 
 extension ChoosingActivityViewController: UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard activity.indices.contains(indexPath.row) else { return }
         let selectedActivity = activity[indexPath.row]
         onSelectActivityType?(selectedActivity)
     }
+
 }

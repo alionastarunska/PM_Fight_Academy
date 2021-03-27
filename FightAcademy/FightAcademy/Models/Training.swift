@@ -50,7 +50,6 @@ extension ApiResponse where Item == Training {
         let services = ["Karate", "Wing Chun", "Kalaripayattu", "Savate", "Capoeira", "Taekwondo", "Muay Thai"]
         let price = [1000, 200]
 
-
         var arr: [Training] = []
 
         for _ in 1...15 {

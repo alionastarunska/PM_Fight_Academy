@@ -20,11 +20,11 @@ final class ActivityCoordinator: FinishFlowCoordinator {
         let initialPage = factory.makeActivityViewController()
 
         initialPage.onActivityStartBooking = showNewActiviyChoosing
-        
+
         initialPage.closeCoordinator = { [ weak self ] in
             self?.finishFlow?()
         }
-        
+
         router.setNewRoot(initialPage)
 
     }

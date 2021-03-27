@@ -19,7 +19,7 @@ class SettingsViewController: UIViewController, Settings {
 
     @IBOutlet private weak var tableView: UITableView!
     private var settingTableManager: SettingTableManager?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Settings"
@@ -29,7 +29,7 @@ class SettingsViewController: UIViewController, Settings {
 
     private func setupTableView() {
         settingTableManager = SettingTableManager(items: SettingModel.mock())
-        tableView.register(SettingTableViewCell.self)
+        tableView.registerNib(for: SettingTableViewCell.self)
         tableView.dataSource = settingTableManager
         tableView.delegate = settingTableManager
     }
@@ -38,40 +38,13 @@ class SettingsViewController: UIViewController, Settings {
         SessionStorage().sessionId = nil
         onLogOut?()
     }
-    
+
     init() {
         super.init(nibName: "SettingsViewController", bundle: .main)
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
-}
 
-struct SettingModel: Named, Imaged {
-
-    let name: String
-    let image: String
-
-    let isAvailable: Bool = false
-
-}
-
-extension SettingModel {
-
-    static func mock() -> [SettingModel] {
-        return [SettingModel(name: "Personalization", image: "personalization"),
-                SettingModel(name: "Notifications", image: "notification"),
-                SettingModel(name: "Language", image: "language")
-                ]
-    }
-
-}
-
-protocol Named {
-    var name: String { get }
-}
-protocol Imaged {
-    var image: String { get }
 }

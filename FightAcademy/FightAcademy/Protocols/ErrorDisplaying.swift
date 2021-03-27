@@ -1,6 +1,6 @@
 //
 //  ErrorDisplaying.swift
-//  StackOverflow-Search
+//  FightAcademy
 //
 //  Created by Aliona Starunska on 25.02.2021.
 //
@@ -14,7 +14,7 @@ protocol ErrorDisplaying where Self: UIViewController {
 }
 
 extension ErrorDisplaying {
-    
+
     func show(errorString: String) {
         guard !errorString.isEmpty else { return }
         var config = SwiftMessages.Config()
@@ -32,11 +32,11 @@ extension ErrorDisplaying {
         view.shadowOffset = CGSize(width: 1, height: 6)
         SwiftMessages.sharedInstance.pauseBetweenMessages = 0.1
         SwiftMessages.show(config: config, view: view)
-        
+
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.error)
     }
-    
+
     func show(error: Error) {
         show(errorString: error.localizedDescription)
     }
