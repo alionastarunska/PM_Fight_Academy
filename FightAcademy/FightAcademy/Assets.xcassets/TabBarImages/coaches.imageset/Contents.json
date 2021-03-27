@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "coaches.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
