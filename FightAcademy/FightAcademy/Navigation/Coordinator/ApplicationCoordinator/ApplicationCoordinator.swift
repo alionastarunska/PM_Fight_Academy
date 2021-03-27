@@ -13,16 +13,12 @@ final class ApplicationCoordinator: BaseCoordinator {
     private var isAutorized: Bool = SessionStorage().sessionId != nil
 
     override func start() {
-        
-        // TODO: mock for getting more  activities
-        // swift
-        // swiftlint:disable all
-        SessionStorage().sessionId = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiMDkzMjI2NzYzMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvdXNlcmRhdGEiOiI3IiwibmJmIjoxNjE2ODMxNDIyLCJleHAiOjE2MTc0MzYyMjIsImlzcyI6Ik15QXV0aFNlcnZlciIsImF1ZCI6Ik15QXV0aENsaWVudCJ9.bMfPi2IbAS5Fw3pnxlVanmiWxwsVTvZ6ARf3ds120wY"
-        
+
         switch isAutorized {
         case false: runAuthFlow()
         case true: runMainFlow()
         }
+
     }
     
     private func runAuthFlow() {

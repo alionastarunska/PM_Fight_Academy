@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		245AF7BD07541C93DC802CCB /* Pods_FightAcademy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98A07E7A90257E2179F4CFB /* Pods_FightAcademy.framework */; };
 		4B3A6BE62603CE3900B99CF0 /* FightAcademy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6BE42603CE3900B99CF0 /* FightAcademy.xcdatamodeld */; };
 		4B3A6BEB2603CE3E00B99CF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6BE92603CE3E00B99CF0 /* LaunchScreen.storyboard */; };
 		4B3A6BF62603CE3F00B99CF0 /* FightAcademyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6BF52603CE3F00B99CF0 /* FightAcademyTests.swift */; };
@@ -22,7 +21,6 @@
 		4B3A6C7A2607416A00B99CF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C782607416A00B99CF0 /* AppDelegate.swift */; };
 		4B3A6C91260742F200B99CF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6C5326063E0D00B99CF0 /* Assets.xcassets */; };
 		4B3A6C9D260747A500B99CF0 /* CoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C9B260747A500B99CF0 /* CoachViewController.swift */; };
-		4B3A6C9E260747A500B99CF0 /* CoachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6C9C260747A500B99CF0 /* CoachViewController.xib */; };
 		4B6CE7FE260D0B8C004D6039 /* CoachModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CE7FD260D0B8C004D6039 /* CoachModel.swift */; };
 		4B6CE83B260D0BEC004D6039 /* TimeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6CE824260D0BEC004D6039 /* TimeCollectionViewCell.xib */; };
 		4B6CE83D260D0BEC004D6039 /* BookingDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CE826260D0BEC004D6039 /* BookingDataSourse.swift */; };
@@ -59,6 +57,12 @@
 		9E41017B260F345200DFBB12 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E41017A260F345200DFBB12 /* AboutViewController.swift */; };
 		9E48E323260D2277005D2E5F /* RCKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E48E322260D2277005D2E5F /* RCKey.swift */; };
 		9E48E328260D2743005D2E5F /* RemoteConfigProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E48E327260D2743005D2E5F /* RemoteConfigProvider.swift */; };
+		9E59537E260F6210002E1637 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 9E59537D260F6210002E1637 /* FSCalendar */; };
+		9E595399260F643F002E1637 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9E595398260F643F002E1637 /* FirebaseAnalytics */; };
+		9E59539B260F643F002E1637 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 9E59539A260F643F002E1637 /* FirebaseRemoteConfig */; };
+		9E59539D260F643F002E1637 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9E59539C260F643F002E1637 /* FirebaseCrashlytics */; };
+		9E5953AC260F6572002E1637 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 9E5953AB260F6572002E1637 /* NVActivityIndicatorViewExtended */; };
+		9E5953B2260F65AE002E1637 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 9E5953B1260F65AE002E1637 /* SwiftMessages */; };
 		9E7124AA260D152200B881AB /* ExpandableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7124A9260D152200B881AB /* ExpandableTableViewCell.swift */; };
 		9E7124AF260D16F900B881AB /* AutoSizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7124AE260D16F900B881AB /* AutoSizingTableView.swift */; };
 		9E7124B4260D1A9A00B881AB /* UITextField+Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7124B3260D1A9A00B881AB /* UITextField+Inspectable.swift */; };
@@ -149,11 +153,6 @@
 		AEF81BD42606445100B5F2B3 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = AEF81BD32606445100B5F2B3 /* SwiftKeychainWrapper */; };
 		AEF81BD92607520100B5F2B3 /* AuthorizationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BD8260751FF00B5F2B3 /* AuthorizationModel.swift */; };
 		AEF81BE72607728C00B5F2B3 /* BaseAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BE62607728B00B5F2B3 /* BaseAuthModel.swift */; };
-		C07E4DF8EA0C49E0918645E6 /* Pods_FightAcademy_FightAcademyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C29E4CF93235F07721BC8EF8 /* Pods_FightAcademy_FightAcademyUITests.framework */; };
-		CDA38223AE70CB8FE96DA12B /* Pods_FightAcademyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E966CBB0B4BB88BE828FF7 /* Pods_FightAcademyTests.framework */; };
-		CFF26CA13FF00445C82B664B /* Pods_FightAcademy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B568C48F62C13747CFE66D40 /* Pods_FightAcademy.framework */; };
-		D9C1358052FDDF0EA865A3C3 /* Pods_FightAcademy_FightAcademyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2098853A5E86CBDAA2E58BC5 /* Pods_FightAcademy_FightAcademyUITests.framework */; };
-		E60FEB6FFC345BD3EF25558A /* Pods_FightAcademyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7E686DC7A366C30A3EF3CA /* Pods_FightAcademyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,12 +173,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2098853A5E86CBDAA2E58BC5 /* Pods_FightAcademy_FightAcademyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightAcademy_FightAcademyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		237C2ACCF09599F70920D054 /* Pods-FightAcademyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightAcademyTests.debug.xcconfig"; path = "Target Support Files/Pods-FightAcademyTests/Pods-FightAcademyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2D7A4FE45A1F402DBF6B2C3E /* Pods-FightAcademy-FightAcademyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightAcademy-FightAcademyUITests.debug.xcconfig"; path = "Target Support Files/Pods-FightAcademy-FightAcademyUITests/Pods-FightAcademy-FightAcademyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		300809C2D22046E0069F3F5A /* Pods-FightAcademyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightAcademyTests.release.xcconfig"; path = "Target Support Files/Pods-FightAcademyTests/Pods-FightAcademyTests.release.xcconfig"; sourceTree = "<group>"; };
-		449D1E5322AEE6898792F26A /* Pods-FightAcademy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightAcademy.release.xcconfig"; path = "Target Support Files/Pods-FightAcademy/Pods-FightAcademy.release.xcconfig"; sourceTree = "<group>"; };
-		45AD68042E6F14392D6D52ED /* Pods-FightAcademy-FightAcademyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightAcademy-FightAcademyUITests.release.xcconfig"; path = "Target Support Files/Pods-FightAcademy-FightAcademyUITests/Pods-FightAcademy-FightAcademyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4B3A6BD82603CE3900B99CF0 /* FightAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FightAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B3A6BE52603CE3900B99CF0 /* FightAcademy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FightAcademy.xcdatamodel; sourceTree = "<group>"; };
 		4B3A6BEA2603CE3E00B99CF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -290,7 +283,6 @@
 		9EF93A80260C5F2B006EB24A /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		9EF93A85260C5F52006EB24A /* HumanApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanApiError.swift; sourceTree = "<group>"; };
 		9EF93AA7260C5FF3006EB24A /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
-		A1B45D15AB09032B774C8168 /* Pods-FightAcademy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightAcademy.debug.xcconfig"; path = "Target Support Files/Pods-FightAcademy/Pods-FightAcademy.debug.xcconfig"; sourceTree = "<group>"; };
 		AE5C81572605182300E12DB5 /* TypeAliasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliasses.swift; sourceTree = "<group>"; };
 		AE5C815C26053A6600E12DB5 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		AE5C815D26053A6600E12DB5 /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
@@ -326,11 +318,6 @@
 		AEF81BC2260624A200B5F2B3 /* ProfileApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileApiClient.swift; sourceTree = "<group>"; };
 		AEF81BD8260751FF00B5F2B3 /* AuthorizationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationModel.swift; sourceTree = "<group>"; };
 		AEF81BE62607728B00B5F2B3 /* BaseAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAuthModel.swift; sourceTree = "<group>"; };
-		B568C48F62C13747CFE66D40 /* Pods_FightAcademy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightAcademy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C29E4CF93235F07721BC8EF8 /* Pods_FightAcademy_FightAcademyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightAcademy_FightAcademyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D98A07E7A90257E2179F4CFB /* Pods_FightAcademy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightAcademy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9E966CBB0B4BB88BE828FF7 /* Pods_FightAcademyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightAcademyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB7E686DC7A366C30A3EF3CA /* Pods_FightAcademyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightAcademyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,9 +325,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5953AC260F6572002E1637 /* NVActivityIndicatorViewExtended in Frameworks */,
 				AEF81BD42606445100B5F2B3 /* SwiftKeychainWrapper in Frameworks */,
-				CFF26CA13FF00445C82B664B /* Pods_FightAcademy.framework in Frameworks */,
-				245AF7BD07541C93DC802CCB /* Pods_FightAcademy.framework in Frameworks */,
+				9E5953B2260F65AE002E1637 /* SwiftMessages in Frameworks */,
+				9E59537E260F6210002E1637 /* FSCalendar in Frameworks */,
+				9E595399260F643F002E1637 /* FirebaseAnalytics in Frameworks */,
+				9E59539D260F643F002E1637 /* FirebaseCrashlytics in Frameworks */,
+				9E59539B260F643F002E1637 /* FirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,8 +339,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDA38223AE70CB8FE96DA12B /* Pods_FightAcademyTests.framework in Frameworks */,
-				E60FEB6FFC345BD3EF25558A /* Pods_FightAcademyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,24 +346,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9C1358052FDDF0EA865A3C3 /* Pods_FightAcademy_FightAcademyUITests.framework in Frameworks */,
-				C07E4DF8EA0C49E0918645E6 /* Pods_FightAcademy_FightAcademyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3D469A606DBC92AC5E4E6F0D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B568C48F62C13747CFE66D40 /* Pods_FightAcademy.framework */,
-				2098853A5E86CBDAA2E58BC5 /* Pods_FightAcademy_FightAcademyUITests.framework */,
-				D9E966CBB0B4BB88BE828FF7 /* Pods_FightAcademyTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		4B3A6BCF2603CE3900B99CF0 = {
 			isa = PBXGroup;
 			children = (
@@ -382,9 +359,6 @@
 				4B3A6BF42603CE3F00B99CF0 /* FightAcademyTests */,
 				4B3A6BFF2603CE3F00B99CF0 /* FightAcademyUITests */,
 				4B3A6BD92603CE3900B99CF0 /* Products */,
-				B2E784A1A163BFA2FD703417 /* Pods */,
-				3D469A606DBC92AC5E4E6F0D /* Frameworks */,
-				9E2DFA73260F580C00276602 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -516,16 +490,6 @@
 				4BB7F820260E74DF00E9294F /* Assets.swift */,
 			);
 			path = Generated;
-			sourceTree = "<group>";
-		};
-		9E2DFA73260F580C00276602 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				D98A07E7A90257E2179F4CFB /* Pods_FightAcademy.framework */,
-				FB7E686DC7A366C30A3EF3CA /* Pods_FightAcademyTests.framework */,
-				C29E4CF93235F07721BC8EF8 /* Pods_FightAcademy_FightAcademyUITests.framework */,
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		9E35A480260D0E4E005D177B /* AboutScreen */ = {
@@ -933,19 +897,6 @@
 			path = History;
 			sourceTree = "<group>";
 		};
-		B2E784A1A163BFA2FD703417 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A1B45D15AB09032B774C8168 /* Pods-FightAcademy.debug.xcconfig */,
-				449D1E5322AEE6898792F26A /* Pods-FightAcademy.release.xcconfig */,
-				2D7A4FE45A1F402DBF6B2C3E /* Pods-FightAcademy-FightAcademyUITests.debug.xcconfig */,
-				45AD68042E6F14392D6D52ED /* Pods-FightAcademy-FightAcademyUITests.release.xcconfig */,
-				237C2ACCF09599F70920D054 /* Pods-FightAcademyTests.debug.xcconfig */,
-				300809C2D22046E0069F3F5A /* Pods-FightAcademyTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -953,11 +904,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B3A6C052603CE3F00B99CF0 /* Build configuration list for PBXNativeTarget "FightAcademy" */;
 			buildPhases = (
-				18ACD557927DCE37F196EAA0 /* [CP] Check Pods Manifest.lock */,
 				4B3A6BD42603CE3900B99CF0 /* Sources */,
 				4B3A6BD52603CE3900B99CF0 /* Frameworks */,
 				4B3A6BD62603CE3900B99CF0 /* Resources */,
-				2189DBEB33F4A02A22944EB7 /* [CP] Embed Pods Frameworks */,
 				4BF53EC9260775C5002166D4 /* Swift lint */,
 			);
 			buildRules = (
@@ -967,6 +916,12 @@
 			name = FightAcademy;
 			packageProductDependencies = (
 				AEF81BD32606445100B5F2B3 /* SwiftKeychainWrapper */,
+				9E59537D260F6210002E1637 /* FSCalendar */,
+				9E595398260F643F002E1637 /* FirebaseAnalytics */,
+				9E59539A260F643F002E1637 /* FirebaseRemoteConfig */,
+				9E59539C260F643F002E1637 /* FirebaseCrashlytics */,
+				9E5953AB260F6572002E1637 /* NVActivityIndicatorViewExtended */,
+				9E5953B1260F65AE002E1637 /* SwiftMessages */,
 			);
 			productName = FightAcademy;
 			productReference = 4B3A6BD82603CE3900B99CF0 /* FightAcademy.app */;
@@ -976,7 +931,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B3A6C082603CE3F00B99CF0 /* Build configuration list for PBXNativeTarget "FightAcademyTests" */;
 			buildPhases = (
-				3ACCCFE1997B1D43288EB56E /* [CP] Check Pods Manifest.lock */,
 				4B3A6BED2603CE3F00B99CF0 /* Sources */,
 				4B3A6BEE2603CE3F00B99CF0 /* Frameworks */,
 				4B3A6BEF2603CE3F00B99CF0 /* Resources */,
@@ -995,11 +949,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B3A6C0B2603CE3F00B99CF0 /* Build configuration list for PBXNativeTarget "FightAcademyUITests" */;
 			buildPhases = (
-				40ECD76D5B44A5A67DA57C07 /* [CP] Check Pods Manifest.lock */,
 				4B3A6BF82603CE3F00B99CF0 /* Sources */,
 				4B3A6BF92603CE3F00B99CF0 /* Frameworks */,
 				4B3A6BFA2603CE3F00B99CF0 /* Resources */,
-				E44BFF28383741ACC550F8C9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1044,6 +996,10 @@
 			mainGroup = 4B3A6BCF2603CE3900B99CF0;
 			packageReferences = (
 				AEF81BD22606445000B5F2B3 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+				9E59537C260F6210002E1637 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				9E595397260F643F002E1637 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				9E5953AA260F6572002E1637 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+				9E5953B0260F65AE002E1637 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 			);
 			productRefGroup = 4B3A6BD92603CE3900B99CF0 /* Products */;
 			projectDirPath = "";
@@ -1105,89 +1061,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		18ACD557927DCE37F196EAA0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FightAcademy-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2189DBEB33F4A02A22944EB7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FightAcademy/Pods-FightAcademy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FightAcademy/Pods-FightAcademy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FightAcademy/Pods-FightAcademy-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3ACCCFE1997B1D43288EB56E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FightAcademyTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		40ECD76D5B44A5A67DA57C07 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FightAcademy-FightAcademyUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4BF53EC9260775C5002166D4 /* Swift lint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1204,24 +1077,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
-		};
-		E44BFF28383741ACC550F8C9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FightAcademy-FightAcademyUITests/Pods-FightAcademy-FightAcademyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FightAcademy-FightAcademyUITests/Pods-FightAcademy-FightAcademyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FightAcademy-FightAcademyUITests/Pods-FightAcademy-FightAcademyUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1509,7 +1365,6 @@
 		};
 		4B3A6C062603CE3F00B99CF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1B45D15AB09032B774C8168 /* Pods-FightAcademy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1530,7 +1385,6 @@
 		};
 		4B3A6C072603CE3F00B99CF0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 449D1E5322AEE6898792F26A /* Pods-FightAcademy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1551,7 +1405,6 @@
 		};
 		4B3A6C092603CE3F00B99CF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 237C2ACCF09599F70920D054 /* Pods-FightAcademyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1573,7 +1426,6 @@
 		};
 		4B3A6C0A2603CE3F00B99CF0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 300809C2D22046E0069F3F5A /* Pods-FightAcademyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1595,7 +1447,6 @@
 		};
 		4B3A6C0C2603CE3F00B99CF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D7A4FE45A1F402DBF6B2C3E /* Pods-FightAcademy-FightAcademyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1615,7 +1466,6 @@
 		};
 		4B3A6C0D2603CE3F00B99CF0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45AD68042E6F14392D6D52ED /* Pods-FightAcademy-FightAcademyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1675,6 +1525,38 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9E59537C260F6210002E1637 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.2;
+			};
+		};
+		9E595397260F643F002E1637 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.9.1;
+			};
+		};
+		9E5953AA260F6572002E1637 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+		9E5953B0260F65AE002E1637 /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.2;
+			};
+		};
 		AEF81BD22606445000B5F2B3 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper";
@@ -1686,6 +1568,36 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9E59537D260F6210002E1637 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E59537C260F6210002E1637 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+		9E595398260F643F002E1637 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E595397260F643F002E1637 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		9E59539A260F643F002E1637 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E595397260F643F002E1637 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		9E59539C260F643F002E1637 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E595397260F643F002E1637 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		9E5953AB260F6572002E1637 /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E5953AA260F6572002E1637 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
+		};
+		9E5953B1260F65AE002E1637 /* SwiftMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E5953B0260F65AE002E1637 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
+			productName = SwiftMessages;
+		};
 		AEF81BD32606445100B5F2B3 /* SwiftKeychainWrapper */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AEF81BD22606445000B5F2B3 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
