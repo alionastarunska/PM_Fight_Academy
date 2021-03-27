@@ -20,3 +20,18 @@ extension ReusableTableViewCell {
     static var cellNib: UINib { return UINib(nibName: String(describing: self), bundle: nil) }
 
 }
+
+// TODO: sdf
+protocol ReusableCollectionViewCell: UICollectionViewCell {
+    
+    static var reuseIdentifier: String { get }
+    static var cellNib: UINib { get }
+
+}
+
+extension ReusableCollectionViewCell {
+
+    static var reuseIdentifier: String { return String(describing: self) }
+    static var cellNib: UINib { return UINib(nibName: String(describing: self), bundle: nil) }
+
+}

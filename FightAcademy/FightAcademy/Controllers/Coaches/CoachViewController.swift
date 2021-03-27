@@ -7,25 +7,57 @@
 
 import UIKit
 
-class CoachViewController: UIViewController {
+class CoachViewController: UIViewController, LoadingDisplaying, ErrorDisplaying {
 
     @IBOutlet private weak var tableView: UITableView!
     
-    private var coaches: [CoachCellModel] = []
-    private var dataSourse: CoachDataSourse<CoachTableViewCell>?
+    private var dataSource: CoachDataSource<CoachTableViewCell>?
+    private var page: Int = 0
+    private var canLoadMore: Bool = true
+    private var isLoadingMore: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Coach"
         
-        coaches = CoachMock.make().map({ CoachCellModel(coach: $0) })
-        
         setupTableView()
+        loadMoreCoaches()
     }
 
     private func setupTableView() {
-        dataSourse = CoachDataSourse<CoachTableViewCell>(items: coaches)
+
+        dataSource = CoachDataSource<CoachTableViewCell>(items: [])
         tableView.register(CoachTableViewCell.self)
-        tableView.dataSource = dataSourse
+        tableView.dataSource = dataSource
+        tableView.delegate = self
+    }
+    
+    private func loadMoreCoaches() {
+        guard !isLoadingMore else { return }
+        guard canLoadMore else { return }
+        isLoadingMore = true
+        page += 1
+        startLoading()
+        PMFightApi.shared.getCoaches(page: page) { [weak self] result in
+            self?.endLoading()
+            self?.isLoadingMore = false
+            switch result {
+            case .success(let response):
+                self?.canLoadMore = response.paggination.hasNextPage
+                guard let indexes = self?.dataSource?.append(items: response.contents.map({ CoachCellModel(coach: $0) })),
+                      !indexes.isEmpty else { return }
+                self?.tableView.insertRows(at: indexes, with: .none)
+            case .failure(let error):
+                self?.page -= 1
+                self?.show(error: error)
+            }
+        }
+    }
+}
+
+extension CoachViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard indexPath.row == tableView.numberOfRows(inSection: 0) - 1 else { return }
+        loadMoreCoaches()
     }
 }

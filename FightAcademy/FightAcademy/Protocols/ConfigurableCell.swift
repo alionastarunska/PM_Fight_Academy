@@ -14,3 +14,11 @@ protocol ConfigurableTableViewCell: UITableViewCell {
     func configure(with item: Item)
 
 }
+
+protocol ConfigurableCollectionViewCell: UICollectionViewCell {
+
+    associatedtype Item
+
+    func configure(with item: Item)
+
+}
