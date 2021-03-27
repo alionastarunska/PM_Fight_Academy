@@ -7,23 +7,25 @@
 
 import UIKit
 
-class CoachDataSourse<Cell: CoachTableViewCell>: NSObject, UITableViewDataSource {
-    
-    var coaches: [CoachCellModel]
+typealias CoachViewCell = ConfigurableTableViewCell & ReusableTableViewCell & ExpandableTableViewCell
 
-       init(coaches: [CoachCellModel]) {
-           self.coaches = coaches
+class CoachDataSourse<Cell: CoachViewCell>: NSObject, UITableViewDataSource {
+    
+    var items: [Cell.Item]
+
+       init(items: [Cell.Item]) {
+           self.items = items
        }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return coaches.count
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Cell.reuseIdentifier, for: indexPath) as? Cell else {
             return UITableViewCell()
         }
-        cell.configure(with: coaches[indexPath.row])
+        cell.configure(with: items[indexPath.row])
         cell.expandEvent = {
             tableView.reloadRows(at: [indexPath], with: .none)
         }
