@@ -168,9 +168,16 @@ class BookingActivityViewController: UIViewController, BookingNewActivity {
     }
     
     private func createBooking(_ activity: TrainingType, _ coach: Coach, _ date: Date, _ timeSlot: TrainingTime) {
-        // TODO:
-        
-        onRequestActivity?()
+        startLoading()
+        PMFightApi.shared.bookActivity(for: activity.id, with: coach.id, on: date.dayString, time: timeSlot) {  [weak self] (result) in
+            self?.endLoading()
+            switch result {
+            case .success:
+                self?.onRequestActivity?()
+            case .failure(let error):
+                self?.show(error: error)
+            }
+        }
     }
     
     private func updateTimeSlotsHeight() {
