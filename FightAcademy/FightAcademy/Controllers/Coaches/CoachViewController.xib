@@ -7,9 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CoachViewController" customModule="FightAcademy">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CoachViewController" customModule="FightAcademy" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="BZK-sp-D4y" id="GdK-X9-Yja"/>
+                <outlet property="tableView" destination="BZK-sp-D4y" id="VvM-Xt-NLp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

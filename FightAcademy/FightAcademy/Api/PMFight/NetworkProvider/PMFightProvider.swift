@@ -26,10 +26,9 @@ class PMFightProvider: NetworkApiProvider {
             perform(request, completion: completion)
 
         } catch {
-            
-            DispatchQueue.main.async {
-                completion(.failure(error))
-            }
+
+            completion(.failure(error))
+
         }
 
     }
@@ -38,29 +37,17 @@ class PMFightProvider: NetworkApiProvider {
 
         networkManager.performFetch(with: request) { [decoder, completion] (result) in
 
-            // "Temporary" workaround for empty response parsing.
-            // Yep, we are going to hell for this :]
-            if T.self is Bool.Type {
-                DispatchQueue.main.async {
-                    // swiftlint:disable force_cast
-                    completion(.success(true as! T))
-                }
-                return
-            }
-            
             do {
+
                 let data = try result.get()
+
                 let decoded = try decoder.decode(T.self, from: data)
 
-                DispatchQueue.main.async {
-                    completion(.success(decoded))
-                }
+                completion(.success(decoded))
 
             } catch {
                 print(error)
-                DispatchQueue.main.async {
-                    completion(.failure(self.handleError(error)))
-                }
+                completion(.failure(self.handleError(error)))
 
             }
 

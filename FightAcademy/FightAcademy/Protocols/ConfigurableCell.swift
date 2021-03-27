@@ -5,20 +5,10 @@
 //  Created by Aliona Starunska on 25.01.2021.
 //
 
-import UIKit
+import Foundation
 
-protocol ConfigurableTableViewCell: UITableViewCell {
-
+protocol ConfigurableCell {
     associatedtype Item
-
+    
     func configure(with item: Item)
-
-}
-
-protocol ConfigurableCollectionViewCell: UICollectionViewCell {
-
-    associatedtype Item
-
-    func configure(with item: Item)
-
 }

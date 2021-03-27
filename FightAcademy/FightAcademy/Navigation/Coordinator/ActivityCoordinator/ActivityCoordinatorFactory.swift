@@ -12,7 +12,7 @@ protocol ActivityFactoryProtocol {
     func makeActivityViewController() -> Activity
     func makeNewActivityViewController() -> BookingNewActivity
     func makeChooseActivityViewController() -> ChoosingActivity
-    func makeChooseCoachViewController(activity: TrainingType) -> ChoosingCoach
+    func makeChooseCoachViewController() -> ChoosingCoach
     func makeAlertController(with error: Error) -> UIAlertController
 
 }
@@ -24,17 +24,15 @@ final class ActivityFactory: ActivityFactoryProtocol {
     }
 
     func makeNewActivityViewController() -> BookingNewActivity {
-        return BookingActivityViewController()
+        return NewActivityViewController()
     }
 
     func makeChooseActivityViewController() -> ChoosingActivity {
         return ChoosingActivityViewController()
     }
 
-    func makeChooseCoachViewController(activity: TrainingType) -> ChoosingCoach {
-        let vc = ChoosingCoachViewController()
-        vc.activity = activity
-        return vc
+    func makeChooseCoachViewController() -> ChoosingCoach {
+        return ChoosingCoachViewController()
     }
 
     func makeAlertController(with error: Error) -> UIAlertController {

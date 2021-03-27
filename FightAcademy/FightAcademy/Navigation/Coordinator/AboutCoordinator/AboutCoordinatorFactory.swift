@@ -16,14 +16,7 @@ protocol AboutFactoryProtocol {
 final class AboutFactory: AboutFactoryProtocol {
 
     func makeAboutViewController() -> UIViewController {
-
-        let socialNetworks = RemoteConfigProvider.fetchSocialNetworks()
-        let description = RemoteConfigProvider.fetchDescription()
-        let acticle = RemoteConfigProvider.fetchArticle()
-
-        return AboutViewController(socialNetworks: socialNetworks,
-                                   description: description,
-                                   acticle: acticle)
+        return AboutViewController()
     }
 
 }

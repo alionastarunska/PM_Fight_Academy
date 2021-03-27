@@ -51,7 +51,7 @@
         <image name="eye.fill" catalog="system" width="128" height="78"/>
         <image name="multiply.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="clearButtonColor">
-            <color red="0.56862745098039214" green="0.56862745098039214" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

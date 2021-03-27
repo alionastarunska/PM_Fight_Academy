@@ -20,8 +20,22 @@ final class SettingsCoordinator: FinishFlowCoordinator {
         let initialPage = factory.makeSettingsViewController()
 
         initialPage.onLogOut = finishFlow
+        initialPage.onChangeButtonTapped = showChangePasswordPage
+
         router.setNewRoot(initialPage)
 
+    }
+
+    private func showChangePasswordPage() {
+
+        let changePasswordPage = factory.makePasswordChangeViewController()
+
+        changePasswordPage.onError = showError
+        changePasswordPage.onSuccess = {
+            self.router.pop(animated: true)
+        }
+
+        router.push(changePasswordPage, animated: true)
     }
 
     private func showError(_ error: Error) {

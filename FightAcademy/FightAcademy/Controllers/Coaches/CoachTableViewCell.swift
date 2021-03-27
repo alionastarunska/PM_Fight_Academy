@@ -7,7 +7,9 @@
 
 import UIKit
 
-class CoachTableViewCell: UITableViewCell, ConfigurableTableViewCell, ReusableTableViewCell, ExpandableTableViewCell {
+typealias Event = () -> Void
+
+class CoachTableViewCell: UITableViewCell, ConfigurableCell, ReusableCell {
     
     var expandEvent: Event?
     
@@ -15,7 +17,7 @@ class CoachTableViewCell: UITableViewCell, ConfigurableTableViewCell, ReusableTa
     @IBOutlet private weak var avatarImageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var ageLabel: UILabel!
-    @IBOutlet private weak var phoneNumberButton: UIButton!
+    @IBOutlet private weak var phoneNumberLabel: UILabel!
     @IBOutlet private weak var trainingLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var showMoreButton: UIButton!
@@ -27,16 +29,12 @@ class CoachTableViewCell: UITableViewCell, ConfigurableTableViewCell, ReusableTa
         model?.isExpanded = true
         expandEvent?()
     }
-    @IBAction func phoneNumberButtonAction(_ sender: UIButton) {
-        guard let number = URL(string: "tel://" + (model?.coach.phoneNumber ?? "")) else { return }
-           UIApplication.shared.open(number)
-    }
     
     func configure(with item: CoachCellModel) {
         model = item
-        nameLabel.text = item.coach.fullName
+        nameLabel.text = item.coach.firstName + " " + item.coach.lastName
         ageLabel.text = "\(item.coach.age)" + " years old"
-        phoneNumberButton.setTitle(item.coach.phoneNumber, for: .normal)
+        phoneNumberLabel.text = item.coach.phoneNumber
         descriptionLabel.text = item.coach.description
         trainingLabel.text = item.coach.trainings.joined(separator: ", ")
         сonfigureShowMoreButton(item.isExpanded)

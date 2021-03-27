@@ -38,21 +38,19 @@ final class ActivityCoordinator: FinishFlowCoordinator {
         router.push(viewController)
     }
 
-    private func showActiviyChoosing(_ delegate: BookingDelegate) {
+    private func showActiviyChoosing() {
 
         let viewController = factory.makeChooseActivityViewController()
-        viewController.onSelectActivityType = { activity in
-            delegate.didSelect(activity)
+        viewController.onSelectActivityType = {
             self.router.pop()
         }
         router.push(viewController, animated: true)
     }
 
-    private func showCoachesChoosing(_ delegate: BookingDelegate, activity: TrainingType) {
+    private func showCoachesChoosing() {
 
-        let viewController = factory.makeChooseCoachViewController(activity: activity)
-        viewController.onSelectCoach = { coach in
-            delegate.didSelect(coach)
+        let viewController = factory.makeChooseCoachViewController()
+        viewController.onSelectCoach = {
             self.router.pop()
         }
 

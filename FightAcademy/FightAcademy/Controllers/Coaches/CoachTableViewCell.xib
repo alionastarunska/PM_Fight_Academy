@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -44,6 +43,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gG3-wq-BFc">
+                                <rect key="frame" x="106" y="56.5" width="36" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imz-4U-91I">
                                 <rect key="frame" x="10" y="98" width="328" height="66"/>
                                 <string key="text">In life I am a versatile person. Persistent, purposeful, sociable. I love to set challenging tasks for myself and fulfill them. Since for me sport is fun up to a sweat, I train and train with true pleasure. I sincerely believe that it is the personal trainer who is responsible for the athletic success of his wards. Give me the opportunity to unleash your potential - and you will not regret it for a second!</string>
@@ -70,16 +75,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYq-9B-YHH">
-                                <rect key="frame" x="106" y="56.5" width="45" height="29"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="phoneNumberButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jte-nf-Gpy"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16862745100000001" green="0.16862745100000001" blue="0.16862745100000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
@@ -92,15 +87,15 @@
                             <constraint firstItem="imz-4U-91I" firstAttribute="leading" secondItem="4pg-TG-UVw" secondAttribute="leading" constant="10" id="Cue-5T-pHy"/>
                             <constraint firstItem="h4H-Hj-5J4" firstAttribute="top" secondItem="4pg-TG-UVw" secondAttribute="top" constant="10" id="D9u-Zr-oQE"/>
                             <constraint firstItem="h4H-Hj-5J4" firstAttribute="leading" secondItem="4pg-TG-UVw" secondAttribute="leading" constant="10" id="DJO-e2-ieb"/>
+                            <constraint firstItem="gG3-wq-BFc" firstAttribute="top" secondItem="uwb-0n-6vL" secondAttribute="bottom" constant="6" id="Fkx-sP-b2Z"/>
                             <constraint firstAttribute="bottom" secondItem="imz-4U-91I" secondAttribute="bottom" constant="6" id="Inp-AP-JaM"/>
                             <constraint firstAttribute="bottom" secondItem="oaJ-VX-0Hg" secondAttribute="bottom" id="YpE-Ok-LuA"/>
+                            <constraint firstItem="gG3-wq-BFc" firstAttribute="leading" secondItem="h4H-Hj-5J4" secondAttribute="trailing" constant="16" id="cIJ-BN-lvD"/>
                             <constraint firstAttribute="trailing" secondItem="imz-4U-91I" secondAttribute="trailing" constant="10" id="dtw-Kp-ooU"/>
-                            <constraint firstItem="lYq-9B-YHH" firstAttribute="top" secondItem="uwb-0n-6vL" secondAttribute="bottom" constant="6" id="eGA-Sl-L7d"/>
                             <constraint firstItem="uwb-0n-6vL" firstAttribute="top" secondItem="A84-Ve-T7w" secondAttribute="bottom" constant="6" id="iNx-g4-rLT"/>
                             <constraint firstItem="oaJ-VX-0Hg" firstAttribute="leading" secondItem="4pg-TG-UVw" secondAttribute="leading" id="mWE-YN-ZPl"/>
                             <constraint firstItem="uwb-0n-6vL" firstAttribute="leading" secondItem="h4H-Hj-5J4" secondAttribute="trailing" constant="16" id="u0C-4y-kPB"/>
                             <constraint firstAttribute="trailing" secondItem="LNq-km-AMp" secondAttribute="trailing" constant="8" id="wZE-Bg-RQP"/>
-                            <constraint firstItem="lYq-9B-YHH" firstAttribute="leading" secondItem="h4H-Hj-5J4" secondAttribute="trailing" constant="16" id="yRh-e5-FdE"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -124,7 +119,7 @@
                 <outlet property="avatarImageView" destination="h4H-Hj-5J4" id="40b-Iu-qDX"/>
                 <outlet property="descriptionLabel" destination="imz-4U-91I" id="Qhs-I1-9rO"/>
                 <outlet property="nameLabel" destination="A84-Ve-T7w" id="zlc-p2-AnZ"/>
-                <outlet property="phoneNumberButton" destination="lYq-9B-YHH" id="rtr-Kp-WkX"/>
+                <outlet property="phoneNumberLabel" destination="gG3-wq-BFc" id="WyB-kI-dXx"/>
                 <outlet property="showMoreButton" destination="oaJ-VX-0Hg" id="Ocn-0b-vFw"/>
                 <outlet property="trainingLabel" destination="LNq-km-AMp" id="Mjz-8W-mdh"/>
                 <outlet property="view" destination="4pg-TG-UVw" id="Dxh-8m-b4G"/>

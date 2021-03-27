@@ -1,7 +1,7 @@
 xcassets:
   inputs:
-    - FightAcademy/Assets.xcassets
-    - FightAcademy/Colors.xcassets
+    - StackOverflow-Search/Resources/Assets.xcassets
+    - StackOverflow-Search/Resources/Colors.xcassets
   outputs:
     templateName: swift4
-    output: FightAcademy/Generated/Assets.swift
+    output: StackOverflow-Search/Misc/Generated/Assets.swift
