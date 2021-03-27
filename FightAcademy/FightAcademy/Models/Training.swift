@@ -14,6 +14,7 @@ struct Training: Decodable {
     let time: String
     let coachFirstName: String
     let coachLastName: String
+    let price: Double
 
 }
 
@@ -37,6 +38,7 @@ extension Training {
         time = Self.moctime
         coachFirstName = "coachFirstName"
         coachLastName = "coachLastName"
+        price = 199.0
     }
 }
 
@@ -46,6 +48,8 @@ extension ApiResponse where Item == Training {
         let names = ["Andrei", "Artem", "Kek", "Heh", "Lol", "Meh", "Jenia", "Slavik"]
         let lastnames = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis", "Rodriguez", "Rodriguez"]
         let services = ["Karate", "Wing Chun", "Kalaripayattu", "Savate", "Capoeira", "Taekwondo", "Muay Thai"]
+        let price = [1000, 200]
+
 
         var arr: [Training] = []
 
@@ -54,7 +58,8 @@ extension ApiResponse where Item == Training {
                                 date: [TrainingTime].mockDay(time: time).randomElement()!,
                                 time: [TrainingTime].mockTime().randomElement()!,
                                 coachFirstName: names.randomElement()!,
-                                coachLastName: lastnames.randomElement()!))
+                                coachLastName: lastnames.randomElement()!,
+                                price: Double(price.randomElement()!)))
         }
 
         let paggination = Paggination(page: 1, totalPages: 1000, hasPreviousPage: false, hasNextPage: true)

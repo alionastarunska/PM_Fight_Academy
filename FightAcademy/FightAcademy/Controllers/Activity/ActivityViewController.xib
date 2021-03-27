@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActivityViewController" customModule="FightAcademy" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="oNF-yt-5e2" id="XPg-Yj-Ynx"/>
+                <outlet property="collectionView" destination="36Y-pw-C4L" id="FOy-St-isc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="36Y-pw-C4L">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="d95-jx-6eE">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="oNF-yt-5e2">
+                    <rect key="frame" x="197" y="443" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="oNF-yt-5e2" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="6YQ-jP-kcF"/>
+                <constraint firstItem="oNF-yt-5e2" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="IpB-rJ-Rmh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="36Y-pw-C4L" secondAttribute="bottom" id="XLX-Tc-vIs"/>
+                <constraint firstItem="36Y-pw-C4L" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="n0R-t8-thc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="36Y-pw-C4L" secondAttribute="trailing" id="vBI-mh-fz7"/>
+                <constraint firstItem="36Y-pw-C4L" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="y52-oa-ha4"/>
+            </constraints>
+            <point key="canvasLocation" x="-145" y="57"/>
+        </view>
+    </objects>
+</document>

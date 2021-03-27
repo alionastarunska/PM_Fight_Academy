@@ -8,7 +8,7 @@
 import Foundation
 
 class TabBarCoordinator: FinishFlowCoordinator {
-
+    
     private let factory: TabBarFactoryProtocol = TabBarFactory()
 
     override func start() {
@@ -24,7 +24,7 @@ class TabBarCoordinator: FinishFlowCoordinator {
         tabContrroller.viewControllers = pages.map { $0.nc }
 
         pages.map { $0.coord }.forEach(configureCoordinator)
-
+        
         // set root after coord-config
         router.setNewRoot(tabContrroller, hideBar: true)
 
@@ -33,7 +33,7 @@ class TabBarCoordinator: FinishFlowCoordinator {
     private func configureCoordinator(_ coordinator: FinishFlowCoordinator) {
 
         self.add(coordinator)
-        coordinator.finishFlow = finishFlow
+        coordinator.finishFlow = self.finishFlow
         coordinator.start()
 
     }

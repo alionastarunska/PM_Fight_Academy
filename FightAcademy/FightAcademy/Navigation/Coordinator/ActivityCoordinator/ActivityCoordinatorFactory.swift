@@ -20,7 +20,7 @@ protocol ActivityFactoryProtocol {
 final class ActivityFactory: ActivityFactoryProtocol {
 
     func makeActivityViewController() -> Activity {
-        return ActivityViewController()
+        return ActivityViewController(nibName: ActivityViewController.name, bundle: .main)
     }
 
     func makeNewActivityViewController() -> BookingNewActivity {

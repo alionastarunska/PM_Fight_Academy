@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		245AF7BD07541C93DC802CCB /* Pods_FightAcademy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98A07E7A90257E2179F4CFB /* Pods_FightAcademy.framework */; };
 		4B3A6BE62603CE3900B99CF0 /* FightAcademy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6BE42603CE3900B99CF0 /* FightAcademy.xcdatamodeld */; };
 		4B3A6BEB2603CE3E00B99CF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6BE92603CE3E00B99CF0 /* LaunchScreen.storyboard */; };
 		4B3A6BF62603CE3F00B99CF0 /* FightAcademyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6BF52603CE3F00B99CF0 /* FightAcademyTests.swift */; };
@@ -22,7 +21,6 @@
 		4B3A6C7A2607416A00B99CF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C782607416A00B99CF0 /* AppDelegate.swift */; };
 		4B3A6C91260742F200B99CF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6C5326063E0D00B99CF0 /* Assets.xcassets */; };
 		4B3A6C9D260747A500B99CF0 /* CoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A6C9B260747A500B99CF0 /* CoachViewController.swift */; };
-		4B3A6C9E260747A500B99CF0 /* CoachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6C9C260747A500B99CF0 /* CoachViewController.xib */; };
 		4B6CE7FE260D0B8C004D6039 /* CoachModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CE7FD260D0B8C004D6039 /* CoachModel.swift */; };
 		4B6CE83B260D0BEC004D6039 /* TimeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6CE824260D0BEC004D6039 /* TimeCollectionViewCell.xib */; };
 		4B6CE83D260D0BEC004D6039 /* BookingDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CE826260D0BEC004D6039 /* BookingDataSourse.swift */; };
@@ -59,6 +57,12 @@
 		9E41017B260F345200DFBB12 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E41017A260F345200DFBB12 /* AboutViewController.swift */; };
 		9E48E323260D2277005D2E5F /* RCKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E48E322260D2277005D2E5F /* RCKey.swift */; };
 		9E48E328260D2743005D2E5F /* RemoteConfigProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E48E327260D2743005D2E5F /* RemoteConfigProvider.swift */; };
+		9E59537E260F6210002E1637 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 9E59537D260F6210002E1637 /* FSCalendar */; };
+		9E595399260F643F002E1637 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9E595398260F643F002E1637 /* FirebaseAnalytics */; };
+		9E59539B260F643F002E1637 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 9E59539A260F643F002E1637 /* FirebaseRemoteConfig */; };
+		9E59539D260F643F002E1637 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9E59539C260F643F002E1637 /* FirebaseCrashlytics */; };
+		9E5953AC260F6572002E1637 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 9E5953AB260F6572002E1637 /* NVActivityIndicatorViewExtended */; };
+		9E5953B2260F65AE002E1637 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 9E5953B1260F65AE002E1637 /* SwiftMessages */; };
 		9E7124AA260D152200B881AB /* ExpandableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7124A9260D152200B881AB /* ExpandableTableViewCell.swift */; };
 		9E7124AF260D16F900B881AB /* AutoSizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7124AE260D16F900B881AB /* AutoSizingTableView.swift */; };
 		9E7124B4260D1A9A00B881AB /* UITextField+Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7124B3260D1A9A00B881AB /* UITextField+Inspectable.swift */; };
@@ -69,8 +73,6 @@
 		9EA88452260683AB002A59E2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA88451260683AB002A59E2 /* NavigationController.swift */; };
 		9EA8845A260683FA002A59E2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA88459260683FA002A59E2 /* TabBarController.swift */; };
 		9EA884702606850A002A59E2 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8846F2606850A002A59E2 /* UIFontExtensions.swift */; };
-		9EA884832606856F002A59E2 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884822606856F002A59E2 /* ActivityViewController.swift */; };
-		9EA88497260685D9002A59E2 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA88496260685D9002A59E2 /* HistoryViewController.swift */; };
 		9EA884A8260686DF002A59E2 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884A7260686DF002A59E2 /* BaseCoordinator.swift */; };
 		9EA884AD260686E8002A59E2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884AC260686E8002A59E2 /* Coordinator.swift */; };
 		9EA884B226068709002A59E2 /* FinishFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA884B126068709002A59E2 /* FinishFlowCoordinator.swift */; };
@@ -121,6 +123,9 @@
 		AE5C817626055ACE00E12DB5 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C817526055ACE00E12DB5 /* AuthorizationService.swift */; };
 		AE5C817E26055B0A00E12DB5 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C817D26055B0A00E12DB5 /* Validator.swift */; };
 		AE5C818426055F6000E12DB5 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C818326055F6000E12DB5 /* RegistrationModel.swift */; };
+		AE5F1520260E4FFB009861FE /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE5F151F260E4FFB009861FE /* HistoryViewController.xib */; };
+		AE5F1525260E79E3009861FE /* HistoryClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5F1524260E79E3009861FE /* HistoryClientAPI.swift */; };
+		AE5F152D260E7DED009861FE /* HistoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5F152C260E7DED009861FE /* HistoryDataSource.swift */; };
 		AE80C8592609FE6200E99D40 /* BaseAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80C8582609FE6200E99D40 /* BaseAuthViewController.swift */; };
 		AE80C85E260A228900E99D40 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80C85D260A228900E99D40 /* ResponseModel.swift */; };
 		AE80C8B9260B4C8C00E99D40 /* LeadingImageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80C8B4260B4C8C00E99D40 /* LeadingImageTextField.swift */; };
@@ -133,13 +138,21 @@
 		AEB49A6A2604B3F700766762 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB49A692604B3F700766762 /* NibLoadable.swift */; };
 		AEB49A7A2604B90500766762 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB49A782604B90500766762 /* RegisterViewController.swift */; };
 		AEB49A7B2604B90500766762 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB49A792604B90500766762 /* RegisterViewController.xib */; };
+		AEEE5E24260D189A00576540 /* ActivityDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE5E1E260D189A00576540 /* ActivityDataSource.swift */; };
+		AEEE5E25260D189A00576540 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE5E1F260D189A00576540 /* ActivityViewController.swift */; };
+		AEEE5E26260D189A00576540 /* ActivityMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE5E20260D189A00576540 /* ActivityMocks.swift */; };
+		AEEE5E27260D189A00576540 /* ActivityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEEE5E21260D189A00576540 /* ActivityCollectionViewCell.xib */; };
+		AEEE5E28260D189A00576540 /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEEE5E22260D189A00576540 /* ActivityViewController.xib */; };
+		AEEE5E29260D189A00576540 /* ActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE5E23260D189A00576540 /* ActivityCollectionViewCell.swift */; };
+		AEEE5E60260DC04A00576540 /* ActivityApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE5E5F260DC04A00576540 /* ActivityApiClient.swift */; };
+		AEEE5EAA260E4C8400576540 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE5EA8260E4C8400576540 /* HistoryViewController.swift */; };
+		AEEE5EB1260E4D1B00576540 /* HistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE5EAF260E4D1B00576540 /* HistoryCollectionViewCell.swift */; };
+		AEEE5EB2260E4D1B00576540 /* HistoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEEE5EB0260E4D1B00576540 /* HistoryCollectionViewCell.xib */; };
 		AEF81BB8260608DA00B5F2B3 /* ValidationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BB7260608D900B5F2B3 /* ValidationServiceTests.swift */; };
 		AEF81BC3260624A200B5F2B3 /* ProfileApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BC2260624A200B5F2B3 /* ProfileApiClient.swift */; };
 		AEF81BD42606445100B5F2B3 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = AEF81BD32606445100B5F2B3 /* SwiftKeychainWrapper */; };
 		AEF81BD92607520100B5F2B3 /* AuthorizationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BD8260751FF00B5F2B3 /* AuthorizationModel.swift */; };
 		AEF81BE72607728C00B5F2B3 /* BaseAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF81BE62607728B00B5F2B3 /* BaseAuthModel.swift */; };
-		C07E4DF8EA0C49E0918645E6 /* Pods_FightAcademy_FightAcademyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C29E4CF93235F07721BC8EF8 /* Pods_FightAcademy_FightAcademyUITests.framework */; };
-		E60FEB6FFC345BD3EF25558A /* Pods_FightAcademyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7E686DC7A366C30A3EF3CA /* Pods_FightAcademyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,9 +173,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F496BB7D26A32B2E842E165 /* Pods-FightAcademy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightAcademy.debug.xcconfig"; path = "Target Support Files/Pods-FightAcademy/Pods-FightAcademy.debug.xcconfig"; sourceTree = "<group>"; };
-		29F4271341A8B45B47EF538B /* Pods-FightAcademyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightAcademyTests.debug.xcconfig"; path = "Target Support Files/Pods-FightAcademyTests/Pods-FightAcademyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3FF98DDDF66EE84856D3A1C4 /* Pods-FightAcademyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightAcademyTests.release.xcconfig"; path = "Target Support Files/Pods-FightAcademyTests/Pods-FightAcademyTests.release.xcconfig"; sourceTree = "<group>"; };
 		4B3A6BD82603CE3900B99CF0 /* FightAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FightAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B3A6BE52603CE3900B99CF0 /* FightAcademy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FightAcademy.xcdatamodel; sourceTree = "<group>"; };
 		4B3A6BEA2603CE3E00B99CF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -207,9 +217,6 @@
 		4BB7F83F260E8A7F00E9294F /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 		4BF53EA7260771F2002166D4 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		4BF53EF326079CE1002166D4 /* String+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Size.swift"; sourceTree = "<group>"; };
-		5955963F0D2F09B3626AD74B /* Pods-FightAcademy-FightAcademyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightAcademy-FightAcademyUITests.debug.xcconfig"; path = "Target Support Files/Pods-FightAcademy-FightAcademyUITests/Pods-FightAcademy-FightAcademyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		7B342199DD675098A15F61CC /* Pods-FightAcademy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightAcademy.release.xcconfig"; path = "Target Support Files/Pods-FightAcademy/Pods-FightAcademy.release.xcconfig"; sourceTree = "<group>"; };
-		83FB1B720F379F68EEA4B6DA /* Pods-FightAcademy-FightAcademyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FightAcademy-FightAcademyUITests.release.xcconfig"; path = "Target Support Files/Pods-FightAcademy-FightAcademyUITests/Pods-FightAcademy-FightAcademyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9E35A484260D0EA7005D177B /* SocialTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialTextView.swift; sourceTree = "<group>"; };
 		9E35A489260D0EDA005D177B /* SocialNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetwork.swift; sourceTree = "<group>"; };
 		9E35A48F260D0EF1005D177B /* AboutSocialTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutSocialTableCell.xib; sourceTree = "<group>"; };
@@ -232,8 +239,6 @@
 		9EA88451260683AB002A59E2 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		9EA88459260683FA002A59E2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		9EA8846F2606850A002A59E2 /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
-		9EA884822606856F002A59E2 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
-		9EA88496260685D9002A59E2 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		9EA884A7260686DF002A59E2 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		9EA884AC260686E8002A59E2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		9EA884B126068709002A59E2 /* FinishFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishFlowCoordinator.swift; sourceTree = "<group>"; };
@@ -284,6 +289,9 @@
 		AE5C817526055ACE00E12DB5 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		AE5C817D26055B0A00E12DB5 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		AE5C818326055F6000E12DB5 /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
+		AE5F151F260E4FFB009861FE /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
+		AE5F1524260E79E3009861FE /* HistoryClientAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryClientAPI.swift; sourceTree = "<group>"; };
+		AE5F152C260E7DED009861FE /* HistoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDataSource.swift; sourceTree = "<group>"; };
 		AE80C8582609FE6200E99D40 /* BaseAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAuthViewController.swift; sourceTree = "<group>"; };
 		AE80C85D260A228900E99D40 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		AE80C8B4260B4C8C00E99D40 /* LeadingImageTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeadingImageTextField.swift; sourceTree = "<group>"; };
@@ -296,13 +304,20 @@
 		AEB49A692604B3F700766762 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		AEB49A782604B90500766762 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AEB49A792604B90500766762 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		AEEE5E1E260D189A00576540 /* ActivityDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDataSource.swift; sourceTree = "<group>"; };
+		AEEE5E1F260D189A00576540 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		AEEE5E20260D189A00576540 /* ActivityMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityMocks.swift; sourceTree = "<group>"; };
+		AEEE5E21260D189A00576540 /* ActivityCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityCollectionViewCell.xib; sourceTree = "<group>"; };
+		AEEE5E22260D189A00576540 /* ActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
+		AEEE5E23260D189A00576540 /* ActivityCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCollectionViewCell.swift; sourceTree = "<group>"; };
+		AEEE5E5F260DC04A00576540 /* ActivityApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityApiClient.swift; sourceTree = "<group>"; };
+		AEEE5EA8260E4C8400576540 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		AEEE5EAF260E4D1B00576540 /* HistoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		AEEE5EB0260E4D1B00576540 /* HistoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		AEF81BB7260608D900B5F2B3 /* ValidationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationServiceTests.swift; sourceTree = "<group>"; };
 		AEF81BC2260624A200B5F2B3 /* ProfileApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileApiClient.swift; sourceTree = "<group>"; };
 		AEF81BD8260751FF00B5F2B3 /* AuthorizationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationModel.swift; sourceTree = "<group>"; };
 		AEF81BE62607728B00B5F2B3 /* BaseAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAuthModel.swift; sourceTree = "<group>"; };
-		C29E4CF93235F07721BC8EF8 /* Pods_FightAcademy_FightAcademyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightAcademy_FightAcademyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D98A07E7A90257E2179F4CFB /* Pods_FightAcademy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightAcademy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB7E686DC7A366C30A3EF3CA /* Pods_FightAcademyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FightAcademyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,8 +325,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5953AC260F6572002E1637 /* NVActivityIndicatorViewExtended in Frameworks */,
 				AEF81BD42606445100B5F2B3 /* SwiftKeychainWrapper in Frameworks */,
-				245AF7BD07541C93DC802CCB /* Pods_FightAcademy.framework in Frameworks */,
+				9E5953B2260F65AE002E1637 /* SwiftMessages in Frameworks */,
+				9E59537E260F6210002E1637 /* FSCalendar in Frameworks */,
+				9E595399260F643F002E1637 /* FirebaseAnalytics in Frameworks */,
+				9E59539D260F643F002E1637 /* FirebaseCrashlytics in Frameworks */,
+				9E59539B260F643F002E1637 /* FirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +339,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E60FEB6FFC345BD3EF25558A /* Pods_FightAcademyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +346,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C07E4DF8EA0C49E0918645E6 /* Pods_FightAcademy_FightAcademyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,8 +359,6 @@
 				4B3A6BF42603CE3F00B99CF0 /* FightAcademyTests */,
 				4B3A6BFF2603CE3F00B99CF0 /* FightAcademyUITests */,
 				4B3A6BD92603CE3900B99CF0 /* Products */,
-				B2E784A1A163BFA2FD703417 /* Pods */,
-				C1ECAE92F8634BD67BDCBD0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -529,13 +545,13 @@
 		9EA88445260682FA002A59E2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AEEE5E1D260D189A00576540 /* Activity */,
+				AEEE5E9E260E4BCC00576540 /* History */,
 				4B6CE823260D0BEC004D6039 /* Booking */,
 				AE80C8D0260B58B700E99D40 /* Auth */,
 				4B3A6C45260635A600B99CF0 /* Coaches */,
 				9EA8845026068395002A59E2 /* Wrappers */,
 				9E35A480260D0E4E005D177B /* AboutScreen */,
-				9EA884822606856F002A59E2 /* ActivityViewController.swift */,
-				9EA88496260685D9002A59E2 /* HistoryViewController.swift */,
 				9ECF241A260E625200B5C6E2 /* SettingsViewController */,
 			);
 			path = Controllers;
@@ -853,27 +869,32 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		B2E784A1A163BFA2FD703417 /* Pods */ = {
+		AEEE5E1D260D189A00576540 /* Activity */ = {
 			isa = PBXGroup;
 			children = (
-				0F496BB7D26A32B2E842E165 /* Pods-FightAcademy.debug.xcconfig */,
-				7B342199DD675098A15F61CC /* Pods-FightAcademy.release.xcconfig */,
-				5955963F0D2F09B3626AD74B /* Pods-FightAcademy-FightAcademyUITests.debug.xcconfig */,
-				83FB1B720F379F68EEA4B6DA /* Pods-FightAcademy-FightAcademyUITests.release.xcconfig */,
-				29F4271341A8B45B47EF538B /* Pods-FightAcademyTests.debug.xcconfig */,
-				3FF98DDDF66EE84856D3A1C4 /* Pods-FightAcademyTests.release.xcconfig */,
+				AEEE5E1E260D189A00576540 /* ActivityDataSource.swift */,
+				AEEE5E1F260D189A00576540 /* ActivityViewController.swift */,
+				AEEE5E20260D189A00576540 /* ActivityMocks.swift */,
+				AEEE5E21260D189A00576540 /* ActivityCollectionViewCell.xib */,
+				AEEE5E22260D189A00576540 /* ActivityViewController.xib */,
+				AEEE5E23260D189A00576540 /* ActivityCollectionViewCell.swift */,
+				AEEE5E5F260DC04A00576540 /* ActivityApiClient.swift */,
 			);
-			path = Pods;
-			sourceTree = "<group>";
+			name = Activity;
+			path = FightAcademy/Controllers/Activity;
+			sourceTree = SOURCE_ROOT;
 		};
-		C1ECAE92F8634BD67BDCBD0F /* Frameworks */ = {
+		AEEE5E9E260E4BCC00576540 /* History */ = {
 			isa = PBXGroup;
 			children = (
-				D98A07E7A90257E2179F4CFB /* Pods_FightAcademy.framework */,
-				C29E4CF93235F07721BC8EF8 /* Pods_FightAcademy_FightAcademyUITests.framework */,
-				FB7E686DC7A366C30A3EF3CA /* Pods_FightAcademyTests.framework */,
+				AEEE5EA8260E4C8400576540 /* HistoryViewController.swift */,
+				AEEE5EAF260E4D1B00576540 /* HistoryCollectionViewCell.swift */,
+				AEEE5EB0260E4D1B00576540 /* HistoryCollectionViewCell.xib */,
+				AE5F151F260E4FFB009861FE /* HistoryViewController.xib */,
+				AE5F1524260E79E3009861FE /* HistoryClientAPI.swift */,
+				AE5F152C260E7DED009861FE /* HistoryDataSource.swift */,
 			);
-			name = Frameworks;
+			path = History;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -883,13 +904,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B3A6C052603CE3F00B99CF0 /* Build configuration list for PBXNativeTarget "FightAcademy" */;
 			buildPhases = (
-				8C55DA796797FA3F8F5E2661 /* [CP] Check Pods Manifest.lock */,
 				4B3A6BD42603CE3900B99CF0 /* Sources */,
 				4B3A6BD52603CE3900B99CF0 /* Frameworks */,
 				4B3A6BD62603CE3900B99CF0 /* Resources */,
 				4BF53EC9260775C5002166D4 /* Swift lint */,
-				4BB7F828260E752800E9294F /* Swift Gen */,
-				74661A24893B9B9AF1CB5084 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -898,6 +916,12 @@
 			name = FightAcademy;
 			packageProductDependencies = (
 				AEF81BD32606445100B5F2B3 /* SwiftKeychainWrapper */,
+				9E59537D260F6210002E1637 /* FSCalendar */,
+				9E595398260F643F002E1637 /* FirebaseAnalytics */,
+				9E59539A260F643F002E1637 /* FirebaseRemoteConfig */,
+				9E59539C260F643F002E1637 /* FirebaseCrashlytics */,
+				9E5953AB260F6572002E1637 /* NVActivityIndicatorViewExtended */,
+				9E5953B1260F65AE002E1637 /* SwiftMessages */,
 			);
 			productName = FightAcademy;
 			productReference = 4B3A6BD82603CE3900B99CF0 /* FightAcademy.app */;
@@ -907,7 +931,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B3A6C082603CE3F00B99CF0 /* Build configuration list for PBXNativeTarget "FightAcademyTests" */;
 			buildPhases = (
-				7F6794D572A0CB1DF2CF57FC /* [CP] Check Pods Manifest.lock */,
 				4B3A6BED2603CE3F00B99CF0 /* Sources */,
 				4B3A6BEE2603CE3F00B99CF0 /* Frameworks */,
 				4B3A6BEF2603CE3F00B99CF0 /* Resources */,
@@ -926,11 +949,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B3A6C0B2603CE3F00B99CF0 /* Build configuration list for PBXNativeTarget "FightAcademyUITests" */;
 			buildPhases = (
-				7E1D7BC01CDCE4BD7F749A1D /* [CP] Check Pods Manifest.lock */,
 				4B3A6BF82603CE3F00B99CF0 /* Sources */,
 				4B3A6BF92603CE3F00B99CF0 /* Frameworks */,
 				4B3A6BFA2603CE3F00B99CF0 /* Resources */,
-				C860A603181EB0DC00F9A533 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -975,6 +996,10 @@
 			mainGroup = 4B3A6BCF2603CE3900B99CF0;
 			packageReferences = (
 				AEF81BD22606445000B5F2B3 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+				9E59537C260F6210002E1637 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				9E595397260F643F002E1637 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				9E5953AA260F6572002E1637 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+				9E5953B0260F65AE002E1637 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 			);
 			productRefGroup = 4B3A6BD92603CE3900B99CF0 /* Products */;
 			projectDirPath = "";
@@ -992,6 +1017,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEEE5E28260D189A00576540 /* ActivityViewController.xib in Resources */,
+				AEEE5EB2260E4D1B00576540 /* HistoryCollectionViewCell.xib in Resources */,
+				AEEE5E27260D189A00576540 /* ActivityCollectionViewCell.xib in Resources */,
+				AE5F1520260E4FFB009861FE /* HistoryViewController.xib in Resources */,
 				4BB7F81B260E741800E9294F /* Colors.xcassets in Resources */,
 				4B6CE87D260D2D70004D6039 /* ChoosingCoachTableViewCell.xib in Resources */,
 				4B6CE879260D2D64004D6039 /* ChoosingCoachViewController.xib in Resources */,
@@ -1032,24 +1061,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4BB7F828260E752800E9294F /* Swift Gen */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Swift Gen";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftGen/bin/swiftgen\n";
-		};
 		4BF53EC9260775C5002166D4 /* Swift lint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1066,107 +1077,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
-		};
-		74661A24893B9B9AF1CB5084 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FightAcademy/Pods-FightAcademy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FightAcademy/Pods-FightAcademy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FightAcademy/Pods-FightAcademy-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7E1D7BC01CDCE4BD7F749A1D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FightAcademy-FightAcademyUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7F6794D572A0CB1DF2CF57FC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FightAcademyTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8C55DA796797FA3F8F5E2661 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FightAcademy-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C860A603181EB0DC00F9A533 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FightAcademy-FightAcademyUITests/Pods-FightAcademy-FightAcademyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FightAcademy-FightAcademyUITests/Pods-FightAcademy-FightAcademyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FightAcademy-FightAcademyUITests/Pods-FightAcademy-FightAcademyUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1175,8 +1086,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEF81BE72607728C00B5F2B3 /* BaseAuthModel.swift in Sources */,
+				AEEE5EAA260E4C8400576540 /* HistoryViewController.swift in Sources */,
 				AE5C815E26053A6600E12DB5 /* LogInViewController.swift in Sources */,
+				AEEE5EB1260E4D1B00576540 /* HistoryCollectionViewCell.swift in Sources */,
+				AEF81BE72607728C00B5F2B3 /* BaseAuthModel.swift in Sources */,
 				4B6CE84D260D0BEC004D6039 /* ChoosingCoachViewController.swift in Sources */,
 				AE5C817626055ACE00E12DB5 /* AuthorizationService.swift in Sources */,
 				AEB49A7A2604B90500766762 /* RegisterViewController.swift in Sources */,
@@ -1198,7 +1111,11 @@
 				4B3A6BE62603CE3900B99CF0 /* FightAcademy.xcdatamodeld in Sources */,
 				AE80C85E260A228900E99D40 /* ResponseModel.swift in Sources */,
 				AE80C93B260BC7B500E99D40 /* SessionStorage.swift in Sources */,
+				AE5F152D260E7DED009861FE /* HistoryDataSource.swift in Sources */,
 				4B3A6C7A2607416A00B99CF0 /* AppDelegate.swift in Sources */,
+				AE5F1525260E79E3009861FE /* HistoryClientAPI.swift in Sources */,
+				9EA88452260683AB002A59E2 /* NavigationController.swift in Sources */,
+				AEEE5E24260D189A00576540 /* ActivityDataSource.swift in Sources */,
 				9EF93A7C260C5F16006EB24A /* Paggination.swift in Sources */,
 				9EF93A81260C5F2B006EB24A /* Token.swift in Sources */,
 				4BB7F82E260E769F00E9294F /* LoadingDisplaying.swift in Sources */,
@@ -1206,7 +1123,6 @@
 				9EA884D126068838002A59E2 /* AuthCoordinatorFactory.swift in Sources */,
 				9EF93A23260C5952006EB24A /* NetworkApiProvider.swift in Sources */,
 				9E35A485260D0EA7005D177B /* SocialTextView.swift in Sources */,
-				9EA88452260683AB002A59E2 /* NavigationController.swift in Sources */,
 				9EF93A4D260C59FF006EB24A /* HTTPSchema.swift in Sources */,
 				9E4100D3260F2EFF00DFBB12 /* TrainingTime.swift in Sources */,
 				4B3A6C792607416A00B99CF0 /* SceneDelegate.swift in Sources */,
@@ -1214,6 +1130,10 @@
 				AE80C8BA260B4C8C00E99D40 /* DesignableButton.swift in Sources */,
 				4B3A6C9D260747A500B99CF0 /* CoachViewController.swift in Sources */,
 				9EA884B226068709002A59E2 /* FinishFlowCoordinator.swift in Sources */,
+				AEEE5E60260DC04A00576540 /* ActivityApiClient.swift in Sources */,
+				9EA884D72606888F002A59E2 /* TabBarCoordinator.swift in Sources */,
+				AEEE5E25260D189A00576540 /* ActivityViewController.swift in Sources */,
+				4BF53EF426079CE1002166D4 /* String+Size.swift in Sources */,
 				4BB7F82F260E769F00E9294F /* ErrorDisplaying.swift in Sources */,
 				9EA884A8260686DF002A59E2 /* BaseCoordinator.swift in Sources */,
 				9E4100D8260F2F0300DFBB12 /* TrainingDay.swift in Sources */,
@@ -1221,11 +1141,9 @@
 				4B6CE85F260D0CB7004D6039 /* UIView+Shake.swift in Sources */,
 				9ECF2425260E625200B5C6E2 /* SettingTableManager.swift in Sources */,
 				9EA884E2260688F4002A59E2 /* AboutCoordinator.swift in Sources */,
-				9EA884D72606888F002A59E2 /* TabBarCoordinator.swift in Sources */,
 				9EA884F026068943002A59E2 /* CoachesCoordinator.swift in Sources */,
 				9EA884BB26068795002A59E2 /* ApplicationCoordinator.swift in Sources */,
 				9EA884702606850A002A59E2 /* UIFontExtensions.swift in Sources */,
-				4BF53EF426079CE1002166D4 /* String+Size.swift in Sources */,
 				9E48E323260D2277005D2E5F /* RCKey.swift in Sources */,
 				9EF93A61260C5E14006EB24A /* PMFightApi.swift in Sources */,
 				9EA8851926068A60002A59E2 /* SettingsCoordinatorFactory.swift in Sources */,
@@ -1250,14 +1168,16 @@
 				9EA88500260689EA002A59E2 /* ActivityCoordinatorFactory.swift in Sources */,
 				9EA8850626068A0C002A59E2 /* HistoryCoordinator.swift in Sources */,
 				9EA8843C26068233002A59E2 /* Router.swift in Sources */,
+				AEEE5E26260D189A00576540 /* ActivityMocks.swift in Sources */,
 				4BB7F840260E8A7F00E9294F /* Date+String.swift in Sources */,
 				9EF93A36260C59A3006EB24A /* StatusCode.swift in Sources */,
 				9EF93A3F260C59C5006EB24A /* RequestableItem.swift in Sources */,
 				9EF93A86260C5F52006EB24A /* HumanApiError.swift in Sources */,
 				4B3A6C61260674A100B99CF0 /* ConfigurableCell.swift in Sources */,
+				AEEE5E29260D189A00576540 /* ActivityCollectionViewCell.swift in Sources */,
 				9EF93A2B260C596D006EB24A /* NetworkManager.swift in Sources */,
-				9ECF2427260E625200B5C6E2 /* SettingsViewController.swift in Sources */,
 				4B3A6C67260732DB00B99CF0 /* CoachDataSourse.swift in Sources */,
+				9ECF2427260E625200B5C6E2 /* SettingsViewController.swift in Sources */,
 				9ECF2422260E625200B5C6E2 /* ToggableSettingTableViewCell.swift in Sources */,
 				4B3A6C482606366E00B99CF0 /* CoachTableViewCell.swift in Sources */,
 				4B3A6C60260674A100B99CF0 /* ReusableCell.swift in Sources */,
@@ -1266,10 +1186,8 @@
 				9EF93AA8260C5FF3006EB24A /* Training.swift in Sources */,
 				4B6CE847260D0BEC004D6039 /* ChoosingActivityDataSourse.swift in Sources */,
 				AE80C8BC260B4C8C00E99D40 /* CustomRightView.swift in Sources */,
-				9EA88497260685D9002A59E2 /* HistoryViewController.swift in Sources */,
 				9EA8850E26068A22002A59E2 /* HistoryFactoryProtocol.swift in Sources */,
 				4B6CE84E260D0BEC004D6039 /* ChoosingCoachTableViewCell.swift in Sources */,
-				9EA884832606856F002A59E2 /* ActivityViewController.swift in Sources */,
 				4B6CE7FE260D0B8C004D6039 /* CoachModel.swift in Sources */,
 				9E7124AA260D152200B881AB /* ExpandableTableViewCell.swift in Sources */,
 				9ECF2423260E625200B5C6E2 /* SettingCell.swift in Sources */,
@@ -1362,6 +1280,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = UPWXFVVHLN;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1423,6 +1342,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = UPWXFVVHLN;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1445,12 +1365,11 @@
 		};
 		4B3A6C062603CE3F00B99CF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F496BB7D26A32B2E842E165 /* Pods-FightAcademy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UPWXFVVHLN;
 				INFOPLIST_FILE = FightAcademy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1466,12 +1385,11 @@
 		};
 		4B3A6C072603CE3F00B99CF0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B342199DD675098A15F61CC /* Pods-FightAcademy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UPWXFVVHLN;
 				INFOPLIST_FILE = FightAcademy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1487,7 +1405,6 @@
 		};
 		4B3A6C092603CE3F00B99CF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29F4271341A8B45B47EF538B /* Pods-FightAcademyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1509,7 +1426,6 @@
 		};
 		4B3A6C0A2603CE3F00B99CF0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3FF98DDDF66EE84856D3A1C4 /* Pods-FightAcademyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1531,7 +1447,6 @@
 		};
 		4B3A6C0C2603CE3F00B99CF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5955963F0D2F09B3626AD74B /* Pods-FightAcademy-FightAcademyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1551,7 +1466,6 @@
 		};
 		4B3A6C0D2603CE3F00B99CF0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83FB1B720F379F68EEA4B6DA /* Pods-FightAcademy-FightAcademyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1611,6 +1525,38 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9E59537C260F6210002E1637 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.2;
+			};
+		};
+		9E595397260F643F002E1637 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.9.1;
+			};
+		};
+		9E5953AA260F6572002E1637 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+		9E5953B0260F65AE002E1637 /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.2;
+			};
+		};
 		AEF81BD22606445000B5F2B3 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper";
@@ -1622,6 +1568,36 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9E59537D260F6210002E1637 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E59537C260F6210002E1637 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+		9E595398260F643F002E1637 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E595397260F643F002E1637 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		9E59539A260F643F002E1637 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E595397260F643F002E1637 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		9E59539C260F643F002E1637 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E595397260F643F002E1637 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		9E5953AB260F6572002E1637 /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E5953AA260F6572002E1637 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
+		};
+		9E5953B1260F65AE002E1637 /* SwiftMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E5953B0260F65AE002E1637 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
+			productName = SwiftMessages;
+		};
 		AEF81BD32606445100B5F2B3 /* SwiftKeychainWrapper */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AEF81BD22606445000B5F2B3 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
