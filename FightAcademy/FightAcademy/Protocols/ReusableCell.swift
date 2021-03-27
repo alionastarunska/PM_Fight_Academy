@@ -7,20 +7,31 @@
 
 import UIKit
 
-protocol ReusableCell {
+protocol ReusableTableViewCell: UITableViewCell {
     
     static var reuseIdentifier: String { get }
     static var cellNib: UINib { get }
+
 }
 
-extension ReusableCell {
-    
+extension ReusableTableViewCell {
+
     static var reuseIdentifier: String { return String(describing: self) }
     static var cellNib: UINib { return UINib(nibName: String(describing: self), bundle: nil) }
+
 }
 
-extension UITableView {
-    func register<T: ReusableCell>(_ type: T.Type) {
-        register(type.cellNib, forCellReuseIdentifier: type.reuseIdentifier)
-    }
+// TODO: sdf
+protocol ReusableCollectionViewCell: UICollectionViewCell {
+    
+    static var reuseIdentifier: String { get }
+    static var cellNib: UINib { get }
+
+}
+
+extension ReusableCollectionViewCell {
+
+    static var reuseIdentifier: String { return String(describing: self) }
+    static var cellNib: UINib { return UINib(nibName: String(describing: self), bundle: nil) }
+
 }
