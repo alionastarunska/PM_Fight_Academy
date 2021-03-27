@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChoosingActivityTableViewCell: UITableViewCell, ConfigurableCell, ReusableCell {
+class ChoosingActivityTableViewCell: UITableViewCell, ConfigurableTableViewCell, ReusableTableViewCell {
 
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!

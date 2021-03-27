@@ -13,9 +13,7 @@ extension Array where Element == TrainingTime {
 
     static func mockTime() -> [TrainingTime] {
 
-        return[ "10:00","11:00","12:00", "13:00" ]
-        
-        
+        return[ "10:00", "11:00", "12:00", "13:00"]
 //            (1...7).map { (_) -> TrainingTime in "\(Int.random(in: 0...24))" + ":" + "00" }
     }
 

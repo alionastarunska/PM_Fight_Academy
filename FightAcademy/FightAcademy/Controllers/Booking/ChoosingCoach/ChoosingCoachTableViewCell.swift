@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChoosingCoachTableViewCell: UITableViewCell, ReusableCell, ConfigurableCell {
+class ChoosingCoachTableViewCell: UITableViewCell, ReusableTableViewCell, ConfigurableTableViewCell {
 
     @IBOutlet private weak var selectionView: UIView!
     @IBOutlet private weak var avatarImageView: UIImageView!

@@ -25,7 +25,8 @@ class CoachViewController: UIViewController, LoadingDisplaying, ErrorDisplaying 
     }
 
     private func setupTableView() {
-        dataSource = CoachDataSource<CoachTableViewCell>(coaches: [])
+
+        dataSource = CoachDataSource<CoachTableViewCell>(items: [])
         tableView.register(CoachTableViewCell.self)
         tableView.dataSource = dataSource
         tableView.delegate = self

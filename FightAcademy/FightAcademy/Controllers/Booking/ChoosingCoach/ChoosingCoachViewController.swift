@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ChoosingCoach: UIViewController, LoadingDisplaying, ErrorDisplaying {
+protocol ChoosingCoach: LoadingDisplaying, ErrorDisplaying {
 
     var onSelectCoach: ((Coach) -> Void)? { get set }
 
@@ -32,7 +32,7 @@ class ChoosingCoachViewController: UIViewController, ChoosingCoach {
     }
     
     private func setupTableView() {
-        dataSource = CoachDataSource<ChoosingCoachTableViewCell>(coaches: [])
+        dataSource = CoachDataSource<ChoosingCoachTableViewCell>(items: [])
         tableView.register(ChoosingCoachTableViewCell.self)
         tableView.dataSource = dataSource
         tableView.delegate = self

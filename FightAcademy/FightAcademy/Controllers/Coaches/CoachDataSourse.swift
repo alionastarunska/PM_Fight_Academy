@@ -7,36 +7,43 @@
 
 import UIKit
 
-typealias TableViewCell = UITableViewCell & ReusableCell & ConfigurableCell
+typealias TableViewCell = ConfigurableTableViewCell & ReusableTableViewCell
 
 class CoachDataSource<Cell: TableViewCell>: NSObject, UITableViewDataSource {
     
-    var coaches: [Cell.Item]
-
-    init(coaches: [Cell.Item]) {
-        self.coaches = coaches
+    var items: [Cell.Item]
+    
+    init(items: [Cell.Item]) {
+        self.items = items
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return coaches.count
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Cell.reuseIdentifier, for: indexPath) as? Cell else {
             return UITableViewCell()
         }
-        cell.configure(with: coaches[indexPath.row])
-        (cell as? CoachTableViewCell)?.expandEvent = {
-            tableView.reloadRows(at: [indexPath], with: .none)
+        
+        cell.configure(with: items[indexPath.row])
+        (cell as? ExpandableTableViewCell)?.expandEvent = {
+            
+            cell.configure(with: self.items[indexPath.row])
+            (cell as? ExpandableTableViewCell)?.expandEvent = {
+                
+                tableView.reloadRows(at: [indexPath], with: .none)
+            }
         }
-        return cell
+            return cell
+        
     }
     
     // MARK: - Public
     
     func append(items: [Cell.Item]) -> [IndexPath] {
-        let count = self.coaches.count
-        self.coaches.append(contentsOf: items)
+        let count = self.items.count
+        self.items.append(contentsOf: items)
         var indexes = [IndexPath]()
         for idx in 0..<items.count {
             indexes.append(IndexPath(row: count + idx, section: 0))

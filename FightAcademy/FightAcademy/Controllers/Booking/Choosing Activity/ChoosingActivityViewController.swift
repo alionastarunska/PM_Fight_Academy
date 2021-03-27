@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ChoosingActivity: UIViewController, LoadingDisplaying, ErrorDisplaying {
+protocol ChoosingActivity: LoadingDisplaying, ErrorDisplaying {
 
     var onSelectActivityType: ((TrainingType) -> Void)? { get set }
 

@@ -22,6 +22,11 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal enum Assets {
+    internal static let aboutimage = ImageAsset(name: "aboutimage")
+    internal static let aboutimage2 = ImageAsset(name: "aboutimage2")
+    internal static let facebook = ImageAsset(name: "facebook")
+    internal static let instagram = ImageAsset(name: "instagram")
+    internal static let youtube = ImageAsset(name: "youtube")
     internal static let accentColor = ColorAsset(name: "AccentColor")
     internal static let eye = ImageAsset(name: "eye")
     internal static let lock = ImageAsset(name: "lock")
@@ -29,17 +34,20 @@ internal enum Asset {
     internal static let mail = ImageAsset(name: "mail")
     internal static let phone = ImageAsset(name: "phone")
     internal static let visibility = ImageAsset(name: "visibility")
+    internal static let language = ImageAsset(name: "language")
+    internal static let notification = ImageAsset(name: "notification")
+    internal static let personalization = ImageAsset(name: "personalization")
     internal static let activity = ImageAsset(name: "activity")
+    internal static let coaches = ImageAsset(name: "coaches")
+    internal static let history = ImageAsset(name: "history")
+    internal static let main = ImageAsset(name: "main")
+    internal static let settings = ImageAsset(name: "settings")
     internal static let buttonShowMore = ImageAsset(name: "buttonShowMore")
     internal static let chevronLeft = ImageAsset(name: "chevron_left")
-    internal static let coaches = ImageAsset(name: "coaches")
     internal static let dambbell = ImageAsset(name: "dambbell")
     internal static let error = ImageAsset(name: "error")
-    internal static let history = ImageAsset(name: "history")
     internal static let logoLaunch = ImageAsset(name: "logoLaunch")
-    internal static let main = ImageAsset(name: "main")
     internal static let plus = ImageAsset(name: "plus")
-    internal static let settings = ImageAsset(name: "settings")
     internal static let testAvatarImage = ImageAsset(name: "testAvatarImage")
   }
   internal enum Colors {

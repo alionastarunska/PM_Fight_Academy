@@ -9,7 +9,6 @@ import UIKit
 
 protocol SettingsFactoryProtocol {
 
-    func makePasswordChangeViewController() -> ChangePassword
     func makeSettingsViewController() -> Settings
     func makeAlertController(with error: Error) -> UIAlertController
 
@@ -19,10 +18,6 @@ final class SettingsFactory: SettingsFactoryProtocol {
 
     func makeSettingsViewController() -> Settings {
         return SettingsViewController()
-    }
-
-    func makePasswordChangeViewController() -> ChangePassword {
-        return ChangePasswordViewController()
     }
 
     func makeAlertController(with error: Error) -> UIAlertController {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TimeCollectionViewCell: UICollectionViewCell, ReusableCell, ConfigurableCell {
+class TimeCollectionViewCell: UICollectionViewCell, ReusableCollectionViewCell, ConfigurableCollectionViewCell {
 
     @IBOutlet private weak var timeSlotLabel: UILabel!
     
