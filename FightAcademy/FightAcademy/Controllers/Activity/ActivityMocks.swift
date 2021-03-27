@@ -22,6 +22,15 @@ class APIClientMock {
     static func fetchData(page: Int, completion: @escaping (Result<ApiResponse<ActivityModel>, Error>) -> Void ) {
         var activities = [ActivityModel]()
         let totalPage = 10
+        let hasNextPage: Bool
+        
+        
+        if page == totalPage {
+            hasNextPage = false
+        }
+        else {
+            hasNextPage = true
+        }
         
         for _ in 0...15 {
             activities.append(ActivityModel(id: page,
@@ -37,7 +46,7 @@ class APIClientMock {
                                         paggination: Paggination(page: page,
                                                                  totalPages: totalPage ,
                                                                  hasPreviousPage: false,
-                                                                 hasNextPage: true))
+                                                                 hasNextPage: hasNextPage))
         
         PMFightApi.shared.incomingActivities(page: page) { result in
             switch result {

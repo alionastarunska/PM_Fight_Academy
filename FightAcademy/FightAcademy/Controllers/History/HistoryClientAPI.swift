@@ -62,11 +62,13 @@ class HistoryClientApi: Prefetchable {
                     
                     self.models.append(contentsOf: response.contents)
                     
-                    if response.paggination.page > 1 || self.firstCall {
+                    if (response.paggination.page > 1 || self.firstCall) && !self.lastCall {
                         
                         self.firstCall = false
                         
                         let indexPathsToReload = self.calculateIndexPathsToReload(from: response.contents)
+                        
+                        self.lastCall = !response.paggination.hasNextPage
                         
                         //TODO: check for the ref cycle
                         self.fetchCompleted?(.success((indexPathsToReload, self.models)))
