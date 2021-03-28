@@ -28,14 +28,17 @@ class ActivityViewController: UIViewController, Activity, NibLoadable {
         super.viewDidLoad()
         navigationItem.title = "Activity"
         setUpCollectionView()
-        performFetch()
 
         navigationItem.rightBarButtonItem = .init(image: UIImage(systemName: "plus"),
                                                   style: .done,
                                                   target: self,
                                                   action: #selector(addActivity))
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        performFetch()
+    }
+    
     init(activityService: ActivityService) {
         self.activityService = activityService
         super.init(nibName: Self.name, bundle: .main)

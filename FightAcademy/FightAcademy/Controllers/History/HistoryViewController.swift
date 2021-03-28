@@ -20,6 +20,9 @@ class HistoryViewController: UIViewController, NibLoadable, UICollectionViewDele
         super.viewDidLoad()
         navigationItem.title = "History"
         setUpCollectionView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         performFetch()
     }
 

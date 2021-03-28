@@ -38,6 +38,7 @@
 		4B6CE875260D2D54004D6039 /* CoachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A6C9C260747A500B99CF0 /* CoachViewController.xib */; };
 		4B6CE879260D2D64004D6039 /* ChoosingCoachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6CE838260D0BEC004D6039 /* ChoosingCoachViewController.xib */; };
 		4B6CE87D260D2D70004D6039 /* ChoosingCoachTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6CE837260D0BEC004D6039 /* ChoosingCoachTableViewCell.xib */; };
+		4BB2B2D52610B9300034B790 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2B2D42610B9300034B790 /* ActivityViewController.swift */; };
 		4BB7F81B260E741800E9294F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BB7F81A260E741800E9294F /* Colors.xcassets */; };
 		4BB7F821260E74DF00E9294F /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB7F820260E74DF00E9294F /* Assets.swift */; };
 		4BB7F82E260E769F00E9294F /* LoadingDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB7F82C260E769F00E9294F /* LoadingDisplaying.swift */; };
@@ -89,7 +90,6 @@
 		9E891B23260FB1E70016B26D /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E891B22260FB1E70016B26D /* LoginModel.swift */; };
 		9E8DBEAF26109E640010C39C /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8DBEAD26109E640010C39C /* HistoryTableViewCell.swift */; };
 		9E8DBEB026109E640010C39C /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E8DBEAE26109E640010C39C /* HistoryTableViewCell.xib */; };
-		9E8DBEE026109FBA0010C39C /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8DBEDE26109FBA0010C39C /* ActivityViewController.swift */; };
 		9EA8843426068216002A59E2 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8843326068216002A59E2 /* RouterProtocol.swift */; };
 		9EA8843C26068233002A59E2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8843B26068233002A59E2 /* Router.swift */; };
 		9EA8844126068270002A59E2 /* Routed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8844026068270002A59E2 /* Routed.swift */; };
@@ -225,6 +225,7 @@
 		4B6CE839260D0BEC004D6039 /* ChoosingCoachViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosingCoachViewController.swift; sourceTree = "<group>"; };
 		4B6CE83A260D0BEC004D6039 /* ChoosingCoachTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosingCoachTableViewCell.swift; sourceTree = "<group>"; };
 		4B6CE85E260D0CB7004D6039 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		4BB2B2D42610B9300034B790 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		4BB7F81A260E741800E9294F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		4BB7F820260E74DF00E9294F /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		4BB7F82C260E769F00E9294F /* LoadingDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingDisplaying.swift; sourceTree = "<group>"; };
@@ -270,7 +271,6 @@
 		9E891B22260FB1E70016B26D /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		9E8DBEAD26109E640010C39C /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		9E8DBEAE26109E640010C39C /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
-		9E8DBEDE26109FBA0010C39C /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityViewController.swift; path = 1/ActivityViewController.swift; sourceTree = "<group>"; };
 		9EA8843326068216002A59E2 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		9EA8843B26068233002A59E2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9EA8844026068270002A59E2 /* Routed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routed.swift; sourceTree = "<group>"; };
@@ -1015,7 +1015,7 @@
 		9EDD6B322610879D002AC595 /* Activity */ = {
 			isa = PBXGroup;
 			children = (
-				9E8DBEDE26109FBA0010C39C /* ActivityViewController.swift */,
+				4BB2B2D42610B9300034B790 /* ActivityViewController.swift */,
 				9EC29D242610A4C700C0120B /* ActivityViewController.xib */,
 				9EDD6B342610879D002AC595 /* ActivityCell */,
 			);
@@ -1500,8 +1500,8 @@
 				9EF326A52610A9FD001B8825 /* TableViewManager.swift in Sources */,
 				9E0A8EDA260F91B50097D260 /* UILabel.swift in Sources */,
 				9E41017B260F345200DFBB12 /* AboutViewController.swift in Sources */,
+				4BB2B2D52610B9300034B790 /* ActivityViewController.swift in Sources */,
 				9E891B11260FB1740016B26D /* LogginingValidator.swift in Sources */,
-				9E8DBEE026109FBA0010C39C /* ActivityViewController.swift in Sources */,
 				9EA8845A260683FA002A59E2 /* TabBarController.swift in Sources */,
 				9EA884C3260687D1002A59E2 /* ApplicationCoordinatorFactory.swift in Sources */,
 				4B6CE848260D0BEC004D6039 /* ChoosingActivityViewController.swift in Sources */,
