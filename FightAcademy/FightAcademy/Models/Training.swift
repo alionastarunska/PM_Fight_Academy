@@ -16,6 +16,10 @@ struct Training: Decodable {
     let coachLastName: String
     let price: Double
 
+    var coachFullName: String {
+        return coachFirstName + " " + coachLastName
+    }
+
 }
 
 extension Training {

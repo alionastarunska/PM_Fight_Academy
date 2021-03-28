@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PMFightApi: LogInService, RegistrationService {
+class PMFightApi: LogInService, RegistrationService, HistoryService, ActivityService {
 
     private let netApiProvider = PMFightProvider()
 

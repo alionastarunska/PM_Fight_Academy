@@ -16,7 +16,8 @@ protocol HistoryFactoryProtocol {
 final class HistoryFactory: HistoryFactoryProtocol {
 
     func makeHistoryViewController() -> HistoryViewController {
-        return HistoryViewController(nibName: HistoryViewController.name, bundle: .main)
+        let service = HistoryProvider(service: PMFightApi.shared)
+        return HistoryViewController(historyService: service)
     }
 
 }

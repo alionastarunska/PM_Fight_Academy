@@ -10,8 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActivityViewController" customModule="FightAcademy" customModuleProvider="target">
             <connections>
-                <outlet property="activityIndicator" destination="oNF-yt-5e2" id="XPg-Yj-Ynx"/>
-                <outlet property="collectionView" destination="36Y-pw-C4L" id="FOy-St-isc"/>
+                <outlet property="tableView" destination="Xg9-Eu-iUk" id="fqg-7b-7gg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,29 +19,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="36Y-pw-C4L">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xg9-Eu-iUk">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="d95-jx-6eE">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="oNF-yt-5e2">
-                    <rect key="frame" x="197" y="443" width="20" height="20"/>
-                </activityIndicatorView>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="oNF-yt-5e2" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="6YQ-jP-kcF"/>
-                <constraint firstItem="oNF-yt-5e2" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="IpB-rJ-Rmh"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="36Y-pw-C4L" secondAttribute="bottom" id="XLX-Tc-vIs"/>
-                <constraint firstItem="36Y-pw-C4L" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="n0R-t8-thc"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="36Y-pw-C4L" secondAttribute="trailing" id="vBI-mh-fz7"/>
-                <constraint firstItem="36Y-pw-C4L" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="y52-oa-ha4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Xg9-Eu-iUk" secondAttribute="bottom" id="2Yk-7C-uc6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Xg9-Eu-iUk" secondAttribute="trailing" id="ASu-k0-6vv"/>
+                <constraint firstItem="Xg9-Eu-iUk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="R15-aD-4Fz"/>
+                <constraint firstItem="Xg9-Eu-iUk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="vWk-bw-TDU"/>
             </constraints>
             <point key="canvasLocation" x="-145" y="57"/>
         </view>

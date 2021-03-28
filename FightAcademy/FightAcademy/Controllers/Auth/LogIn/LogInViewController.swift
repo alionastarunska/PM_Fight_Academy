@@ -21,7 +21,7 @@ class LogInViewController<LoginValidator: LogginingValidationService>: BaseAuthV
                                                                        UITextFieldDelegate {
 
     var onSignUpButtonTap: (() -> Void)?
-    private var authModel = LoginValidator.CustomLoginModel(password: "PaSSw0rd123", phone: "+380689292193")
+    private var authModel = LoginValidator.CustomLoginModel()//password: "PaSSw0rd123", phone: "+380689292193")
     private var validationService: LogginingValidator<LoginValidator>
     private var authService: AuthorizationService
 

@@ -21,7 +21,8 @@ final class ActivityCoordinator: FinishFlowCoordinator {
 
         initialPage.onActivityStartBooking = showNewActiviyChoosing
 
-        initialPage.closeCoordinator = { [ weak self ] in
+        initialPage.onError = { [ weak self ] error in
+            print(error)
             self?.finishFlow?()
         }
 

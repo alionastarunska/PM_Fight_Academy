@@ -19,8 +19,8 @@ final class HistoryCoordinator: FinishFlowCoordinator {
 
         let initialPage = factory.makeHistoryViewController()
 
-        initialPage.closeCoordinator = { [ weak self ] in
-            self?.finishFlow?()
+        initialPage.onError = { error in
+            print(error)
         }
 
         router.setNewRoot(initialPage)

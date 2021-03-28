@@ -9,18 +9,18 @@ import Foundation
 
 struct AuthorizationService: LogInService, RegistrationService {
 
-    private let authorizationService: LogInService & RegistrationService
+    private let service: LogInService & RegistrationService
 
     init(authorizationService: LogInService & RegistrationService) {
-        self.authorizationService = authorizationService
+        service = authorizationService
     }
 
     func logIn(phone: String, password: String, completion: @escaping (Error?) -> Void) {
-        authorizationService.logIn(phone: phone, password: password, completion: completion)
+        service.logIn(phone: phone, password: password, completion: completion)
     }
 
     func registrate(phone: String, password: String, name: String, completion: @escaping (Error?) -> Void) {
-        authorizationService.registrate(phone: phone, password: password, name: name, completion: completion)
+        service.registrate(phone: phone, password: password, name: name, completion: completion)
     }
 
 }

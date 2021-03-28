@@ -45,11 +45,7 @@ class CoachViewController: UIViewController, LoadingDisplaying, ErrorDisplaying 
             case .success(let response):
                 self?.canLoadMore = response.paggination.hasNextPage
                 print(response.contents)
-                guard let indexes = self?.dataSource?.append(items: response.contents.map({ (coach) -> Coach in
-                    var coachc = coach
-                    coachc.description! += String(repeating: "kek ", count: 100)
-                    return coachc
-                }).map({ CoachCellModel(coach: $0) })),
+                guard let indexes = self?.dataSource?.append(items: response.contents.map({ CoachCellModel(coach: $0) })),
                       !indexes.isEmpty else { return }
                 self?.tableView.insertRows(at: indexes, with: .none)
             case .failure(let error):
