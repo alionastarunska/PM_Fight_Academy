@@ -87,6 +87,11 @@
 		9E891B16260FB18A0016B26D /* LogginingValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E891B15260FB18A0016B26D /* LogginingValidationService.swift */; };
 		9E891B1E260FB1C10016B26D /* LogginingModelRequirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E891B1D260FB1C00016B26D /* LogginingModelRequirements.swift */; };
 		9E891B23260FB1E70016B26D /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E891B22260FB1E70016B26D /* LoginModel.swift */; };
+		9E8DBEAF26109E640010C39C /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8DBEAD26109E640010C39C /* HistoryTableViewCell.swift */; };
+		9E8DBEB026109E640010C39C /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E8DBEAE26109E640010C39C /* HistoryTableViewCell.xib */; };
+		9E8DBECD26109ED60010C39C /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8DBECA26109ED60010C39C /* HistoryViewController.swift */; };
+		9E8DBECE26109ED60010C39C /* TableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8DBECB26109ED60010C39C /* TableViewManager.swift */; };
+		9E8DBEE026109FBA0010C39C /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8DBEDE26109FBA0010C39C /* ActivityViewController.swift */; };
 		9EA8843426068216002A59E2 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8843326068216002A59E2 /* RouterProtocol.swift */; };
 		9EA8843C26068233002A59E2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8843B26068233002A59E2 /* Router.swift */; };
 		9EA8844126068270002A59E2 /* Routed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8844026068270002A59E2 /* Routed.swift */; };
@@ -113,6 +118,8 @@
 		9EA8851426068A4B002A59E2 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8851326068A4B002A59E2 /* SettingsCoordinator.swift */; };
 		9EA8851926068A60002A59E2 /* SettingsCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8851826068A60002A59E2 /* SettingsCoordinatorFactory.swift */; };
 		9EAE5987260F358D00F1ED6C /* TrainingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE5986260F358D00F1ED6C /* TrainingType.swift */; };
+		9EC29D192610A24200C0120B /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EC29D182610A24200C0120B /* HistoryViewController.xib */; };
+		9EC29D252610A4C800C0120B /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EC29D242610A4C700C0120B /* ActivityViewController.xib */; };
 		9EC3D75B260FC95B00FCD19E /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC3D75A260FC95B00FCD19E /* SettingModel.swift */; };
 		9EC3D764260FC97800FCD19E /* Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC3D763260FC97800FCD19E /* Named.swift */; };
 		9EC3D76C260FC98B00FCD19E /* Imaged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC3D76B260FC98B00FCD19E /* Imaged.swift */; };
@@ -121,15 +128,8 @@
 		9ECF2425260E625200B5C6E2 /* SettingTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF241F260E625200B5C6E2 /* SettingTableManager.swift */; };
 		9ECF2426260E625200B5C6E2 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ECF2420260E625200B5C6E2 /* SettingsViewController.xib */; };
 		9ECF2427260E625200B5C6E2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF2421260E625200B5C6E2 /* SettingsViewController.swift */; };
-		9EDD6B2426108783002AC595 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDD6B1F26108783002AC595 /* HistoryTableViewCell.swift */; };
-		9EDD6B2526108783002AC595 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD6B2026108783002AC595 /* HistoryTableViewCell.xib */; };
-		9EDD6B2626108783002AC595 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD6B2126108783002AC595 /* HistoryViewController.xib */; };
-		9EDD6B2726108783002AC595 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDD6B2226108783002AC595 /* HistoryViewController.swift */; };
-		9EDD6B2826108783002AC595 /* TableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDD6B2326108783002AC595 /* TableViewManager.swift */; };
-		9EDD6B382610879D002AC595 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDD6B332610879D002AC595 /* ActivityViewController.swift */; };
 		9EDD6B392610879D002AC595 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDD6B352610879D002AC595 /* ActivityTableViewCell.swift */; };
 		9EDD6B3A2610879D002AC595 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD6B362610879D002AC595 /* ActivityTableViewCell.xib */; };
-		9EDD6B3B2610879D002AC595 /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD6B372610879D002AC595 /* ActivityViewController.xib */; };
 		9EDD6B43261087DE002AC595 /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDD6B41261087DE002AC595 /* ActivityService.swift */; };
 		9EDD6B44261087DE002AC595 /* ActivityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDD6B42261087DE002AC595 /* ActivityProvider.swift */; };
 		9EDD6B4C261087E7002AC595 /* HistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDD6B4A261087E7002AC595 /* HistoryService.swift */; };
@@ -268,6 +268,11 @@
 		9E891B15260FB18A0016B26D /* LogginingValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogginingValidationService.swift; sourceTree = "<group>"; };
 		9E891B1D260FB1C00016B26D /* LogginingModelRequirements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogginingModelRequirements.swift; sourceTree = "<group>"; };
 		9E891B22260FB1E70016B26D /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		9E8DBEAD26109E640010C39C /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		9E8DBEAE26109E640010C39C /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		9E8DBECA26109ED60010C39C /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = 1/HistoryViewController.swift; sourceTree = "<group>"; };
+		9E8DBECB26109ED60010C39C /* TableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewManager.swift; path = 1/TableViewManager.swift; sourceTree = "<group>"; };
+		9E8DBEDE26109FBA0010C39C /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityViewController.swift; path = 1/ActivityViewController.swift; sourceTree = "<group>"; };
 		9EA8843326068216002A59E2 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		9EA8843B26068233002A59E2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9EA8844026068270002A59E2 /* Routed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routed.swift; sourceTree = "<group>"; };
@@ -294,6 +299,8 @@
 		9EA8851326068A4B002A59E2 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		9EA8851826068A60002A59E2 /* SettingsCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorFactory.swift; sourceTree = "<group>"; };
 		9EAE5986260F358D00F1ED6C /* TrainingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingType.swift; sourceTree = "<group>"; };
+		9EC29D182610A24200C0120B /* HistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HistoryViewController.xib; path = "New Folder With Items/HistoryViewController.xib"; sourceTree = "<group>"; };
+		9EC29D242610A4C700C0120B /* ActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
 		9EC3D75A260FC95B00FCD19E /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		9EC3D763260FC97800FCD19E /* Named.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Named.swift; sourceTree = "<group>"; };
 		9EC3D76B260FC98B00FCD19E /* Imaged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imaged.swift; sourceTree = "<group>"; };
@@ -302,15 +309,8 @@
 		9ECF241F260E625200B5C6E2 /* SettingTableManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableManager.swift; sourceTree = "<group>"; };
 		9ECF2420260E625200B5C6E2 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		9ECF2421260E625200B5C6E2 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		9EDD6B1F26108783002AC595 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
-		9EDD6B2026108783002AC595 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
-		9EDD6B2126108783002AC595 /* HistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
-		9EDD6B2226108783002AC595 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
-		9EDD6B2326108783002AC595 /* TableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewManager.swift; sourceTree = "<group>"; };
-		9EDD6B332610879D002AC595 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		9EDD6B352610879D002AC595 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		9EDD6B362610879D002AC595 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
-		9EDD6B372610879D002AC595 /* ActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
 		9EDD6B41261087DE002AC595 /* ActivityService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityService.swift; sourceTree = "<group>"; };
 		9EDD6B42261087DE002AC595 /* ActivityProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityProvider.swift; sourceTree = "<group>"; };
 		9EDD6B4A261087E7002AC595 /* HistoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryService.swift; sourceTree = "<group>"; };
@@ -756,6 +756,26 @@
 			path = RegistrationModel;
 			sourceTree = "<group>";
 		};
+		9E8DBEAB26109E550010C39C /* History */ = {
+			isa = PBXGroup;
+			children = (
+				9E8DBECA26109ED60010C39C /* HistoryViewController.swift */,
+				9EC29D182610A24200C0120B /* HistoryViewController.xib */,
+				9E8DBECB26109ED60010C39C /* TableViewManager.swift */,
+				9E8DBEAC26109E640010C39C /* HistoryCell */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		9E8DBEAC26109E640010C39C /* HistoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				9E8DBEAD26109E640010C39C /* HistoryTableViewCell.swift */,
+				9E8DBEAE26109E640010C39C /* HistoryTableViewCell.xib */,
+			);
+			path = HistoryCell;
+			sourceTree = "<group>";
+		};
 		9E9D302D260FD6AE0035ABD5 /* BookingScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -811,7 +831,7 @@
 				4B3A6C45260635A600B99CF0 /* Coaches */,
 				4B6CE823260D0BEC004D6039 /* Booking */,
 				9EDD6B322610879D002AC595 /* Activity */,
-				9EDD6B1D26108783002AC595 /* History */,
+				9E8DBEAB26109E550010C39C /* History */,
 				9ECF241A260E625200B5C6E2 /* SettingsViewController */,
 			);
 			path = Controllers;
@@ -992,33 +1012,12 @@
 			path = SettingsCells;
 			sourceTree = "<group>";
 		};
-		9EDD6B1D26108783002AC595 /* History */ = {
-			isa = PBXGroup;
-			children = (
-				9EDD6B1E26108783002AC595 /* HistoryCell */,
-				9EDD6B2126108783002AC595 /* HistoryViewController.xib */,
-				9EDD6B2226108783002AC595 /* HistoryViewController.swift */,
-				9EDD6B2326108783002AC595 /* TableViewManager.swift */,
-			);
-			name = History;
-			path = ../../../../../PM_Fight_Academy/FightAcademy/FightAcademy/Controllers/History;
-			sourceTree = "<group>";
-		};
-		9EDD6B1E26108783002AC595 /* HistoryCell */ = {
-			isa = PBXGroup;
-			children = (
-				9EDD6B1F26108783002AC595 /* HistoryTableViewCell.swift */,
-				9EDD6B2026108783002AC595 /* HistoryTableViewCell.xib */,
-			);
-			path = HistoryCell;
-			sourceTree = "<group>";
-		};
 		9EDD6B322610879D002AC595 /* Activity */ = {
 			isa = PBXGroup;
 			children = (
-				9EDD6B332610879D002AC595 /* ActivityViewController.swift */,
+				9E8DBEDE26109FBA0010C39C /* ActivityViewController.swift */,
+				9EC29D242610A4C700C0120B /* ActivityViewController.xib */,
 				9EDD6B342610879D002AC595 /* ActivityCell */,
-				9EDD6B372610879D002AC595 /* ActivityViewController.xib */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -1367,20 +1366,20 @@
 			files = (
 				4BB7F81B260E741800E9294F /* Colors.xcassets in Resources */,
 				4B6CE87D260D2D70004D6039 /* ChoosingCoachTableViewCell.xib in Resources */,
-				9EDD6B2526108783002AC595 /* HistoryTableViewCell.xib in Resources */,
 				4B6CE879260D2D64004D6039 /* ChoosingCoachViewController.xib in Resources */,
 				4B6CE875260D2D54004D6039 /* CoachViewController.xib in Resources */,
-				9EDD6B2626108783002AC595 /* HistoryViewController.xib in Resources */,
 				4B3A6BEB2603CE3E00B99CF0 /* LaunchScreen.storyboard in Resources */,
+				9E8DBEB026109E640010C39C /* HistoryTableViewCell.xib in Resources */,
 				AEB49A7B2604B90500766762 /* RegisterViewController.xib in Resources */,
 				AE5C815F26053A6600E12DB5 /* LogInViewController.xib in Resources */,
+				9EC29D252610A4C800C0120B /* ActivityViewController.xib in Resources */,
+				9EC29D192610A24200C0120B /* HistoryViewController.xib in Resources */,
 				4B3A6C492606366E00B99CF0 /* CoachTableViewCell.xib in Resources */,
 				4B6CE83B260D0BEC004D6039 /* TimeCollectionViewCell.xib in Resources */,
 				AE80C8BD260B4C8C00E99D40 /* TextFieldRightView.xib in Resources */,
 				4B6CE846260D0BEC004D6039 /* ChoosingActivityTableViewCell.xib in Resources */,
 				4B3A6C91260742F200B99CF0 /* Assets.xcassets in Resources */,
 				4B6CE845260D0BEC004D6039 /* ChoosingActivityViewController.xib in Resources */,
-				9EDD6B3B2610879D002AC595 /* ActivityViewController.xib in Resources */,
 				4B3A6C182603D58700B99CF0 /* GoogleService-Info.plist in Resources */,
 				4B6CE849260D0BEC004D6039 /* BookingActivityViewController.xib in Resources */,
 				9ECF2426260E625200B5C6E2 /* SettingsViewController.xib in Resources */,
@@ -1469,7 +1468,6 @@
 				9EF93A23260C5952006EB24A /* NetworkApiProvider.swift in Sources */,
 				9E35A485260D0EA7005D177B /* SocialTextView.swift in Sources */,
 				9EF93A4D260C59FF006EB24A /* HTTPSchema.swift in Sources */,
-				9EDD6B2726108783002AC595 /* HistoryViewController.swift in Sources */,
 				9E4100D3260F2EFF00DFBB12 /* TrainingTime.swift in Sources */,
 				4B3A6C792607416A00B99CF0 /* SceneDelegate.swift in Sources */,
 				9E0A8EEA260FA0FE0097D260 /* ReusableCollectionCell.swift in Sources */,
@@ -1481,7 +1479,6 @@
 				4BB7F82F260E769F00E9294F /* ErrorDisplaying.swift in Sources */,
 				9E0A8EEF260FA1390097D260 /* ConfigurableCollectionViewCell.swift in Sources */,
 				9EA884A8260686DF002A59E2 /* BaseCoordinator.swift in Sources */,
-				9EDD6B2826108783002AC595 /* TableViewManager.swift in Sources */,
 				9E4100D8260F2F0300DFBB12 /* TrainingDay.swift in Sources */,
 				4B6CE83D260D0BEC004D6039 /* BookingDataSourse.swift in Sources */,
 				4B6CE85F260D0CB7004D6039 /* UIView.swift in Sources */,
@@ -1499,13 +1496,16 @@
 				9EDD6B392610879D002AC595 /* ActivityTableViewCell.swift in Sources */,
 				9EF93A74260C5F00006EB24A /* ApiResponse.swift in Sources */,
 				9EF93A47260C59D9006EB24A /* EndPointError.swift in Sources */,
+				9E8DBECD26109ED60010C39C /* HistoryViewController.swift in Sources */,
 				9E0A8EDA260F91B50097D260 /* UILabel.swift in Sources */,
 				9E41017B260F345200DFBB12 /* AboutViewController.swift in Sources */,
 				9E891B11260FB1740016B26D /* LogginingValidator.swift in Sources */,
+				9E8DBEE026109FBA0010C39C /* ActivityViewController.swift in Sources */,
 				9EA8845A260683FA002A59E2 /* TabBarController.swift in Sources */,
 				9EA884C3260687D1002A59E2 /* ApplicationCoordinatorFactory.swift in Sources */,
 				4B6CE848260D0BEC004D6039 /* ChoosingActivityViewController.swift in Sources */,
 				9EAE5987260F358D00F1ED6C /* TrainingType.swift in Sources */,
+				9E8DBEAF26109E640010C39C /* HistoryTableViewCell.swift in Sources */,
 				9EA884C926068819002A59E2 /* AuthCoordinator.swift in Sources */,
 				9EA8844126068270002A59E2 /* Routed.swift in Sources */,
 				9E0A8F1A260FA6DD0097D260 /* RegistrationValidator.swift in Sources */,
@@ -1513,7 +1513,6 @@
 				9EF93A30260C5988006EB24A /* NetworkError.swift in Sources */,
 				9EA8843426068216002A59E2 /* RouterProtocol.swift in Sources */,
 				9E7124B9260D1D8900B881AB /* RemoteConfigManager.swift in Sources */,
-				9EDD6B382610879D002AC595 /* ActivityViewController.swift in Sources */,
 				9EA884F52606894F002A59E2 /* CoachesCoordinatorFactory.swift in Sources */,
 				9EF93A5A260C5A1E006EB24A /* HTTPHeaders.swift in Sources */,
 				9E0A8ED5260F8E910097D260 /* DateFormatter.swift in Sources */,
@@ -1525,7 +1524,6 @@
 				9EA8850626068A0C002A59E2 /* HistoryCoordinator.swift in Sources */,
 				9E320ACE260F8CA30089FCE0 /* CGColor.swift in Sources */,
 				9EA8843C26068233002A59E2 /* Router.swift in Sources */,
-				9EDD6B2426108783002AC595 /* HistoryTableViewCell.swift in Sources */,
 				4BB7F840260E8A7F00E9294F /* Date.swift in Sources */,
 				9EF93A36260C59A3006EB24A /* StatusCode.swift in Sources */,
 				9EF93A3F260C59C5006EB24A /* RequestableItem.swift in Sources */,
@@ -1536,6 +1534,7 @@
 				4B3A6C67260732DB00B99CF0 /* CoachDataSourse.swift in Sources */,
 				9ECF2427260E625200B5C6E2 /* SettingsViewController.swift in Sources */,
 				9ECF2422260E625200B5C6E2 /* SettingTableViewCell.swift in Sources */,
+				9E8DBECE26109ED60010C39C /* TableViewManager.swift in Sources */,
 				9E0A8F3D260FA9540097D260 /* PasswordValidationService.swift in Sources */,
 				4B3A6C482606366E00B99CF0 /* CoachTableViewCell.swift in Sources */,
 				4B3A6C60260674A100B99CF0 /* ReusableTableCell.swift in Sources */,
