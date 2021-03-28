@@ -21,7 +21,9 @@ class LogInViewController<LoginValidator: LogginingValidationService>: BaseAuthV
                                                                        UITextFieldDelegate {
 
     var onSignUpButtonTap: (() -> Void)?
-    private var authModel = LoginValidator.CustomLoginModel()//password: "PaSSw0rd123", phone: "+380689292193")
+    
+    // password: "PaSSw0rd123", phone: "+380689292193")
+    private var authModel = LoginValidator.CustomLoginModel()
     private var validationService: LogginingValidator<LoginValidator>
     private var authService: AuthorizationService
 
@@ -53,15 +55,23 @@ class LogInViewController<LoginValidator: LogginingValidationService>: BaseAuthV
 
     // MARK: - IBAction
     @IBAction func logInPressed(_ sender: Any) {
+        
+        self.setButtonNotEnabling(doneButton)
+
         do {
 
             try validationService.validate(authModel)
+            
+            self.startLoading()
+
             authService.logIn(phone: authModel.phone,
                                password: authModel.password,
                                completion: { [weak self] (error) in
                                 guard let self = self else {
                                     return
                                 }
+                                self.endLoading()
+
                                 switch error {
                                 case .none:
                                     self.onCompleteAuth?()
@@ -133,14 +143,12 @@ private extension LogInViewController {
 
     func checkButtonAvailability() {
         if authModel.isFilled {
-            doneButton.isEnabled = true
-            doneButton.backgroundColor = UIColor(named: "customYellow")
+            self.setButtonEnabling(doneButton)
         } else {
-            doneButton.isEnabled = false
-            doneButton.backgroundColor = .lightGray
+            self.setButtonNotEnabling(doneButton)
         }
     }
-
+    
     func dismiss(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }

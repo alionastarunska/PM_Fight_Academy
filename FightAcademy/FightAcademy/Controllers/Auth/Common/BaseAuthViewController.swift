@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaseAuthViewController: UIViewController {
+class BaseAuthViewController: UIViewController, LoadingDisplaying {
 
     // MARK: - Properties
 
@@ -34,7 +34,7 @@ class BaseAuthViewController: UIViewController {
 
 }
 
-extension BaseAuthViewController {
+internal extension BaseAuthViewController {
 
     // MARK: - Handlers
 
@@ -86,5 +86,15 @@ extension BaseAuthViewController {
             $0.setCustomClearButton(with: image)
         }
     }
-
+    
+    func setButtonNotEnabling(_ button: UIButton) {
+        button.isEnabled = false
+        button.backgroundColor = .lightGray
+    }
+    
+    func setButtonEnabling(_ button: UIButton) {
+        button.isEnabled = true
+        button.backgroundColor = UIColor(named: "customYellow")
+    }
+    
 }

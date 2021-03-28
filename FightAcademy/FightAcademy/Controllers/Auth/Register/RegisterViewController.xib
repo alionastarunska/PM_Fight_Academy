@@ -35,7 +35,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="uyt-6m-pJB">
-                                    <rect key="frame" x="19" y="0.0" width="337.5" height="578"/>
+                                    <rect key="frame" x="19" y="0.0" width="337.5" height="621"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZ8-CF-hvi">
                                             <rect key="frame" x="0.0" y="0.0" width="337.5" height="200"/>
@@ -55,16 +55,16 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXb-M7-hR8">
-                                            <rect key="frame" x="0.0" y="225" width="337.5" height="35"/>
+                                            <rect key="frame" x="0.0" y="225" width="337.5" height="29"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                             <color key="textColor" name="customYellow"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="gdL-Zy-yND">
-                                            <rect key="frame" x="0.0" y="285" width="337.5" height="46"/>
+                                            <rect key="frame" x="0.0" y="279" width="337.5" height="50"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XZH-tN-Jbl" customClass="LeadingImageTextField" customModule="FightAcademy" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="337.5" height="40"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="337.5" height="44"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="textColor" name="typingTextColor"/>
@@ -82,7 +82,7 @@
                                                             <real key="value" value="20"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="18"/>
+                                                            <real key="value" value="20"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                             <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,7 +90,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wE8-zn-DRs">
-                                                    <rect key="frame" x="0.0" y="46" width="337.5" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="50" width="337.5" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" name="errorTextCollor"/>
                                                     <nil key="highlightedColor"/>
@@ -98,10 +98,10 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="U5r-G4-Wql">
-                                            <rect key="frame" x="0.0" y="356" width="337.5" height="46"/>
+                                            <rect key="frame" x="0.0" y="354" width="337.5" height="50"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TrT-q5-7Q5" customClass="LeadingImageTextField" customModule="FightAcademy" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="337.5" height="40"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="337.5" height="44"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="textColor" name="typingTextColor"/>
@@ -119,7 +119,7 @@
                                                             <real key="value" value="20"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="18"/>
+                                                            <real key="value" value="20"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                             <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -127,7 +127,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPZ-LO-pYv">
-                                                    <rect key="frame" x="0.0" y="46" width="337.5" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="50" width="337.5" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" name="errorTextCollor"/>
                                                     <nil key="highlightedColor"/>
@@ -135,10 +135,10 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="mcV-bi-yrC">
-                                            <rect key="frame" x="0.0" y="427" width="337.5" height="63"/>
+                                            <rect key="frame" x="0.0" y="429" width="337.5" height="67"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LrI-Op-0Ml" customClass="TrailingImageTextField" customModule="FightAcademy" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="337.5" height="40"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="337.5" height="44"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="textColor" name="typingTextColor"/>
@@ -159,7 +159,7 @@
                                                             <real key="value" value="-8"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="18"/>
+                                                            <real key="value" value="20"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="image" keyPath="trailingImageButton" value="eye.fill" catalog="system"/>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -168,7 +168,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kye-JH-gUU">
-                                                    <rect key="frame" x="0.0" y="46" width="337.5" height="17"/>
+                                                    <rect key="frame" x="0.0" y="50" width="337.5" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" name="errorTextCollor"/>
                                                     <nil key="highlightedColor"/>
@@ -176,17 +176,20 @@
                                             </subviews>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONo-iP-Yhv">
-                                            <rect key="frame" x="0.0" y="515" width="337.5" height="63"/>
+                                            <rect key="frame" x="0.0" y="521" width="337.5" height="100"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1g-TR-NsJ">
-                                                    <rect key="frame" x="0.0" y="23" width="337.5" height="40"/>
+                                                    <rect key="frame" x="0.0" y="56" width="337.5" height="44"/>
                                                     <color key="backgroundColor" name="customYellow"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="RYv-Rv-x5W"/>
+                                                    </constraints>
                                                     <state key="normal" title="Done">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="18"/>
+                                                            <real key="value" value="20"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
@@ -196,17 +199,17 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="L1g-TR-NsJ" secondAttribute="trailing" id="Yj0-EM-hvR"/>
-                                                <constraint firstItem="L1g-TR-NsJ" firstAttribute="leading" secondItem="ONo-iP-Yhv" secondAttribute="leading" id="gZ8-Mv-ctT"/>
-                                                <constraint firstAttribute="bottom" secondItem="L1g-TR-NsJ" secondAttribute="bottom" id="uhp-bV-H9N"/>
+                                                <constraint firstAttribute="trailing" secondItem="L1g-TR-NsJ" secondAttribute="trailing" id="KEa-KN-cV5"/>
+                                                <constraint firstAttribute="height" constant="100" id="Lmb-XC-E8W"/>
+                                                <constraint firstAttribute="bottom" secondItem="L1g-TR-NsJ" secondAttribute="bottom" id="cO3-G2-vdq"/>
+                                                <constraint firstItem="L1g-TR-NsJ" firstAttribute="leading" secondItem="ONo-iP-Yhv" secondAttribute="leading" id="gdd-hL-m86"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="LrI-Op-0Ml" firstAttribute="height" secondItem="L1g-TR-NsJ" secondAttribute="height" id="DrH-mh-S34"/>
-                                        <constraint firstItem="TrT-q5-7Q5" firstAttribute="height" secondItem="LrI-Op-0Ml" secondAttribute="height" id="P7e-oG-3sC"/>
-                                        <constraint firstItem="nXb-M7-hR8" firstAttribute="height" secondItem="uyt-6m-pJB" secondAttribute="height" multiplier="0.06" id="hgR-0w-vVt"/>
-                                        <constraint firstItem="XZH-tN-Jbl" firstAttribute="height" secondItem="TrT-q5-7Q5" secondAttribute="height" id="jht-Nk-RMN"/>
+                                        <constraint firstItem="L1g-TR-NsJ" firstAttribute="height" secondItem="LrI-Op-0Ml" secondAttribute="height" id="MlP-Sa-EFk"/>
+                                        <constraint firstItem="LrI-Op-0Ml" firstAttribute="height" secondItem="TrT-q5-7Q5" secondAttribute="height" id="Qso-x3-Ec0"/>
+                                        <constraint firstItem="TrT-q5-7Q5" firstAttribute="height" secondItem="XZH-tN-Jbl" secondAttribute="height" id="hKm-Zr-UjB"/>
                                     </constraints>
                                 </stackView>
                             </subviews>
@@ -233,11 +236,9 @@
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="MZ8-CF-hvi" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.3" id="Hgw-ca-HJR"/>
-                <constraint firstItem="L1g-TR-NsJ" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.06" id="QJT-oZ-Er0"/>
                 <constraint firstItem="hCa-hd-e4A" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="RXu-zL-wjh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="hCa-hd-e4A" secondAttribute="top" id="Sr6-B3-NHF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hCa-hd-e4A" secondAttribute="trailing" id="V4S-Px-nw9"/>
-                <constraint firstItem="ONo-iP-Yhv" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.09483" id="V5L-GY-YEq"/>
                 <constraint firstItem="hCa-hd-e4A" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Wln-4T-m7y"/>
             </constraints>
             <point key="canvasLocation" x="454" y="60"/>

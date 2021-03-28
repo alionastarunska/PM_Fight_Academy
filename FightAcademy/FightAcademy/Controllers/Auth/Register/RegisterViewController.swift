@@ -58,11 +58,11 @@ final class RegisterViewController<RegValidator: RegistrationValidationService>:
     // MARK: - IBAction
 
     @IBAction func signUpAction(_ sender: Any) {
-
+        self.setButtonNotEnabling(doneButton)
         do {
 
             try validationService.validate(registerModel)
-
+            self.startLoading()
             authService.registrate(phone: registerModel.phone,
                              password: registerModel.password,
                              name: registerModel.name,
@@ -70,6 +70,7 @@ final class RegisterViewController<RegValidator: RegistrationValidationService>:
                               guard let self = self else {
                                   return
                               }
+                                self.endLoading()
                               switch error {
                               case .none:
                                   self.onCompleteAuth?()
@@ -154,11 +155,9 @@ extension RegisterViewController {
 
     func checkButtonAvailability() {
         if registerModel.isFilled {
-            doneButton.isEnabled = true
-            doneButton.backgroundColor = UIColor(named: "customYellow")
+            self.setButtonEnabling(doneButton)
         } else {
-            doneButton.isEnabled = false
-            doneButton.backgroundColor = .lightGray
+            self.setButtonNotEnabling(doneButton)
         }
     }
 
