@@ -195,10 +195,43 @@ class BookingActivityViewController: UIViewController, BookingNewActivity {
     }
 }
 
+extension BookingActivityViewController {
+    func invalidateCoach() {
+        if selectedCoach != nil {
+            selectedCoach = nil
+            coachNameLabel.text = "Name Surname"
+        }
+    }
+    
+    func invalidateTimeSlots() {
+        if !timeSlots.isEmpty {
+            selectedTimeSlot = nil
+            timeSlots = []
+            timeCollectionView.alpha = 0.5
+            timeCollectionView.isUserInteractionEnabled = false
+            dataSource?.set(items: [])
+            timeCollectionView.reloadData()
+            updateTimeSlotsHeight()
+        }
+    }
+    
+    func invalidateCalendar() {
+        if let selectedDate = selectedDate {
+            calendar.deselect(selectedDate)
+            self.selectedDate = nil
+            trainingDates = []
+            calendar.reloadData()
+            calendar.alpha = 0.5
+            calendar.isUserInteractionEnabled = false
+        }
+    }
+}
 extension BookingActivityViewController: BookingDelegate {
     func didSelect(_ coach: Coach) {
         selectedCoach = coach
         coachNameLabel.text = coach.fullName
+        invalidateCalendar()
+        invalidateTimeSlots()
         fetchDates()
     }
 
@@ -207,6 +240,10 @@ extension BookingActivityViewController: BookingDelegate {
         activityLabel.text = activity.name
         chooseCoachButton.isEnabled = true
         chooseCoachButton.superview?.alpha = 1
+        invalidateCoach()
+        invalidateCalendar()
+        invalidateTimeSlots()
+        
     }
 
 }
@@ -230,6 +267,7 @@ extension BookingActivityViewController: FSCalendarDelegate, FSCalendarDataSourc
 
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         selectedDate = date
+        invalidateTimeSlots()
         timeCollectionView.alpha = 1
         timeCollectionView.isUserInteractionEnabled = true
         fetchTimeSlots()
