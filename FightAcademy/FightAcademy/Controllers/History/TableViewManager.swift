@@ -53,8 +53,10 @@ class TableViewManager<Cell: ConfigurableTableViewCell & ReusableTableViewCell>:
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
 
         if items.count - 10 < indexPath.row {
+
             canFetch = false
             onRowsEnded?()
+
         }
 
     }

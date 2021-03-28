@@ -10,8 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryViewController" customModule="FightAcademy" customModuleProvider="target">
             <connections>
-                <outlet property="activityIndicator" destination="IJJ-vU-tIA" id="HK5-XG-Ohb"/>
-                <outlet property="collectionView" destination="7EP-EJ-Mc5" id="eV3-hw-Ps7"/>
+                <outlet property="tableView" destination="7ZU-uk-t0d" id="eKw-2q-bsw"/>
                 <outlet property="view" destination="iN0-l3-epB" id="rnZ-NU-7IG"/>
             </connections>
         </placeholder>
@@ -20,29 +19,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7EP-EJ-Mc5">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7ZU-uk-t0d">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ueL-HI-b1x">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="IJJ-vU-tIA">
-                    <rect key="frame" x="197" y="443" width="20" height="20"/>
-                </activityIndicatorView>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7EP-EJ-Mc5" secondAttribute="bottom" id="4hm-XW-rxN"/>
-                <constraint firstItem="IJJ-vU-tIA" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="78y-JL-MJc"/>
-                <constraint firstItem="7EP-EJ-Mc5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7nP-C5-i2h"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7EP-EJ-Mc5" secondAttribute="trailing" id="8Ud-QQ-c6M"/>
-                <constraint firstItem="IJJ-vU-tIA" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="CUv-rz-cp1"/>
-                <constraint firstItem="7EP-EJ-Mc5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Efa-8p-IYm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7ZU-uk-t0d" secondAttribute="bottom" id="P7k-ga-EwL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7ZU-uk-t0d" secondAttribute="trailing" id="iOs-Ua-Clh"/>
+                <constraint firstItem="7ZU-uk-t0d" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="o8Q-R8-oxm"/>
+                <constraint firstItem="7ZU-uk-t0d" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="vfS-fc-Yzg"/>
             </constraints>
             <point key="canvasLocation" x="-733" y="239"/>
         </view>
