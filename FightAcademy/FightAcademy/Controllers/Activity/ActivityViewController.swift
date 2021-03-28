@@ -55,17 +55,14 @@ private extension ActivityViewController {
 
     func setUpCollectionView() {
         tableView.registerNib(for: ActivityTableViewCell.self)
-        tableView.dataSource = tableManager
-        tableView.delegate = tableManager
+
 
     }
 
     func performFetch(page: Int = 1) {
         
         if page == 1 {
-            tableManager = TableViewManager()
-            tableView.dataSource = tableManager
-            tableView.delegate = tableManager
+            setManager()
         }
 
         tableManager.onRowsEnded = { [weak self] in
@@ -75,6 +72,12 @@ private extension ActivityViewController {
         activityService.incomingActivities(page: page, completion: validateFetchResult)
     }
 
+    func setManager() {
+        tableManager = TableViewManager()
+        tableView.dataSource = tableManager
+        tableView.delegate = tableManager
+    }
+    
     func validateFetchResult(_ result: Result<ApiResponse<Training>, Error>) {
 
         do {

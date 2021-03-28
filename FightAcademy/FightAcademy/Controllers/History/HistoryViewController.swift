@@ -23,6 +23,7 @@ class HistoryViewController: UIViewController, NibLoadable, UICollectionViewDele
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         performFetch()
     }
 
@@ -41,14 +42,14 @@ private extension HistoryViewController {
 
     func setUpCollectionView() {
         tableView.registerNib(for: HistoryTableViewCell.self)
-
-        tableView.dataSource = tableManager
-        tableView.delegate = tableManager
-
     }
 
     func performFetch(page: Int = 1) {
 
+        if page == 1 {
+            setManager()
+        }
+        
         tableManager.onRowsEnded = { [weak self] in
             self?.performFetch(page: page + 1)
         }
@@ -56,7 +57,13 @@ private extension HistoryViewController {
         historyService.activityHistory(page: page, completion: validateFetchResult)
 
     }
-
+    
+    func setManager() {
+        tableManager = TableViewManager()
+        tableView.dataSource = tableManager
+        tableView.delegate = tableManager
+    }
+    
     func validateFetchResult(_ result: Result<ApiResponse<Training>, Error>) {
 
         do {
