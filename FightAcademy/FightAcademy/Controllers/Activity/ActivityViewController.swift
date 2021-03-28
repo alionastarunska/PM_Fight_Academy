@@ -28,14 +28,18 @@ class ActivityViewController: UIViewController, Activity, NibLoadable {
         super.viewDidLoad()
         navigationItem.title = "Activity"
         setUpCollectionView()
-        performFetch()
 
         navigationItem.rightBarButtonItem = .init(image: UIImage(systemName: "plus"),
                                                   style: .done,
                                                   target: self,
                                                   action: #selector(addActivity))
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        performFetch()
+    }
+    
     init(activityService: ActivityService) {
         self.activityService = activityService
         super.init(nibName: Self.name, bundle: .main)
@@ -51,13 +55,18 @@ private extension ActivityViewController {
 
     func setUpCollectionView() {
         tableView.registerNib(for: ActivityTableViewCell.self)
-
         tableView.dataSource = tableManager
         tableView.delegate = tableManager
 
     }
 
     func performFetch(page: Int = 1) {
+        
+        if page == 1 {
+            tableManager = TableViewManager()
+            tableView.dataSource = tableManager
+            tableView.delegate = tableManager
+        }
 
         tableManager.onRowsEnded = { [weak self] in
             self?.performFetch(page: page + 1)
