@@ -1,0 +1,7 @@
+xcassets:
+  inputs:
+    - FightAcademy/Assets.xcassets
+    - FightAcademy/Colors.xcassets
+  outputs:
+    templateName: swift4
+    output: FightAcademy/Generated/Assets.swift
