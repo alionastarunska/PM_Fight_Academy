@@ -32,5 +32,15 @@ struct RemoteConfigProvider {
 
         return RemoteConfigManager.fetch(for: RCKey.article.rawValue) ?? ""
     }
+    
+    static func fetchPhoneNumber() -> String {
+
+        return RemoteConfigManager.fetch(for: RCKey.phoneNumber.rawValue) ?? ""
+    }
+    
+    static func fetchAdress() -> String {
+
+        return RemoteConfigManager.fetch(for: RCKey.adress.rawValue) ?? ""
+    }
 
 }

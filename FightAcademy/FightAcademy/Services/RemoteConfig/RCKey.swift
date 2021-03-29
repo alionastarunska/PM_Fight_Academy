@@ -11,6 +11,8 @@ enum RCKey: String {
 
     case description
     case article
+    case phoneNumber
+    case adress
 
     enum SocialNetworks: String, CaseIterable {
 
