@@ -55,8 +55,6 @@ private extension ActivityViewController {
 
     func setUpCollectionView() {
         tableView.registerNib(for: ActivityTableViewCell.self)
-
-
     }
 
     func performFetch(page: Int = 1) {

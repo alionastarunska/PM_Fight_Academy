@@ -37,8 +37,8 @@ final class AuthFactory: AuthFactoryProtocol {
     }
 
     func makeAlertController(with error: Error) -> UIAlertController {
-        let controller = UIAlertController(title: "error", message: error.localizedDescription, preferredStyle: .alert)
-        controller.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+        let controller = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        controller.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         return controller
     }
 
