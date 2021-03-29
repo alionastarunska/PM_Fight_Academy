@@ -20,8 +20,10 @@ final class RegisterViewController<RegValidator: RegistrationValidationService>:
                                                                                  UITextFieldDelegate {
     // MARK: - Properties
 
+    @IBOutlet weak var heighBetweenButtonAndStack: NSLayoutConstraint!
     @IBOutlet private weak var firstNameTextField: LeadingImageTextField!
     @IBOutlet private weak var nameErrorLabel: UILabel!
+    @IBOutlet weak var mainStackView: UIStackView!
     private var validationService: RegistrationValidator<RegValidator>
     private var registerModel = RegValidator.CustomRegistraionModel()
     private var authService: AuthorizationService
@@ -53,6 +55,14 @@ final class RegisterViewController<RegValidator: RegistrationValidationService>:
         setTextFieldDelegating()
 
         setKeyboardObservers()
+
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        resizeIfIpod()
+        
     }
 
     // MARK: - IBAction
@@ -139,7 +149,7 @@ final class RegisterViewController<RegValidator: RegistrationValidationService>:
 
 // MARK: - Private Methods
 
-extension RegisterViewController {
+private extension RegisterViewController {
 
     func setErrorsLabelHiden() {
         nameErrorLabel.isHidden = true
@@ -165,4 +175,15 @@ extension RegisterViewController {
         self.view.endEditing(true)
     }
 
+    func resizeIfIpod() {
+        let screenSize: CGRect = UIScreen.main.bounds
+        let screenHeight = screenSize.height
+    
+        if screenHeight <= 568 {
+            
+            heighBetweenButtonAndStack.constant = 30
+            view.layoutIfNeeded()
+            
+        }
+    }
 }
