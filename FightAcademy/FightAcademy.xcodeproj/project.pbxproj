@@ -60,10 +60,7 @@
 		9E320ACE260F8CA30089FCE0 /* CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E320ACD260F8CA30089FCE0 /* CGColor.swift */; };
 		9E35A485260D0EA7005D177B /* SocialTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E35A484260D0EA7005D177B /* SocialTextView.swift */; };
 		9E35A48A260D0EDA005D177B /* SocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E35A489260D0EDA005D177B /* SocialNetwork.swift */; };
-		9E35A491260D0EF1005D177B /* AboutSocialTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E35A48F260D0EF1005D177B /* AboutSocialTableCell.xib */; };
-		9E35A492260D0EF1005D177B /* AboutSocialTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E35A490260D0EF1005D177B /* AboutSocialTableCell.swift */; };
 		9E35A497260D0F07005D177B /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E35A496260D0F07005D177B /* AboutViewController.xib */; };
-		9E35A49F260D106F005D177B /* SocialNetworkDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E35A49E260D106F005D177B /* SocialNetworkDataSource.swift */; };
 		9E35A4A4260D11EB005D177B /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E35A4A3260D11EB005D177B /* UITableView.swift */; };
 		9E4100D3260F2EFF00DFBB12 /* TrainingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4100D2260F2EFF00DFBB12 /* TrainingTime.swift */; };
 		9E4100D8260F2F0300DFBB12 /* TrainingDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4100D7260F2F0300DFBB12 /* TrainingDay.swift */; };
@@ -247,10 +244,7 @@
 		9E320ACD260F8CA30089FCE0 /* CGColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGColor.swift; sourceTree = "<group>"; };
 		9E35A484260D0EA7005D177B /* SocialTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialTextView.swift; sourceTree = "<group>"; };
 		9E35A489260D0EDA005D177B /* SocialNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetwork.swift; sourceTree = "<group>"; };
-		9E35A48F260D0EF1005D177B /* AboutSocialTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutSocialTableCell.xib; sourceTree = "<group>"; };
-		9E35A490260D0EF1005D177B /* AboutSocialTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutSocialTableCell.swift; sourceTree = "<group>"; };
 		9E35A496260D0F07005D177B /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
-		9E35A49E260D106F005D177B /* SocialNetworkDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkDataSource.swift; sourceTree = "<group>"; };
 		9E35A4A3260D11EB005D177B /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		9E4100D2260F2EFF00DFBB12 /* TrainingTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTime.swift; sourceTree = "<group>"; };
 		9E4100D7260F2F0300DFBB12 /* TrainingDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDay.swift; sourceTree = "<group>"; };
@@ -612,19 +606,9 @@
 			isa = PBXGroup;
 			children = (
 				9E41017A260F345200DFBB12 /* AboutViewController.swift */,
-				9E35A49E260D106F005D177B /* SocialNetworkDataSource.swift */,
 				9E35A496260D0F07005D177B /* AboutViewController.xib */,
 			);
 			path = About;
-			sourceTree = "<group>";
-		};
-		9E35A48E260D0EF1005D177B /* AboutSocialCell */ = {
-			isa = PBXGroup;
-			children = (
-				9E35A48F260D0EF1005D177B /* AboutSocialTableCell.xib */,
-				9E35A490260D0EF1005D177B /* AboutSocialTableCell.swift */,
-			);
-			path = AboutSocialCell;
 			sourceTree = "<group>";
 		};
 		9E36C6A3260FBE3A0033AB58 /* Views */ = {
@@ -694,7 +678,6 @@
 			isa = PBXGroup;
 			children = (
 				9EE371EF260FD1DD00FFD65B /* ActivityCell */,
-				9E35A48E260D0EF1005D177B /* AboutSocialCell */,
 				9E7F7ADF260FC5F5003FF1F8 /* CoachCell */,
 				9EE371E3260FD14B00FFD65B /* ChooseCoachCell */,
 				9ECF241B260E625200B5C6E2 /* SettingsCells */,
@@ -1386,7 +1369,6 @@
 				9EDD6B3A2610879D002AC595 /* ActivityTableViewCell.xib in Resources */,
 				9ECF2424260E625200B5C6E2 /* SettingTableViewCell.xib in Resources */,
 				9E35A497260D0F07005D177B /* AboutViewController.xib in Resources */,
-				9E35A491260D0EF1005D177B /* AboutSocialTableCell.xib in Resources */,
 				9EF91D84260D20CE0067FE76 /* RemoteConfigDefaults.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1451,9 +1433,7 @@
 				9E35A48A260D0EDA005D177B /* SocialNetwork.swift in Sources */,
 				9E7F7AEA260FC6EB003FF1F8 /* RegisterViewController.swift in Sources */,
 				9E891B1E260FB1C10016B26D /* LogginingModelRequirements.swift in Sources */,
-				9E35A492260D0EF1005D177B /* AboutSocialTableCell.swift in Sources */,
 				AE80C8592609FE6200E99D40 /* BaseAuthViewController.swift in Sources */,
-				9E35A49F260D106F005D177B /* SocialNetworkDataSource.swift in Sources */,
 				9E0A8F5F260FAB8D0097D260 /* RegistrationValidationService.swift in Sources */,
 				AE5C81582605182300E12DB5 /* TypeAliasses.swift in Sources */,
 				4B3A6BE62603CE3900B99CF0 /* FightAcademy.xcdatamodeld in Sources */,
@@ -1731,14 +1711,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UPWXFVVHLN;
+				DEVELOPMENT_TEAM = 82CSN5YWUM;
 				INFOPLIST_FILE = FightAcademy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.PMTech.FightAcademy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sa.FightAcademy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1751,14 +1731,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UPWXFVVHLN;
+				DEVELOPMENT_TEAM = 82CSN5YWUM;
 				INFOPLIST_FILE = FightAcademy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.PMTech.FightAcademy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sa.FightAcademy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

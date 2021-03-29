@@ -20,10 +20,14 @@ final class AboutFactory: AboutFactoryProtocol {
         let socialNetworks = RemoteConfigProvider.fetchSocialNetworks()
         let description = RemoteConfigProvider.fetchDescription()
         let acticle = RemoteConfigProvider.fetchArticle()
+        let phoneNumber = RemoteConfigProvider.fetchPhoneNumber()
+        let adress = RemoteConfigProvider.fetchAdress()
 
         return AboutViewController(socialNetworks: socialNetworks,
                                    description: description,
-                                   acticle: acticle)
+                                   acticle: acticle,
+                                   phoneNumber: phoneNumber,
+                                   adress: adress)
     }
 
 }
