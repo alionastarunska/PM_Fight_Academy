@@ -30,8 +30,6 @@ class HistoryTableViewCell: UITableViewCell, NibLoadable, ReusableTableViewCell 
         dateValueLabel.text = date
     }
 
-    // note: PLZ ADD prepareForReuse for all cells!
-
 }
 
 extension HistoryTableViewCell: ConfigurableTableViewCell {

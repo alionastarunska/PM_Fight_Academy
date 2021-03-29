@@ -35,8 +35,6 @@ class ActivityTableViewCell: UITableViewCell, NibLoadable, ReusableTableViewCell
         timeLabel.text = time
     }
 
-    // TODO: PLZ ADD prepareForReuse for all cells!
-
 }
 
 extension ActivityTableViewCell: ConfigurableTableViewCell {

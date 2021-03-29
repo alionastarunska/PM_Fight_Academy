@@ -19,7 +19,7 @@ final class HistoryCoordinator: FinishFlowCoordinator {
 
         let initialPage = factory.makeHistoryViewController()
 
-        initialPage.onError = { [weak self]  error in
+        initialPage.onError = { [weak self] _ in
             self?.finishFlow?()
         }
 
