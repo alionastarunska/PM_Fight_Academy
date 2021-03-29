@@ -8,7 +8,7 @@
 import UIKit
 
 class SettingTableManager: NSObject {
-    
+
     var items: [SettingModel]
 
     init(items: [SettingModel]) {
@@ -16,8 +16,9 @@ class SettingTableManager: NSObject {
     }
 
 }
+
 extension SettingTableManager: UITableViewDataSource {
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return items.count
     }
@@ -25,7 +26,7 @@ extension SettingTableManager: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingTableViewCell.reuseIdentifier,

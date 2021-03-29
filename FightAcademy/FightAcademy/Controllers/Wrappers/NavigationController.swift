@@ -17,6 +17,11 @@ class NavigationController: UINavigationController {
         super.viewDidLoad()
 
         self.delegate = self
+        setUp()
+
+    }
+
+    func setUp() {
 
         navigationBar.barStyle = UIBarStyle.black
 

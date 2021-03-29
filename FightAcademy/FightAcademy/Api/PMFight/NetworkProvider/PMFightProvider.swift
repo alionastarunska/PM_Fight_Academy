@@ -14,8 +14,8 @@ class PMFightProvider: NetworkApiProvider {
     private let networkManager = NetworkManager()
     private let decoder = JSONDecoder()
 
-    private let commonHeaders: HTTPHeaders = ["Content-Type": "application/json",
-                                              "Accept": "text/plain"]
+    private let headers: HTTPHeaders = ["Content-Type": "application/json",
+                                        "Accept": "text/plain"]
     private var storage = SessionStorage()
 
     func request<T: Decodable>(_ endPoint: ApiEndpoint, completion: @escaping (Result<T, Error>) -> Void) {
@@ -26,41 +26,41 @@ class PMFightProvider: NetworkApiProvider {
             perform(request, completion: completion)
 
         } catch {
-            
-            DispatchQueue.main.async {
-                completion(.failure(error))
-            }
+            completion(.failure(error))
         }
 
     }
 
-    private func perform<T: Decodable>(_ request: URLRequest, completion: @escaping (Result<T, Error>) -> Void) {
+    func request(_ endPoint: ApiEndpoint, completion: @escaping (Error?) -> Void) {
+
+        do {
+
+            let request = try buildRequest(for: endPoint)
+            perform(request, completion: completion)
+
+        } catch {
+            completion(error)
+        }
+
+    }
+
+}
+
+private extension PMFightProvider {
+
+    func perform<T: Decodable>(_ request: URLRequest, completion: @escaping (Result<T, Error>) -> Void) {
 
         networkManager.performFetch(with: request) { [decoder, completion] (result) in
 
-            // "Temporary" workaround for empty response parsing.
-            // Yep, we are going to hell for this :]
-            if T.self is Bool.Type {
-                DispatchQueue.main.async {
-                    // swiftlint:disable force_cast
-                    completion(.success(true as! T))
-                }
-                return
-            }
-            
             do {
                 let data = try result.get()
                 let decoded = try decoder.decode(T.self, from: data)
 
-                DispatchQueue.main.async {
-                    completion(.success(decoded))
-                }
+                completion(.success(decoded))
 
             } catch {
                 print(error)
-                DispatchQueue.main.async {
-                    completion(.failure(self.handleError(error)))
-                }
+                completion(.failure(self.handleError(error)))
 
             }
 
@@ -68,8 +68,15 @@ class PMFightProvider: NetworkApiProvider {
 
     }
 
-    private func buildRequest(for endPoint: ApiEndpoint) throws -> URLRequest {
-        var urlRequest = try endPoint.buildURLRequest(with: commonHeaders)
+    func perform(_ request: URLRequest, completion: @escaping (Error?) -> Void) {
+
+        networkManager.performFetchNoResponce(with: request, completion: completion)
+
+    }
+
+    func buildRequest(for endPoint: ApiEndpoint) throws -> URLRequest {
+        var urlRequest = try endPoint.buildURLRequest(with: headers)
+
         if let token = storage.sessionId {
             urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         }
@@ -77,7 +84,7 @@ class PMFightProvider: NetworkApiProvider {
         return urlRequest
     }
 
-    private func handleError(_ error: Error) -> HumanApiError {
+    func handleError(_ error: Error) -> HumanApiError {
 
         switch error {
         case NetworkError.badStatusCode(let statusCode):

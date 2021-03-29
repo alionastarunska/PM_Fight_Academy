@@ -20,7 +20,8 @@ protocol ActivityFactoryProtocol {
 final class ActivityFactory: ActivityFactoryProtocol {
 
     func makeActivityViewController() -> Activity {
-        return ActivityViewController(nibName: ActivityViewController.name, bundle: .main)
+        let service = ActivityProvider(service: PMFightApi.shared)
+        return ActivityViewController(activityService: service)
     }
 
     func makeNewActivityViewController() -> BookingNewActivity {

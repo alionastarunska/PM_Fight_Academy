@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PMFightApi {
+class PMFightApi: LogInService, RegistrationService, HistoryService, ActivityService {
 
     private let netApiProvider = PMFightProvider()
 
@@ -15,75 +15,77 @@ class PMFightApi {
 
     private init() {}
 
-    func logIn(phone: String, password: String, completion: @escaping (Result<Token, Error>) -> Void) {
-        netApiProvider.request(.login(login: phone, password: password)) { (result: Result<Token, Error>) in
-            switch result {
-            case .success(let token):
-                SessionStorage().sessionId = token.raw
-                completion(.success(token))
-            case .failure(let error):
-                completion(.failure(error))
-            }
-        }
-
+    func logIn(phone: String, password: String, completion: @escaping (Error?) -> Void) {
+        requestAuthentication(with: .login(login: phone, password: password), completion: completion)
     }
 
-    func register(name: String, phone: String, password: String, completion: @escaping (Result<Token, Error>) -> Void) {
-        netApiProvider.request(.register(name: name, login: phone, password: password)) { (result: Result<Token, Error>) in
-            switch result {
-            case .success(let token):
-                SessionStorage().sessionId = token.raw
-                completion(.success(token))
-            case .failure(let error):
-                completion(.failure(error))
-            }
-        }
-
+    func registrate(phone: String, password: String, name: String, completion: @escaping (Error?) -> Void) {
+        requestAuthentication(with: .register(name: name, login: phone, password: password), completion: completion)
     }
 
     func activities(completion: @escaping (Result<[TrainingType], Error>) -> Void) {
-        netApiProvider.request(.activities,
-                               completion: completion)
-
+        request(with: .activities, completion: completion)
     }
 
     func coaches(with activity: Int, completion: @escaping (Result<[Coach], Error>) -> Void) {
-        netApiProvider.request(.coaches(forActivity: activity),
-                               completion: completion)
-
+        request(with: .coaches(forActivity: activity), completion: completion)
     }
 
     func dates(for activity: Int, with coach: Int, completion: @escaping (Result<[TrainingDay], Error>) -> Void) {
-        netApiProvider.request(.dates(forActivity: activity, withCoach: coach),
-                               completion: completion)
+        request(with: .dates(forActivity: activity, withCoach: coach), completion: completion)
     }
 
     func time(for activity: Int, with coach: Int, on day: String, completion: @escaping (Result<[TrainingTime], Error>) -> Void) {
-        netApiProvider.request(.time(forActivity: activity, withCoach: coach, onDay: day),
-                               completion: completion)
+        request(with: .time(forActivity: activity, withCoach: coach, onDay: day), completion: completion)
     }
 
-    func bookActivity(for activity: Int, with coach: Int, on day: String, time: String, completion: @escaping (Result<Bool, Error>) -> Void) {
-        netApiProvider.request(.bookActivity(forActivity: activity, withCoach: coach, onDay: day, time: time),
-                               completion: completion)
-
+    func bookActivity(for activity: Int, with coach: Int, on day: String, time: String, completion: @escaping (Error?) -> Void) {
+        request(with: .bookActivity(forActivity: activity, withCoach: coach, onDay: day, time: time), completion: completion)
     }
 
     func getCoaches(page: Int, completion: @escaping (Result<ApiResponse<Coach>, Error>) -> Void) {
-        netApiProvider.request(.allCoaches(pageSize: 15, page: page),
-                               completion: completion)
-
+        request(with: .allCoaches(pageSize: 15, page: page), completion: completion)
     }
-// TODO: replace page size it's only for testing
     func activityHistory(page: Int, completion: @escaping (Result<ApiResponse<Training>, Error>) -> Void) {
-        netApiProvider.request(.activityHistory(pageSize: 7, page: page),
-                               completion: completion)
-
+        request(with: .activityHistory(pageSize: 15, page: page), completion: completion)
     }
 
     func incomingActivities(page: Int, completion: @escaping (Result<ApiResponse<Training>, Error>) -> Void) {
-        netApiProvider.request(.incomingActivity(pageSize: 7, page: page),
-                               completion: completion)
+        request(with: .incomingActivity(pageSize: 15, page: page), completion: completion)
+    }
+
+}
+
+private extension PMFightApi {
+
+    func requestAuthentication(with endpoint: PMFightProvider.ApiEndpoint, completion: @escaping (Error?) -> Void) {
+        netApiProvider.request(endpoint) { (result: Result<Token, Error>) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let token):
+                    SessionStorage().sessionId = token.raw
+                    completion(nil)
+                case .failure(let error):
+                    completion(error)
+                }
+            }
+        }
+    }
+
+    func request<T: Decodable>(with endpoint: PMFightProvider.ApiEndpoint, completion: @escaping (Result<T, Error>) -> Void) {
+        netApiProvider.request(endpoint) { (result: Result<T, Error>) in
+            DispatchQueue.main.async {
+                completion(result)
+            }
+        }
+    }
+
+    func request(with endpoint: PMFightProvider.ApiEndpoint, completion: @escaping (Error?) -> Void) {
+        netApiProvider.request(endpoint) { error in
+            DispatchQueue.main.async {
+                completion(error)
+            }
+        }
     }
 
 }

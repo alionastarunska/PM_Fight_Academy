@@ -16,6 +16,10 @@ struct Training: Decodable {
     let coachLastName: String
     let price: Double
 
+    var coachFullName: String {
+        return coachFirstName + " " + coachLastName
+    }
+
 }
 
 extension Training {
@@ -49,7 +53,6 @@ extension ApiResponse where Item == Training {
         let lastnames = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis", "Rodriguez", "Rodriguez"]
         let services = ["Karate", "Wing Chun", "Kalaripayattu", "Savate", "Capoeira", "Taekwondo", "Muay Thai"]
         let price = [1000, 200]
-
 
         var arr: [Training] = []
 
